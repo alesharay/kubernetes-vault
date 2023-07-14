@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "2772be6dc5af8f92",
+    "type": "split",
+    "children": [
+      {
+        "id": "3263308813018b51",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b165fdc5890ad69",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "11003f0bca6014fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "6009f4dab204c4ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb74cb5e49442574",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8735ef17ffd866ab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "28917002fd7fb889",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "189985aa43e8398b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9c29329f5387c87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ed92eca7f299e12",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3585898e537645de",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "edd1f7b939453726",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "021b15dcfcee47d0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9b165fdc5890ad69",
+  "lastOpenFiles": [
+    "cka/0 - Core Concepts/4 - Kube Scheduler.md",
+    "cka/1 - Scheduling/6 - Resource Limits.md",
+    "cka/1 - Scheduling/8 - Static Pods.md",
+    "cka/1 - Scheduling/7 - DaemonSets.md",
+    "cka/0 - Core Concepts/7 - Pods.md",
+    "cka/1 - Scheduling/3 - Node Selectors.md",
+    "cka/1 - Scheduling/4 - Node Affinity.md",
+    "cka/1 - Scheduling/5 - Taints & Tolerations vs Node Affinity.md",
+    "cka/1 - Scheduling/1 - Labels & Selectors.md",
+    "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+    "cka/1 - Scheduling/9 - Multiple Schedulers.md",
+    "cka/1 - Scheduling/0 - Scheduling Intro.md",
+    "cka/0 - Core Concepts/13 - Kubectl Apply.md",
+    "cka/0 - Core Concepts/12 - Declarative vs Imperative.md",
+    "cka/0 - Core Concepts/6 - Kube Proxy.md",
+    "cka/0 - Core Concepts/5 - Kubelet.md",
+    "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
+    "cka/0 - Core Concepts/2 - Kube API server.md",
+    "cka/0 - Core Concepts/1 - ETCD.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/0 - Core Concepts/11 - Namespaces.md",
+    "cka/0 - Core Concepts/10 - Services.md",
+    "cka/0 - Core Concepts/9 - Deployments.md",
+    "cka/0 - Core Concepts/8 - ReplicaSets.md",
+    "pod.md",
+    "cka/images/mult-schedulers-8.png",
+    "cka/images/mult-schedulers-7.png",
+    "cka/images/mult-schedulers-6.png",
+    "cka/images/mult-schedulers-5.png",
+    "cka/images/mult-schedulers-4.png",
+    "cka/images/mult-schedulers-3.png",
+    "cka/images/mult-schedulers-2.png",
+    "cka/images/mult-schedulers-1.png",
+    "cka/images/static-pods-5.png",
+    "cka/images/static-pods-4.png",
+    "Untitled.md",
+    "cks/images",
+    "ckad/images",
+    "cka/images",
+    "cka/9 - Practice Questions",
+    "cka/8 - Design and Install a Kubernetes Cluster",
+    "cka/7 - Networking",
+    "cka/6 - Storage",
+    "cka/5 - Security",
+    "cka/4 - Cluster Maintenance",
+    "cka/3 - Application Lifecycle Management"
+  ]
+}
