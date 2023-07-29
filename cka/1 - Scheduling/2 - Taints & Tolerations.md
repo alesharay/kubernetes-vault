@@ -9,19 +9,17 @@
 - By default, [[7 - Pods|pods]] have no <b><span style="color:#d46644">tolerations</span></b>
 
 - Assume there are dedicated restrictions on a particular [[0 - Core Concepts Intro|node]] where only [[7 - Pods|pods]] that are part of a certain application can be placed on said [[0 - Core Concepts Intro|node]]
-
-	
-1. Apply a <b><span style="color:#d46644">taint</span></b> to the [[0 - Core Concepts Intro|node]]
+	1. Apply a <b><span style="color:#d46644">taint</span></b> to the [[0 - Core Concepts Intro|node]]
 		1. Unless specified otherwise, none of the [[7 - Pods|pods]] will be able to <b><span style="color:#d46644">tolerate</span></b> the specified <b><span style="color:#d46644">taint</span></b>
 		2. This means no unwanted [[7 - Pods|pods]] will be placed on said [[0 - Core Concepts Intro|node]]
-	1. To enable certain [[7 - Pods|pods]] to be placed on the [[0 - Core Concepts Intro|node]] with the <b><span style="color:#d46644">taint</span></b>, we must specify which [[7 - Pods|pods]] can <b><span style="color:#d46644">tolerate</span></b> that <b><span style="color:#d46644">taint</span></b>
+	2. To enable certain [[7 - Pods|pods]] to be placed on the [[0 - Core Concepts Intro|node]] with the <b><span style="color:#d46644">taint</span></b>, we must specify which [[7 - Pods|pods]] can <b><span style="color:#d46644">tolerate</span></b> that <b><span style="color:#d46644">taint</span></b>
 		1. Do this by adding a <b><span style="color:#d46644">toleration</span></b> to the [[7 - Pods|pod]]
-	1. Now, when the [[4 - Kube Scheduler|scheduler]] places the [[7 - Pods|pods]] on the [[0 - Core Concepts Intro|nodes]], the [[7 - Pods|pods]] that can <b><span style="color:#d46644">tolerate</span></b> specific <b><span style="color:#d46644">taints</span></b> on specific [[0 - Core Concepts Intro|nodes]] will be placed on the [[0 - Core Concepts Intro|nodes]]
+	3. Now, when the [[4 - Kube Scheduler|scheduler]] places the [[7 - Pods|pods]] on the [[0 - Core Concepts Intro|nodes]], the [[7 - Pods|pods]] that can <b><span style="color:#d46644">tolerate</span></b> specific <b><span style="color:#d46644">taints</span></b> on specific [[0 - Core Concepts Intro|nodes]] will be placed on the [[0 - Core Concepts Intro|nodes]]
 
-- Use the <span style="color:red">kubectl taint nodes</span> command to place a <b><span style="color:#d46644">taint</span></b> on a [[0 - Core Concepts Intro|node]]. Specify the following:
-	- [[0 - Core Concepts Intro|node]] name
-	- <b><span style="color:#d46644">Taint</span></b> - key-value
-	- <b><span style="color:#d46644">Taint effect</span></b> - placed on value separated by colon
+	- Use the <span style="color:red">kubectl taint nodes</span> command to place a <b><span style="color:#d46644">taint</span></b> on a [[0 - Core Concepts Intro|node]]. Specify the following:
+		- [[0 - Core Concepts Intro|node]] name
+		- <b><span style="color:#d46644">Taint</span></b> - key-value
+		- <b><span style="color:#d46644">Taint effect</span></b> - placed on value separated by colon
 
 		`kubectl taint nodes NODE_NAME key=value:taint-effect`
 
@@ -42,10 +40,10 @@
 - To add <b><span style="color:#d46644">tolerations</span></b> to [[7 - Pods|pods]], add a <b><span style="color:#d46644">tolerations</span></b> property in the spec section of the [[7 - Pods|pod]] definition file
 
 - The <b><span style="color:#d46644">tolerations</span></b> properties are as follows (all values of these properties should be in double quotes
-	- Key
+	- <b><span style="color:#d46644">key</span></b>
 		- The <b><span style="color:#d46644">taint</span></b> key described on the [[0 - Core Concepts Intro|node]]
 		- "<span style="color:#5c7e3e">app</span>" in the above example
-	- Operator
+	- <b><span style="color:#d46644">operator</span></b>
 		- The <b><span style="color:#d46644">taint</span></b> operator described on the [[0 - Core Concepts Intro|node]]
 		- "<span style="color:#5c7e3e">Equal</span>" in the above example (must be spelled out)
 		- The operator options are as follows
@@ -54,10 +52,10 @@
 			- "<span style="color:#5c7e3e">Equal</span>"
 				- A value should be specified
 
-	- Value
+	- <b><span style="color:#d46644">value</span></b>
 		- The <b><span style="color:#d46644">taint</span></b> value described on the [[0 - Core Concepts Intro|node]]
 		- "<span style="color:#5c7e3e">blue</span>" in the above example
-	- Effect
+	- <b><span style="color:#d46644">effect</span></b>
 		- The <b><span style="color:#d46644">taint</span></b> effect described on the [[0 - Core Concepts Intro|node]]
 		- "<b><span style="color:#d46644">NoSchedule</span></b>" in the above example
 

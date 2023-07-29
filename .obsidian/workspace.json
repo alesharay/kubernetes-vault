@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3263308813018b51",
+        "id": "021a85459e06f566",
         "type": "tabs",
         "children": [
           {
-            "id": "9b165fdc5890ad69",
+            "id": "4ae8c3b5dfb81181",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md"
+              }
             }
           }
         ]
@@ -138,53 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9b165fdc5890ad69",
+  "active": "4ae8c3b5dfb81181",
   "lastOpenFiles": [
-    "cka/0 - Core Concepts/4 - Kube Scheduler.md",
-    "cka/1 - Scheduling/6 - Resource Limits.md",
-    "cka/1 - Scheduling/8 - Static Pods.md",
-    "cka/1 - Scheduling/7 - DaemonSets.md",
-    "cka/0 - Core Concepts/7 - Pods.md",
-    "cka/1 - Scheduling/3 - Node Selectors.md",
-    "cka/1 - Scheduling/4 - Node Affinity.md",
-    "cka/1 - Scheduling/5 - Taints & Tolerations vs Node Affinity.md",
-    "cka/1 - Scheduling/1 - Labels & Selectors.md",
-    "cka/1 - Scheduling/2 - Taints & Tolerations.md",
-    "cka/1 - Scheduling/9 - Multiple Schedulers.md",
-    "cka/1 - Scheduling/0 - Scheduling Intro.md",
-    "cka/0 - Core Concepts/13 - Kubectl Apply.md",
-    "cka/0 - Core Concepts/12 - Declarative vs Imperative.md",
-    "cka/0 - Core Concepts/6 - Kube Proxy.md",
-    "cka/0 - Core Concepts/5 - Kubelet.md",
-    "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
-    "cka/0 - Core Concepts/2 - Kube API server.md",
-    "cka/0 - Core Concepts/1 - ETCD.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
-    "cka/0 - Core Concepts/11 - Namespaces.md",
-    "cka/0 - Core Concepts/10 - Services.md",
-    "cka/0 - Core Concepts/9 - Deployments.md",
-    "cka/0 - Core Concepts/8 - ReplicaSets.md",
-    "pod.md",
-    "cka/images/mult-schedulers-8.png",
-    "cka/images/mult-schedulers-7.png",
-    "cka/images/mult-schedulers-6.png",
-    "cka/images/mult-schedulers-5.png",
-    "cka/images/mult-schedulers-4.png",
-    "cka/images/mult-schedulers-3.png",
-    "cka/images/mult-schedulers-2.png",
-    "cka/images/mult-schedulers-1.png",
-    "cka/images/static-pods-5.png",
-    "cka/images/static-pods-4.png",
-    "Untitled.md",
-    "cks/images",
-    "ckad/images",
-    "cka/images",
+    "chromedriver",
+    "LICENSE.chromedriver",
+    "cka/images/design-4.png",
+    "cka/images/design-3.png",
+    "cka/images/design-2.png",
+    "cka/images/design-1.png",
+    "cka/8 - Design and Install a Kubernetes Cluster/1 - Choosing Kubernetes Infrastructure.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/2 - ** Configure High Availability.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
+    "cka/7 - Networking/9 - Ingress.md",
+    "cka/images/ingress-22.png",
+    "cka/images/ingress-27.png",
+    "cka/images/ingress-26.png",
+    "cka/images/ingress-25.png",
+    "cka/images/ingress-23.png",
+    "cka/images/ingress-24.png",
+    "cka/7 - Networking/8 - CoreDNS in Kubernetes.md",
+    "cka/7 - Networking/7 - DNS in Kubernetes.md",
+    "cka/7 - Networking/6 - Service Networking.md",
+    "cka/7 - Networking/5 - IPAM Weave.md",
+    "cka/7 - Networking/4 - CNI Weave.md",
+    "cka/7 - Networking/3 - CNI in Kubernetes.md",
+    "cka/7 - Networking/2 - Pod Networking.md",
+    "cka/7 - Networking/1 - Cluster Networking.md",
+    "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+    "cka/7 - Networking/0 - Prereqs/0.5 - Docker Networking.md",
+    "cka/7 - Networking/0 - Prereqs/0.4 - Network Namespaces.md",
+    "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
+    "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+    "cka/7 - Networking/0 - Prereqs/0.1 - Switching, Routing, Gateways CNI in Kubernetes.md",
+    "cka/6 - Storage/2 - Container Storage Interface.md",
+    "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
+    "cka/6 - Storage/6 - Storage Classes.md",
+    "cka/6 - Storage/5 - Persistent Volume Claims.md",
+    "cka/6 - Storage/4 - Persistent Volumes.md",
+    "cka/7 - Networking/0 - Prereqs",
     "cka/9 - Practice Questions",
     "cka/8 - Design and Install a Kubernetes Cluster",
     "cka/7 - Networking",
     "cka/6 - Storage",
     "cka/5 - Security",
     "cka/4 - Cluster Maintenance",
-    "cka/3 - Application Lifecycle Management"
+    "cka/3 - Application Lifecycle Management/Untitled",
+    "cka/3 - Application Lifecycle Management",
+    "Untitled.canvas"
   ]
 }
