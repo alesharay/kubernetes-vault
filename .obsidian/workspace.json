@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/9 - Practice Questions/Question 22.md",
+                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/9 - Practice Questions/Question 22.md",
+                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/9 - Practice Questions/Question 22.md",
+                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/9 - Practice Questions/Question 22.md"
+                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md"
               }
             }
           }
@@ -173,6 +173,13 @@
   },
   "active": "90aad6147f86ac68",
   "lastOpenFiles": [
+    "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
+    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
+    "cka/3 - Application Lifecycle Management/0 - Rolling Updates & Rollbacks.md",
+    "cka/2 - Logging , Monitoring/1 - Monitor Cluster Components.md",
+    "cka/2 - Logging , Monitoring/0 - Managing Application Logs.md",
+    "cka/1 - Scheduling/9 - Multiple Schedulers.md",
+    "cka/9 - Practice Questions/Question 22.md",
     "cka/images/q22a-4.png",
     "cka/images/q22a-3.png",
     "cka/images/q22a-2.png",
@@ -189,7 +196,6 @@
     "cka/images/q17a-2.jpg",
     "cka/images/q17a-1.jpg",
     "cka/9 - Practice Questions/Question 16.md",
-    "cka/images/q16a-7.jpg",
     "cka/9 - Practice Questions/Question 15.md",
     "cka/9 - Practice Questions/Question 14.md",
     "cka/9 - Practice Questions/Question 13.md",
@@ -203,12 +209,6 @@
     "cka/9 - Practice Questions/Question 5.md",
     "cka/9 - Practice Questions/Question 4.md",
     "cka/9 - Practice Questions/Question 3.md",
-    "cka/9 - Practice Questions/Question 2.md",
-    "cka/9 - Practice Questions/Question 1.md",
-    "cka/9 - Practice Questions/Question 22.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/1 - Choosing Kubernetes Infrastructure.md",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",
