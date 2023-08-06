@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4ae8c3b5dfb81181",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "cka/9 - Practice Questions/Question 3.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "70ecc1eb023e9bf3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "cka/9 - Practice Questions/Question 22.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "90aad6147f86ac68",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
+                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
+                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
+                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md"
+                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md"
               }
             }
           }
@@ -173,13 +148,27 @@
   },
   "active": "90aad6147f86ac68",
   "lastOpenFiles": [
-    "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
-    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
+    "cka/4 - Cluster Maintenance/2 - Cluster Upgrades.md",
+    "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
+    "cka/0 - Core Concepts/10 - Services.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
+    "cka/4 - Cluster Maintenance/0 - OS Upgrades.md",
+    "cka/0 - Core Concepts/8 - ReplicaSets.md",
+    "cka/0 - Core Concepts/12 - Declarative vs Imperative.md",
+    "cka/3 - Application Lifecycle Management/7 - InitContainers.md",
+    "cka/3 - Application Lifecycle Management/6 - Multi-Container Pods.md",
+    "cka/3 - Application Lifecycle Management/5 - Secrets.md",
+    "cka/3 - Application Lifecycle Management/4 - Configure ConfigMaps in Applications.md",
+    "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
     "cka/3 - Application Lifecycle Management/0 - Rolling Updates & Rollbacks.md",
+    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
+    "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
+    "cka/9 - Practice Questions/Question 3.md",
+    "cka/9 - Practice Questions/Question 22.md",
     "cka/2 - Logging , Monitoring/1 - Monitor Cluster Components.md",
     "cka/2 - Logging , Monitoring/0 - Managing Application Logs.md",
     "cka/1 - Scheduling/9 - Multiple Schedulers.md",
-    "cka/9 - Practice Questions/Question 22.md",
     "cka/images/q22a-4.png",
     "cka/images/q22a-3.png",
     "cka/images/q22a-2.png",
@@ -195,20 +184,6 @@
     "cka/9 - Practice Questions/Question 17.md",
     "cka/images/q17a-2.jpg",
     "cka/images/q17a-1.jpg",
-    "cka/9 - Practice Questions/Question 16.md",
-    "cka/9 - Practice Questions/Question 15.md",
-    "cka/9 - Practice Questions/Question 14.md",
-    "cka/9 - Practice Questions/Question 13.md",
-    "cka/9 - Practice Questions/Question 12.md",
-    "cka/9 - Practice Questions/Question 11.md",
-    "cka/9 - Practice Questions/Question 10.md",
-    "cka/9 - Practice Questions/Question 9.md",
-    "cka/9 - Practice Questions/Question 8.md",
-    "cka/9 - Practice Questions/Question 7.md",
-    "cka/9 - Practice Questions/Question 6.md",
-    "cka/9 - Practice Questions/Question 5.md",
-    "cka/9 - Practice Questions/Question 4.md",
-    "cka/9 - Practice Questions/Question 3.md",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",

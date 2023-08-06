@@ -1,6 +1,6 @@
-- Secrets are used to store sensitive information like passwords or keys
+- <b><span style="color:#d46644">Secrets</span></b> are used to store sensitive information like passwords or keys
 
-- Secrets are similar to configMaps except that they're stored in an encoded or hashed format
+- <b><span style="color:#d46644">Secrets</span></b> are similar to [[4 - Configure ConfigMaps in Applications|configMaps]] except that they're stored in an <span style="color:#5c7e3e">encoded</span> or <span style="color:#5c7e3e">hashed</span> format
 
 ![[secrets-1.png]]
 
@@ -8,57 +8,51 @@
 
 ### Two phases involved when working with secrets
 
-1. Create the secret
+1. Create the <b><span style="color:#d46644">secret</span></b>
+	- Similar to [[4 - Configure ConfigMaps in Applications|configMaps]], there are two ways to creating a <b><span style="color:#d46644">secret</span></b>
+		- <span style="color:#5c7e3e">Imparatively</span>
 
-- Similar to configMaps, there are two ways to creating a secret
+	![[secrets-2.png]]
 
-- Imperatively
-
-![[secrets-2.png]]
-
-- Declaratively
-
-- Be sure to store the values for the secret in encoded or hashed format
+		- <span style="color:#5c7e3e">Declaratively</span>
+			- Be sure to store the values for the <b><span style="color:#d46644">secret</span></b> in encoded or hashed format
 
 ![[secrets-3.png]]
 
-- To convert the data to encoded or hashed format, use base64 encoding
-
-- Be sure to add the <span style="color:red">-n</span> option to remove any newline characters
+- To convert the data to <span style="color:#5c7e3e">encoded</span> or <span style="color:#5c7e3e">hashed</span> format, use <span style="color:#5c7e3e">base64 encoding</span>
+	- Be sure to add the <span style="color:red">-n</span> option to remove any newline characters
 
 ![[secrets-4.png]]
 
-- To view the original values of the base64 encoded secret, use the same base64 command with the <span style="color:red">--decode ( -d )</span> command
+- To view the original values of the <span style="color:#5c7e3e">base64 encoded</span> <b><span style="color:#d46644">secret</span></b>, use the same <span style="color:#5c7e3e">base64</span> command with the <span style="color:red">--decode ( -d )</span> command
 
 ![[secrets-7.png]]
 
-1. Inject the secret into the pod definition file
+1. Inject the <b><span style="color:#d46644">secret</span></b> into the [[7 - Pods|pod]] definition file
 
-- To inject an environment variable into the pod definition file, add the envFrom property
+	- To inject an [[3 - Configure Environment Variables in Applications|environment variable]] into the [[7 - Pods|pod]] definition file, add the <b><span style="color:#d46644">envFrom</span></b> property
 
-- The envFrom variable is a list and can hold as many environment variables as required
+	- The <b><span style="color:#d46644">envFrom</span></b> variable is a list and can hold as many [[3 - Configure Environment Variables in Applications|environment variables]] as required
 
 ![[secrets-6.png]]
 
-- Another way to inject secrets into a pod definition file is as files in a volume if you were to mount the secret as a volume in your pod
-
-- Each attribute in the secret is created as a file with the value of the secret as its content
+- Another way to inject <b><span style="color:#d46644">secrets</span></b> into a [[7 - Pods|pod]] definition file is as files in a [[3 - Volumes|volume]] if you were to mount the <b><span style="color:#d46644">secret</span></b> as a [[3 - Volumes|volume]] in your [[7 - Pods|pod]]
+	- Each attribute in the <b><span style="color:#d46644">secret</span></b> is created as a file with the value of the <b><span style="color:#d46644">secret</span></b> as its content
 
 ![[secrets-7.png]]
 
 ------------------------------------------------------------------------------------------------------
 
-- To view secrets, run the <span style="color:red">kubectl get secrets</span> command
+- To view <b><span style="color:#d46644">secrets</span></b>, run the <span style="color:red">kubectl get secrets</span> command
 
-- To view more information regarding the secret, use the <span style="color:red">kubectl describe secrets</span> command
+- To view more information regarding the <b><span style="color:#d46644">secret</span></b>, use the <span style="color:red">kubectl describe secrets</span> command
 
-Practice Problems
+### Practice Problems
 
-- Create a new secret named "db-secret" with the given data:
+- Create a new secret named `db-secret` with the given data:
+	- Secret Name: `db-secret`
+	- Secret 1: `DB_Host=sql01`
+	- Secret 2: `DB_User=root`
+	- Secret 3: `DB_Password=password123`
 
-- Secret Name: db-secret
-- Secret 1: DB_Host=sql01
-- Secret 2: DB_User=root
-- Secret 3: DB_Password=password123
-
-		kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123 --dry-run=client -o yaml > db-secret.yaml
+	`kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123 --dry-run=client -o yaml > db-secret.yaml`

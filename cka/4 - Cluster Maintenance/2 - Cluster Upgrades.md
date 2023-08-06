@@ -1,127 +1,114 @@
-- Most upgrade information can be found on the following page
+- Most <b><span style="color:#d46644">upgrade</span></b> information can be found on the following page
 
-[https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/](https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
+	[https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/](https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
 
-- It is not mandatory for all of the core controlplane components to have the same version
+- It is not mandatory for all of the [[0 - Core Concepts Intro|core control-plane components]] to have the same <b><span style="color:#d46644">version</span></b>
 
 ![[clusteru-1.png]]
 
-- Since the kube-apiserver is the most important component in the controlplane and is the component that all other components must talk to, none of the components can have a higher version than the kube-apiserver
+- Since the [[2 - Kube API server|kube-apiserver]] is the most important component in the [[0 - Core Concepts Intro|control-plane]] and is the component that all other components must talk to, none of the components can have a higher <b><span style="color:#d46644">version</span></b> than the [[2 - Kube API server|kube-apiserver]]
 
-- The controller-manager and scheduler can be one version lower than the kube-apiserver
+- The [[3 - Kube Controller Manager|controller-manager]] and [[4 - Kube Scheduler|scheduler]] can be one <b><span style="color:#d46644">version</span></b> lower than the [[2 - Kube API server|kube-apiserver]]
 
-- The kubelet and kube-proxy can be two versions lower than the kube-apiserver
+- The [[5 - Kubelet|kubelet]] and [[6 - Kube Proxy|kube-proxy]] can be two <b><span style="color:#d46644">versions</span></b> lower than the [[2 - Kube API server|kube-apiserver]]
 
 ![[clusteru-2.png]]
 
-- The versioning rules that apply to the control plane components do not apply to kubectl
+- The <b><span style="color:#d46644">versioning</span></b> rules that apply to the [[0 - Core Concepts Intro| control-plane components]] do not apply to <span style="color:#5c7e3e">kubectl</span>
 
-- The kubectl utility can be one version higher, the same, or one version lower than the kube-apiserver
+- The <span style="color:#5c7e3e">kubectl</span> utility can be one <b><span style="color:#d46644">version</span></b> higher, the same, or one <b><span style="color:#d46644">version</span></b> lower than the [[2 - Kube API server|kube-apiserver]]
 
 ![[clusteru-3.png]]
 
-- This permissible skew in versions allow live upgrades to be carried out
+- This permissible skew in <b><span style="color:#d46644">versions</span></b> allow live <b><span style="color:#d46644">upgrades</span></b> to be carried out
 
-### When should you upgrade
+### When should you <b><span style="color:#d46644">upgrade</span></b>
 
-- At any time, Kubernetes only supports up to three minor versions
+- At any time, <span style="color:#5c7e3e">Kubernetes</span> only supports up to three <b><span style="color:#d46644">minor versions</span></b>
 
-- Be sure to upgrade your current version before the next version (which will kick your current version to unsupported status) is released
+- Be sure to <b><span style="color:#d46644">upgrade</span></b> your current <b><span style="color:#d46644">version</span></b> before the next <b><span style="color:#d46644">version</span></b> (which will kick your current <b><span style="color:#d46644">version</span></b> to unsupported status) is released
 
 ![[clusteru-4.png]]
 
-- The recommended method of upgrading is to upgrade one minor version at a time
+- The recommended method of <b><span style="color:#d46644">upgrading</span></b> is to <b><span style="color:#d46644">upgrade</span></b> one <b><span style="color:#d46644">minor version</span></b> at a time
+	- As opposed to just jumping to the latest <b><span style="color:#d46644">version</span></b>
 
-- As opposed to just jumping to the latest version
-
-- The upgrade process depends on how your cluster is setup
-
-- If the cluster is managed on a cloud platform, there are likely tools that make upgrading easy
-- If the cluster is managed with tools such as kubeadm, the tool will help you plan and upgrade the cluster
+- The <b><span style="color:#d46644">upgrade</span></b> process depends on how your [[0 - Core Concepts Intro|cluster]] is setup
+	- If the [[0 - Core Concepts Intro|cluster]] is managed on a cloud platform, there are likely tools that make <b><span style="color:#d46644">upgrading</span></b> easy
+	- If the [[0 - Core Concepts Intro|cluster]] is managed with tools such as <span style="color:#5c7e3e">Kubeadm</span>, the tool will help you plan and <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|cluster]]
 
 ![[clusteru-5.png]]
 
-- If the cluster was deployed from scratch, you must manually upgrade each component in the cluster
+- If the [[0 - Core Concepts Intro|cluster]] was deployed from scratch, you must manually <b><span style="color:#d46644">upgrade</span></b> each component in the [[0 - Core Concepts Intro|cluster]]
 
-### Upgrading a Kubeadm Cluster
+### Upgrading a <span style="color:#5c7e3e">Kubeadm</span> [[0 - Core Concepts Intro|cluster]]
 
-- Upgrading a cluster involves two major steps:
+- Upgrading a [[0 - Core Concepts Intro|cluster]] involves two major steps:
+	- <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|master nodes]]
+	- <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|worker nodes]]
 
-- Upgrade the master nodes
-- Upgrade the worker nodes
+- While the [[0 - Core Concepts Intro|master node]] is being <b><span style="color:#d46644">upgraded</span></b>, the [[0 - Core Concepts Intro|control-plane components]] such as the [[2 - Kube API server|kube-apiserver]], [[4 - Kube Scheduler|scheduler]], and [[3 - Kube Controller Manager|controller managers]] go down briefly
 
-- While the master node is being upgraded, the control plane components such as the kube-apiserver, scheduler, and controller-managers go down briefly
+- The [[0 - Core Concepts Intro|master node]] going down doesn't mean your [[0 - Core Concepts Intro|worker nodes]] and applications on the [[0 - Core Concepts Intro|cluster]] are impacted
 
-- The master node going down doesn't mean your worker nodes and applications on the cluster are impacted
+- Since the [[0 - Core Concepts Intro|master node]] is down, all management functions are down
+	- In this case, you cannot access the [[0 - Core Concepts Intro|cluster]] using <span style="color:#5c7e3e">kubectl</span> or the <span style="color:#5c7e3e">Kubernetes</span> API
+	- You cannot deploy new applications or modify existing ones
+	- The [[3 - Kube Controller Manager|controller managers]] won't function either
+		- If a [[7 - Pods|pod]] was to fail, a new [[7 - Pods|pod]] will not be automatically brought back up
 
-- Since the master node is down, all management functions are down
+- Once the <b><span style="color:#d46644">upgrade</span></b> is complete and the [[0 - Core Concepts Intro|cluster]] is back up, it should function as normal
 
-- In this case, you cannot access the cluster using kubectl or the Kubernetes API
-- You cannot deploy new applications or modify existing ones
-- The controller-managers won't function either
+- There are different strategies available to <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|worker nodes]]
 
-- If a pod was to fail, a new pod will not be automatically brought back up
+- Strategy 1 to <b><span style="color:#d46644">upgrade</span></b> a [[0 - Core Concepts Intro|worker node]] is to <b><span style="color:#d46644">upgrade</span></b> all of them at once
+	- With this process, all [[7 - Pods|pods]] are down and the application is unavailable to your users
+	- Once the <b><span style="color:#d46644">upgrade</span></b> is complete, the [[0 - Core Concepts Intro|nodes]] are back up, the new [[7 - Pods|pods]] are scheduled, and users are able to access your application
 
-- Once the upgrade is complete and the cluster is back up, it should function as normal
+- Strategy 2 to <b><span style="color:#d46644">upgrade</span></b> a [[0 - Core Concepts Intro|worker node]] is to <b><span style="color:#d46644">upgrade</span></b> them one at a time
+	- While <b><span style="color:#d46644">upgrading</span></b> one [[0 - Core Concepts Intro|node]], the [[7 - Pods|pods]] will be placed on other [[0 - Core Concepts Intro|nodes]] while the current one is [[0 - Core Concepts Intro|node]]  <b><span style="color:#d46644">upgraded</span></b>
+	- Once the first [[0 - Core Concepts Intro|node]] is back up, the second [[0 - Core Concepts Intro|node]] goes down and those [[7 - Pods|pods]] are then moved to the other [[0 - Core Concepts Intro|nodes]] while that one is being <b><span style="color:#d46644">upgraded</span></b>
+	- This process is repeated until all [[0 - Core Concepts Intro|worker nodes]] are <b><span style="color:#d46644">upgraded</span></b>
 
-- There are different strategies available to upgrade the worker nodes
+- Strategy 3 to <b><span style="color:#d46644">upgrade</span></b> a [[0 - Core Concepts Intro|worker node]] is to add new [[0 - Core Concepts Intro|nodes]] (with newer <b><span style="color:#d46644">versions</span></b>) to the [[0 - Core Concepts Intro|cluster]]
+	- This method is convenient if you're on a cloud environment
+	- Move the workload from the first [[0 - Core Concepts Intro|node]] to the new [[0 - Core Concepts Intro|node]] and terminate the original [[0 - Core Concepts Intro|node]]
+	- Continue this until you have all new <b><span style="color:#d46644">upgraded</span></b> [[0 - Core Concepts Intro|nodes]] with the [[7 - Pods|pods]] moved to them
 
-- Strategy 1 to upgrade a worker node is to upgrade all of them at once
+- <span style="color:#5c7e3e">Kubeadm</span> has an <b><span style="color:#d46644">upgrade</span></b> command that helps in upgrading [[0 - Core Concepts Intro|clusters]]
+	- First run the <span style="color:red">kubeadm upgrade plan</span> command
 
-- With this process, all pods are down and the application is unavailable to your users
-- Once the upgrade is complete, the nodes are back up, the new pods are scheduled, and users are able to access your application
+	![[clusteru-6.png]]
 
-- Strategy 2 to upgrade a worker node is to upgrade them one at a time
+	- This gives a bunch of information like the [[0 - Core Concepts Intro|cluster]] <b><span style="color:#d46644">version</span></b> and <span style="color:#5c7e3e">Kubeadm</span> tool <b><span style="color:#d46644">version</span></b>
+	- This also lists all of the [[0 - Core Concepts Intro|control-plane components]], their current <b><span style="color:#d46644">versions</span></b>, and what <b><span style="color:#d46644">versions</span></b> they can be <b><span style="color:#d46644">upgraded</span></b> to
+	- It also tells you what components need to be <b><span style="color:#d46644">upgraded</span></b> manually
+	- Keep in mind that <span style="color:#5c7e3e">Kubeadm</span> does not install or <b><span style="color:#d46644">upgrade</span></b> [[5 - Kubelet|kubelet]]
+	- Finally, the command gives you the command to <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|cluster]]
 
-- While upgrading one node, the pods will be placed on other nodes while the current one is being upgraded
-- Once the first node is back up, the second node goes down and those pods are then moved to the other nodes while that one is being upgraded
-- This process is repeated until all worker nodes are upgraded
+- You must <b><span style="color:#d46644">upgrade</span></b> the <span style="color:#5c7e3e">Kubeadm</span> tool first before you can <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro|cluster]]
 
-- Strategy 3 to upgrade a worker node is to add new nodes (with newer versions) to the cluster
+- The <span style="color:#5c7e3e">Kubeadm</span> tool follows the same software <b><span style="color:#d46644">version</span></b> as <span style="color:#5c7e3e">Kubernetes</span>
 
-- This method is convenient if you're on a cloud environment
-- Move the workload from the first node to the new node and terminate the original node
-- Continue this until you have all new upgraded nodes with the pods moved to them
+- First <b><span style="color:#d46644">upgrade</span></b> the <span style="color:#5c7e3e">Kubeadm</span> tool with the OS's <b><span style="color:#d46644">upgrade</span></b> tool (ie. <span style="color:#5c7e3e">apt/yum</span> <b><span style="color:#d46644">upgrade</span></b>)
+	- Then after  <b><span style="color:#d46644">upgrading</span></b> the [[0 - Core Concepts Intro|cluster]], <b><span style="color:#d46644">upgrade</span></b> [[5 - Kubelet|kubelet]] with the OS's <b><span style="color:#d46644">upgrade</span></b> tool
 
-- Kubeadm has an upgrade command that helps in upgrading clusters
-
-- First run the <span style="color:red">kubeadm upgrade plan</span> command
-
-![[clusteru-6.png]]
-
-- This gives a bunch of information like the cluster version and kubeadm tool version
-- This also lists all of the control plane components, their current versions, and what versions they can be upgraded to
-- It also tells you what components need to be upgraded manually
-- Keep in mind that kubeadm does not install or upgrade kubelet
-- Finally, the command gives you the command to upgrade the cluster
-
-- You must upgrade the kubeadm tool first before you can upgrade the cluster
-
-- The kubeadm tool follows the same software version as Kubernetes
-
-- First upgrade the kubeadm tool with the OS's upgrade tool (ie. apt/yum upgrade)
-
-- Then after upgrading the cluster, upgrade kubelet with the OS's upgrade tool
-
-- Run the <span style="color:red">kubeadm upgrade apply</span>command with the version
-
-- Be sure to upgrade one version at a time
+- Run the <span style="color:red">kubeadm upgrade apply</span> command with the <b><span style="color:#d46644">version</span></b>
+	- Be sure to <b><span style="color:#d46644">upgrade</span></b> one <b><span style="color:#d46644">version</span></b> at a time
 
 ![[clusteru-7.png]]
 
-- The version seen when running the <span style="color:red">kubectl get nodes</span> is showing the version of kubelet on each of the nodes registered with the kube-apiserver and not the version of the kube-apiserver itself
+- The <b><span style="color:#d46644">version</span></b> seen when running the <span style="color:red">kubectl get nodes</span> is showing the <b><span style="color:#d46644">version</span></b> of [[5 - Kubelet|kubelet]] on each of the [[0 - Core Concepts Intro|nodes]] registered with the [[2 - Kube API server|kube-apiserver]] and not the <b><span style="color:#d46644">version</span></b> of the [[2 - Kube API server|kube-apiserver]] itself
+	- So when you first <b><span style="color:#d46644">upgrade</span></b> and then run the <span style="color:red">kubectl get nodes</span> command, you will still see an older [[5 - Kubelet|kubelet]] <b><span style="color:#d46644">version</span></b>
 
-- So when you first upgrade and then run the <span style="color:red">kubectl get nodes</span> command, you will still see an older kubelet version
+	![[clusteru-8.png]]
 
-![[clusteru-8.png]]
+	- Then <b><span style="color:#d46644">upgrade</span></b> the [[5 - Kubelet|kubelet]] <b><span style="color:#d46644">version</span></b>
 
-- Then upgrade the kubelet version
+	![[clusteru-9.png]]
 
-![[clusteru-9.png]]
-
-- Keep in mind that the drain, cordon, and uncordon commands are only to be run in the control plane node (passing in any node name - master) since it is a kubectl command
-
-- If it is run on a worker node, you will receive an error
+- Keep in mind that the <b><span style="color:#d46644">drain</span></b>, <b><span style="color:#d46644">cordon</span></b>, and <b><span style="color:#d46644">uncordon</span></b> commands are only to be run in the [[0 - Core Concepts Intro|control-plane node]] (passing in any [[0 - Core Concepts Intro|node]] name - master) since it is a <span style="color:#5c7e3e">kubectl</span> command
+	- If it is run on a [[0 - Core Concepts Intro|worker node]], you will receive an error
 
 ### Practice Problems
 
@@ -191,4 +178,4 @@ apt install -y --allow-change-held-packages kubelet=1.20.0 kubectl=1.20.0
 
 - Remove the restriction and mark node01 as schedulable again
 
-		kubectl uncordon node01
+	`kubectl uncordon node01`
