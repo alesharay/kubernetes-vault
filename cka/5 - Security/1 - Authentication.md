@@ -1,19 +1,18 @@
-- Different groups must access the node to perform different tasks
+- Different <i><span style="color:#477bbe">groups</span></i> must access the [[0 - Core Concepts Intro|node]] to perform different tasks
+	- Admins for administrative tasks
+	- Developers for testing and deploying applications
+	- End <i><span style="color:#477bbe">users</span></i> for accessing the deployed applications
+	- Third party applications for integration purposes
 
-- Admins for administrative tasks
-- Developers for testing and deploying applications
-- End users for accessing the deployed applications
-- Third party applications for integration purposes
+- One way to <b><i><span style="color:#d46644">secure</span></i></b> the [[0 - Core Concepts Intro|cluster]] is to <b><i><span style="color:#d46644">secure</span></i></b> the communication between internal components and securing management access to the [[0 - Core Concepts Intro|cluster]] through <b><i><span style="color:#d46644">authentication</span></i></b> and [[7 - Authorization|authorization]] mechanisms
 
-- One way to secure the cluster is to secure the communication between internal components and securing management access to the cluster through authentication and authorization mechanisms
+- The <b><i><span style="color:#d46644">security</span></i></b> of <i><span style="color:#477bbe">end-users</span></i> who access the <u>applications</u> deployed on the [[0 - Core Concepts Intro|cluster]] is managed by the applications themselves internally
 
-- The security of end-users who access the applications deployed on the cluster is managed by the applications themselves internally
+- <span style="color:#5c7e3e">Kubernetes</span> does not manage <i><span style="color:#477bbe">user</span></i> accounts natively, it relies on external sources like a file with <i><span style="color:#477bbe">user</span></i> details, certificates or a third-party <b><i><span style="color:#d46644">security</span></i></b> [[10 - Services|service]] like <b><i><span style="color:#d46644">LDAP</span></i></b> to manage these <i><span style="color:#477bbe">users</span></i>.
 
-- Kubernetes does not manage user accounts natively, it relies on external sources like a file with user details, certificates or a third-party security service like LDAP to manage these users.
+- In case of [[10 - Service Accounts|Service Accounts]], <span style="color:#5c7e3e">Kubernetes</span> can manage them
 
-- In case of Service Accounts, Kubernetes can manage them
-
-- You can create and manage Service Accounts using the Kubernetes API
+- You can create and manage [[10 - Service Accounts|Service Accounts]] using the <span style="color:#5c7e3e">Kubernetes</span> API
 
         kubernetes create serviceaccount SERVICE_ACCOUNT_NAME
 
@@ -21,68 +20,63 @@
 
 ![[auth-2.png]]
 
-- All user access is managed by the API server
+- All <i><span style="color:#477bbe">user</span></i> access is managed by the [[2 - Kube API server|API Server]]
 
-- Whether you are accessing the cluster through the kubectl tool or the API directly, all of the request go through the kube-apiserver
+- Whether you are accessing the [[0 - Core Concepts Intro|cluster]] through the kubectl tool or the API directly, all of the request go through the [[2 - Kube API server|kube-apiserver]]
 
-- The kube-apiserver authenticates the requests before processing it
+- The [[2 - Kube API server|kube-apiserver]] <b><i><span style="color:#d46644">authenticates</span></i></b> the requests before processing it
 
 ![[auth-3.png]]
 
-How does the kube-apiserver authenticate?
+### How does the [[2 - Kube API server|kube-apiserver]] <b><i><span style="color:#d46644">authenticate</span></i></b>?
 
-- For kube-apiserver user authentication
-
-- you can have a list of usernames and passwords in a static password file
-- you can have usernames and tokens in a static token file
-- you can authenticate using certificates
-- you can connect to a third party authentication protocol like LDAP or Kerberos
+- For [[2 - Kube API server|kube-apiserver]] <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">authentication</span></i></b>
+	- you can have a list of usernames and passwords in a <u><i>static password</i></u> file
+	- you can have usernames and tokens in a <u><i>static token</i></u> file
+	- you can <b><i><span style="color:#d46644">authenticate</span></i></b> using certificates
+	- you can connect to a third party <b><i><span style="color:#d46644">authentication</span></i></b> protocol like <b><i><span style="color:#d46644">LDAP</span></i></b> or Kerberos
 
 ![[auth-4.png]]
 
-- The simplest form of authentication is using static password and token files
+- The simplest form of <b><i><span style="color:#d46644">authentication</span></i></b> is using <u><i>static password</i></u> and token files
 
-- You can create a list of users and their passwords in a csv file and use that as the source for user information
+- You can create a list of <i><span style="color:#477bbe">users</span></i> and their passwords in a csv file and use that as the source for <i><span style="color:#477bbe">user</span></i> information
+	- The file has three columns
+		- Username
+		- Password
+		- <i><span style="color:#477bbe">user</span></i> ID
 
-- The file has three columns
-
-- Username
-- Password
-- User ID
-
-- After the static authentication file is created, we then pass the file name as an option to the kube-apiserver service file
+- After the <u><i>static</i></u> <b><i><span style="color:#d46644">authentication</span></i></b> file is created, we then pass the file name as an option to the [[2 - Kube API server|kube-apiserver]] service file
 
 ![[auth-5.png]]
 
 ![[auth-6.png]]
 
-- After the static authentication file has been passed to the kube-apiserver service, you must restart the kube-apiserver for these options to take effect
+- After the <u><i>static</i></u> <b><i><span style="color:#d46644">authentication</span></i></b> file has been passed to the [[2 - Kube API server|kube-apiserver]] service, you must restart the [[2 - Kube API server|kube-apiserver]] for these options to take effect
 
-- If you setup your cluster using the kubeadm tool, you must modify the kube-apiserver pod definition file
+- If you setup your [[0 - Core Concepts Intro|cluster]] using the <span style="color:#5c7e3e">Kubeadm</span> tool, you must modify the [[2 - Kube API server|kube-apiserver]] pod definition file
+	- The <span style="color:#5c7e3e">Kubeadm</span> tool will automatically restart the [[2 - Kube API server|kube-apiserver]] once you update the file
 
-- The kubeadm tool will automatically restart the kube-apiserver once you update the file
-
-- To authenticate using the basic credentials while accessing the API server specify the user and password in a curl command as follows
+- To <b><i><span style="color:#d46644">authenticate</span></i></b> using the basic credentials while accessing the [[2 - Kube API server|API Server]] specify the <i><span style="color:#477bbe">user</span></i> and password in a curl command as follows
 
 ![[auth-7.png]]
 
-- In the static user authentication csv file, there can be an optional 4th column with the group details to assign users to specific groups similarly instead of a static password file
+- In the <u><i>static</i></u> <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">authentication</span></i></b> csv file, there can be an optional 4th column with the group details to assign <i><span style="color:#477bbe">users</span></i> to specific <i><span style="color:#477bbe">groups</span></i> similarly instead of a <u><i>static password</i></u> file
 
 ![[auth-8.png]]
 
-- You can have a static token file where instead of a password, you specify a token
+- You can have a <u><i>static token</i></u> file where instead of a password, you specify a token
 
 ![[auth-9.png]]
 
-- Pass the token file as an option to the kube-apiserver
+- Pass the token file as an option to the [[2 - Kube API server|kube-apiserver]]
 
 ![[auth-10.png]]
 
-- While authenticating, specify the token as an authorization bearer token to your request
+- While <b><i><span style="color:#d46644">authenticating</span></i></b>, specify the token as an [[7 - Authorization|authorization]] bearer token to your request
 
 ![[auth-11.png]]
 
-- Storing authentication information in clear text in a file and passing it in is not the recommended approach for authentication as it is not secure
-
-- Consider volume mount while providing the authentication file in a kubeadm setup
-- Setup RBAC for the new users
+- Storing <b><i><span style="color:#d46644">authentication</span></i></b> information in clear text in a file and passing it in is not the recommended approach for <b><i><span style="color:#d46644">authentication</span></i></b> as it is not <b><i><span style="color:#d46644">secure</span></i></b>
+	- Consider volume mount while providing the <b><i><span style="color:#d46644">authentication</span></i></b> file in a <span style="color:#5c7e3e">Kubeadm</span> setup
+	- Setup <b><i><span style="color:#d46644">RBAC</span></i></b> for the new <i><span style="color:#477bbe">users</span></i>

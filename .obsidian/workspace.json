@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "021a85459e06f566",
+        "id": "9de715e170da8fd0",
         "type": "tabs",
         "children": [
           {
-            "id": "90aad6147f86ac68",
+            "id": "48e39ba68f5c50b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
+                "file": "cka/5 - Security/3.1 - Certification Creation.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
+                "file": "cka/5 - Security/3.1 - Certification Creation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
+                "file": "cka/5 - Security/3.1 - Certification Creation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/4 - Cluster Maintenance/3 - Backup & Restore.md"
+                "file": "cka/5 - Security/3.1 - Certification Creation.md"
               }
             }
           }
@@ -146,14 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90aad6147f86ac68",
+  "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/4 - Cluster Maintenance/2 - Cluster Upgrades.md",
-    "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
-    "cka/0 - Core Concepts/10 - Services.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/5 - Security/3 - TLS in Kubernetes.md",
+    "cka/5 - Security/2 - TLS Basics.md",
+    "cka/5 - Security/1.1 - Basic Authentication.md",
+    "cka/5 - Security/3.1 - Certification Creation.md",
+    "cka/5 - Security/1 - Authentication.md",
+    "cka/1 - Scheduling/1 - Labels & Selectors.md",
+    "cka/1 - Scheduling/0 - Scheduling Intro.md",
+    "cka/5 - Security/0 - Kubernetes Security Primitives.md",
     "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
+    "cka/4 - Cluster Maintenance/2 - Cluster Upgrades.md",
     "cka/4 - Cluster Maintenance/0 - OS Upgrades.md",
+    "cka/0 - Core Concepts/10 - Services.md",
     "cka/0 - Core Concepts/8 - ReplicaSets.md",
     "cka/0 - Core Concepts/12 - Declarative vs Imperative.md",
     "cka/3 - Application Lifecycle Management/7 - InitContainers.md",
@@ -166,22 +174,14 @@
     "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
     "cka/9 - Practice Questions/Question 3.md",
     "cka/9 - Practice Questions/Question 22.md",
-    "cka/2 - Logging , Monitoring/1 - Monitor Cluster Components.md",
-    "cka/2 - Logging , Monitoring/0 - Managing Application Logs.md",
-    "cka/1 - Scheduling/9 - Multiple Schedulers.md",
     "cka/images/q22a-4.png",
     "cka/images/q22a-3.png",
     "cka/images/q22a-2.png",
     "cka/images/q22a-1.png",
-    "cka/9 - Practice Questions/Question 21.md",
     "cka/images/q21a-3.jpg",
     "cka/images/q21a-2.png",
     "cka/images/q21a-1.png",
-    "cka/9 - Practice Questions/Question 20.md",
-    "cka/9 - Practice Questions/Question 19.md",
-    "cka/9 - Practice Questions/Question 18.md",
     "cka/images/q18a.png",
-    "cka/9 - Practice Questions/Question 17.md",
     "cka/images/q17a-2.jpg",
     "cka/images/q17a-1.jpg",
     "chromedriver",
