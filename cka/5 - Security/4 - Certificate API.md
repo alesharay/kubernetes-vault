@@ -1,96 +1,86 @@
-- As the admin of the cluster, when you need to add new admins to have access to the cluster, they need their own certificates and keys
+- As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics|keys]]
 
-- This new admin would create their own key-pair, generate a CSR, and send it to the current admin who has access to the CA server
+- This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>
 
-- When the current admin receives the new admin's CSR, the current admin would sign the CSR using their CA server's private key and root certificate, then send back the signed certificate to the new admin
+- When the current <i><span style="color:#477bbe">admin</span></i> receives the new <i><span style="color:#477bbe">admin's</span></i> [[3.1 - Certification Creation|CSR]], the current <i><span style="color:#477bbe">admin</span></i> would [[2 - TLS Basics|sign]] the [[3.1 - Certification Creation|CSR]] using their <i><span style="color:#477bbe">CA server's</span></i> [[2 - TLS Basics|private key]] and [[3.1 - Certification Creation|root certificate]], then send back the [[3.1 - Certification Creation|signed certificate]] to the new <i><span style="color:#477bbe">admin</span></i>
+	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication|authenticated]] to the [[0 - Core Concepts Intro|cluster]]
 
-- The new admin is now authenticated to the cluster
+- The [[2 - TLS Basics|CA]] is a pair of [[2 - TLS Basics|key]] and [[3.1 - Certification Creation|certificate]] files that have been generated
 
-- The CA is a pair of key and certificate files that have been generated
+- Whoever gains access to the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] can [[2 - TLS Basics|sign]] any [[3.1 - Certification Creation|certificate]] in the <span style="color:#5c7e3e">Kubernetes</span> environment and can create as many <i><span style="color:#477bbe">users</span></i> as they want with whatever privileges they want
 
-- Whoever gains access to the CA private key and certificate can sign any certificate in the Kubernetes environment and can create as many users as they want with whatever privileges they want
+- Whatever secure <i><span style="color:#477bbe">server</span></i> holds the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] is then the <i><span style="color:#477bbe">CA server</span></i>
 
-- Whatever secure server holds the CA private key and certificate is then the CA server
+- Any time you want to [[2 - TLS Basics|sign]] a [[3.1 - Certification Creation|certificate]] with the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] file, the only way to do this is by logging into the <i><span style="color:#477bbe">CA server</span></i>
 
-- Any time you want to sign a certificate with the CA private key and certificate file, the only way to do this is by logging into the CA server
+- If the [[2 - TLS Basics|CA]] files are located on the [[0 - Core Concepts Intro|master node]], then the [[0 - Core Concepts Intro|master node]] is also the <i><span style="color:#477bbe">CA server</span></i>
+	- This is where the <span style="color:#5c7e3e">kubeadm</span> tool places the [[2 - TLS Basics|CA]] files
 
-- If the CA files are located on the master node, then the master node is also the CA server
+- While [[3.1 - Certification Creation|CSR]] can be [[2 - TLS Basics|signed]] manually, with larger teams and continuous growth, you need an easier way of managing [[3.1 - Certification Creation|certificates]], carrying out the [[3.1 - Certification Creation|CSR]] [[2 - TLS Basics|signing]] process, and rotating [[3.1 - Certification Creation|certificates]] when they expire
 
-- This is where the kubeadm tool places the CA files
+- <span style="color:#5c7e3e">Kubernetes</span> has a built-in <b><i><span style="color:#d46644">certificate API</span></i></b> that can manage, [[2 - TLS Basics|sign]], and rotate [[3.1 - Certification Creation|certificates]]
 
-- While CSRs can be signed manually, with larger teams and continuous growth, you need an easier way of managing certificates, carrying out the CSR signing process, and rotating certificates when they expire
+- With the <b><i><span style="color:#d46644">certificate API</span></i></b>, you send the [[3.1 - Certification Creation|CSR]] directly to <span style="color:#5c7e3e">Kubernetes</span> through an <b><i><span style="color:#d46644">API</span></i></b> call
 
-- Kubernetes has a built-in certificate API that can manage, sign, and rotate certificates
+- When a [[3.1 - Certification Creation|CSR]] is sent through an <b><i><span style="color:#d46644">API</span></i></b> call, rather than the <i><span style="color:#477bbe">admin</span></i> manually logging into the <i><span style="color:#477bbe">CA server</span></i> to [[2 - TLS Basics|sign]], they create and <span style="color:#5c7e3e">Kubernetes</span> API object called the [[3.1 - Certification Creation|CertificateSigningRequest]] object
 
-- With the certificate API, you send the CSR directly to Kubernetes through an API call
+- Once the [[3.1 - Certification Creation|CertificateSigningRequest]] object is created, all [[3.1 - Certification Creation|CSRs]] can be seen by the <i><span style="color:#477bbe">administrators</span></i> of the [[0 - Core Concepts Intro|cluster]]
 
-- When a CSR is sent through an API call, rather than the admin manually logging into the CA server to sign, they create and Kubernetes API object called the CertificateSigningRequest object
-
-- Once the CertificateSigningRequest object is created, all CSRs can be seen by the administrators of the cluster
-
-- Once the CSR object is created, the requests can now easily be reviewed and approved using kubectl commands
-
-- The certificate can then be extracted and shared with the new admin
+- Once the [[3.1 - Certification Creation|CSR]] object is created, the requests can now easily be reviewed and approved using <span style="color:#5c7e3e">kubectl</span> commands
+	- The [[3.1 - Certification Creation|certificate]] can then be extracted and shared with the new <i><span style="color:#477bbe">admin</span></i>
 
 ------------------------------------------------------------------------------------------------------
 
 ### Process
 
-1. A user creates a key-pair
+1. A <i><span style="color:#477bbe">user</span></i> creates a [[2 - TLS Basics|key-pair]]
 
-![[certa-1.png]]
+		![[certa-1.png]]
 
-1. The user generates a CSR using the private key with their name on it, and sends the request to the admin
+2. The <i><span style="color:#477bbe">user</span></i> generates a [[3.1 - Certification Creation|CSR]] using the [[2 - TLS Basics|private key]] with their name on it, and sends the request to the <i><span style="color:#477bbe">admin</span></i>
 
-![[certa-2.png]]
+		![[certa-2.png]]
 
-1. The admin takes the CSR and creates a CertificateSigningRequest object with they base64 private key included
+3. The <i><span style="color:#477bbe">admin</span></i> takes the [[3.1 - Certification Creation|CSR]] and creates a [[3.1 - Certification Creation|CertificateSigningRequest]] object with they <span style="color:#5c7e3e">base64</span> [[2 - TLS Basics|private key]] included
+	1. This is created like any other <span style="color:#5c7e3e">Kubernetes</span> object, using a manifest file
 
-1. This is created like any other Kubernetes object, using a manifest file
+		![[certa-3.png]]
 
-![[certa-3.png]]
+	2. The spec section of the [[3.1 - Certification Creation|CertificateSigningRequest]] object contains:
+		1. <i><span style="color:#477bbe">groups</span></i>
+			1. <i><span style="color:#477bbe">Groups</span></i> the <i><span style="color:#477bbe">user</span></i> should be part of
+		2. usages
+			1. Usages of the account (as a list of strings)
+		3. Request
+			1. Where the [[3.1 - Certification Creation|CSR]] sent by the <i><span style="color:#477bbe">user</span></i> is specified (<span style="color:#5c7e3e">base64</span> encoded)
 
-1. The spec section of the CertificateSigningRequest object contains:
+		![[certa-4.png]]
 
-1. groups
+	4. All [[3.1 - Certification Creation|CSR]] objects can be seen by <i><span style="color:#477bbe">administrators</span></i> by running the <span style="color:red">kubectl get csr</span> command
 
-1. Groups the user should be part of
+		![[certa-5.png]]
 
-3. usages
+	5. Identify and review the specified request. Then approve the request using the <span style="color:red">kubectl [[3.1 - Certification Creation|certificate]] approve</span> command with the name of the [[3.1 - Certification Creation|CSR]]
 
-1. Usages of the account (as a list of strings)
+		![[certa-6.png]]
 
-5. Request
+	6. <span style="color:#5c7e3e">Kubernetes</span> [[2 - TLS Basics|signs]] the [[3.1 - Certification Creation|certificate]], then generates a [[3.1 - Certification Creation|certificate]] [[2 - TLS Basics|key-pair]] for the <i><span style="color:#477bbe">user</span></i>
 
-1. Where the CSR sent by the user is specified (base64 encoded)
+	7. This [[3.1 - Certification Creation|certificate]] can then be extracted and shared with the <i><span style="color:#477bbe">user</span></i>
 
-![[certa-4.png]]
+	8. To view the [[3.1 - Certification Creation|certificate]], use the <span style="color:red">kubectl get csr</span> command with the <span style="color:red">-o yaml</span> option
 
-1. All CSR objects can be seen by administrators by running the `kubectl get csr` command
+		![[certa-7.png]]
 
-![[certa-5.png]]
-
-1. Identify and review the specified request. Then approve the request using the `kubectl certificate approve` command with the name of the CSR
-
-![[certa-6.png]]
-
-1. Kubernetes signs the certificate, then generates a certificate key-pair for the user
-
-1. This certificate can then be extracted and shared with the user
-
-1. To view the certificate, use the `kubectl get csr` command with the `-o yaml` option
-
-![[certa-7.png]]
-
-1. The generated certificate is part of the output (as a base64 encoded string)
+	9. The generated [[3.1 - Certification Creation|certificate]] is part of the output (as a <span style="color:#5c7e3e">base64</span> encoded string)
 
 ------------------------------------------------------------------------------------------------------
 
-- All certificate operations are carried out by the kube-controller-manager
+- All [[3.1 - Certification Creation|certificate]] operations are carried out by the [[3 - Kube Controller Manager|kube-controller-manager]]
 
-- The kube-controller-manager has controllers called CSR-Approving, CSR-Signing, etc… that are responsible for carrying out the CSR tasks
+- The [[3 - Kube Controller Manager|kube-controller-manager]] has [[3 - Kube Controller Manager|controllers]] called [[3.1 - Certification Creation|CSR]]-Approving, [[3.1 - Certification Creation|CSR]]-[[2 - TLS Basics|signing]], etc… that are responsible for carrying out the [[3.1 - Certification Creation|CSR]] tasks
 
-- The kube-controller-manager has two options where you can specify the CA certificate and private key
+- The [[3 - Kube Controller Manager|kube-controller-manager]] has two options where you can specify the [[3.1 - Certification Creation|CA certificate]] and [[2 - TLS Basics|private key]]
 
 ![[certa-8.png]]
 
@@ -102,7 +92,7 @@
 
 - Create a CSR object with the name andrew with the contents of the andrew.csr file
 
-	(*As of Kubernetes 1.19, the apiVersion to use for CSR objects is certificates.k8s.io/v1)
+	(*As of <span style="color:#5c7e3e">Kubernetes</span> 1.19, the apiVersion to use for CSR objects is certificates.k8s.io/v1)
 
 	(**An additional filed called signerName should be added when creating the CSR. Use the built-in signer kubernetes.io/kube-apiserver.client)
 
