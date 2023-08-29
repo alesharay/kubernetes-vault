@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/5 - Security/4 - Certificate API.md",
+                "file": "cka/5 - Security/5 - Kubeconfig.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "189985aa43e8398b",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/5 - Security/4 - Certificate API.md",
+                "file": "cka/5 - Security/5 - Kubeconfig.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/5 - Security/4 - Certificate API.md",
+                "file": "cka/5 - Security/5 - Kubeconfig.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/5 - Security/4 - Certificate API.md"
+                "file": "cka/5 - Security/5 - Kubeconfig.md"
               }
             }
           }
@@ -149,16 +148,37 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/5 - Security/3.1 - Certification Creation.md",
+    "ckad/images/readiness-9.png",
+    "ckad/images/readiness-8.png",
+    "ckad/images/readiness-7.png",
+    "ckad/images/readiness-6.png",
+    "ckad/images/readiness-5.png",
+    "ckad/images/readiness-4.png",
+    "ckad/images/readiness-3.png",
+    "ckad/images/readiness-2.png",
+    "ckad/images/readiness-17.png",
+    "ckad/images/readiness-16.png",
+    "ckad/images/readiness-15.png",
+    "ckad/images",
+    "ckad/2 - Observability/0 - Readiness probes.md",
+    "ckad/2 - Observability/1 - Liveness Probes.md",
+    "ckad/2 - Observability",
     "cka/5 - Security/4 - Certificate API.md",
     "cka/5 - Security/5 - Kubeconfig.md",
+    "cka/5 - Security/3.1 - Certification Creation.md",
     "cka/5 - Security/3 - TLS in Kubernetes.md",
     "cka/5 - Security/2 - TLS Basics.md",
-    "cka/5 - Security/1.1 - Basic Authentication.md",
+    "cka/5 - Security/8 - Role Based Access Controls.md",
+    "cka/5 - Security/13 - Security Contexts.md",
+    "cka/5 - Security/7 - Authorization.md",
     "cka/5 - Security/1 - Authentication.md",
+    "cka/5 - Security/0 - Kubernetes Security Primitives.md",
+    "cka/6 - Storage/0 - Storage in Docker.md",
+    "cka/7 - Networking/1 - Cluster Networking.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+    "cka/5 - Security/1.1 - Basic Authentication.md",
     "cka/1 - Scheduling/1 - Labels & Selectors.md",
     "cka/1 - Scheduling/0 - Scheduling Intro.md",
-    "cka/5 - Security/0 - Kubernetes Security Primitives.md",
     "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
     "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
     "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
@@ -166,25 +186,6 @@
     "cka/4 - Cluster Maintenance/0 - OS Upgrades.md",
     "cka/0 - Core Concepts/10 - Services.md",
     "cka/0 - Core Concepts/8 - ReplicaSets.md",
-    "cka/0 - Core Concepts/12 - Declarative vs Imperative.md",
-    "cka/3 - Application Lifecycle Management/7 - InitContainers.md",
-    "cka/3 - Application Lifecycle Management/6 - Multi-Container Pods.md",
-    "cka/3 - Application Lifecycle Management/5 - Secrets.md",
-    "cka/3 - Application Lifecycle Management/4 - Configure ConfigMaps in Applications.md",
-    "cka/3 - Application Lifecycle Management/3 - Configure Environment Variables in Applications.md",
-    "cka/3 - Application Lifecycle Management/0 - Rolling Updates & Rollbacks.md",
-    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
-    "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
-    "cka/images/q22a-4.png",
-    "cka/images/q22a-3.png",
-    "cka/images/q22a-2.png",
-    "cka/images/q22a-1.png",
-    "cka/images/q21a-3.jpg",
-    "cka/images/q21a-2.png",
-    "cka/images/q21a-1.png",
-    "cka/images/q18a.png",
-    "cka/images/q17a-2.jpg",
-    "cka/images/q17a-1.jpg",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",
@@ -193,8 +194,6 @@
     "cka/7 - Networking",
     "cka/6 - Storage",
     "cka/5 - Security",
-    "cka/4 - Cluster Maintenance",
-    "cka/3 - Application Lifecycle Management/Untitled",
     "Untitled.canvas"
   ]
 }
