@@ -1,18 +1,18 @@
-- A client can use the certificate file and key to query the Kubernetes REST API for a list of pods using curl
+- A <i><span style="color:#477bbe">client</span></i> can use the [[3.1 - Certification Creation|certificate]] file and [[3.1 - Certification Creation|key]] to query the <span style="color:#5c7e3e">Kubernetes</span> REST API for a list of [[7 - Pods|pods]] using <span style="color:#5c7e3e">curl</span>
 
-- This is then validated by the kube-apiserver to authenticate the user
+- This is then validated by the [[2 - Kube API server|kube-apiserver]] to [[1 - Authentication|authenticate]] the <i><span style="color:#477bbe">user</span></i>
 
 ![[kubeconfig-1.png]]
 
-- For kubectl, the easiest way to query the Kubernetes REST API without having to pass in the certificate and key names each time, is by creating a kubeconfig file and specify its when using the <span style="color:red">kubectl get</span> command
+- For [[13 - Kubectl Apply|kubectl]], the easiest way to query the <span style="color:#5c7e3e">Kubernetes</span> REST API without having to pass in the [[3.1 - Certification Creation|certificate]] and key names each time, is by creating a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file and specify its when using the <span style="color:red">kubectl get</span> command
 
 ![[kubeconfig-2.png]]
 
-- By default, the kubectl tool looks for a file named config in the $HOME/.kube directory
+- By default, the [[13 - Kubectl Apply|kubectl]] tool looks for a file named config in the <span style="color:red">$HOME/.kube</span> directory
 
-- Therefore if the kubeconfig file is specified here, the <span style="color:red">--kubeconfig</span> option is not necessary for kubectl API calls
+- Therefore if the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is specified here, the <span style="color:red">--kubeconfig</span> option is not necessary for [[13 - Kubectl Apply|kubectl]] API calls
 
-- The kubeconfig file is in a specific format of the following sections:
+- The <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is in a specific format of the following sections:
 
 - clusters
 - users
@@ -20,74 +20,74 @@
 - current-context
 - preferences
 
-- Clusters (on the kubeconfig files) are the various kubernetes clusters that you need access to
+- [[0 - Core Concepts Intro|Clusters]] (on the <b><i><span style="color:#d46644">kubeconfig</span></i></b> files) are the various <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|clusters]] that you need access to
 
-- Users (on the kubeconfig file) are the user accounts with which you have access to the specified clusters
+- <i><span style="color:#477bbe">Users</span></i> (on the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file) are the <i><span style="color:#477bbe">user accounts</span></i> with which you have access to the specified [[0 - Core Concepts Intro|clusters]]
 
-- These users may have different privileges on different clusters
+- These <i><span style="color:#477bbe">users</span></i> may have different privileges on different [[0 - Core Concepts Intro|clusters]]
 
-- Contexts (on the kubeconfig file) marry the users and clusters together by defining which user account will be used to access which cluster
+- <b><i><span style="color:#d46644">Contexts</span></i></b> (on the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file) marry the <i><span style="color:#477bbe">users</span></i> and [[0 - Core Concepts Intro|clusters]] together by defining which <i><span style="color:#477bbe">user account</span></i> will be used to access which [[0 - Core Concepts Intro|cluster]]
 
-- In the kubeconfig file, the server specification and CA cert  info would go into the cluster section
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <i><span style="color:#477bbe">server</span></i> specification and [[3.1 - Certification Creation|CA cert]]  info would go into the [[0 - Core Concepts Intro|cluster]] section
 
-- In the kubeconfig file, the admin user keys and certificates, goes into the users section
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <i><span style="color:#477bbe">admin</span></i> [[3.1 - Certification Creation|user keys]] and [[3.1 - Certification Creation|certificates]], goes into the <i><span style="color:#477bbe">users</span></i> section
 
-- In the kubeconfig file, once the cluster and user sections are setup, you then setup contexts to specify which user account will access which cluster
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, once the [[0 - Core Concepts Intro|cluster]] and user sections are setup, you then setup <b><i><span style="color:#d46644">contexts</span></i></b> to specify which <i><span style="color:#477bbe">user account</span></i> will access which [[0 - Core Concepts Intro|cluster]]
 
-- The current apiVersion for a kubeconfig file is v1 and the kind is config
+- The current <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is v1 and the <span style="color:#5c7e3e">kind</span> is <b><i><span style="color:#d46644">config</span></i></b>
 
-- Each of the kubeconfig sections (clusters, contexts, users) are in array format so that you can specify multiple of each in the same file
+- Each of the <b><i><span style="color:#d46644">kubeconfig</span></i></b> sections ([[0 - Core Concepts Intro|[[0 - Core Concepts Intro|Cluster]]]], <b><i><span style="color:#d46644">contexts</span></i></b>, <i><span style="color:#477bbe">users</span></i>) are in array format so that you can specify multiple of each in the same file
 
-- In the kubeconfig file, each cluster has the following properties:
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, each [[0 - Core Concepts Intro|cluster]] has the following properties:
 
-- name (string/property): name of the cluster
-- cluster (dictionary): details of the cluster
+- name (string/property): name of the [[0 - Core Concepts Intro|cluster]]
+- [[0 - Core Concepts Intro|cluster]] (dictionary): details of the [[0 - Core Concepts Intro|cluster]]
 
-- *certificate-authority (string/property): the full path to the CA cert file
-- *certificate-authority-data (string/property): the base64 encoded contents of the CA cert
+- *[[3.1 - Certification Creation|certificate-authority]] (string/property): the full path to the [[3.1 - Certification Creation|CA cert]] file
+- *[[3.1 - Certification Creation|certificate-authority-data]] (string/property): the <span style="color:#5c7e3e">base64</span> encoded contents of the [[3.1 - Certification Creation|CA cert]]
 
 - ( * ) = only one of these fields are needed
 
-- server:  the DNS for the kube-apiserver
+- <i><span style="color:#477bbe">server</span></i>:  the DNS for the [[2 - Kube API server|kube-apiserver]]
 
-- In the kubeconfig file, the user section has the following properties:
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the user section has the following properties:
 
-- name (string/property): name of the user account
+- name (string/property): name of the <i><span style="color:#477bbe">user account</span></i>
 - User (dictionary: details of the user
 
-- client-certificate (string/property): the signed TLS certificate for the user account (either filename/location or base64 encoded string)
-- client-key (string/property): the private key for the user account (filename/location or base64 encoded string)
+- [[3.1 - Certification Creation|client-certificate]] (string/property): the signed [[3.1 - Certification Creation|TLS certificate]] for the <i><span style="color:#477bbe">user account</span></i> (either filename/location or <span style="color:#5c7e3e">base64</span> encoded string)
+- [[3.1 - Certification Creation|client-key]] (string/property): the [[3.1 - Certification Creation|private key]] for the <i><span style="color:#477bbe">user account</span></i> (filename/location or <span style="color:#5c7e3e">base64</span> encoded string)
 
-- In the kubeconfig file, the contexts section has the following properties:
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">contexts</span></i></b> section has the following properties:
 
-- name (string/property): whatever name you want to give the context (may be helpful the indicate the user and cluster in the name)
-- context (dictionary): details of the user and cluster connection
+- name (string/property): whatever name you want to give the <b><i><span style="color:#d46644">context</span></i></b> (may be helpful the indicate the user and [[0 - Core Concepts Intro|cluster]] in the name)
+- <b><i><span style="color:#d46644">context</span></i></b> (dictionary): details of the <i><span style="color:#477bbe">user</span></i> and [[0 - Core Concepts Intro|cluster]] connection
 
-- cluster (string/property): cluster name for the context
-- user (string/property): user name for the specified cluster
-- namespace (string/property): specifies a particular namespace for that context so that when that context is used, you will automatically be in the correct namespace
+- [[0 - Core Concepts Intro|cluster]] (string/property): [[0 - Core Concepts Intro|cluster]] name for the <b><i><span style="color:#d46644">context</span></i></b>
+- <i><span style="color:#477bbe">user</span></i> (string/property): username for the specified [[0 - Core Concepts Intro|cluster]]
+- [[11 - Namespaces|namespace]] (string/property): specifies a particular [[11 - Namespaces|namespace]] for that <b><i><span style="color:#d46644">context</span></i></b> so that when that <b><i><span style="color:#d46644">context</span></i></b> is used, you will automatically be in the correct [[11 - Namespaces|namespace]]
 
-- In the kubeconfig file, the current-context section specifies the default context to use when connecting to Kubernetes
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">current-context</span></i></b> section specifies the default <b><i><span style="color:#d46644">context</span></i></b> to use when connecting to <span style="color:#5c7e3e">Kubernetes</span>
 
-- There are command line options available within the kubectl tool to view and modify the kubeconfig file
+- There are command line options available within the [[13 - Kubectl Apply|kubectl]] tool to view and modify the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file
 
-- To view the kubeconfig file being used, run the <span style="color:red">kubectl config view</span> command
+- To view the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file being used, run the <span style="color:red">kubectl config view</span> command
 
-- This command lists the clusters, contexts and users as well as the current-context
+- This command lists the [[0 - Core Concepts Intro|clusters]], <b><i><span style="color:#d46644">contexts</span></i></b> and <i><span style="color:#477bbe">users</span></i> as well as the <b><i><span style="color:#d46644">current-context</span></i></b>
 
 ![[kubeconfig-3.png]]
 
-- If you don't want to use the default kubeconfig file when running the <span style="color:red">kubectl config</span> command, you can pass in the <span style="color:red">--kubeconfig=</span> command with the location of the desired kubeconfig file
+- If you don't want to use the default <b><i><span style="color:#d46644">kubeconfig</span></i></b> file when running the <span style="color:red">kubectl config</span> command, you can pass in the <span style="color:red">--kubeconfig=</span> command with the location of the desired <b><i><span style="color:#d46644">kubeconfig</span></i></b> file
 
 ![[kubeconfig-4.png]]
 
-- To update the current-context, run the <span style="color:red">kubectl config use-context</span> command with the name of the desired context
+- To update the <b><i><span style="color:#d46644">current-context</span></i></b>, run the <span style="color:red">kubectl config use-context</span> command with the name of the desired <b><i><span style="color:#d46644">context</span></i></b>
 
 - These changes will be reflected in the output of the command
 
 ![[kubeconfig-5.png]]
 
-- Other changes can be made to the kubeconfig file using other variations of the <span style="color:red">kubectl config</span> command
+- Other changes can be made to the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file using other variations of the <span style="color:red">kubectl config</span> command
 
 - Use <span style="color:red">-h</span> to get a list of available options
 
