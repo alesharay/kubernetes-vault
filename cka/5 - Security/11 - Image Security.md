@@ -3,8 +3,7 @@
 - When you use the nginx image, it's actually library/nginx
 
 - When setting the image name, if you don't define a user or account name (the first part of the image name), Kubernetes assumes it to be "library"
-
-- Library is the name of the default account where Docker's official images are stored
+	- Library is the name of the default account where Docker's official images are stored
 
 ![[images-security-1.png]]
 
@@ -27,8 +26,7 @@
 - On any of the public image registries, you may choose to make your registry private so that it is only accessible using a set of credentials
 
 - From Docker's perspective, to run a container using a private image, you must first login to your private registry using the `docker login` command followed by the private registry name
-
-- Then input your credentials
+	- Then input your credentials
 
 ![[images-security-3.png]]
 
@@ -45,8 +43,7 @@
 - Within Kubernetes, images are pulled by the container runtime  (docker) on the worker nodes
 
 - In order for Kubernetes to get the credentials to access the private registry, thus authenticating the user to the private registry from within Kubernetes, a secret object is created with the credentials in it
-
-- The secret is of type docker-registry
+	- The secret is of type docker-registry
 
 - Docker-registry is a built-in secret type that was built for storing Docker credentials
 
@@ -55,8 +52,7 @@
 ![[images-security-7.png]]
 
 - The secret with the Docker private registry credentials is specified in the pod definition file using the "imagePullSecrets" property
-
-- This a child to the spec property
+	- This a child to the spec property
 
 ![[images-security-8.png]]
 

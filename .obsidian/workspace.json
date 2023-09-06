@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/5 - Security/8 - Role Based Access Controls.md",
+                "file": "cka/5 - Security/9 - Cluster Roles.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/5 - Security/8 - Role Based Access Controls.md",
+                "file": "cka/5 - Security/9 - Cluster Roles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/5 - Security/8 - Role Based Access Controls.md",
+                "file": "cka/5 - Security/9 - Cluster Roles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/5 - Security/8 - Role Based Access Controls.md"
+                "file": "cka/5 - Security/9 - Cluster Roles.md"
               }
             }
           }
@@ -148,24 +148,33 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/5 - Security/7 - Authorization.md",
-    "cka/5 - Security/8 - Role Based Access Controls.md",
-    "cka/5 - Security/9 - Cluster Roles.md",
-    "API server.md",
-    "cka/5 - Security/5 - Kubeconfig.md",
-    "cka/5 - Security/6 - API Groups.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/5 - Security/10 - Service Accounts.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/2 - ** Configure High Availability.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/1 - Choosing Kubernetes Infrastructure.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
+    "cka/7 - Networking/9 - Ingress.md",
+    "cka/7 - Networking/8 - CoreDNS in Kubernetes.md",
+    "cka/7 - Networking/7 - DNS in Kubernetes.md",
+    "cka/7 - Networking/6 - Service Networking.md",
+    "cka/7 - Networking/5 - IPAM Weave.md",
+    "cka/7 - Networking/4 - CNI Weave.md",
+    "cka/7 - Networking/3 - CNI in Kubernetes.md",
+    "cka/7 - Networking/2 - Pod Networking.md",
+    "cka/7 - Networking/1 - Cluster Networking.md",
+    "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+    "cka/7 - Networking/0 - Prereqs/0.5 - Docker Networking.md",
+    "cka/7 - Networking/0 - Prereqs/0.4 - Network Namespaces.md",
+    "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
+    "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+    "cka/7 - Networking/0 - Prereqs/0.1 - Switching, Routing, Gateways CNI in Kubernetes.md",
     "cka/6 - Storage/6 - Storage Classes.md",
-    "cka/5 - Security/3.1 - Certification Creation.md",
-    "cka/5 - Security/4 - Certificate API.md",
-    "cka/5 - Security/3 - TLS in Kubernetes.md",
-    "cka/5 - Security/2 - TLS Basics.md",
-    "cka/5 - Security/1.1 - Basic Authentication.md",
-    "cka/5 - Security/1 - Authentication.md",
-    "cka/5 - Security/0 - Kubernetes Security Primitives.md",
+    "cka/6 - Storage/5 - Persistent Volume Claims.md",
+    "cka/6 - Storage/4 - Persistent Volumes.md",
+    "cka/6 - Storage/3 - Volumes.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
-    "cka/1 - Scheduling/4 - Node Affinity.md",
-    "cka/0 - Core Concepts/7 - Pods.md",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
     "ckad/images/readiness-7.png",
@@ -176,16 +185,7 @@
     "ckad/images/readiness-2.png",
     "ckad/images/readiness-17.png",
     "ckad/images",
-    "ckad/2 - Observability/1 - Liveness Probes.md",
-    "ckad/2 - Observability/0 - Readiness probes.md",
     "ckad/2 - Observability",
-    "cka/5 - Security/13 - Security Contexts.md",
-    "cka/6 - Storage/0 - Storage in Docker.md",
-    "cka/7 - Networking/1 - Cluster Networking.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
-    "cka/1 - Scheduling/1 - Labels & Selectors.md",
-    "cka/1 - Scheduling/0 - Scheduling Intro.md",
-    "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",

@@ -15,22 +15,19 @@
 ![[np-3.png]]
 
 - When you define ingress and egress, remember you're only looking at the direction in which the traffic originated
-
-- The response back to the user doesn't really matter
+	- The response back to the user doesn't really matter
 
 - For an API server, it receives ingress traffic from the web server and sends egress traffic to the DB server
-
-- The DB server receives ingress traffic from the API server
+	- The DB server receives ingress traffic from the API server
 
 ![[np-4.png]]
 
 - If required rules to get the web server - API server - DB server setup working were listed, we would have:
-
-- an ingress rule that is required to accept HTTP traffic
-- an egress rule to allow traffic from the web server to the API server
-- an ingress rule to accept traffic on the API server
-- an egress to allow traffic on the DB server
-- an ingress rule to accept traffic on the DB server
+	- an ingress rule that is required to accept HTTP traffic
+	- an egress rule to allow traffic from the web server to the API server
+	- an ingress rule to accept traffic on the API server
+	- an egress to allow traffic on the DB server
+	- an ingress rule to accept traffic on the DB server
 
 ![[np-5.png]]
 
@@ -61,8 +58,7 @@
 - You can define rules within the network policy
 
 - Once the network policy is created, it blocks all other traffic to the pod and only allows traffic that matches the specified rule
-
-- This is only applicable to the pod on which the network policy is applied
+	- This is only applicable to the pod on which the network policy is applied
 
 - To apply or link a network policy to a pod, use labels and selectors
 
@@ -75,8 +71,7 @@
 ![[np-9.png]]
 
 - Specify the ingress rule that allows traffic from the sending pod to the receiving pod using labels and selectors.
-
-- Then add the port of the sending pod
+	- Then add the port of the sending pod
 
 ![[np-10.png]]
 
@@ -89,13 +84,11 @@
 - *Remember: Network policies are enforced by the network solution implemented on the Kubernetes cluster
 
 - Not all solutions support network policies; a few of them that are supported are kube-router, Calico, Romana and Weave-net
-
-- Flannel does not
+	- Flannel does not
 
 ![[np-12.png]]
 
 - Always refer to the network solution's documentation to see support for network policies
 
 - Even in a cluster configured with a solution that does not support network policies, you can still create the policies but they will just not be enforced
-
-- You will not get an error message saying that the network solution does not support network policies
+	- You will not get an error message saying that the network solution does not support network policies

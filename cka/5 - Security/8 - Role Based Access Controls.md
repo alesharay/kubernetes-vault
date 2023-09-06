@@ -5,28 +5,24 @@
 - The <span style="color:#5c7e3e">kind</span> for a <b><i><span style="color:#d46644">role</span></i></b> definition file is "<span style="color:red">Role</span>"
 
 - The <span style="color:#5c7e3e">metadata</span> property has a <span style="color:#5c7e3e">label</span> called name with the name of who/what the <b><i><span style="color:#d46644">role</span></i></b> is for
-
-- Ie. Developer, if the <b><i><span style="color:#d46644">role</span></i></b> is for developers
+	- Ie. Developer, if the <b><i><span style="color:#d46644">role</span></i></b> is for developers
 
 ![[role-based-1.png]]
 
 - On a <b><i><span style="color:#d46644">role</span></i></b> definition file, instead of the <span style="color:#5c7e3e">spec</span> section, a <span style="color:#5c7e3e">rules</span> section is defined
 
 - On a <b><i><span style="color:#d46644">role</span></i></b> definition file, each rule has three sections:
-
-- apiGroups
-- resources
-- verbs
+	- apiGroups
+	- resources
+	- verbs
 
 - For a [[6 - API Groups|core group]], the [[6 - API Groups|apiGroups]] section of the <b><i><span style="color:#d46644">role</span></i></b> definition file can be left blank. But for any other <i><span style="color:#477bbe">group</span></i>, the <i><span style="color:#477bbe">group</span></i> name must be specified
 
 - The <span style="color:#5c7e3e">resources</span> property of the <span style="color:#5c7e3e">rules</span> section on a <b><i><span style="color:#d46644">role</span></i></b> definition is for what you want to provide access to
-
-- Ie. For developers, you provide access to [[7 - Pods|pods]]
+	- Ie. For developers, you provide access to [[7 - Pods|pods]]
 
 - The verbs property of the <span style="color:#5c7e3e">rules</span> section on a <b><i><span style="color:#d46644">role</span></i></b> definition is for the actions the <i><span style="color:#477bbe">user</span></i> can take
-
-- Ie. For developers, the can perform the "list, get, create, update, delete" actions
+	- Ie. For developers, the can perform the "list, get, create, update, delete" actions
 
 - Each <b><i><span style="color:#d46644">resource</span></i></b> gets its own set of <b><i><span style="color:#d46644">rules</span></i></b>
 
@@ -43,9 +39,8 @@
 - The <span style="color:#5c7e3e">kind</span> for a <b><i><span style="color:#d46644">role binding</span></i></b> object is <span style="color:red">RoleBinding</span>
 
 - For <b><i><span style="color:#d46644">role binding</span></i></b> objects, instead of the <span style="color:#5c7e3e">spec</span> section, there are two sections:
-
-- subjects
-- roleRef
+	- subjects
+	- roleRef
 
 - In a <b><i><span style="color:#d46644">role binding</span></i></b> object, the <span style="color:#5c7e3e">subjects</span> section is where <i><span style="color:#477bbe">user</span></i> details are specified
 
@@ -62,8 +57,7 @@
 ![[role-based-4.png]]
 
 - To view details about a <b><i><span style="color:#d46644">role</span></i></b>, use the <span style="color:red">kubectl describe role</span> command
-
-- Here you see details about <b><i><span style="color:#d46644">resources</span></i></b> and permissions for each <b><i><span style="color:#d46644">resource</span></i></b>
+	- Here you see details about <b><i><span style="color:#d46644">resources</span></i></b> and permissions for each <b><i><span style="color:#d46644">resource</span></i></b>
 
 ![[role-based-5.png]]
 
@@ -72,14 +66,12 @@
 ![[role-based-6.png]]
 
 - To view details about <b><i><span style="color:#d46644">role bindings</span></i></b>, use the <span style="color:red">kubectl describe rolebindings</span> command
-
-- Here you can see details about an existing <b><i><span style="color:#d46644">role binding</span></i></b>
+	- Here you can see details about an existing <b><i><span style="color:#d46644">role binding</span></i></b>
 
 ![[role-based-7.png]]
 
 - As a <i><span style="color:#477bbe">user</span></i>, if you want to see if you have access to a particular <b><i><span style="color:#d46644">resource</span></i></b> in the [[0 - Core Concepts Intro|cluster]], you can use the <span style="color:red">kubectl auth can-i</span> command with the action and <b><i><span style="color:#d46644">resource</span></i></b>
-
-- You will get a boolean response on whether you can or can't perform that action on the <b><i><span style="color:#d46644">resource</span></i></b>
+	- You will get a boolean response on whether you can or can't perform that action on the <b><i><span style="color:#d46644">resource</span></i></b>
 
 ![[role-based-8.png]]
 

@@ -1,16 +1,13 @@
 -  On a Unix laptop or a local machine, you can get started with cluster installation by installing the binaries manually and setting up a local cluster
-
-- This, however is a very tedious process
+	- This, however is a very tedious process
 
 - Using a solution that automates installing binaries will help in setting up a cluster in a matter of minutes
 
 - On windows, you cannot setup Kubernetes natively as there are no Windows binaries
-
-- This means you must rely on a virtualization software (i.e. Hyper-V, VMWare Workstation or VirtualBox)
+	- This means you must rely on a virtualization software (i.e. Hyper-V, VMWare Workstation or VirtualBox)
 
 - There are also solutions available to run Kubernetes components as Docker containers on Windows VMs
-
-- But even then, the Docker images are Linux based and under the hood they run on a small Linux OS create by Hyper-V for running Linux Docker containers
+	- But even then, the Docker images are Linux based and under the hood they run on a small Linux OS create by Hyper-V for running Linux Docker containers
 
 Some Simple Solutions
 
@@ -25,9 +22,8 @@ Some Simple Solutions
 Turnkey or Hosted Solutions (production grade)
 
 - Turnkey solutions are where you provision the required VMs and use some kind of tools or scripts to configure a Kubernetes cluster on them
-
-- This means you are responsible for creating, patching, and otherwise those VMs manually
-- But cluster management and maintenance are made easy using these tools
+	- This means you are responsible for creating, patching, and otherwise those VMs manually
+	- But cluster management and maintenance are made easy using these tools
 
 - OpenShift is a popular turnkey solution that is provided by RedHat, which is an open source container application platform and it built on top of Kubernetes
 

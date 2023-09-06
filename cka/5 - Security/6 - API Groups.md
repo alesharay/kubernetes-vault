@@ -1,20 +1,18 @@
 [https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#-strong-api-groups-strong](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#-strong-api-groups-strong)-
 
 - The <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> is <b><i><span style="color:#d46644">grouped</span></i></b> into multiple <b><i><span style="color:#d46644">groups</span></i></b> based on their purpose
-
-- Those <b><i><span style="color:#d46644">groups</span></i></b> are the <i><span style="color:#477bbe">endpoints</span></i> for when the [[2 - Kube API server|API server]] is contacted
-
-- ie. [https://kube-master:6443/version](https://kube-master:6443/version) = the <b><i><span style="color:#d46644">version group</span></i></b>
-- ie. [https://kube-master:6443/api/v1/pods](https://kube-master:6443/api/v1/pods) = the <b><i><span style="color:#d46644">API group</span></i></b>
+	- Those <b><i><span style="color:#d46644">groups</span></i></b> are the <i><span style="color:#477bbe">endpoints</span></i> for when the [[2 - Kube API server|API server]] is contacted
+		- ie. [https://kube-master:6443/version](https://kube-master:6443/version) = the <b><i><span style="color:#d46644">version group</span></i></b>
+		- ie. [https://kube-master:6443/api/v1/pods](https://kube-master:6443/api/v1/pods) = the <b><i><span style="color:#d46644">API group</span></i></b>
 
 - The common <b><i><span style="color:#d46644">API groups</span></i></b> include:
 
-- /metrics
-- /healthz
-- /version
-- /api
-- /apis
-- /logs
+	- /metrics
+	- /healthz
+	- /version
+	- /api
+	- /apis
+	- /logs
 
 - The <b><i><span style="color:#d46644">/version API</span></i></b> is for viewing the version of the [[0 - Core Concepts Intro|cluster]]
 
@@ -39,8 +37,7 @@
 - The actions for an <b><i><span style="color:#d46644">API group</span></i></b> resource are known as <b><i><span style="color:#d46644">verbs</span></i></b>
 
 - The <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> reference page can indicate what the <b><i><span style="color:#d46644">API group</span></i></b> is for each object
-
-- When an object is selected, the first section in the documentation page shows its <b><i><span style="color:#d46644">group</span></i></b> details
+	- When an object is selected, the first section in the documentation page shows its <b><i><span style="color:#d46644">group</span></i></b> details
 
 ![[api-3.png]]
 

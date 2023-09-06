@@ -1,27 +1,22 @@
 - The concept of service accounts is linked to other security related resources in Kubernetes
-
-- Ie. authentication, authorization, roles, rolebindings, clusterroles, clusterrolebindings, etc
+	- Ie. authentication, authorization, roles, rolebindings, clusterroles, clusterrolebindings, etc
 
 - There are two types of accounts in Kubernetes:
-
-- User
-- Service
+	- User
+	- Service
 
 - User accounts are used by humans
-
-- Ie. Admins accessing the cluster to perform administrative tasks
-- Ie. Developers accessing the cluster to deploy applications, etc..
+	- Ie. Admins accessing the cluster to perform administrative tasks
+	- Ie. Developers accessing the cluster to deploy applications, etc..
 
 - Service accounts are used by machines
 
 - Service accounts could be accounts used by an application to interact with the Kubernetes cluster
-
-- Ie. A monitoring application like Prometheus uses a service account to poll the Kubernetes API for performance metrics
-- Ie. An automated build tool like Jenkins uses a service account to deploy applications on the Kubernetes cluster
+	- Ie. A monitoring application like Prometheus uses a service account to poll the Kubernetes API for performance metrics
+	- Ie. An automated build tool like Jenkins uses a service account to deploy applications on the Kubernetes cluster
 
 - In order for an application to query the Kubernetes API, it has to be authenticated
-
-- For that, you use service accounts
+	- For that, you use service accounts
 
 - To create service accounts imperatively, run the command <span style="color:red">kubectl create serviceaccount</span> followed by the account name
 
@@ -48,8 +43,7 @@
 - After a service account object is created and a token is generated, a secret is then created to store the token inside, and the secret object is linked to the service account
 
 - To view the service account token, view the secret object first by running the <span style="color:red">kubectl describe serviceaccount</span> command with the name of the service account to find out the name of the secret that was created, then <span style="color:red">kubectl describe secret</span> with the name of the secret to see the encoded token
-
-- Decode the token using base64 decoding
+	- Decode the token using base64 decoding
 
 - The service account token can be used as an authentication bearer token when making REST calls to the Kubernetes API
 
@@ -62,12 +56,10 @@
 - If your application is hosted on the Kubernetes cluster itself, the service account process is different
 
 - If your application is hosted on the Kubernetes cluster, the service account creation and use process is made simple by automatically mounting the service token secret as a volume inside of the pod hosting the application
-
-- This way, the token to access the Kubernetes API is already placed inside of the pod and can be easily read by the application
+	- This way, the token to access the Kubernetes API is already placed inside of the pod and can be easily read by the application
 
 - For every namespace in Kubernetes, a service account named "default" is automatically created
-
-- Each namespace has it's own "default" service account
+	- Each namespace has it's own "default" service account
 
 - Whenever a pod is created, the default service account and its token are automatically mounted to that pod as a volume mount
 
@@ -92,8 +84,7 @@
 - *Remember: you cannot edit the service account of an existing pod. To use a different service account, you must delete and recreate the pod
 
 - You can edit the service account for a deployment without having to delete and recreate as any changes in the pod spec section will automatically trigger a new rollout
-
-- Thus the deployment will take care of deleting and recreating new pods with the right service accounts
+	- Thus the deployment will take care of deleting and recreating new pods with the right service accounts
 
 ![[servicea-10.png]]
 

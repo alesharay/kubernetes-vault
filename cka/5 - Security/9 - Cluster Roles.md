@@ -1,47 +1,60 @@
-- Roles and role bindings are namespaced, meaning they are created within namespaces
+- Roles and role bindings are [[11 - Namespaces|namespaced]], meaning they are created within [[11 - Namespaces|namespaces]]
 
-- If the namespace for roles and role bindings are not indicated, they will be created within the default namespace and can control resources in that namespace alone
+- If the [[11 - Namespaces|namespace]] for roles and role bindings are not indicated, they will be created within the default [[11 - Namespaces|namespace]] and can control resources in that [[11 - Namespaces|namespace]] alone
 
-- *Reminder: namespaces are used for grouping and isolating resources
+- *Reminder: [[11 - Namespaces|namespaces]] are used for grouping and isolating resources
 
-- Nodes cannot be grouped inside of namespaces as they are cluster-wide or cluster-scoped resources
+- Nodes cannot be grouped inside of [[11 - Namespaces|namespaces]] as they are <b><i><span style="color:#d46644">cluster-wide</span></i></b> or <b><i><span style="color:#d46644">cluster-scoped</span></i></b> resources
+	- They cannot be associated with any particular [[11 - Namespaces|namespace]]
 
-- They cannot be associated with any particular namespace
+- [[11 - Namespaces|namespace-scoped]] resources included:
 
-- Namespace-scoped resources included:
+	* Pods
+	* replicasets
+	* jobs
+	* deployments
+	* services
+	* secrets
+	* roles
+	* rolebindings
+	* configmaps
+	* persistent volume claims
+	* etc…
 
-Pods, replicasets, jobs, deployments, services, secrets, roles, rolebindings, configmaps, persistent volume claims, etc…
+- The <b><i><span style="color:#d46644">cluster-scoped</span></i></b> resources are those where you don't specify a [[11 - Namespaces|namespace]]; such as:
 
-- The cluster-scoped resources are those where you don't specify a namespace; such as:
+	- Nodes
+	- persistent volumes
+	- clusterroles
+	- clusterrolebindings
+	- certificate signing requests
+	- namespaced
+	- etc…
 
-Nodes, persistent volumes, clusterroles, clusterrolebindings, certificate signing requests, namespaces, etc…
+- To see a full list of [[11 - Namespaces|namespaced]] and [[11 - Namespaces|non-namespaced]] resources, run the <span style="color:red">kubectl api-resources</span> command with the [[11 - Namespaces|namespaced]] option set
 
-- To see a full list of namespaced and non-namespaced resources, run the `kubectl api-resource` command with the namespaced option set
+- To authorize <i><span style="color:#477bbe">users</span></i> to use <b><i><span style="color:#d46644">cluster-wide</span></i></b> resources like nodes or persistent volumes, use <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b>
 
-- To authorize users to use cluster-wide resources like nodes or persistent volumes, use clusterroles and clusterrolebindings
+- <b><i><span style="color:#d46644">Clusterroles</span></i></b> are just like roles, only at a cluster level
+	- Ie. A <b><i><span style="color:#d46644">cluster admin role</span></i></b> can be created for the <b><i><span style="color:#d46644">cluster administrator</span></i></b>
+	- Ie. A <b><i><span style="color:#d46644">storage admin role</span></i></b> can be created for the <b><i><span style="color:#d46644">storage administrator</span></i></b>
 
-- Clusterroles are just like roles, only at a cluster level
-
-- Ie. A cluster admin role can be created for the cluster administrator
-- Ie. A storage admin role can be created for the storage administrator
-
-- To create a clusterrole, create a clusterrole definition file with the kind "ClusterRole" and specify the rules similar to those in a role definition file
+- To create a <b><i><span style="color:#d46644">clusterrole</span></i></b>, create a <b><i><span style="color:#d46644">clusterrole</span></i></b> definition file with the kind "<span style="color:red">ClusterRole</span>" and specify the rules similar to those in a role definition file
 
 ![[cluster-1.png]]
 
-- After creating a clusterrole object, the next step is to link a user/group to the clusterrole
+- After creating a <b><i><span style="color:#d46644">clusterrole</span></i></b> object, the next step is to link a <i><span style="color:#477bbe">user</span></i>/<i><span style="color:#477bbe">group</span></i> to the <b><i><span style="color:#d46644">clusterrole</span></i></b>
 
-- To link a user/group to a clusterrole object, create a clusterrolebinding object similar to a rolebinding object with the kind "ClusterRoleBinding"
+- To link a <i><span style="color:#477bbe">user</span></i>/<i><span style="color:#477bbe">group</span></i> to a <b><i><span style="color:#d46644">clusterrole</span></i></b> object, create a <b><i><span style="color:#d46644">clusterrolebinding</span></i></b> object similar to a <b><i><span style="color:#d46644">rolebinding</span></i></b> object with the kind "<span style="color:red">ClusterRoleBinding</span>"
 
 ![[cluster-2.png]]
 
-- It is not a hard rule that clusterroles and clusterrolebindings are used for clusters of resources
+- It is not a hard rule that <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b> are used for [[0 - Core Concepts Intro|clusters]] of resources
+	- <b><i><span style="color:#d46644">Clusterroles</span></i></b> can be created for [[11 - Namespaces|namespace]] resources as well
 
-- Clusterroles can be created for namespace resources as well
+- When a <b><i><span style="color:#d46644">clusterrole</span></i></b> is created for [[11 - Namespaces|namespaced]] resources, the <i><span style="color:#477bbe">user</span></i> will have access to these resources across all [[11 - Namespaces|namespaces]]
 
-- When a clusterrole is created for namespaced resources, the user will have access to these resources across all namespaces
-
-- Kubernetes creates a number of clusterroles by default when the cluster is first setup
+- <span style="color:#5c7e3e">Kubernetes</span> creates a number of <b><i><span style="color:#d46644">clusterroles</span></i></b> by default when the cluster is first setup
 
 ### Practice Problems
 

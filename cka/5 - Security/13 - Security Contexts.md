@@ -7,8 +7,7 @@
 - If you configure security settings on both the pod and the container, the settings on the container will override the setting on the pod
 
 - To configure security on a pod from within the pod definition file, add a field called "securityContext" under the spec section of the pod
-
-- Use the <span style="color:red">runAsUser</span> option to set the user ID for the pod
+	- Use the <span style="color:red">runAsUser</span> option to set the user ID for the pod
 
 ![[security-1.png]]
 
@@ -17,8 +16,7 @@
 ![[security-2.png]]
 
 - To add/drop capabilities, use the <span style="color:red">capabilities</span> option under the <span style="color:red">securityContext</span> section and specify which capabilities to add/drop
-
-- *NOTE: Capabilities are only supported at the container level and not the pod level
+	- *NOTE: Capabilities are only supported at the container level and not the pod level
 
 ![[security-3.png]]
 
