@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/5 - Security/5 - Kubeconfig.md",
+                "file": "cka/5 - Security/6 - API Groups.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/5 - Security/5 - Kubeconfig.md",
+                "file": "cka/5 - Security/6 - API Groups.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/5 - Security/5 - Kubeconfig.md",
+                "file": "cka/5 - Security/6 - API Groups.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/5 - Security/5 - Kubeconfig.md"
+                "file": "cka/5 - Security/6 - API Groups.md"
               }
             }
           }
@@ -148,9 +148,11 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/5 - Security/6 - API Groups.md",
+    "cka/5 - Security/5 - Kubeconfig.md",
     "cka/6 - Storage/6 - Storage Classes.md",
     "cka/5 - Security/3.1 - Certification Creation.md",
-    "cka/5 - Security/5 - Kubeconfig.md",
     "cka/5 - Security/4 - Certificate API.md",
     "cka/5 - Security/3 - TLS in Kubernetes.md",
     "cka/5 - Security/2 - TLS Basics.md",
@@ -160,7 +162,6 @@
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "cka/1 - Scheduling/4 - Node Affinity.md",
     "cka/0 - Core Concepts/7 - Pods.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
     "ckad/images/readiness-7.png",
@@ -185,7 +186,6 @@
     "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
     "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
     "cka/4 - Cluster Maintenance/2 - Cluster Upgrades.md",
-    "cka/4 - Cluster Maintenance/0 - OS Upgrades.md",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",
