@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/5 - Security/6 - API Groups.md",
+                "file": "cka/5 - Security/7 - Authorization.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/5 - Security/6 - API Groups.md",
+                "file": "cka/5 - Security/7 - Authorization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/5 - Security/6 - API Groups.md",
+                "file": "cka/5 - Security/7 - Authorization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/5 - Security/6 - API Groups.md"
+                "file": "cka/5 - Security/7 - Authorization.md"
               }
             }
           }
@@ -148,9 +148,11 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
-    "cka/5 - Security/6 - API Groups.md",
+    "API server.md",
+    "cka/5 - Security/7 - Authorization.md",
     "cka/5 - Security/5 - Kubeconfig.md",
+    "cka/5 - Security/6 - API Groups.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
     "cka/6 - Storage/6 - Storage Classes.md",
     "cka/5 - Security/3.1 - Certification Creation.md",
     "cka/5 - Security/4 - Certificate API.md",
@@ -177,7 +179,6 @@
     "ckad/2 - Observability",
     "cka/5 - Security/8 - Role Based Access Controls.md",
     "cka/5 - Security/13 - Security Contexts.md",
-    "cka/5 - Security/7 - Authorization.md",
     "cka/6 - Storage/0 - Storage in Docker.md",
     "cka/7 - Networking/1 - Cluster Networking.md",
     "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
@@ -185,7 +186,6 @@
     "cka/1 - Scheduling/0 - Scheduling Intro.md",
     "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions.md",
     "cka/4 - Cluster Maintenance/3 - Backup & Restore.md",
-    "cka/4 - Cluster Maintenance/2 - Cluster Upgrades.md",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",
