@@ -1,78 +1,78 @@
-- A Docker host has a set of its own processes running on it (i.e. a number of operating system processes, the docker daemon itself, the SSH server, etc…)
+- A <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i> has a set of its own processes running on it (i.e. a number of operating system processes, the <span style="color:#5c7e3e">Docker daemon</span> itself, the <span style="color:#5c7e3e">SSH</span> server, etc…)
 
 ![[psd-1.png]]
 
-- *Remember: unlike virtual machines, containers are not completely isolated from their host
+- *Remember: unlike virtual machines, [[7 - Pods|containers]] are not completely isolated from their <i><span style="color:#477bbe">host</span></i>
 
 ![[psd-2.png]]
 
-- Containers and their host share the same kernel
+- [[7 - Pods|Containers]] and their <i><span style="color:#477bbe">host</span></i> share the same <span style="color:#5c7e3e">kernel</span>
 
-- Containers are isolated using namespaces in Linux
+- [[7 - Pods|Containers]] are isolated using [[11 - Namespaces|namespaces]] in <span style="color:#5c7e3e">Linux</span>
 
-- The host has a namespace and the containers have their own namespace
+- The <i><span style="color:#477bbe">host</span></i> has a [[11 - Namespaces|namespace]] and the [[7 - Pods|containers]] have their own [[11 - Namespaces|namespace]]
 
 ![[psd-3.png]]
 
-- All processes run by a container are in fact run on the host itself but in their own namespace
-	- As far as the Docker container is concerned, it is in its own namespace and it can see its own processes only
-	- It cannot see anything outside of it or in any other namespace
+- All processes run by a [[7 - Pods|container]] are in fact run on the <i><span style="color:#477bbe">host</span></i> itself but in their own [[11 - Namespaces|namespace]]
+	- As far as the <span style="color:#5c7e3e">Docker</span> [[7 - Pods|container]] is concerned, it is in its own [[11 - Namespaces|namespace]] and it can see its own processes only
+	- It cannot see anything outside of it or in any other [[11 - Namespaces|namespace]]
 
-- When you list processes within the Docker container, you see the processes with their process IDs
+- When you list processes within the <span style="color:#5c7e3e">Docker</span> [[7 - Pods|container]], you see the processes with their process IDs
 
 ![[psd-4.png]]
 
-- For the Docker host, all processes of its own, as well as those in the child namespaces are visible as just another process in the system
+- For the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>, all processes of its own, as well as those in the child [[11 - Namespaces|namespaces]] are visible as just another process in the system
 
-- When you list the processes on the host, you see a list of processes and there IDs
-	- These will show the same processes as the container (including more) but with different process IDs
+- When you list the processes on the <i><span style="color:#477bbe">host</span></i>, you see a list of processes and there IDs
+	- These will show the same processes as the [[7 - Pods|container]] (including more) but with different process IDs
 
 ![[psd-5.png]]
 
-- Processes can have different process IDs in different namespaces and this is how Docker isolates containers within a system
+- Processes can have different process IDs in different [[11 - Namespaces|namespaces]] and this is how <span style="color:#5c7e3e">Docker</span> isolates [[7 - Pods|containers]] within a system
 
-- The Docker host has a set of users: a root user and a slew of non-root users
+- The <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i> has a set of <i><span style="color:#477bbe">users</span></i>: a <i><span style="color:#477bbe">root user</span></i> and a slew of <i><span style="color:#477bbe">non-root users</span></i>
 
-- By default, Docker runs processes within containers as the root user
+- By default, <span style="color:#5c7e3e">Docker</span> runs processes within [[7 - Pods|containers]] as the <i><span style="color:#477bbe">root user</span></i>
 
-- Both in the container and outside of the container as the host, the process is run as the root user
+- Both in the [[7 - Pods|container]] and outside of the [[7 - Pods|container]] as the <i><span style="color:#477bbe">host</span></i>, the process is run as the <i><span style="color:#477bbe">root user</span></i>
 
-- If you don't want processes within the container to run as the root user, you may set the user using the <span style="color:red">kubectl --user</span> flag within the Docker run command
-	- You will see that the process now runs with the new user ID
+- If you don't want processes within the [[7 - Pods|container]] to run as the <i><span style="color:#477bbe">root user</span></i>, you may set the <i><span style="color:#477bbe">user</span></i> using the <span style="color:red">kubectl --user</span> flag within the <span style="color:#5c7e3e">Docker</span> run command
+	- You will see that the process now runs with the new <i><span style="color:#477bbe">user</span></i> ID
 
 ![[psd-6.png]]
 
-- Another way to enforce user security in containers is to define the user in the images themselves at the time of creation
+- Another way to enforce <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">security</span></i></b> in [[7 - Pods|containers]] is to define the <i><span style="color:#477bbe">user</span></i> in the images themselves at the time of creation
 
-- To define the user in the image, use the USER instruction in the Dockerfile then give it the user ID, then build the custom image
+- To define the <i><span style="color:#477bbe">user</span></i> in the image, use the <i><span style="color:#477bbe">USER</span></i> instruction in the <span style="color:#5c7e3e">Docker</span>file then give it the <i><span style="color:#477bbe">user</span></i> ID, then build the custom image
 
 ![[psd-7.png]]
 
-- When the user is specified within the image, you can run the container without specifying the user and when you output the processes, you will see the user is the user specified at creation time
+- When the <i><span style="color:#477bbe">user</span></i> is specified within the image, you can run the [[7 - Pods|container]] without specifying the <i><span style="color:#477bbe">user</span></i> and when you output the processes, you will see the <i><span style="color:#477bbe">user</span></i> is the <i><span style="color:#477bbe">user</span></i> specified at creation time
 
 ![[psd-8.png]]
 
-- Docker implements a set of security features that limit the abilities of the root user within the container
-	- This means that the root user within the container isn't really like the root user on the host
+- <span style="color:#5c7e3e">Docker</span> implements a set of security features that limit the abilities of the <i><span style="color:#477bbe">root user</span></i> within the [[7 - Pods|container]]
+	- This means that the <i><span style="color:#477bbe">root user</span></i> within the [[7 - Pods|container]] isn't really like the <i><span style="color:#477bbe">root user</span></i> on the <i><span style="color:#477bbe">host</span></i>
 
-- *Remember: the root user is usually the most powerful user on a system and can do literally anything
-	- And so can a process run by the root user
+- *Remember: the <i><span style="color:#477bbe">root user</span></i> is usually the most powerful <i><span style="color:#477bbe">user</span></i> on a system and can do literally anything
+	- And so can a process run by the <i><span style="color:#477bbe">root user</span></i>
 
 ![[psd-9.png]]
 
-- On a Linux operating system, you can see a full list of root user capabilities at /usr/include/linux/capability.h
+- On a <span style="color:#5c7e3e">Linux</span> operating system, you can see a full list of <i><span style="color:#477bbe">root user</span></i> capabilities at /usr/include/linux/capability.h
 
-- By default, Docker runs a container with a limited set of capabilities
-	- Thus the processes run within the container do not have the privileges to do certain things that require full access
+- By default, <span style="color:#5c7e3e">Docker</span> runs a [[7 - Pods|container]] with a limited set of capabilities
+	- Thus the processes run within the [[7 - Pods|container]] do not have the privileges to do certain things that require full access
 
 ![[psd-10.png]]
 
-- If you wish to override the default behavior of the Docker container and provide additional privileges than what is available, then use the "cap-add" option in the `docker run` command
+- If you wish to override the default behavior of the <span style="color:#5c7e3e">Docker</span> [[7 - Pods|container]] and provide additional privileges than what is available, then use the "cap-add" option in the `docker run` command
 
 ![[psd-11.png]]
 
-- Similar to adding privileges to a container user, you drop privileges using the "cap-drop" option with the `docker run` command
+- Similar to adding privileges to a [[7 - Pods|container]] <i><span style="color:#477bbe">user</span></i>, you drop privileges using the "cap-drop" option with the `docker run` command
 
 ![[psd-12.png]]
 
-- If you wish to run the container with all privileges available, use the "--privileged" flag with the `docker run` command
+- If you wish to run the [[7 - Pods|container]] with all privileges available, use the "--privileged" flag with the `docker run` command

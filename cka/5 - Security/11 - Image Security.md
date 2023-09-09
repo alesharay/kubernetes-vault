@@ -2,7 +2,7 @@
 
 - When you use the <span style="color:#5c7e3e">nginx</span> <b><i><span style="color:#d46644">image</span></i></b>, it's actually **library**/<span style="color:#5c7e3e">nginx</span>
 
-- When setting the <b><i><span style="color:#d46644">image</span></i></b> name, if you don't define a user or account name (the first part of the <b><i><span style="color:#d46644">image</span></i></b> name), <span style="color:#5c7e3e">Kubernetes</span> assumes it to be "**library**"
+- When setting the <b><i><span style="color:#d46644">image</span></i></b> name, if you don't define a <i><span style="color:#477bbe">user</span></i> or account name (the first part of the <b><i><span style="color:#d46644">image</span></i></b> name), <span style="color:#5c7e3e">Kubernetes</span> assumes it to be "**library**"
 	- **Library** is the name of the default account where <span style="color:#5c7e3e">Docker's</span> official <b><i><span style="color:#d46644">images</span></i></b> are stored
 
 ![[images-security-1.png]]
@@ -42,7 +42,7 @@
 
 - Within <span style="color:#5c7e3e">Kubernetes</span>, <b><i><span style="color:#d46644">images</span></i></b> are pulled by the [[0 - Core Concepts Intro|container runtime]]  (<span style="color:#5c7e3e">Docker</span>) on the [[0 - Core Concepts Intro|worker nodes]]
 
-- In order for <span style="color:#5c7e3e">Kubernetes</span> to get the credentials to access the <b><i><span style="color:#d46644">private registry</span></i></b>, thus [[1 - Authentication|authenticating]] the user to the <b><i><span style="color:#d46644">private registry</span></i></b> from within <span style="color:#5c7e3e">Kubernetes</span>, a [[5 - Secrets|secret]] object is created with the credentials in it
+- In order for <span style="color:#5c7e3e">Kubernetes</span> to get the credentials to access the <b><i><span style="color:#d46644">private registry</span></i></b>, thus [[1 - Authentication|authenticating]] the <i><span style="color:#477bbe">user</span></i> to the <b><i><span style="color:#d46644">private registry</span></i></b> from within <span style="color:#5c7e3e">Kubernetes</span>, a [[5 - Secrets|secret]] object is created with the credentials in it
 	- The [[5 - Secrets|secret]] is of type <span style="color:#5c7e3e">docker-registry</span>
 
 - <span style="color:#5c7e3e">Docker-registry</span> is a built-in [[5 - Secrets|secret]] type that was built for storing <span style="color:#5c7e3e">Docker</span> credentials
