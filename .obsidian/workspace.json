@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
+                "file": "cka/6 - Storage/3 - Volumes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
+                "file": "cka/6 - Storage/3 - Volumes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
+                "file": "cka/6 - Storage/3 - Volumes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/6 - Storage/2 - Container Storage Interface.md"
+                "file": "cka/6 - Storage/3 - Volumes.md"
               }
             }
           }
@@ -150,10 +150,10 @@
   "lastOpenFiles": [
     "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
     "cka/6 - Storage/2 - Container Storage Interface.md",
+    "cka/6 - Storage/3 - Volumes.md",
     "cka/6 - Storage/0 - Storage in Docker.md",
     "cka/5 - Security/16 - Kubectx & Kubens - Command Line Utilities.md",
     "cka/5 - Security/0 - Kubernetes Security Primitives.md",
-    "cka/6 - Storage/3 - Volumes.md",
     "cka/5 - Security/1 - Authentication.md",
     "cka/5 - Security/15 - Developing Network Policies.md",
     "cka/5 - Security/14 - Network Policies.md",
