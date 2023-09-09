@@ -1,94 +1,94 @@
 ### Basics of traffic flow and rules
 
-- There are many configurations for an application. Assume you have a web server serving front-end to users and an app server serving back-end API server and database server
+- There are many configurations for an application. Assume you have a <i><span style="color:#477bbe">web server</span></i> serving <i><span style="color:#477bbe">frontend</span></i> to <i><span style="color:#477bbe">users</span></i> and an <i><span style="color:#477bbe">app server</span></i> serving <i><span style="color:#477bbe">backend API server</span></i> and <i><span style="color:#477bbe">database server</span></i>
 
 ![[np-1.png]]
 
-- Consider the following scenario: A user sends a request to the web server , the web server then sends a request to the API server  in the back-end, the API server then fetches data from the database server and then sends the data back to the user
+- Consider the following scenario: A <i><span style="color:#477bbe">user</span></i> sends a request to the <i><span style="color:#477bbe">web server</span></i> , the <i><span style="color:#477bbe">web server</span></i> then sends a request to the [[2 - Kube API server|API server]]  in the <i><span style="color:#477bbe">backend</span></i>, the [[2 - Kube API server|API server]] then fetches data from the <i><span style="color:#477bbe">database server</span></i> and then sends the data back to the <i><span style="color:#477bbe">user</span></i>
 
 ![[np-2.png]]
 
-- There are two types of traffic in the web server - API server - DB server setup: ingress and egress
+- There are two types of traffic in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: [[9 - Ingress|ingress]] and [[9 - Ingress|egress]]
 
-- For a web server, the traffic coming in from users is an ingress traffic and the outgoing requests from the web server to the API server is an egress traffic
+- For a <i><span style="color:#477bbe">web server</span></i>, the traffic coming in from <i><span style="color:#477bbe">users</span></i> is an [[9 - Ingress|ingress traffic]] and the outgoing requests from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server|API server]] is an [[9 - Ingress|egress traffic]]
 
 ![[np-3.png]]
 
-- When you define ingress and egress, remember you're only looking at the direction in which the traffic originated
-	- The response back to the user doesn't really matter
+- When you define [[9 - Ingress|ingress]] and [[9 - Ingress|egress]], remember you're only looking at the direction in which the traffic originated
+	- The response back to the <i><span style="color:#477bbe">user</span></i> doesn't really matter
 
-- For an API server, it receives ingress traffic from the web server and sends egress traffic to the DB server
-	- The DB server receives ingress traffic from the API server
+- For an [[2 - Kube API server|API server]], it receives [[9 - Ingress|ingress traffic]] from the <i><span style="color:#477bbe">web server</span></i> and sends [[9 - Ingress|egress traffic]] to the <i><span style="color:#477bbe">DB server</span></i>
+	- The <i><span style="color:#477bbe">DB server</span></i> receives [[9 - Ingress|ingress traffic]] from the [[2 - Kube API server|API server]]
 
 ![[np-4.png]]
 
-- If required rules to get the web server - API server - DB server setup working were listed, we would have:
-	- an ingress rule that is required to accept HTTP traffic
-	- an egress rule to allow traffic from the web server to the API server
-	- an ingress rule to accept traffic on the API server
-	- an egress to allow traffic on the DB server
-	- an ingress rule to accept traffic on the DB server
+- If required <b><i><span style="color:#d46644">rules</span></i></b> to get the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup working were listed, we would have:
+	- an [[9 - Ingress|ingress rule]] that is required to accept HTTP traffic
+	- an [[9 - Ingress|egress rule]] to allow traffic from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server|API server]]
+	- an [[9 - Ingress|ingress rule]] to accept traffic on the [[2 - Kube API server|API server]]
+	- an [[9 - Ingress|egress rule]] to allow traffic on the <i><span style="color:#477bbe">DB server</span></i>
+	- an [[9 - Ingress|ingress rule]] to accept traffic on the <i><span style="color:#477bbe">DB server</span></i>
 
 ![[np-5.png]]
 
 ### Network security in Kubernetes
 
-- On a cluster with a set of nodes hosting a set of pods and services, each node, pod, and services have their own IP address
+- On a [[0 - Core Concepts Intro|cluster]] with a set of [[0 - Core Concepts Intro|nodes]] hosting a set of [[7 - Pods|pods]] and [[10 - Services|services]], each [[0 - Core Concepts Intro|node]], [[7 - Pods|pod]], and [[10 - Services|services]] have their own IP address
 
 ![[np-6.png]]
 
-- One of the prerequisites for networking in Kubernetes is that with whatever solution you implement, the pods should be able to communicate with each other without having to configure any additional settings like routes.
+- One of the prerequisites for <b><i><span style="color:#d46644">networking</span></i></b> in <span style="color:#5c7e3e">Kubernetes</span> is that with whatever solution you implement, the [[7 - Pods|pods]] should be able to communicate with each other without having to configure any additional settings like routes.
 
-- In networking, all pods should, by default, be able to reach each other by their IP addresses, pod names, or services
+- In <b><i><span style="color:#d46644">networking</span></i></b>, all [[7 - Pods|pods]] should, by default, be able to reach each other by their IP addresses, [[7 - Pods|pod]] names, or [[10 - Services|services]]
 
-- *Remember: Kubernetes is configured, by default, with an "All Allow" rule that allows traffic from any pod to any other pod or service
+- *Remember: <span style="color:#5c7e3e">Kubernetes</span> is configured, by default, with an "<b><i><span style="color:#d46644">Allow All</span></i></b>" <b><i><span style="color:#d46644">rule</span></i></b> that allows traffic from any [[7 - Pods|pod]] to any other [[7 - Pods|pod]] or [[10 - Services|service]]
 
-- Using the web server - API server - DB server setup but in Kubernetes, for each component in the application, we deploy a pod: one for the web server, one for the API server, and one for the DB server
+- Using the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup but in <span style="color:#5c7e3e">Kubernetes</span>, for each component in the application, we deploy a [[7 - Pods|pod]]: one for the <i><span style="color:#477bbe">web server</span></i>, one for the [[2 - Kube API server|API server]], and one for the <i><span style="color:#477bbe">DB server</span></i>
 
-- Create services to enable communication between the pods as well as the end users
+- Create [[10 - Services|services]] to enable communication between the [[7 - Pods|pods]] as well as the <i><span style="color:#477bbe">end users</span></i>
 
-- If we don't want the front-end web server to be able to communicate with the DB server directly, you would implement a network policy to allow traffic to the DB server only from the API server
+- If we don't want the <i><span style="color:#477bbe">frontend web server</span></i> to be able to communicate with the <i><span style="color:#477bbe">DB server</span></i> directly, you would implement a <b><i><span style="color:#d46644">network policy</span></i></b> to allow traffic to the <i><span style="color:#477bbe">DB server</span></i> only from the [[2 - Kube API server|API server]]
 
-- A network policy is another object in the Kubernetes namespace
+- A <b><i><span style="color:#d46644">network policy</span></i></b> is another object in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces|namespace]]
 
-- You link a network policy to one ore more pods
+- You link a <b><i><span style="color:#d46644">network policy</span></i></b> to one ore more [[7 - Pods|pods]]
 
 ![[np-7.png]]
 
-- You can define rules within the network policy
+- You can define <b><i><span style="color:#d46644">rules</span></i></b> within the <b><i><span style="color:#d46644">network policy</span></i></b>
 
-- Once the network policy is created, it blocks all other traffic to the pod and only allows traffic that matches the specified rule
-	- This is only applicable to the pod on which the network policy is applied
+- Once the <b><i><span style="color:#d46644">network policy</span></i></b> is created, it blocks all other traffic to the [[7 - Pods|pod]] and only allows traffic that matches the specified <b><i><span style="color:#d46644">rule</span></i></b>
+	- This is only applicable to the [[7 - Pods|pod]] on which the <b><i><span style="color:#d46644">network policy</span></i></b> is applied
 
-- To apply or link a network policy to a pod, use labels and selectors
+- To apply or link a <b><i><span style="color:#d46644">network policy</span></i></b> to a [[7 - Pods|pod]], use labels and selectors
 
-- To apply a network policy, label the pod and apply the same labels on the <span style="color:red">podSelector</span> field in the network policy
+- To apply a <b><i><span style="color:#d46644">network policy</span></i></b>, label the [[7 - Pods|pod]] and apply the same [[1 - Labels & Selectors|labels]] on the <span style="color:red">podSelector</span> field in the <b><i><span style="color:#d46644">network policy</span></i></b>
 
 ![[np-8.png]]
 
-- After the pod is labeled and the rule is built, under policy types we specify whether the rule is to allow ingress or egress traffic or both
+- After the [[7 - Pods|pod]] is [[1 - Labels & Selectors|labeled]] and the <b><i><span style="color:#d46644">rule</span></i></b> is built, under <b><i><span style="color:#d46644">policy types</span></i></b> we specify whether the <b><i><span style="color:#d46644">rule</span></i></b> is to allow [[9 - Ingress|ingress]] or [[9 - Ingress|egress traffic]] or both
 
 ![[np-9.png]]
 
-- Specify the ingress rule that allows traffic from the sending pod to the receiving pod using labels and selectors.
-	- Then add the port of the sending pod
+- Specify the [[9 - Ingress|ingress rule]] that allows traffic from the sending [[7 - Pods|pods]] to the receiving [[7 - Pods|pod]] using [[1 - Labels & Selectors|labels and selectors]].
+	- Then add the port of the sending [[7 - Pods|pod]]
 
 ![[np-10.png]]
 
-- The apiVersion for a network policy object is networking.k8s.io/v1. The kind is NetworkPolicy
+- The <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">network policy</span></i></b> object is networking.k8s.io/v1. The <span style="color:#5c7e3e">kind</span> is <b><i><span style="color:#d46644">NetworkPolicy</span></i></b>
 
-- In a network policy object file, under the spec section,  add the podSelectors to apply the policy, then the rule
+- In a <b><i><span style="color:#d46644">network policy</span></i></b> object file, under the <span style="color:#5c7e3e">spec</span> section,  add the [[1 - Labels & Selectors|podSelector]] to apply the <b><i><span style="color:#d46644">policy</span></i></b>, then the <b><i><span style="color:#d46644">rule</span></i></b>
 
 ![[np-11.png]]
 
-- *Remember: Network policies are enforced by the network solution implemented on the Kubernetes cluster
+- *Remember: <b><i><span style="color:#d46644">network policies</span></i></b> are enforced by the <b><i><span style="color:#d46644">network</span></i></b> solution implemented on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
 
-- Not all solutions support network policies; a few of them that are supported are kube-router, Calico, Romana and Weave-net
+- Not all solutions support <b><i><span style="color:#d46644">network policies</span></i></b>; a few of them that are supported are kube-router, Calico, Romana and Weave-net
 	- Flannel does not
 
 ![[np-12.png]]
 
-- Always refer to the network solution's documentation to see support for network policies
+- Always refer to the <b><i><span style="color:#d46644">network</span></i></b> solution's documentation to see support for <b><i><span style="color:#d46644">network policies</span></i></b>
 
-- Even in a cluster configured with a solution that does not support network policies, you can still create the policies but they will just not be enforced
-	- You will not get an error message saying that the network solution does not support network policies
+- Even in a [[0 - Core Concepts Intro|cluster]] configured with a solution that does not support <b><i><span style="color:#d46644">network policies</span></i></b>, you can still create the <b><i><span style="color:#d46644">policies</span></i></b> but they will just not be enforced
+	- You will not get an error message saying that the <b><i><span style="color:#d46644">network</span></i></b> solution does not support <b><i><span style="color:#d46644">network policies</span></i></b>
