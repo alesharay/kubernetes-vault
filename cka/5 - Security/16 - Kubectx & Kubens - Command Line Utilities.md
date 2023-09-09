@@ -1,13 +1,13 @@
-- In a real “live” Kubernetes cluster implemented for production, there could be a possibility of often switching between a large number of namespaces and clusters
-	- This can quickly become a confusing and overwhelming task if you had to rely on kubectl alone
+- In a real “live” <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]] implemented for production, there could be a possibility of often switching between a large number of [[11 - Namespaces|namespaces]] and [[0 - Core Concepts Intro|clusters]]
+	- This can quickly become a confusing and overwhelming task if you had to rely on [[13 - Kubectl Apply|kubectl]] alone
 
-- This is where command line tools such as kubectx and kubens come in to picture
+- This is where command line tools such as <b><i><span style="color:#d46644">kubectx</span></i></b> and <b><i><span style="color:#d46644">kubens</span></i></b> come in to picture
 	- Reference:  [https://github.com/ahmetb/kubectx](https://github.com/ahmetb/kubectx)
 
 ### Kubectx:
 
-- With this tool, you don’t have to make use of lengthy `kubectl config` commands to switch between contexts.
-	- This tool is particularly useful to switch context between clusters in a multi-cluster environment
+- With this tool, you don’t have to make use of lengthy <span style="color:red">kubectl config</span> commands to switch between contexts.
+	- This tool is particularly useful to switch context between [[0 - Core Concepts Intro|clusters]] in a [[0 - Core Concepts Intro|multi-cluster]] environment
 
 - Installation:
 
@@ -34,7 +34,7 @@
 
 ### Kubens:
 
-- This tool allows users to switch between namespaces quickly with a simple command.
+- This tool allows <i><span style="color:#477bbe">users</span></i> to switch between [[11 - Namespaces|namespaces]] quickly with a simple command.
 
 - Installation:
 
@@ -43,10 +43,10 @@
 
 #### Syntax:
 
-- To switch to a new namespace:
+- To switch to a new [[11 - Namespaces|namespace]]:
 
 		kubens
 
-- To switch back to previous namespace:
+- To switch back to previous [[11 - Namespaces|namespace]]:
 
 		kubens –
