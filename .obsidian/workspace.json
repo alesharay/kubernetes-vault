@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
+                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
+                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
+                "file": "cka/6 - Storage/2 - Container Storage Interface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md"
+                "file": "cka/6 - Storage/2 - Container Storage Interface.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/6 - Storage/0 - Storage in Docker.md",
     "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
+    "cka/6 - Storage/2 - Container Storage Interface.md",
+    "cka/6 - Storage/0 - Storage in Docker.md",
     "cka/5 - Security/16 - Kubectx & Kubens - Command Line Utilities.md",
     "cka/5 - Security/0 - Kubernetes Security Primitives.md",
     "cka/6 - Storage/3 - Volumes.md",
@@ -173,7 +174,6 @@
     "cka/7 - Networking/9 - Ingress.md",
     "cka/7 - Networking/8 - CoreDNS in Kubernetes.md",
     "cka/7 - Networking/7 - DNS in Kubernetes.md",
-    "cka/7 - Networking/6 - Service Networking.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
