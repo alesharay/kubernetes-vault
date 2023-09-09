@@ -1,102 +1,102 @@
-- Assume the goal is to protect the DB pod in the web server - API server - DB server setup so that it doesn't allow access from any other pods except the API server pod
+- Assume the goal is to protect the [[7 - Pods|DB pod]] in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]]- <i><span style="color:#477bbe">DB server</span></i> setup so that it doesn't allow access from any other [[7 - Pods|pods]] except the [[2 - Kube API server|API server]] [[7 - Pods|pod]]
 
-- By default, Kubernetes allows all communications from all pods to all destinations
+- By default, <span style="color:#5c7e3e">Kubernetes</span> allows all communications from all [[7 - Pods|pods]] to all destinations
 
-- Consider the web server - API server - DB server setup: as a first step, we want to block out everything going in and out of the DB pod
+- Consider the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: as a first step, we want to block out everything going in and out of the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]]
 
-- Create a network policy with the pod that we want to protect by creating a NetworkPolicy object
+- Create a <b><i><span style="color:#d46644">network policy</span></i></b> with the [[7 - Pods|pod]] that we want to protect by creating a [[14 - Network Policies|NetworkPolicy]] object
 	- Give it a name that represents what it's for
 
-- *Remember: network policies are created using labels and selectors
+- *Remember: <b><i><span style="color:#d46644">network policies</span></i></b> are created using [[1 - Labels & Selectors|labels and selectors]]
 
-- To add labels and selectors to the NetworkPolicy object, add a podSelector property with a matchLabel field under it specifying the label on the pod
-	- This associates the network policy with the pod and blocks out all traffic
+- To add [[1 - Labels & Selectors|labels and selectors]] to the [[14 - Network Policies|NetworkPolicy]] object, add a [[1 - Labels & Selectors|podSelector]] property with a [[1 - Labels & Selectors|matchLabel]] field under it specifying the [[1 - Labels & Selectors|label]] on the [[7 - Pods|pod]]
+	- This associates the <b><i><span style="color:#d46644">network policy</span></i></b> with the [[7 - Pods|pod]] and blocks out all traffic
 
 ![[developing-1.png]]
 
-- After blocking out all traffic to the pod, we need to choose which pod needs to be able to access the pod and on which port
+- After blocking out all traffic to the [[7 - Pods|pod]], we need to choose which [[7 - Pods|pod]] needs to be able to access the [[7 - Pods|pod]] and on which <span style="color:#5c7e3e">port</span>
 
-- It is necessary to decide what type of policies should be defined on the network policy object to meet necessary requirements
-	- Ingress, egress or both
+- It is necessary to decide what type of [[14 - Network Policies|policies]] should be defined on the <b><i><span style="color:#d46644">network policy</span></i></b> object to meet necessary requirements
+	- [[14 - Network Policies|ingress]], [[14 - Network Policies|egress]] or both
 
-- From the DB pod perspective, we want to allow traffic from the API server pod
-	- This is incoming traffic so we need an ingress network policy
+- From the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]] perspective, we want to allow traffic from the [[2 - Kube API server|API server]] [[7 - Pods|pod]]
+	- This is incoming traffic so we need an [[14 - Network Policies|ingress]] <b><i><span style="color:#d46644">network policy</span></i></b>
 
 ![[developing-2.png]]
 
 - Once you allow incoming traffic, the response or reply to that traffic is allowed back automatically
-	- Thus a separate rule is not needed
+	- Thus a separate <span style="color:#5c7e3e">rule</span> is not needed
 
-- When deciding on what type of rule needs to be created, you only need to be concerned about the direction in which the requests originate
-	- This is denoted by the straight line in the image
+- When deciding on what type of <span style="color:#5c7e3e">rule</span> needs to be created, you only need to be concerned about the direction in which the requests originate
+	- This is denoted by the straight line in the [[11 - Image Security|image]]
 
 ![[developing-3.png]]
 
-- For an ingress policy, even though response traffic is still allowed through, new outgoing traffic (like a call from the DB to the API) can't
+- For an [[14 - Network Policies|ingress policy]], even though response traffic is still allowed through, new outgoing traffic (like a call from the <i><span style="color:#477bbe">DB</span></i> to the [[2 - Kube API server|API]]) can't
 
-- A single network policy can have an ingress type, and egress type, or both in the case where a pod wants to allow incoming connections as well as wants to make external calls (like an API)
+- A single <b><i><span style="color:#d46644">network policy</span></i></b> can have an [[14 - Network Policies|ingress type]], and [[14 - Network Policies|egress type]], or both in the case where a [[7 - Pods|pod]] wants to allow incoming connections as well as wants to make external calls (like an [[2 - Kube API server|API]])
 
-- Once you decide on the policy type, the next step is to define the specifics of that policy
+- Once you decide on the [[14 - Network Policies|policy type]], the next step is to define the specifics of that policy
 
-- If the type is ingress, create a section called ingress within which we specify multiple rules
+- If the type is [[14 - Network Policies|ingress]], create a section called [[14 - Network Policies|ingress]] within which we specify multiple <span style="color:#5c7e3e">rules</span>
 
-- Each rule for a policy type has a from and ports property
+- Each <span style="color:#5c7e3e">rule</span> for a [[14 - Network Policies|policy type]] has a from and <span style="color:#5c7e3e">ports</span> property
 
-- The from property defines the source of traffic that is allowed to pass through to the specified pod
+- The from property defines the source of traffic that is allowed to pass through to the specified [[7 - Pods|pod]]
 
-- For the from property, we use a podSelector and provide the labels of the API pod
+- For the from property, we use a [[1 - Labels & Selectors|podSelector]] and provide the [[1 - Labels & Selectors|labels]] of the [[2 - Kube API server|API]] [[7 - Pods|pod]]
 
 ![[developing-4.png]]
 
-- The ports property defines what port on the pod the traffic is allowed to go to
+- The <span style="color:#5c7e3e">ports</span> property defines what <span style="color:#5c7e3e">port</span> on the [[7 - Pods|pod]] the traffic is allowed to go to
 
 ![[developing-5.png]]
 
-- If there are multiple pods (ie. In different namespaces) that need access to the specified pod, the created network policy allows any pod in any namespace with matchLabels to reach that pod
+- If there are multiple [[7 - Pods|pods]] (ie. In different [[11 - Namespaces|namespaces]]) that need access to the specified [[7 - Pods|pod]], the created <b><i><span style="color:#d46644">network policy</span></i></b> allows any [[7 - Pods|pod]] in any [[11 - Namespaces|namespace]] with [[1 - Labels & Selectors|matchLabels]] to reach that [[7 - Pods|pod]]
 
-- If we only want to allow a pod in a specific namespace to reach the specified pod, even though other pods have matching labels, we add a new selector called the namespaceSelector on the same rule as the podSelector
-	- Here we match labels again using the namespace label which should be specified on the namespace first
+- If we only want to allow a [[7 - Pods|pod]] in a specific [[11 - Namespaces|namespace]] to reach the specified [[7 - Pods|pod]], even though other [[7 - Pods|pods]] have matching [[1 - Labels & Selectors|labels]], we add a new selector called the [[1 - Labels & Selectors|namespaceSelector]] on the same <span style="color:#5c7e3e">rule</span> as the [[1 - Labels & Selectors|podSelector]]
+	- Here we match [[1 - Labels & Selectors|labels]] again using the [[11 - Namespaces|namespace]] [[1 - Labels & Selectors|label]] which should be specified on the [[11 - Namespaces|namespace]] first
 
 ![[developing-6.png]]
 
-- The namespaceSelector helps in defining from what namespace traffic is allowed to reach the specified pod
+- The [[1 - Labels & Selectors|namespaceSelector]] helps in defining from what [[11 - Namespaces|namespace]] traffic is allowed to reach the specified [[7 - Pods|pod]]
 
-- If you only have the namespaceSelector and not the podSelector, all pods within the specified namespace will be allowed to reach the specified pod
-	- Pods from outside of this namespace will not be allowed to go through
+- If you only have the [[1 - Labels & Selectors|namespaceSelector]] and not the [[1 - Labels & Selectors|podSelector]], all [[7 - Pods|pods]] within the specified [[11 - Namespaces|namespace]] will be allowed to reach the specified [[7 - Pods|pod]]
+	- [[7 - Pods|Pods]] from outside of this [[11 - Namespaces|namespace]] will not be allowed to go through
 
-- If we have a server, that is not apart of the Kubernetes cluster, that we want to be able to access the specified pod, the current podSelector and namespaceSelector won't work
+- If we have a <i><span style="color:#477bbe">server</span></i>, that is not apart of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]], that we want to be able to access the specified [[7 - Pods|pod]], the current [[1 - Labels & Selectors|podSelector]] and [[11 - Namespaces|namespace]]Selector won't work
 
-- It is possible to configure network policies to allow traffic from a specific IP address by adding an ipBlock property.
+- It is possible to configure <b><i><span style="color:#d46644">network policies</span></i></b> to allow traffic from a specific IP address by adding an <span style="color:#5c7e3e">ipBlock</span> property.
 	- This will have the CIDR property under it with the IP CIDR
 
 ![[developing-7.png]]
 
-- The podSelector, namespaceSelector, and ipBlock properties are all able to be used in both the from and to sections of the network policy object
+- The [[1 - Labels & Selectors|podSelector]], [[1 - Labels & Selectors|namespaceSelector]], and <span style="color:#5c7e3e">ipBlock</span> properties are all able to be used in both the from and to sections of the <b><i><span style="color:#d46644">network policy</span></i></b> object
 
-- podSelectors select pods by labels
+- [[1 - Labels & Selectors|podSelectors]] select [[7 - Pods|pods]] by [[1 - Labels & Selectors|labels]]
 
-- namespaceSelectors select namespaces by labels
+- [[1 - Labels & Selectors|namespaceSelectors]] select [[11 - Namespaces|namespaces]] by [[1 - Labels & Selectors|labels]]
 
-- ipBlock selectors select IP address ranges
+- <span style="color:#5c7e3e">ipBlock</span> [[1 - Labels & Selectors|selectors]] select IP address ranges
 
-- The podSelector, namespaceSelector, and ipBlock properties can be passed in separately or together as part of a single rule
+- The [[1 - Labels & Selectors|podSelector]], [[1 - Labels & Selectors|namespaceSelector]], and <span style="color:#5c7e3e">ipBlock</span> properties can be passed in separately or together as part of a single <span style="color:#5c7e3e">rule</span>
 
-- The multiple rules work like OR operators thus traffic for meeting any of these criteria will be allowed to pass through
+- The multiple <span style="color:#5c7e3e">rules</span> work like OR operators thus traffic for meeting any of these criteria will be allowed to pass through
 
 ![[developing-8.png]]
 
-- When there are multiple selectors in the same rule, all traffic must meet the requirements of all selectors in the rule, like an AND operation
+- When there are multiple [[1 - Labels & Selectors|selectors]] in the same <span style="color:#5c7e3e">rule</span>, all traffic must meet the requirements of all selectors in the <span style="color:#5c7e3e">rule</span>, like an AND operation
 
 ![[developing-9.png]]
 
-- It's important to understand the possibilities of rule configuration
+- It's important to understand the possibilities of <span style="color:#5c7e3e">rule</span> configuration
 
-- There can be both ingress and egress types on the same network policy
+- There can be both [[14 - Network Policies|ingress]] and [[14 - Network Policies|egress]] types on the same <b><i><span style="color:#d46644">network policy</span></i></b>
 
-- Just like with ingress, egress needs to be added to the policyTypes section and there needs to be an egress section
+- Just like with [[14 - Network Policies|ingress]], [[14 - Network Policies|egress]] needs to be added to the <span style="color:#5c7e3e">policyTypes</span> section and there needs to be an [[14 - Network Policies|egress]] section
 
-- To define the specifics of the egress policy type, and the to (instead of from) and ports properties
-	- In the ports section, specify the port for which to send traffic
+- To define the specifics of the [[14 - Network Policies|egress policy]] type, and the to (instead of from) and <span style="color:#5c7e3e">ports</span> properties
+	- In the <span style="color:#5c7e3e">ports</span> section, specify the <span style="color:#5c7e3e">port</span> for which to send traffic
 
 ![[developing-10.png]]
 
