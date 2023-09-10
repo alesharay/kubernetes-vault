@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+                "file": "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+                "file": "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+                "file": "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md"
+                "file": "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md"
               }
             }
           }
@@ -148,14 +148,15 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
+    "cka/6 - Storage/3 - Volumes.md",
+    "cka/6 - Storage/4 - Persistent Volumes.md",
+    "cka/6 - Storage/5 - Persistent Volume Claims.md",
+    "cka/6 - Storage/6 - Storage Classes.md",
     "cka/7 - Networking/0 - Prereqs/0.1 - Switching, Routing, Gateways CNI in Kubernetes.md",
     "cka/7 - Networking/0 - Prereqs/0.2 - DNS.md",
+    "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
     "cka/7 - Networking/2 - Pod Networking.md",
     "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
-    "cka/6 - Storage/6 - Storage Classes.md",
-    "cka/6 - Storage/5 - Persistent Volume Claims.md",
-    "cka/6 - Storage/4 - Persistent Volumes.md",
-    "cka/6 - Storage/3 - Volumes.md",
     "cka/6 - Storage/1 - Volume Driver Plugins in Docker.md",
     "cka/6 - Storage/2 - Container Storage Interface.md",
     "cka/6 - Storage/0 - Storage in Docker.md",
@@ -173,7 +174,6 @@
     "cka/5 - Security/10 - Service Accounts.md",
     "cka/5 - Security/9 - Cluster Roles.md",
     "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
