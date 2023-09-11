@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/7 - Networking/5 - IPAM Weave.md",
+                "file": "cka/7 - Networking/6 - Service Networking.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/7 - Networking/5 - IPAM Weave.md",
+                "file": "cka/7 - Networking/6 - Service Networking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/7 - Networking/5 - IPAM Weave.md",
+                "file": "cka/7 - Networking/6 - Service Networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/7 - Networking/5 - IPAM Weave.md"
+                "file": "cka/7 - Networking/6 - Service Networking.md"
               }
             }
           }
@@ -149,10 +149,11 @@
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
     "cka/7 - Networking/4 - CNI Weave.md",
+    "cka/7 - Networking/6 - Service Networking.md",
     "cka/7 - Networking/5 - IPAM Weave.md",
+    "cka/7 - Networking/3 - CNI in Kubernetes.md",
     "cka/0 - Core Concepts/7 - Pods.md",
     "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
-    "cka/7 - Networking/3 - CNI in Kubernetes.md",
     "cka/7 - Networking/2 - Pod Networking.md",
     "cka/7 - Networking/1 - Cluster Networking.md",
     "cka/7 - Networking/0 - Prereqs/0.1 - Switching, Routing, Gateways CNI in Kubernetes.md",
@@ -174,7 +175,6 @@
     "cka/5 - Security/15 - Developing Network Policies.md",
     "cka/5 - Security/14 - Network Policies.md",
     "cka/0 - Core Concepts/11 - Namespaces.md",
-    "cka/5 - Security/13 - Security Contexts.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
