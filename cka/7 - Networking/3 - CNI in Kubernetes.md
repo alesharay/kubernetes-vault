@@ -27,4 +27,4 @@
 
 ![[cnik-5.png]]
 
-- The <span style="color:#5c7e3e">IPAM</span> type <i><span style="color:#477bbe">host-local</span></i> means that the <span style="color:#5c7e3e">IP addresses</span> are managed locally on this <i><span style="color:#477bbe">host</span></i>, unlike a <span style="color:#5c7e3e">DHCP server</span> maintaining it remotely
+- The [[5 - IPAM Weave|IPAM]] type <i><span style="color:#477bbe">host-local</span></i> means that the <span style="color:#5c7e3e">IP addresses</span> are managed locally on this <i><span style="color:#477bbe">host</span></i>, unlike a <span style="color:#5c7e3e">DHCP server</span> maintaining it remotely
