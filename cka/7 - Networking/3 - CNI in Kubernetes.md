@@ -1,30 +1,30 @@
-- As per CNI, container runtimes, in the case Kubernetes, is responsible for creating container network namespaces identifying and attaching those namespaces to the right network by calling the right network plugin
+- As per <b><i><span style="color:#d46644">CNI</span></i></b>, [[7 - Pods|container runtimes]], in the case <span style="color:#5c7e3e">Kubernetes</span>, is responsible for creating [[7 - Pods|container]] [[0.4 - Network Namespaces|network namespaces]] identifying and attaching those [[0.4 - Network Namespaces|namespaces]] to the right <b><i><span style="color:#d46644">network</span></i></b> by calling the right <b><i><span style="color:#d46644">network plugins</span></i></b>
 
-- In order for Kubernetes to use CNI plugins, the CNI plugin must be invoked by the component within Kubernetes that is responsible for creating containers
-	- This component must then invoke the appropriate network plugin after the container is created
+- In order for <span style="color:#5c7e3e">Kubernetes</span> to use <b><i><span style="color:#d46644">CNI plugins</span></i></b>, the <b><i><span style="color:#d46644">CNI plugin</span></i></b> must be invoked by the component within <span style="color:#5c7e3e">Kubernetes</span> that is responsible for creating [[7 - Pods|containers]]
+	- This component must then invoke the appropriate <b><i><span style="color:#d46644">network plugins</span></i></b> after the [[7 - Pods|container]] is created
 
-- The CNI plugin is configured in the kubelet service on each node in the cluster
+- The <b><i><span style="color:#d46644">CNI plugin</span></i></b> is configured in the [[5 - Kubelet|kubelet]] service on each [[0 - Core Concepts Intro|node]] in the [[0 - Core Concepts Intro|cluster]]
 
 ![[cnik-1.png]]
 
-- You can see the same information on viewing the running kubelet service
+- You can see the same information on viewing the running [[5 - Kubelet|kubelet]] service
 
 ![[cnik-2.png]]
 
-- The CNI bin directory has all the supported CNI plugins as executables
-	- Such as bridge, dhcp, flannel
-		- This directory is /opt/cni/bin by default
+- The <b><i><span style="color:#d46644">CNI</span></i></b> bin directory has all the supported <b><i><span style="color:#d46644">CNI plugins</span></i></b> as executables
+	- Such as [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|bridge]], <span style="color:#5c7e3e">DHCP</span>, <span style="color:#5c7e3e">flannel</span>
+		- This directory is <span style="color:red">/opt/cni/bin</span> by default
 
 ![[cnik-3.png]]
 
-- The CNI config directory has a set of configuration files, which is where kubelet looks to find out which plugin needs to be used
+- The <b><i><span style="color:#d46644">CNI</span></i></b> config directory has a set of configuration files, which is where [[5 - Kubelet|kubelet]] looks to find out which plugin needs to be used
 
 ![[cnik-4.png]]
 
    - If there are multiple config files available, choose the one in alphabetical order
 
-- The bridge config file uses a format defined by the CNI standard for a plugin configuration file
+- The [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|bridge]] config file uses a format defined by the <b><i><span style="color:#d46644">CNI</span></i></b> standard for a plugin configuration file
 
 ![[cnik-5.png]]
 
-- The IPAM type host-local means that the IP addresses are managed locally on this host, unlike a DHCP server maintaining it remotely
+- The <span style="color:#5c7e3e">IPAM</span> type <i><span style="color:#477bbe">host-local</span></i> means that the <span style="color:#5c7e3e">IP addresses</span> are managed locally on this <i><span style="color:#477bbe">host</span></i>, unlike a <span style="color:#5c7e3e">DHCP server</span> maintaining it remotely
