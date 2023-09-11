@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+                "file": "cka/7 - Networking/1 - Cluster Networking.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+                "file": "cka/7 - Networking/1 - Cluster Networking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+                "file": "cka/7 - Networking/1 - Cluster Networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md"
+                "file": "cka/7 - Networking/1 - Cluster Networking.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
-    "cka/7 - Networking/0 - Prereqs/0.5 - Docker Networking.md",
     "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
+    "cka/7 - Networking/1 - Cluster Networking.md",
+    "cka/7 - Networking/0 - Prereqs/0.5 - Docker Networking.md",
     "cka/7 - Networking/0 - Prereqs/0.4 - Network Namespaces.md",
     "kind-config.yaml",
     "cka/7 - Networking/0 - Prereqs/0.3 - CoreDNS.md",
