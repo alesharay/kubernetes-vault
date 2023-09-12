@@ -59,9 +59,9 @@
 
 ![[api-7.png]]
 
-- [[6 - Kube Proxy|kube-proxy]] and [[13 - Kubectl Apply|kubectl]] proxy are not the same
+- [[6 - Kube Proxy ✅|kube-proxy]] and [[13 - Kubectl Apply|kubectl]] proxy are not the same
 
-- As a reminder, [[6 - Kube Proxy|kube-proxy]] is used to enable connectivity between [[7 - Pods|pods]] and [[10 - Services|services]] across different [[0 - Core Concepts Intro ✅|nodes]] in a [[0 - Core Concepts Intro ✅|cluster]]
+- As a reminder, [[6 - Kube Proxy ✅|kube-proxy]] is used to enable connectivity between [[7 - Pods ✅|pods]] and [[10 - Services|services]] across different [[0 - Core Concepts Intro ✅|nodes]] in a [[0 - Core Concepts Intro ✅|cluster]]
 
 - [[13 - Kubectl Apply|kubectl]] proxy is an HTTP proxy service created by the [[13 - Kubectl Apply]] utility to access the [[2 - Kube API server ✅|kube-apiserver]]
 

@@ -76,11 +76,11 @@
 
 ------------------------------------------------------------------------------------------------------
 
-- All [[3.1 - Certification Creation|certificate]] operations are carried out by the [[3 - Kube Controller Manager|kube-controller-manager]]
+- All [[3.1 - Certification Creation|certificate]] operations are carried out by the [[3 - Kube Controller Manager ✅|kube-controller-manager]]
 
-- The [[3 - Kube Controller Manager|kube-controller-manager]] has [[3 - Kube Controller Manager|controllers]] called [[3.1 - Certification Creation|CSR]]-Approving, [[3.1 - Certification Creation|CSR]]-[[2 - TLS Basics|signing]], etc… that are responsible for carrying out the [[3.1 - Certification Creation|CSR]] tasks
+- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has [[3 - Kube Controller Manager ✅|controllers]] called [[3.1 - Certification Creation|CSR]]-Approving, [[3.1 - Certification Creation|CSR]]-[[2 - TLS Basics|signing]], etc… that are responsible for carrying out the [[3.1 - Certification Creation|CSR]] tasks
 
-- The [[3 - Kube Controller Manager|kube-controller-manager]] has two options where you can specify the [[3.1 - Certification Creation|CA certificate]] and [[2 - TLS Basics|private key]]
+- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has two options where you can specify the [[3.1 - Certification Creation|CA certificate]] and [[2 - TLS Basics|private key]]
 
 ![[certa-8.png]]
 

@@ -31,6 +31,6 @@
 
 ### Communication between apps in the cluster
 
-- By default, all [[7 - Pods|pods]] can <b><i><span style="color:#d46644">access</span></i></b> all other [[7 - Pods|pods]] within the [[0 - Core Concepts Intro ✅|cluster]]
+- By default, all [[7 - Pods ✅|pods]] can <b><i><span style="color:#d46644">access</span></i></b> all other [[7 - Pods ✅|pods]] within the [[0 - Core Concepts Intro ✅|cluster]]
 
 - It's possible to restrict <b><i><span style="color:#d46644">access</span></i></b> between [[0 - Core Concepts Intro ✅|clusters]] using network policies

@@ -1,4 +1,4 @@
-- We create [[4 - Persistent Volumes|PVs]] and [[5 - Persistent Volume Claims|PVCs]] to claim the [[4 - Persistent Volumes|PV]] <b><i><span style="color:#d46644">storage</span></i></b>, and inject them into the [[7 - Pods|pod]] definition files as [[3 - Volumes|volumes]]
+- We create [[4 - Persistent Volumes|PVs]] and [[5 - Persistent Volume Claims|PVCs]] to claim the [[4 - Persistent Volumes|PV]] <b><i><span style="color:#d46644">storage</span></i></b>, and inject them into the [[7 - Pods ✅|pod]] definition files as [[3 - Volumes|volumes]]
 
 ![[storage-classes-1.png]]
 
@@ -8,7 +8,7 @@
 
 - <b><i><span style="color:#d46644">Storage classes</span></i></b> come in when [[3 - Volumes|volumes]] get <b><i><span style="color:#d46644">provisioned</span></i></b> automatically when the application requires it
 
-- With <b><i><span style="color:#d46644">storage classes</span></i></b>, you can define a <b><i><span style="color:#d46644">provisioner</span></i></b> such as <b><i><span style="color:#d46644">Google Storage</span></i></b> that can automatically <b><i><span style="color:#d46644">provision storage</span></i></b> on the <span style="color:#5c7e3e">cloud platform</span> and attach it to [[7 - Pods|pods]] when a [[5 - Persistent Volume Claims|PVC]] is made
+- With <b><i><span style="color:#d46644">storage classes</span></i></b>, you can define a <b><i><span style="color:#d46644">provisioner</span></i></b> such as <b><i><span style="color:#d46644">Google Storage</span></i></b> that can automatically <b><i><span style="color:#d46644">provision storage</span></i></b> on the <span style="color:#5c7e3e">cloud platform</span> and attach it to [[7 - Pods ✅|pods]] when a [[5 - Persistent Volume Claims|PVC]] is made
 
 - To create a <b><i><span style="color:#d46644">storage class</span></i></b> object, the <span style="color:#5c7e3e">apiVersion</span> is storage.k8s.io/v1 and <span style="color:#5c7e3e">kind</span> is <span style="color:red">StorageClass</span>
 
@@ -43,4 +43,4 @@
 
 ![[storage-classes-7.png]]
 
-- The <span style="color:red">volumeBinderMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes|PV]] until a [[7 - Pods|pod]] using the [[5 - Persistent Volume Claims|PVC]] is created
+- The <span style="color:red">volumeBinderMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes|PV]] until a [[7 - Pods ✅|pod]] using the [[5 - Persistent Volume Claims|PVC]] is created

@@ -20,15 +20,15 @@
 
 ### **ETCD in Kubernetes**
 
-- The <b><span style="color:#d46644">etcd datastore</span></b> stores information regarding the [[0 - Core Concepts Intro ✅|cluster]], such as the [[0 - Core Concepts Intro ✅|node]], [[7 - Pods|pods]], <i><span style="color:#477bbe">configs</span></i>, <i><span style="color:#477bbe">secrets</span></i>, <i><span style="color:#477bbe">accounts</span></i>, <i><span style="color:#477bbe">roles</span></i>, <i><span style="color:#477bbe">bindings</span></i>, other
+- The <b><span style="color:#d46644">etcd datastore</span></b> stores information regarding the [[0 - Core Concepts Intro ✅|cluster]], such as the [[0 - Core Concepts Intro ✅|node]], [[7 - Pods ✅|pods]], <i><span style="color:#477bbe">configs</span></i>, <i><span style="color:#477bbe">secrets</span></i>, <i><span style="color:#477bbe">accounts</span></i>, <i><span style="color:#477bbe">roles</span></i>, <i><span style="color:#477bbe">bindings</span></i>, other
 
 - All of the information we see when we run the `kubectl get` command comes from <b><span style="color:#d46644">etcd</span></b>
 
-- Every change you make to the [[0 - Core Concepts Intro ✅|cluster]] such as adding additional [[0 - Core Concepts Intro ✅|nodes]], deploying [[7 - Pods|pods]] or [[8 - ReplicaSets|replicaSets]] are updated in the <b><span style="color:#d46644">etcd server</span></b>
+- Every change you make to the [[0 - Core Concepts Intro ✅|cluster]] such as adding additional [[0 - Core Concepts Intro ✅|nodes]], deploying [[7 - Pods ✅|pods]] or [[8 - ReplicaSets ✅|replicaSets]] are updated in the <b><span style="color:#d46644">etcd server</span></b>
 
 - Depending on how you setup your [[0 - Core Concepts Intro ✅|cluster]], <b><span style="color:#d46644">etcd</span></b> can be deployed differently
 	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup from scratch, you download <b><span style="color:#d46644">etcd</span></b> binaries manually and configure <b><span style="color:#d46644">etcd</span></b> as a service in the [[0 - Core Concepts Intro ✅|master node]]
-	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>, the <b><span style="color:#d46644">etcd server</span></b> is setup for you as a [[7 - Pods|pod]] in the kube-system [[11 - Namespaces|namespace]]
+	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>, the <b><span style="color:#d46644">etcd server</span></b> is setup for you as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces|namespace]]
 
 - You can explore the <b><span style="color:#d46644">etcd database</span></b> by running the <span style="color:red">kubectl exec</span> command inside of the [[0 - Core Concepts Intro ✅|master node]]
 
@@ -36,11 +36,11 @@
 
 `kubectl exec etcd-NAME_OF_POD -n kube-system etcdctl get / --prefix --keys-only`
 
-- When <b><span style="color:#d46644">etcd</span></b>  is running in a [[7 - Pods|pod]] on the [[0 - Core Concepts Intro ✅|cluster]], this means that <b><span style="color:#d46644">etcd</span></b> is set up as a <b><span style="color:#5c7e3e">Stacked ETCD Topology</span></b> where the distributed data storage [[0 - Core Concepts Intro ✅|cluster]] provided by <b><span style="color:#d46644">etcd</span></b> is <b><span style="color:#5c7e3e">stacked</span></b> on top of the [[0 - Core Concepts Intro ✅|cluster]] formed by the [[0 - Core Concepts Intro ✅|nodes]] managed by <i><span style="color:#477bbe">kubeadm</span></i> that runs <i><span style="color:#477bbe">controlplane</span></i> components
+- When <b><span style="color:#d46644">etcd</span></b>  is running in a [[7 - Pods ✅|pod]] on the [[0 - Core Concepts Intro ✅|cluster]], this means that <b><span style="color:#d46644">etcd</span></b> is set up as a <b><span style="color:#5c7e3e">Stacked ETCD Topology</span></b> where the distributed data storage [[0 - Core Concepts Intro ✅|cluster]] provided by <b><span style="color:#d46644">etcd</span></b> is <b><span style="color:#5c7e3e">stacked</span></b> on top of the [[0 - Core Concepts Intro ✅|cluster]] formed by the [[0 - Core Concepts Intro ✅|nodes]] managed by <i><span style="color:#477bbe">kubeadm</span></i> that runs <i><span style="color:#477bbe">controlplane</span></i> components
 
-- If there is no <b><span style="color:#d46644">etcd</span></b> [[7 - Pods|pod]] and no <b><span style="color:#d46644">etcd</span></b> [[7 - Pods|pod]] manifest file, <b><i><span style="color:#5c7e3e">ssh</span></i></b> into the [[0 - Core Concepts Intro ✅|node]] where you are searching for <b><span style="color:#d46644">etcd</span></b>
+- If there is no <b><span style="color:#d46644">etcd</span></b> [[7 - Pods ✅|pod]] and no <b><span style="color:#d46644">etcd</span></b> [[7 - Pods ✅|pod]] manifest file, <b><i><span style="color:#5c7e3e">ssh</span></i></b> into the [[0 - Core Concepts Intro ✅|node]] where you are searching for <b><span style="color:#d46644">etcd</span></b>
 	- Run the <span style="color:red">ps ef | grep -I etcd</span> command to find that the [[2 - Kube API server ✅|kube-apiserver]] is, in fact, referencing an <b><span style="color:#d46644">etcd store</span></b>
-	- This can also be seen by describing the [[2 - Kube API server ✅|kube-apiserver]] [[7 - Pods|pod]]
+	- This can also be seen by describing the [[2 - Kube API server ✅|kube-apiserver]] [[7 - Pods ✅|pod]]
 	- This means that the <b><span style="color:#d46644">etcd</span></b> <i><span style="color:#477bbe">datastore</span></i> is <b><i><span style="color:#5c7e3e">external</span></i></b>
 
 ![[etcd-1.png]]

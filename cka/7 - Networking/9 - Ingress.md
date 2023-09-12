@@ -13,7 +13,7 @@
 
 ### How would all of this be done manually without Ingress?
 
-- A reverse proxy or [[10 - Services|load balancing]] solution (such as <span style="color:#5c7e3e">NGINX</span>, <span style="color:#5c7e3e">HA Proxy</span>, <span style="color:#5c7e3e">HA</span>, etc..) would be [[9 - Deployments|deployed]] on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
+- A reverse proxy or [[10 - Services|load balancing]] solution (such as <span style="color:#5c7e3e">NGINX</span>, <span style="color:#5c7e3e">HA Proxy</span>, <span style="color:#5c7e3e">HA</span>, etc..) would be [[9 - Deployments ✅|deployed]] on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[ingress-4.png]]
 
@@ -24,9 +24,9 @@
 
 ### How is Ingress configured?
 
-- <b><i><span style="color:#d46644">Ingress</span></i></b> is implemented in <span style="color:#5c7e3e">Kubernetes</span> in kind of the same way as manual, as you would first [[9 - Deployments|deploy]] one of the available solutions and then specify a set of rules
+- <b><i><span style="color:#d46644">Ingress</span></i></b> is implemented in <span style="color:#5c7e3e">Kubernetes</span> in kind of the same way as manual, as you would first [[9 - Deployments ✅|deploy]] one of the available solutions and then specify a set of rules
 
-- The solution [[9 - Deployments|deployed]] is called an <b><i><span style="color:#d46644">ingress controller</span></i></b>
+- The solution [[9 - Deployments ✅|deployed]] is called an <b><i><span style="color:#d46644">ingress controller</span></i></b>
 
 - The rules configured are called <b><i><span style="color:#d46644">ingress resources</span></i></b>
 
@@ -48,15 +48,15 @@
 ![[ingress-7.png]]
 
 - An <b><i><span style="color:#d46644">ingress controller</span></i></b> is not just another [[10 - Services|load balancer]] or <i><span style="color:#477bbe">server</span></i>
-	- The [[10 - Services|load balance]] components are just a part of it but these [[3 - Kube Controller Manager|controllers]] have additional intelligence built into them to monitor the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] for new definitions (<b><i><span style="color:#d46644">ingress resources</span></i></b>) and configure the <i><span style="color:#477bbe">server</span></i> accordingly
+	- The [[10 - Services|load balance]] components are just a part of it but these [[3 - Kube Controller Manager ✅|controllers]] have additional intelligence built into them to monitor the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] for new definitions (<b><i><span style="color:#d46644">ingress resources</span></i></b>) and configure the <i><span style="color:#477bbe">server</span></i> accordingly
 
 		** USING NGINX FOR OUR NOTES **
 
-- An <span style="color:#5c7e3e">NGINX</span> <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments|deployed]] as just another [[9 - Deployments|deployment]] in <span style="color:#5c7e3e">Kubernetes</span>
+- An <span style="color:#5c7e3e">NGINX</span> <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments ✅|deployed]] as just another [[9 - Deployments ✅|deployment]] in <span style="color:#5c7e3e">Kubernetes</span>
 
 ![[ingress-8.png]]
 
-- The manifest file type for an <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments|deployment]] and the [[11 - Image Security|image]] to be used is the one that corresponds with your chosen solution
+- The manifest file type for an <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments ✅|deployment]] and the [[11 - Image Security|image]] to be used is the one that corresponds with your chosen solution
 	- This would be a special build of that [[10 - Services|service]] created specifically to be used as an <b><i><span style="color:#d46644">ingress controller</span></i></b> in <span style="color:#5c7e3e">Kubernetes</span> which means it has its own set of requirements
 
 - For <span style="color:#5c7e3e">NGINX</span>, within the image, the <span style="color:#5c7e3e">NGINX</span> program is stored at location <span style="color:red">/nginx-ingress-controller</span>; therefore that must be passed as the command to start the <span style="color:#5c7e3e">NGINX controller</span> [[10 - Services|service]]
@@ -73,8 +73,8 @@
 ![[ingress-11.png]]
 
 
-- Two [[3 - Environment Variables|environment variables]] that hold the [[7 - Pods|pod]] name and the [[11 - Namespaces|namespace]] that holds the [[7 - Pods|pod]] is also required
-	- The <span style="color:#5c7e3e">NGINX</span> [[10 - Services|service]] requires this information to read the configuration data from within the [[7 - Pods|pod]]
+- Two [[3 - Environment Variables|environment variables]] that hold the [[7 - Pods ✅|pod]] name and the [[11 - Namespaces|namespace]] that holds the [[7 - Pods ✅|pod]] is also required
+	- The <span style="color:#5c7e3e">NGINX</span> [[10 - Services|service]] requires this information to read the configuration data from within the [[7 - Pods ✅|pod]]
 
 ![[ingress-12.png]]
 
@@ -84,7 +84,7 @@
 
 - After the <b><i><span style="color:#d46644">ingress controller</span></i></b> definition file has been created, a [[10 - Services|service]] is needed to expose the it to the external world
 
-- A [[10 - Services|service]] of type [[10 - Services|NodePort]] is created to link the [[10 - Services|service]] to the previously created [[9 - Deployments|deployment]]
+- A [[10 - Services|service]] of type [[10 - Services|NodePort]] is created to link the [[10 - Services|service]] to the previously created [[9 - Deployments ✅|deployment]]
 
 ![[ingress-14.png]]
 
@@ -93,7 +93,7 @@
 
 ![[ingress-15.png]]
 
-- To summarize, with a [[9 - Deployments|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services|service]] to expose it, a [[4 - ConfigMaps|configMap]] to feed configuration data, and a [[10 - Service Accounts|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls|roles]], [[8 - Role Based Access Controls|clusterroles]], and [[8 - Role Based Access Controls|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
+- To summarize, with a [[9 - Deployments ✅|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services|service]] to expose it, a [[4 - ConfigMaps|configMap]] to feed configuration data, and a [[10 - Service Accounts|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls|roles]], [[8 - Role Based Access Controls|clusterroles]], and [[8 - Role Based Access Controls|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
 
 ![[ingress-16.png]]
 
@@ -117,7 +117,7 @@ Ingress Resources
 
 ![[ingress-18.png]]
 
-- The "<span style="color:red">service</span>" property with the child "<span style="color:red">name</span>" and "<span style="color:red">port</span>" properties are used because traffic is routed to the <span style="color:#5c7e3e">Kubernetes</span> service and not the [[7 - Pods|pods]] directly
+- The "<span style="color:red">service</span>" property with the child "<span style="color:red">name</span>" and "<span style="color:red">port</span>" properties are used because traffic is routed to the <span style="color:#5c7e3e">Kubernetes</span> service and not the [[7 - Pods ✅|pods]] directly
 	- If it is a single backend, you don't really have any rules and the "<span style="color:red">service</span>" property with the child "<span style="color:red">name</span>" and "<span style="color:red">port</span>" properties will suffice
 
 - Rules are used when you want to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|route]] traffic based on different conditions

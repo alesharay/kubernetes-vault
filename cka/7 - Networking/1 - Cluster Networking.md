@@ -9,15 +9,15 @@
 
 ![[cluster-networking-1.png]]
 
-- [[5 - Kubelet|Kublet]], on the [[0 - Core Concepts Intro ✅|master]] and [[0 - Core Concepts Intro ✅|worker nodes]] listen on <span style="color:#5c7e3e">port</span> 10250
+- [[5 - Kubelet ✅|Kublet]], on the [[0 - Core Concepts Intro ✅|master]] and [[0 - Core Concepts Intro ✅|worker nodes]] listen on <span style="color:#5c7e3e">port</span> 10250
 
 ![[cluster-networking-2.png]]
 
-- The [[4 - Kube Scheduler|kube-scheduler]] requires <span style="color:#5c7e3e">port</span> 10259 to be opened
+- The [[4 - Kube Scheduler ✅|kube-scheduler]] requires <span style="color:#5c7e3e">port</span> 10259 to be opened
 
 ![[cluster-networking-3.png]]
 
-- The [[3 - Kube Controller Manager|kube-controller-manager]] requires <span style="color:#5c7e3e">port</span> 10257 to be opened
+- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] requires <span style="color:#5c7e3e">port</span> 10257 to be opened
 
 ![[cluster-networking-4.png]]
 

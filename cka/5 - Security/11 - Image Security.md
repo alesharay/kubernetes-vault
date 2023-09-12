@@ -1,4 +1,4 @@
-- This lesson will cover <b><i><span style="color:#d46644">image</span></i></b> names and configuring [[7 - Pods|pods]] to use <b><i><span style="color:#d46644">images</span></i></b> from secure repositories
+- This lesson will cover <b><i><span style="color:#d46644">image</span></i></b> names and configuring [[7 - Pods ✅|pods]] to use <b><i><span style="color:#d46644">images</span></i></b> from secure repositories
 
 - When you use the <span style="color:#5c7e3e">nginx</span> <b><i><span style="color:#d46644">image</span></i></b>, it's actually **library**/<span style="color:#5c7e3e">nginx</span>
 
@@ -36,7 +36,7 @@
 
 ![[images-security-5.png]]
 
-- In the [[7 - Pods|pod]] definition file, to use an <b><i><span style="color:#d46644">image</span></i></b> from a <b><i><span style="color:#d46644">private registry</span></i></b>, we use the full name of the <b><i><span style="color:#d46644">registry</span></i></b> along with the <b><i><span style="color:#d46644">image</span></i></b> name
+- In the [[7 - Pods ✅|pod]] definition file, to use an <b><i><span style="color:#d46644">image</span></i></b> from a <b><i><span style="color:#d46644">private registry</span></i></b>, we use the full name of the <b><i><span style="color:#d46644">registry</span></i></b> along with the <b><i><span style="color:#d46644">image</span></i></b> name
 
 ![[images-security-6.png]]
 
@@ -51,12 +51,12 @@
 
 ![[images-security-7.png]]
 
-- The [[5 - Secrets|secret]] with the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">private registry</span></i></b> credentials is specified in the [[7 - Pods|pod]] definition file using the <span style="color:#5c7e3e">imagePullSecret</span> property
+- The [[5 - Secrets|secret]] with the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">private registry</span></i></b> credentials is specified in the [[7 - Pods ✅|pod]] definition file using the <span style="color:#5c7e3e">imagePullSecret</span> property
 	- This a child to the <span style="color:#5c7e3e">spec</span> property
 
 ![[images-security-8.png]]
 
-- When the [[7 - Pods|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet|kubelet]] (on the [[0 - Core Concepts Intro ✅|worker nodes]]) uses the [[5 - Secrets|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
+- When the [[7 - Pods ✅|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet ✅|kubelet]] (on the [[0 - Core Concepts Intro ✅|worker nodes]]) uses the [[5 - Secrets|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
 
 ### Practice Problems
 

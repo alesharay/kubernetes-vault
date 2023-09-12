@@ -16,7 +16,7 @@
 
 		`RESOURCE_NAME.NAMESPACE.SUBDOMAIN.DOMAIN`
 
-- To list [[7 - Pods|pods]] in another <b><span style="color:#d46644">namespace</span></b>, use the <span style="color:red">--namespace NAMESPACE</span> OR <span style="color:red">-n NAMESPACE</span> option
+- To list [[7 - Pods ✅|pods]] in another <b><span style="color:#d46644">namespace</span></b>, use the <span style="color:red">--namespace NAMESPACE</span> OR <span style="color:red">-n NAMESPACE</span> option
 
 		kubectl get pods --namespace dev
 

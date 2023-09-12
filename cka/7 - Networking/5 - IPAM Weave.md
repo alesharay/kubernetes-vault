@@ -1,4 +1,4 @@
-- <b><i><span style="color:#d46644">IP Address Management</span></i></b> (<b><i><span style="color:#d46644">IPAM</span></i></b>) describes how the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|virtual bridge networks]] in the [[0 - Core Concepts Intro ✅|nodes]] are assigned an <span style="color:#5c7e3e">IP subnet</span>, how the [[7 - Pods|pods]] are assigned <span style="color:#5c7e3e">IP addresses</span>, and who is responsible for ensuring there are no duplicates assigned
+- <b><i><span style="color:#d46644">IP Address Management</span></i></b> (<b><i><span style="color:#d46644">IPAM</span></i></b>) describes how the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|virtual bridge networks]] in the [[0 - Core Concepts Intro ✅|nodes]] are assigned an <span style="color:#5c7e3e">IP subnet</span>, how the [[7 - Pods ✅|pods]] are assigned <span style="color:#5c7e3e">IP addresses</span>, and who is responsible for ensuring there are no duplicates assigned
 
 - Per <b><i><span style="color:#d46644">CNI</span></i></b>, it is the responsibility of the <b><i><span style="color:#d46644">CNI plugin</span></i></b> (the <b><i><span style="color:#d46644">network</span></i></b> solution provider) to take care of assigning <span style="color:#5c7e3e">IP address</span> to the containers
 
@@ -8,7 +8,7 @@
 
 ![[ipam-weave-1.png]]
 
-- The <span style="color:#5c7e3e">IP address</span> file would be placed on each <i><span style="color:#477bbe">host</span></i> and manages the IPs of [[7 - Pods|pods]] on those [[0 - Core Concepts Intro ✅|nodes]]
+- The <span style="color:#5c7e3e">IP address</span> file would be placed on each <i><span style="color:#477bbe">host</span></i> and manages the IPs of [[7 - Pods ✅|pods]] on those [[0 - Core Concepts Intro ✅|nodes]]
 
 ![[ipam-weave-2.png]]
 
@@ -25,7 +25,7 @@
 
 - <b><i><span style="color:#d46644">Weave</span></i></b>, by default, allocates the <span style="color:#5c7e3e">IP range 10.32.0.0/12</span> for the entire <b><i><span style="color:#d46644">network</span></i></b>
 
-- From the available range, the <b><i><span style="color:#d46644">weave</span></i></b> peers will split them equally between each [[0 - Core Concepts Intro ✅|node]] on the <b><i><span style="color:#d46644">network</span></i></b> and [[7 - Pods|pods]] created on those [[0 - Core Concepts Intro ✅|nodes]] will have <span style="color:#5c7e3e">IP addresses</span> in the range specified for their [[0 - Core Concepts Intro ✅|node]]
+- From the available range, the <b><i><span style="color:#d46644">weave</span></i></b> peers will split them equally between each [[0 - Core Concepts Intro ✅|node]] on the <b><i><span style="color:#d46644">network</span></i></b> and [[7 - Pods ✅|pods]] created on those [[0 - Core Concepts Intro ✅|nodes]] will have <span style="color:#5c7e3e">IP addresses</span> in the range specified for their [[0 - Core Concepts Intro ✅|node]]
 	- This is by default but can be changed using additional available options
 
 ![[ipam-weave-4.png]]

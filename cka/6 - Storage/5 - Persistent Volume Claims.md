@@ -56,7 +56,7 @@
 
 ![[pvc-9.png]]
 
-- Once you create a <b><i><span style="color:#d46644">PVC</span></i></b>, use it in a [[7 - Pods|pod]] definition file by specifying the <b><i><span style="color:#d46644">PVC</span></i></b> name under the "<span style="color:red">persistentVolumeClaim</span>" section in the [[3 - Volumes|volumes]] section
-	- This same is true for [[8 - ReplicaSets|replicaSets]] and [[9 - Deployments|deployments]]
+- Once you create a <b><i><span style="color:#d46644">PVC</span></i></b>, use it in a [[7 - Pods ✅|pod]] definition file by specifying the <b><i><span style="color:#d46644">PVC</span></i></b> name under the "<span style="color:red">persistentVolumeClaim</span>" section in the [[3 - Volumes|volumes]] section
+	- This same is true for [[8 - ReplicaSets ✅|replicaSets]] and [[9 - Deployments ✅|deployments]]
 
 ![[pvc-10.png]]

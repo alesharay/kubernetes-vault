@@ -9,14 +9,14 @@
 	- * Always Allow
 	- * Always Deny
 
-- The requests that [[5 - Kubelet|kubelet]] makes to/from the [[2 - Kube API server ✅|kube-apiserver]] are made by a special handler known as the [[0 - Core Concepts Intro ✅|node]] <b><i><span style="color:#d46644">authorizer</span></i></b>
-	- This is because [[5 - Kubelet|kubelet]] is a [[0 - Core Concepts Intro ✅|node]]
+- The requests that [[5 - Kubelet ✅|kubelet]] makes to/from the [[2 - Kube API server ✅|kube-apiserver]] are made by a special handler known as the [[0 - Core Concepts Intro ✅|node]] <b><i><span style="color:#d46644">authorizer</span></i></b>
+	- This is because [[5 - Kubelet ✅|kubelet]] is a [[0 - Core Concepts Intro ✅|node]]
 
 - Any request coming from a <i><span style="color:#477bbe">user</span></i> with the name <b><i><span style="color:#d46644">system:node</span></i></b> and is part of the <b><i><span style="color:#d46644">system:nodes</span></i></b> <i><span style="color:#477bbe">group</span></i> is <b><i><span style="color:#d46644">authorized</span></i></b> by the [[0 - Core Concepts Intro ✅|node]] <b><i><span style="color:#d46644">authorizer</span></i></b> and are granted those privileges
-	- Such as the privileges required by [[5 - Kubelet|kubelet]] (this is access within the [[0 - Core Concepts Intro ✅|cluster]])
+	- Such as the privileges required by [[5 - Kubelet ✅|kubelet]] (this is access within the [[0 - Core Concepts Intro ✅|cluster]])
 
 - <b><i><span style="color:#d46644">Attribute Based Authorization</span></i></b> is where you associate a <i><span style="color:#477bbe">user</span></i> or <i><span style="color:#477bbe">group</span></i> of <i><span style="color:#477bbe">users</span></i> with a set of permissions
-	- Ie.. The dev <i><span style="color:#477bbe">user</span></i> can view, create, and delete [[7 - Pods|pods]]
+	- Ie.. The dev <i><span style="color:#477bbe">user</span></i> can view, create, and delete [[7 - Pods ✅|pods]]
 	- (This is external access to the API)        
 
 - To create <b><i><span style="color:#d46644">Attribute Based Authorization</span></i></b>, you use a set of policy files with the policies defined in <span style="color:#5c7e3e">JSON</span> format

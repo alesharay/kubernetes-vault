@@ -28,15 +28,15 @@
 
 ![[secrets-7.png]]
 
-1. Inject the <b><span style="color:#d46644">secret</span></b> into the [[7 - Pods|pod]] definition file
+1. Inject the <b><span style="color:#d46644">secret</span></b> into the [[7 - Pods ✅|pod]] definition file
 
-	- To inject an [[3 - Environment Variables|environment variable]] into the [[7 - Pods|pod]] definition file, add the <b><span style="color:#d46644">envFrom</span></b> property
+	- To inject an [[3 - Environment Variables|environment variable]] into the [[7 - Pods ✅|pod]] definition file, add the <b><span style="color:#d46644">envFrom</span></b> property
 
 	- The <b><span style="color:#d46644">envFrom</span></b> variable is a list and can hold as many [[3 - Environment Variables|environment variables]] as required
 
 ![[secrets-6.png]]
 
-- Another way to inject <b><span style="color:#d46644">secrets</span></b> into a [[7 - Pods|pod]] definition file is as files in a [[3 - Volumes|volume]] if you were to mount the <b><span style="color:#d46644">secret</span></b> as a [[3 - Volumes|volume]] in your [[7 - Pods|pod]]
+- Another way to inject <b><span style="color:#d46644">secrets</span></b> into a [[7 - Pods ✅|pod]] definition file is as files in a [[3 - Volumes|volume]] if you were to mount the <b><span style="color:#d46644">secret</span></b> as a [[3 - Volumes|volume]] in your [[7 - Pods ✅|pod]]
 	- Each attribute in the <b><span style="color:#d46644">secret</span></b> is created as a file with the value of the <b><span style="color:#d46644">secret</span></b> as its content
 
 ![[secrets-7.png]]

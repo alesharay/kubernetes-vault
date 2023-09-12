@@ -1,21 +1,21 @@
 <i><span style="color:red">Not listed in as a required topic in cert but important to know</span></i>
 
-- [[7 - Pods|Containers]] are not meant to host an OS
+- [[7 - Pods ✅|Containers]] are not meant to host an OS
 
-- [[7 - Pods|Containers]] are meant to run a specific task or process such as to host an instance of a webserver, application server, database, or even just to carry out some sort of computational task
+- [[7 - Pods ✅|Containers]] are meant to run a specific task or process such as to host an instance of a webserver, application server, database, or even just to carry out some sort of computational task
 
-- A [[7 - Pods|containers]] only lives for as long as the process(es) inside it are alive
+- A [[7 - Pods ✅|containers]] only lives for as long as the process(es) inside it are alive
 
-- In a <span style="color:#5c7e3e">Dockerfile</span>, the <b><span style="color:#d46644">CMD</span></b> instruction, which stands for <i><span style="color:#d46644">command</span></i>, defines the program that will be run inside of the [[7 - Pods|containers]] when it starts
+- In a <span style="color:#5c7e3e">Dockerfile</span>, the <b><span style="color:#d46644">CMD</span></b> instruction, which stands for <i><span style="color:#d46644">command</span></i>, defines the program that will be run inside of the [[7 - Pods ✅|containers]] when it starts
 
 ![[commands-1.png]]
 
-- By default, <span style="color:#5c7e3e">Docker</span> does not attach a terminal to a [[7 - Pods|containers]] when it is run
+- By default, <span style="color:#5c7e3e">Docker</span> does not attach a terminal to a [[7 - Pods ✅|containers]] when it is run
 
 - In <span style="color:#5c7e3e">Docker</span>, one way to specify a <i><span style="color:#d46644">command</span></i> to run is to append the <i><span style="color:#d46644">command</span></i> to the end of the <span style="color:red">docker run</span> <i><span style="color:#d46644">command</span></i>
 	- This way, it overrides the default <i><span style="color:#d46644">command</span></i>
 
-- If the <span style="color:red">docker run</span> <i><span style="color:#d46644">command</span></i> is run with the `sleep 5` <i><span style="color:#d46644">command</span></i> at the end, the [[7 - Pods|containers]] will start, sleep for 5 seconds, then exit
+- If the <span style="color:red">docker run</span> <i><span style="color:#d46644">command</span></i> is run with the `sleep 5` <i><span style="color:#d46644">command</span></i> at the end, the [[7 - Pods ✅|containers]] will start, sleep for 5 seconds, then exit
 
 ![[commands-2.png]]
 

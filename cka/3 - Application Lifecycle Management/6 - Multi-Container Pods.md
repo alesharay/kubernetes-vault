@@ -6,15 +6,15 @@
 
 - At times, you may need two [[10 - Services|services]] to work together such as a webserver and a logging [[10 - Services|service]]
 	- Even though you want them to deployed separately, you still want them to be paired together
-	- This is the scenario where you would want multiple [[7 - Pods|containers]] in a [[7 - Pods|pod]]
+	- This is the scenario where you would want multiple [[7 - Pods ✅|containers]] in a [[7 - Pods ✅|pod]]
 
-- Multiple [[7 - Pods|containers]] in a [[7 - Pods|pod]] means they will be both created and destroyed together
+- Multiple [[7 - Pods ✅|containers]] in a [[7 - Pods ✅|pod]] means they will be both created and destroyed together
 	- They also share the same network space which means they can refer to each other as localhost, and they have access to the same storage [[3 - Volumes|volumes]]
 
-- To create a <b><span style="color:#d46644">multi-container pod</span></b>, add the new [[7 - Pods|container]] information to the [[7 - Pods|pod]] definition file
+- To create a <b><span style="color:#d46644">multi-container pod</span></b>, add the new [[7 - Pods ✅|container]] information to the [[7 - Pods ✅|pod]] definition file
 
-- Remember that the [[7 - Pods|containers]] section in the <span style="color:#5c7e3e">spec</span> section is an <span style="color:#5c7e3e">array</span>
-	- This is to allow multiple [[7 - Pods|containers]] in a [[7 - Pods|pod]]
+- Remember that the [[7 - Pods ✅|containers]] section in the <span style="color:#5c7e3e">spec</span> section is an <span style="color:#5c7e3e">array</span>
+	- This is to allow multiple [[7 - Pods ✅|containers]] in a [[7 - Pods ✅|pod]]
 
 ![[multi-1.png]]
 

@@ -18,7 +18,7 @@ link- There are many candidates for <b><span style="color:#d46644">backups</span
 
 - Query the [[2 - Kube API server ✅|kube-apiserver]] using <span style="color:#5c7e3e">kubectl</span> or by accessing the [[2 - Kube API server ✅|API server]] directly and saving all <i><span style="color:#477bbe">resource</span></i> configurations, so that all objects created on the [[0 - Core Concepts Intro ✅|cluster]] have a copy
 
-- One of the commands that can be used in a <b><span style="color:#d46644">backup</span></b> script is to get all [[7 - Pods|pods]], [[9 - Deployments|deployments]], and [[10 - Services|services]] in all [[11 - Namespaces|na]] using the <span style="color:red">kubectl get all --all-namespaces</span> command and redirect the output to a YAML file
+- One of the commands that can be used in a <b><span style="color:#d46644">backup</span></b> script is to get all [[7 - Pods ✅|pods]], [[9 - Deployments ✅|deployments]], and [[10 - Services|services]] in all [[11 - Namespaces|na]] using the <span style="color:red">kubectl get all --all-namespaces</span> command and redirect the output to a YAML file
 
 ![[backup-2.png]]
 

@@ -34,7 +34,7 @@
 ![[ksoftware-2.png]]
 
 - All of the components in the downloaded package have the same version
-	- [[2 - Kube API server ✅|kube-apiserver]], [[3 - Kube Controller Manager|controller manager]], [[4 - Kube Scheduler|scheduler]], [[5 - Kubelet|kubelet]], [[6 - Kube Proxy|kube-proxy]]
+	- [[2 - Kube API server ✅|kube-apiserver]], [[3 - Kube Controller Manager ✅|controller manager]], [[4 - Kube Scheduler ✅|scheduler]], [[5 - Kubelet ✅|kubelet]], [[6 - Kube Proxy ✅|kube-proxy]]
 
 - There are other components within the control plane that do not have the same version
 	- [[0 - Core Concepts Intro ✅|ETCD cluster]], [[8 - CoreDNS in Kubernetes|core DNS server]]

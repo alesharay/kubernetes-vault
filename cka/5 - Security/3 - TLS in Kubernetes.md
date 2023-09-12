@@ -35,7 +35,7 @@
 
 ![[tlsk-4.png]]
 
-- The [[5 - Kubelet|kubelet]] services on the [[0 - Core Concepts Intro ✅|worker nodes]] are <i><span style="color:#477bbe">servers</span></i> that also expose an HTTPS API endpoint that the [[2 - Kube API server ✅|kube-apiserver]] talks to in order to interact with [[0 - Core Concepts Intro ✅|worker nodes]]
+- The [[5 - Kubelet ✅|kubelet]] services on the [[0 - Core Concepts Intro ✅|worker nodes]] are <i><span style="color:#477bbe">servers</span></i> that also expose an HTTPS API endpoint that the [[2 - Kube API server ✅|kube-apiserver]] talks to in order to interact with [[0 - Core Concepts Intro ✅|worker nodes]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">kubelet.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">kubelet.key</span>
 
 ![[tlsk-5.png]]
@@ -49,21 +49,21 @@
 
 ![[tlsk-6.png]]
 
-- The [[4 - Kube Scheduler|scheduler]] talks to the [[2 - Kube API server ✅|kube-apiserver]] to look for [[7 - Pods|pods]] that require scheduling and then gets the [[7 - Pods|pods]] scheduled on the correct [[0 - Core Concepts Intro ✅|worker nodes]]
-	- As far as the [[2 - Kube API server ✅|kube-apiserver]] is concerned, the [[4 - Kube Scheduler|scheduler]] is just another <i><span style="color:#477bbe">client</span></i> like the <i><span style="color:#477bbe">admin user</span></i>
+- The [[4 - Kube Scheduler ✅|scheduler]] talks to the [[2 - Kube API server ✅|kube-apiserver]] to look for [[7 - Pods ✅|pods]] that require scheduling and then gets the [[7 - Pods ✅|pods]] scheduled on the correct [[0 - Core Concepts Intro ✅|worker nodes]]
+	- As far as the [[2 - Kube API server ✅|kube-apiserver]] is concerned, the [[4 - Kube Scheduler ✅|scheduler]] is just another <i><span style="color:#477bbe">client</span></i> like the <i><span style="color:#477bbe">admin user</span></i>
 
-- The [[4 - Kube Scheduler|scheduler]] needs to validate its identity using a <b><i><span style="color:#d46644">client TLS certificate</span></i></b>
+- The [[4 - Kube Scheduler ✅|scheduler]] needs to validate its identity using a <b><i><span style="color:#d46644">client TLS certificate</span></i></b>
 	- It needs its own pair of [[3.1 - Certification Creation|certificates]] and <b><i><span style="color:#d46644">keys</span></i></b>
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">scheduler.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">scheduler.key</span>
 
 ![[tlsk-7.png]]
 
-- The [[3 - Kube Controller Manager|kube-controller manager]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
+- The [[3 - Kube Controller Manager ✅|kube-controller manager]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">controller-manager.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">controller-manager.key</span>
 
 ![[tlsk-8.png]]
 
-- The [[6 - Kube Proxy|kube-proxy]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
+- The [[6 - Kube Proxy ✅|kube-proxy]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">kube-proxy.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">kube-proxy.key</span>
 
 ![[tlsk-9.png]]
@@ -77,7 +77,7 @@
 - As far as the [[1 - ETCD ✅|etcd server]] is concerned, the [[2 - Kube API server ✅|kube-apiserver]] is just another <i><span style="color:#477bbe">client</span></i> and thus needs to [[1 - Authentication|authenticate]] the [[2 - Kube API server ✅|kube-apiserver]]
 	- The same <b><i><span style="color:#d46644">keys</span></i></b> from serving its own API service can be used (<span style="color:red">apiservice.crt</span> and <span style="color:red">apiservice.key</span>) or you can generate new ones specifically for this purpose
 
-- The [[2 - Kube API server ✅|kube-apiserver]] talks to the [[5 - Kubelet|kubelet server]] on each of the individual [[0 - Core Concepts Intro ✅|nodes]]
+- The [[2 - Kube API server ✅|kube-apiserver]] talks to the [[5 - Kubelet ✅|kubelet server]] on each of the individual [[0 - Core Concepts Intro ✅|nodes]]
 	- This is how it monitors the [[0 - Core Concepts Intro ✅|worker nodes]]
 	- The same <b><i><span style="color:#d46644">keys</span></i></b> from serving its own API service can be used (<span style="color:red">apiservice.crt</span> and <span style="color:red">apiservice.key</span>) or you can generate new ones specifically for this purpose
 

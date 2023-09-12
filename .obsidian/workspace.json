@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
+                "file": "cka/7 - Networking/9 - Ingress.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IPAM",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
+                "file": "cka/7 - Networking/9 - Ingress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
+                "file": "cka/7 - Networking/9 - Ingress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/0 - Core Concepts/3 - Kube Controller Manager.md"
+                "file": "cka/7 - Networking/9 - Ingress.md"
               }
             }
           }
@@ -148,43 +148,42 @@
   },
   "active": "48e39ba68f5c50b7",
   "lastOpenFiles": [
+    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
+    "cka/7 - Networking/2 - Pod Networking.md",
+    "cka/5 - Security/12 - Pre-requisite - Security in Docker.md",
+    "cka/images/pods3.png",
+    "cka/images/pods2.png",
+    "cka/images/pods1.png",
+    "cka/images/pods.png",
+    "cka/3 - Application Lifecycle Management/4 - ConfigMaps.md",
+    "cka/3 - Application Lifecycle Management/3 - Environment Variables.md",
+    "cka/0 - Core Concepts/9 - Deployments ✅.md",
+    "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
+    "cka/0 - Core Concepts/7 - Pods ✅.md",
+    "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
+    "cka/0 - Core Concepts/5 - Kubelet ✅.md",
+    "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
+    "cka/0 - Core Concepts/3 - Kube Controller Manager ✅.md",
     "cka/0 - Core Concepts/2 - Kube API server ✅.md",
-    "cka/0 - Core Concepts/3 - Kube Controller Manager.md",
     "cka/0 - Core Concepts/1 - ETCD ✅.md",
     "cka/0 - Core Concepts/0 - Core Concepts Intro ✅.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+    "cka/5 - Security/11 - Image Security.md",
+    "cka/6 - Storage/0 - Storage in Docker.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
+    "cka/5 - Security/10 - Service Accounts.md",
+    "cka/5 - Security/9 - Cluster Roles.md",
     "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
     "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
     "cka/8 - Design and Install a Kubernetes Cluster/2 - ** Configure High Availability.md",
     "cka/8 - Design and Install a Kubernetes Cluster/1 - Choosing Kubernetes Infrastructure.md",
-    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
     "cka/7 - Networking/9 - Ingress.md",
-    "cka/3 - Application Lifecycle Management/0 - Rolling Updates & Rollbacks.md",
-    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
-    "cka/3 - Application Lifecycle Management/2 - Commands & Arguments in Kubernetes.md",
-    "cka/3 - Application Lifecycle Management/3 - Environment Variables.md",
-    "cka/3 - Application Lifecycle Management/4 - ConfigMaps.md",
-    "cka/7 - Networking/8 - CoreDNS in Kubernetes.md",
-    "cka/7 - Networking/7 - DNS in Kubernetes.md",
-    "cka/7 - Networking/1 - Cluster Networking.md",
-    "cka/7 - Networking/3 - CNI in Kubernetes.md",
-    "cka/7 - Networking/4 - CNI Weave.md",
-    "cka/7 - Networking/5 - IPAM Weave.md",
-    "cka/7 - Networking/6 - Service Networking.md",
-    "cka/0 - Core Concepts/7 - Pods.md",
-    "cka/7 - Networking/0 - Prereqs/0.6 - CNI.md",
-    "cka/7 - Networking/2 - Pod Networking.md",
-    "kind-config.yaml",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
     "ckad/images/readiness-7.png",
     "ckad/images/readiness-6.png",
     "ckad/images/readiness-5.png",
-    "ckad/images/readiness-4.png",
-    "ckad/images/readiness-3.png",
-    "ckad/images/readiness-2.png",
-    "ckad/images/readiness-17.png",
     "ckad/images",
     "ckad/2 - Observability",
     "chromedriver",
@@ -194,6 +193,7 @@
     "cka/8 - Design and Install a Kubernetes Cluster",
     "cka/7 - Networking",
     "cka/6 - Storage",
+    "cka/5 - Security",
     "Untitled.canvas"
   ]
 }

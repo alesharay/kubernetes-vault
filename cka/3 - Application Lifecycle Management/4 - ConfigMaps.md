@@ -1,11 +1,11 @@
-- When you have a lot of [[7 - Pods|pod]] definition files, it will become difficult to manage the environment data stored within the query files
+- When you have a lot of [[7 - Pods ✅|pod]] definition files, it will become difficult to manage the environment data stored within the query files
 
-- [[3 - Environment Variables|Environment variable]] values can be taken out of the [[7 - Pods|pod]] definition file and managed centrally using <b><span style="color:#d46644">configMaps</span></b>
+- [[3 - Environment Variables|Environment variable]] values can be taken out of the [[7 - Pods ✅|pod]] definition file and managed centrally using <b><span style="color:#d46644">configMaps</span></b>
 
 - <b><span style="color:#d46644">configMaps</span></b> are used to pass configuration data in the form of key-value pairs in <span style="color:#5c7e3e">Kubernetes</span>
 
-- When a <b><span style="color:#d46644">configMap</span></b> is created, inject the <b><span style="color:#d46644">configMap</span></b> into the [[7 - Pods|pod]] instead
-	- This way the key-value pairs are available as [[3 - Environment Variables|Environment variables]] for the application hosted inside of the [[7 - Pods|container]] in the [[7 - Pods|pod]]
+- When a <b><span style="color:#d46644">configMap</span></b> is created, inject the <b><span style="color:#d46644">configMap</span></b> into the [[7 - Pods ✅|pod]] instead
+	- This way the key-value pairs are available as [[3 - Environment Variables|Environment variables]] for the application hosted inside of the [[7 - Pods ✅|container]] in the [[7 - Pods ✅|pod]]
 
 ------------------------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@
 		- With this definition file, we still have the <i><span style="color:#5c7e3e">apiVersion</span></i>, <i><span style="color:#5c7e3e">kind</span></i> and <i><span style="color:#5c7e3e">metadata</span></i> properties; but instead of the spec property, we have the data property
 			- Under <i><span style="color:#5c7e3e">data</span></i>, add the configuration data in key-value format
 		- You can create as many <b><span style="color:#d46644">configMaps</span></b> in this way as needed for various different purposes
-			- Name the config files appropriately as that will be used later while associating it with [[7 - Pods|pods]]
+			- Name the config files appropriately as that will be used later while associating it with [[7 - Pods ✅|pods]]
 
 ![[configure-2-3.png]]
 
@@ -41,7 +41,7 @@
 
 ![[configure-2-5.png]]
 
-1. Inject the <b><span style="color:#d46644">configMap</span></b> in the [[7 - Pods|pod]] definition file
+1. Inject the <b><span style="color:#d46644">configMap</span></b> in the [[7 - Pods ✅|pod]] definition file
 
 	- Add a property called <b><span style="color:#d46644">envFrom</span></b>, which is a list
 

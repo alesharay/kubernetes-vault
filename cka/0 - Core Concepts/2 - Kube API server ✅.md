@@ -9,7 +9,7 @@
 
 		curl -X POST /api/v1/namespaces/default/pods
 
-- The [[4 - Kube Scheduler|scheduler]] continuously monitors the <b><span style="color:#d46644">API server</span></b>
+- The [[4 - Kube Scheduler ✅|scheduler]] continuously monitors the <b><span style="color:#d46644">API server</span></b>
 
 - The <b><span style="color:#d46644">kube-apiserver</span></b> is at the center of all the different tasks that need to be performed to make a change in the [[0 - Core Concepts Intro ✅|cluster]]
 

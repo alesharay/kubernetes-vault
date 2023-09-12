@@ -61,15 +61,15 @@
 
 - If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] itself, the <b><i><span style="color:#d46644">service account</span></i></b> process is different
 
-- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods|pod]] hosting the application
-	- This way, the token to access the <span style="color:#5c7e3e">Kubernetes</span> API is already placed inside of the [[7 - Pods|pod]] and can be easily read by the application
+- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods ✅|pod]] hosting the application
+	- This way, the token to access the <span style="color:#5c7e3e">Kubernetes</span> API is already placed inside of the [[7 - Pods ✅|pod]] and can be easily read by the application
 
 - For every [[11 - Namespaces|namespace]] in <span style="color:#5c7e3e">Kubernetes</span>, a <b><i><span style="color:#d46644">service account</span></i></b> named "<span style="color:red">default</span>" is automatically created
 	- Each [[11 - Namespaces|namespace]] has it's own "<span style="color:red">default</span>" <b><i><span style="color:#d46644">service account</span></i></b>
 
-- Whenever a [[7 - Pods|pod]] is created, the default <b><i><span style="color:#d46644">service account</span></i></b> and its token are automatically mounted to that [[7 - Pods|pod]] as a [[3 - Volumes|volume mount]]
+- Whenever a [[7 - Pods ✅|pod]] is created, the default <b><i><span style="color:#d46644">service account</span></i></b> and its token are automatically mounted to that [[7 - Pods ✅|pod]] as a [[3 - Volumes|volume mount]]
 
-- When you look at the details of a [[7 - Pods|pod]], you see that a [[3 - Volumes|volume]] is created from the <b><i><span style="color:#d46644">service account</span></i></b> [[5 - Secrets|secret]], which is in fact the [[5 - Secrets|secret]] containing the default token for this <b><i><span style="color:#d46644">service account</span></i></b>
+- When you look at the details of a [[7 - Pods ✅|pod]], you see that a [[3 - Volumes|volume]] is created from the <b><i><span style="color:#d46644">service account</span></i></b> [[5 - Secrets|secret]], which is in fact the [[5 - Secrets|secret]] containing the default token for this <b><i><span style="color:#d46644">service account</span></i></b>
 
 ![[servicea-6.png]]
 
@@ -77,26 +77,26 @@
 
 ![[servicea-7.png]]
 
-- If you exec into a [[7 - Pods|pod]] and list (ls) the files in the location of the mounted [[3 - Volumes|volumes]], you will see the files that it references in the <span style="color:#5c7e3e">volumes</span> section
+- If you exec into a [[7 - Pods ✅|pod]] and list (ls) the files in the location of the mounted [[3 - Volumes|volumes]], you will see the files that it references in the <span style="color:#5c7e3e">volumes</span> section
 
 ![[servicea-8.png]]
 
 - The default <b><i><span style="color:#d46644">service account</span></i></b> is very much restricted as it only has permission to run basic <span style="color:#5c7e3e">Kubernetes</span> API queries
 
-- To use a different <b><i><span style="color:#d46644">service account</span></i></b> with more access in your <span style="color:#5c7e3e">Kubernetes</span> [[9 - Deployments|deployed]] application, modify the [[7 - Pods|pod]] definition file to include a <span style="color:#5c7e3e">serviceAccountName</span> field, specifying the name of the new <b><i><span style="color:#d46644">service account</span></i></b>
+- To use a different <b><i><span style="color:#d46644">service account</span></i></b> with more access in your <span style="color:#5c7e3e">Kubernetes</span> [[9 - Deployments ✅|deployed]] application, modify the [[7 - Pods ✅|pod]] definition file to include a <span style="color:#5c7e3e">serviceAccountName</span> field, specifying the name of the new <b><i><span style="color:#d46644">service account</span></i></b>
 
 ![[servicea-9.png]]
 
-- *Remember: you cannot edit the <b><i><span style="color:#d46644">service account</span></i></b> of an existing [[7 - Pods|pod]]. To use a different <b><i><span style="color:#d46644">service account</span></i></b>, you must delete and recreate the [[7 - Pods|pod]]
+- *Remember: you cannot edit the <b><i><span style="color:#d46644">service account</span></i></b> of an existing [[7 - Pods ✅|pod]]. To use a different <b><i><span style="color:#d46644">service account</span></i></b>, you must delete and recreate the [[7 - Pods ✅|pod]]
 
-- You can edit the <b><i><span style="color:#d46644">service account</span></i></b> for a [[9 - Deployments|deployment]] without having to delete and recreate as any changes in the [[7 - Pods|pod]] <span style="color:#5c7e3e">spec</span> section will automatically trigger a new [[0 - Rolling Updates & Rollbacks|rollout]]
-	- Thus the [[9 - Deployments|deployment]] will take care of deleting and recreating new [[7 - Pods|pods]] with the right <b><i><span style="color:#d46644">service accounts</span></i></b>
+- You can edit the <b><i><span style="color:#d46644">service account</span></i></b> for a [[9 - Deployments ✅|deployment]] without having to delete and recreate as any changes in the [[7 - Pods ✅|pod]] <span style="color:#5c7e3e">spec</span> section will automatically trigger a new [[0 - Rolling Updates & Rollbacks|rollout]]
+	- Thus the [[9 - Deployments ✅|deployment]] will take care of deleting and recreating new [[7 - Pods ✅|pods]] with the right <b><i><span style="color:#d46644">service accounts</span></i></b>
 
 ![[servicea-10.png]]
 
 - *Remember: <span style="color:#5c7e3e">Kubernetes</span> automatically mounts the default <b><i><span style="color:#d46644">service account</span></i></b> if you haven't explicitly specified any <b><i><span style="color:#d46644">service account</span></i></b>
 
-- You may choose not to mount a <b><i><span style="color:#d46644">service account</span></i></b> automatically by setting the <span style="color:#5c7e3e">automountServiceAccountToken</span> property to false in the [[7 - Pods|pod]] <span style="color:#5c7e3e">spec</span> section
+- You may choose not to mount a <b><i><span style="color:#d46644">service account</span></i></b> automatically by setting the <span style="color:#5c7e3e">automountServiceAccountToken</span> property to false in the [[7 - Pods ✅|pod]] <span style="color:#5c7e3e">spec</span> section
 
 ![[servicea-11.png]]
 

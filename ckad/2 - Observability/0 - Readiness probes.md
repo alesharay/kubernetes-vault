@@ -1,12 +1,12 @@
 ### Pod Lifecycle Stages
 
-* A [[7 - Pods|pod]] has a [[7 - Pods|pod]] status and some conditions
+* A [[7 - Pods ✅|pod]] has a [[7 - Pods ✅|pod]] status and some conditions
 
 ![[readiness-1.png]]
 
-* The [[7 - Pods|pod]] status tells us where the pod is in its lifecycle
+* The [[7 - Pods ✅|pod]] status tells us where the pod is in its lifecycle
 
-* When a [[7 - Pods|pod]] is first created, it is in a pending state.
+* When a [[7 - Pods ✅|pod]] is first created, it is in a pending state.
 	* This is when the **scheduler** determines where to place the **pod**
 	* If the **scheduler** cannot find a **node** to place the **pod** it will remain in a *pending* state
 

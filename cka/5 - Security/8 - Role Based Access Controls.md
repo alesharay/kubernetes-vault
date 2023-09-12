@@ -19,7 +19,7 @@
 - For a [[6 - API Groups|core group]], the [[6 - API Groups|apiGroups]] section of the <b><i><span style="color:#d46644">role</span></i></b> definition file can be left blank. But for any other <i><span style="color:#477bbe">group</span></i>, the <i><span style="color:#477bbe">group</span></i> name must be specified
 
 - The <span style="color:#5c7e3e">resources</span> property of the <span style="color:#5c7e3e">rules</span> section on a <b><i><span style="color:#d46644">role</span></i></b> definition is for what you want to provide access to
-	- Ie. For developers, you provide access to [[7 - Pods|pods]]
+	- Ie. For developers, you provide access to [[7 - Pods ✅|pods]]
 
 - The verbs property of the <span style="color:#5c7e3e">rules</span> section on a <b><i><span style="color:#d46644">role</span></i></b> definition is for the actions the <i><span style="color:#477bbe">user</span></i> can take
 	- Ie. For developers, the can perform the "list, get, create, update, delete" actions
@@ -83,7 +83,7 @@
 
 !![[role-based-10.png]]
 
-- In addition to providing <b><i><span style="color:#d46644">rules</span></i></b> for a specific <b><i><span style="color:#d46644">resource</span></i></b> (like [[7 - Pods|pods]]), you can also go one level in and provide <b><i><span style="color:#d46644">rules</span></i></b> for a specific <b><i><span style="color:#d46644">resources</span></i></b> within that <i><span style="color:#477bbe">group</span></i> (like green [[7 - Pods|pod]] or blue [[7 - Pods|pod]]) by specifying the <span style="color:#5c7e3e">resourceNames</span> property
+- In addition to providing <b><i><span style="color:#d46644">rules</span></i></b> for a specific <b><i><span style="color:#d46644">resource</span></i></b> (like [[7 - Pods ✅|pods]]), you can also go one level in and provide <b><i><span style="color:#d46644">rules</span></i></b> for a specific <b><i><span style="color:#d46644">resources</span></i></b> within that <i><span style="color:#477bbe">group</span></i> (like green [[7 - Pods ✅|pod]] or blue [[7 - Pods ✅|pod]]) by specifying the <span style="color:#5c7e3e">resourceNames</span> property
 
 ![[role-based-11.png]]
 
