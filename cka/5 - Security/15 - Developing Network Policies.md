@@ -1,8 +1,8 @@
-- Assume the goal is to protect the [[7 - Pods|DB pod]] in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]]- <i><span style="color:#477bbe">DB server</span></i> setup so that it doesn't allow access from any other [[7 - Pods|pods]] except the [[2 - Kube API server|API server]] [[7 - Pods|pod]]
+- Assume the goal is to protect the [[7 - Pods|DB pod]] in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]]- <i><span style="color:#477bbe">DB server</span></i> setup so that it doesn't allow access from any other [[7 - Pods|pods]] except the [[2 - Kube API server ✅|API server]] [[7 - Pods|pod]]
 
 - By default, <span style="color:#5c7e3e">Kubernetes</span> allows all communications from all [[7 - Pods|pods]] to all destinations
 
-- Consider the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: as a first step, we want to block out everything going in and out of the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]]
+- Consider the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: as a first step, we want to block out everything going in and out of the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]]
 
 - Create a <b><i><span style="color:#d46644">network policy</span></i></b> with the [[7 - Pods|pod]] that we want to protect by creating a [[14 - Network Policies|NetworkPolicy]] object
 	- Give it a name that represents what it's for
@@ -19,7 +19,7 @@
 - It is necessary to decide what type of [[14 - Network Policies|policies]] should be defined on the <b><i><span style="color:#d46644">network policy</span></i></b> object to meet necessary requirements
 	- [[14 - Network Policies|ingress]], [[14 - Network Policies|egress]] or both
 
-- From the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]] perspective, we want to allow traffic from the [[2 - Kube API server|API server]] [[7 - Pods|pod]]
+- From the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods|pod]] perspective, we want to allow traffic from the [[2 - Kube API server ✅|API server]] [[7 - Pods|pod]]
 	- This is incoming traffic so we need an [[14 - Network Policies|ingress]] <b><i><span style="color:#d46644">network policy</span></i></b>
 
 ![[developing-2.png]]
@@ -32,9 +32,9 @@
 
 ![[developing-3.png]]
 
-- For an [[14 - Network Policies|ingress policy]], even though response traffic is still allowed through, new outgoing traffic (like a call from the <i><span style="color:#477bbe">DB</span></i> to the [[2 - Kube API server|API]]) can't
+- For an [[14 - Network Policies|ingress policy]], even though response traffic is still allowed through, new outgoing traffic (like a call from the <i><span style="color:#477bbe">DB</span></i> to the [[2 - Kube API server ✅|API]]) can't
 
-- A single <b><i><span style="color:#d46644">network policy</span></i></b> can have an [[14 - Network Policies|ingress type]], and [[14 - Network Policies|egress type]], or both in the case where a [[7 - Pods|pod]] wants to allow incoming connections as well as wants to make external calls (like an [[2 - Kube API server|API]])
+- A single <b><i><span style="color:#d46644">network policy</span></i></b> can have an [[14 - Network Policies|ingress type]], and [[14 - Network Policies|egress type]], or both in the case where a [[7 - Pods|pod]] wants to allow incoming connections as well as wants to make external calls (like an [[2 - Kube API server ✅|API]])
 
 - Once you decide on the [[14 - Network Policies|policy type]], the next step is to define the specifics of that policy
 
@@ -44,7 +44,7 @@
 
 - The from property defines the source of traffic that is allowed to pass through to the specified [[7 - Pods|pod]]
 
-- For the from property, we use a [[1 - Labels & Selectors|podSelector]] and provide the [[1 - Labels & Selectors|labels]] of the [[2 - Kube API server|API]] [[7 - Pods|pod]]
+- For the from property, we use a [[1 - Labels & Selectors|podSelector]] and provide the [[1 - Labels & Selectors|labels]] of the [[2 - Kube API server ✅|API]] [[7 - Pods|pod]]
 
 ![[developing-4.png]]
 
@@ -64,7 +64,7 @@
 - If you only have the [[1 - Labels & Selectors|namespaceSelector]] and not the [[1 - Labels & Selectors|podSelector]], all [[7 - Pods|pods]] within the specified [[11 - Namespaces|namespace]] will be allowed to reach the specified [[7 - Pods|pod]]
 	- [[7 - Pods|Pods]] from outside of this [[11 - Namespaces|namespace]] will not be allowed to go through
 
-- If we have a <i><span style="color:#477bbe">server</span></i>, that is not apart of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]], that we want to be able to access the specified [[7 - Pods|pod]], the current [[1 - Labels & Selectors|podSelector]] and [[11 - Namespaces|namespace]]Selector won't work
+- If we have a <i><span style="color:#477bbe">server</span></i>, that is not apart of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], that we want to be able to access the specified [[7 - Pods|pod]], the current [[1 - Labels & Selectors|podSelector]] and [[11 - Namespaces|namespace]]Selector won't work
 
 - It is possible to configure <b><i><span style="color:#d46644">network policies</span></i></b> to allow traffic from a specific IP address by adding an <span style="color:#5c7e3e">ipBlock</span> property.
 	- This will have the CIDR property under it with the IP CIDR

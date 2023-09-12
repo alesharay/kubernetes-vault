@@ -49,7 +49,7 @@
 
 ![[cluster-2.png]]
 
-- It is not a hard rule that <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b> are used for [[0 - Core Concepts Intro|clusters]] of resources
+- It is not a hard rule that <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b> are used for [[0 - Core Concepts Intro ✅|clusters]] of resources
 	- <b><i><span style="color:#d46644">Clusterroles</span></i></b> can be created for [[11 - Namespaces|namespace]] resources as well
 
 - When a <b><i><span style="color:#d46644">clusterrole</span></i></b> is created for [[11 - Namespaces|namespaced]] resources, the <i><span style="color:#477bbe">user</span></i> will have access to these resources across all [[11 - Namespaces|namespaces]]

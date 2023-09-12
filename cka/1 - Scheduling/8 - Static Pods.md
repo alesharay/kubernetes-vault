@@ -1,6 +1,6 @@
-- [[5 - Kubelet|Kubelet]] can manage [[0 - Core Concepts Intro|nodes]] independently
+- [[5 - Kubelet|Kubelet]] can manage [[0 - Core Concepts Intro ✅|nodes]] independently
 
-- If [[5 - Kubelet|kubelet]] has no [[2 - Kube API server|kube-apiserver]] or [[1 - ETCD|etcd]] store to communicate with, there are still things that can be done in order to deploy [[7 - Pods|pods]] onto the [[0 - Core Concepts Intro|node]]
+- If [[5 - Kubelet|kubelet]] has no [[2 - Kube API server ✅|kube-apiserver]] or [[1 - ETCD ✅|etcd]] store to communicate with, there are still things that can be done in order to deploy [[7 - Pods|pods]] onto the [[0 - Core Concepts Intro ✅|node]]
 
 - [[7 - Pods|pod]] definition files can be placed in a directory on the server and [[5 - Kubelet|kubelet]] can read those files to create the [[7 - Pods|pods]]
 
@@ -12,7 +12,7 @@
 
 - If a file is deleted from the <i><span style="color:#5c7e3e">manifest</span></i> directory, that [[7 - Pods|pod]] is deleted automatically
 
-- These [[7 - Pods|pods]] that are created directly from <i><span style="color:#5c7e3e">manifest</span></i> files, without input from any of the [[0 - Core Concepts Intro|control plane]] components ([[2 - Kube API server|kube-apiserver]], [[1 - ETCD|etcd]], etc…) are known as <b><span style="color:#d46644">static pods</span></b>
+- These [[7 - Pods|pods]] that are created directly from <i><span style="color:#5c7e3e">manifest</span></i> files, without input from any of the [[0 - Core Concepts Intro ✅|control plane]] components ([[2 - Kube API server ✅|kube-apiserver]], [[1 - ETCD ✅|etcd]], etc…) are known as <b><span style="color:#d46644">static pods</span></b>
 
 - Only [[7 - Pods|pods]] can be created this way (directly from files in the <i><span style="color:#5c7e3e">manifest</span></i> directory)
 
@@ -32,9 +32,9 @@
 
 ![[static-pods-2.png]]
 
-- [[0 - Core Concepts Intro|clusters]] setup by the <b><i><span style="color:#5c7e3e">kubeadm</span></i></b> tool uses this approach.
+- [[0 - Core Concepts Intro ✅|clusters]] setup by the <b><i><span style="color:#5c7e3e">kubeadm</span></i></b> tool uses this approach.
 
-- To view these files, first <i><span style="color:#5c7e3e">ssh</span></i> into the [[0 - Core Concepts Intro|node]] where the [[7 - Pods|pods]] were deployed
+- To view these files, first <i><span style="color:#5c7e3e">ssh</span></i> into the [[0 - Core Concepts Intro ✅|node]] where the [[7 - Pods|pods]] were deployed
 
 - Then identify the [[5 - Kubelet|kubelet]] config file using the following commands
 
@@ -54,55 +54,55 @@
 
 		grep -i staticpod KUBELET_CONFIG_FILE_DIR/CONFIG_FILE_NAME
 
-- Since [[0 - Core Concepts Intro|kubectl]] works by using the [[2 - Kube API server|kube-apiserver]] which is not available for <b><span style="color:#d46644">static pods</span></b>, to view the <span style="color:#5c7e3e">kubelet.service</span> file, you must use the `docker ps` command
+- Since [[0 - Core Concepts Intro ✅|kubectl]] works by using the [[2 - Kube API server ✅|kube-apiserver]] which is not available for <b><span style="color:#d46644">static pods</span></b>, to view the <span style="color:#5c7e3e">kubelet.service</span> file, you must use the `docker ps` command
 
 ![[static-pods-4.png]]
 
-- If there is a [[0 - Core Concepts Intro|cluster]] with an available [[2 - Kube API server|kube-apiserver]], [[5 - Kubelet|kubelet]] can then take in requests for creating [[7 - Pods|pods]] from different inputs
+- If there is a [[0 - Core Concepts Intro ✅|cluster]] with an available [[2 - Kube API server ✅|kube-apiserver]], [[5 - Kubelet|kubelet]] can then take in requests for creating [[7 - Pods|pods]] from different inputs
 
 - The [[7 - Pods|pod]] definition files through the <b><span style="color:#d46644">static pods</span></b> directory
 - An HTTP API endpoint
 
-- This is how the [[2 - Kube API server|kube-apiserver]] sends input to [[5 - Kubelet|kubelet]]
+- This is how the [[2 - Kube API server ✅|kube-apiserver]] sends input to [[5 - Kubelet|kubelet]]
 
 - [[5 - Kubelet|Kubelet]] can create both kinds of [[7 - Pods|pods]] at the same time
 
-- In the case that [[5 - Kubelet|kubelet]] creates both kinds of [[7 - Pods|pods]], the [[2 - Kube API server|kube-apiserver]] IS aware of the statically created [[7 - Pods|pods]]
+- In the case that [[5 - Kubelet|kubelet]] creates both kinds of [[7 - Pods|pods]], the [[2 - Kube API server ✅|kube-apiserver]] IS aware of the statically created [[7 - Pods|pods]]
 
-- In this case, if the [[0 - Core Concepts Intro|kubectl]] command is run on the [[0 - Core Concepts Intro|master node]], all [[7 - Pods|pods]] will be listed
+- In this case, if the [[0 - Core Concepts Intro ✅|kubectl]] command is run on the [[0 - Core Concepts Intro ✅|master node]], all [[7 - Pods|pods]] will be listed
 
-- This happens because if [[5 - Kubelet|kubelet]] is part of a [[0 - Core Concepts Intro|cluster]] when creating <b><span style="color:#d46644">static pods</span></b>, it also creates a mirror object in the [[2 - Kube API server|kube-apiserver]]
+- This happens because if [[5 - Kubelet|kubelet]] is part of a [[0 - Core Concepts Intro ✅|cluster]] when creating <b><span style="color:#d46644">static pods</span></b>, it also creates a mirror object in the [[2 - Kube API server ✅|kube-apiserver]]
 
-- What you see from the [[2 - Kube API server|kube-apiserver]] is a read-only mirror of the [[7 - Pods|pod]]
+- What you see from the [[2 - Kube API server ✅|kube-apiserver]] is a read-only mirror of the [[7 - Pods|pod]]
 
 - You can view details about the [[7 - Pods|pods]] but you can't edit or delete them like normal [[7 - Pods|pods]]
 - The only way to edit or delete these [[7 - Pods|pods]] is as mentioned above, by modifying or removing them directly from the specified <i><span style="color:#5c7e3e">manifest</span></i> directory
 
-- The name of the <b><span style="color:#d46644">static pod</span></b> is automatically appended with the [[0 - Core Concepts Intro|node]] name
+- The name of the <b><span style="color:#d46644">static pod</span></b> is automatically appended with the [[0 - Core Concepts Intro ✅|node]] name
 
 ### Why would you use Static pods
 
-- Since <b><span style="color:#d46644">static pods</span></b> are not dependent on the [[0 - Core Concepts Intro|control plane]], you can use <b><span style="color:#d46644">static pods</span></b> to deploy [[0 - Core Concepts Intro|control plane]] components manually as [[7 - Pods|pods]] on the [[0 - Core Concepts Intro|node]]
+- Since <b><span style="color:#d46644">static pods</span></b> are not dependent on the [[0 - Core Concepts Intro ✅|control plane]], you can use <b><span style="color:#d46644">static pods</span></b> to deploy [[0 - Core Concepts Intro ✅|control plane]] components manually as [[7 - Pods|pods]] on the [[0 - Core Concepts Intro ✅|node]]
 
-- Start by deploying [[5 - Kubelet|kubelet]] on all of the master [[0 - Core Concepts Intro|nodes]] 
-- Then create [[7 - Pods|pod]] definition files that use <i><span style="color:#5c7e3e">docker</span></i> images of the various [[0 - Core Concepts Intro|control plane]] components ([[2 - Kube API server|kube-apiserver]], controller, [[1 - ETCD|etcd]], scheduler)
+- Start by deploying [[5 - Kubelet|kubelet]] on all of the master [[0 - Core Concepts Intro ✅|nodes]] 
+- Then create [[7 - Pods|pod]] definition files that use <i><span style="color:#5c7e3e">docker</span></i> images of the various [[0 - Core Concepts Intro ✅|control plane]] components ([[2 - Kube API server ✅|kube-apiserver]], controller, [[1 - ETCD ✅|etcd]], scheduler)
 - Place these definition files in the specified <i><span style="color:#5c7e3e">manifest</span></i> directory and [[5 - Kubelet|kubelet]] will take care of the rest
 
 - This method allows you to avoid downloading the binaries and configuring the [[10 - Services|services]]
 
 - Using this method, if any of the [[7 - Pods|pods]] were to crash, the <b><span style="color:#d46644">static pods</span></b> will automatically be restarted by [[5 - Kubelet|kubelet]]
 
-- This is actually how <b><i><span style="color:#5c7e3e">kubeadm</span></i></b> sets up a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
+- This is actually how <b><i><span style="color:#5c7e3e">kubeadm</span></i></b> sets up a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[static-pods-5.png]]
 
 #### Practice Problems
 
-- How many <b><span style="color:#d46644">static pods</span></b> exist in this [[0 - Core Concepts Intro|cluster]] in all [[11 - Namespaces|namespaces]]?
+- How many <b><span style="color:#d46644">static pods</span></b> exist in this [[0 - Core Concepts Intro ✅|cluster]] in all [[11 - Namespaces|namespaces]]?
 
 		kubectl get pods --all-namespaces
 
-(view the [[7 - Pods|pods]] with a [[0 - Core Concepts Intro|node]] name at the end)
+(view the [[7 - Pods|pods]] with a [[0 - Core Concepts Intro ✅|node]] name at the end)
 
 - What is the path of the directory holding the <b><span style="color:#d46644">static pod</span></b> definition files?
 

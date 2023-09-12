@@ -1,10 +1,10 @@
-- Whenever a [[7 - Pods|pod]] is placed on a [[0 - Core Concepts Intro|node]] it consumes <b><span style="color:#d46644">resources</span></b> available to the [[0 - Core Concepts Intro|node]] (<span style="color:#5c7e3e">CPU</span>, <span style="color:#5c7e3e">memory</span>, <span style="color:#5c7e3e">disk space</span>, etc…)
+- Whenever a [[7 - Pods|pod]] is placed on a [[0 - Core Concepts Intro ✅|node]] it consumes <b><span style="color:#d46644">resources</span></b> available to the [[0 - Core Concepts Intro ✅|node]] (<span style="color:#5c7e3e">CPU</span>, <span style="color:#5c7e3e">memory</span>, <span style="color:#5c7e3e">disk space</span>, etc…)
 
-- To recap, the [[4 - Kube Scheduler|scheduler]] takes into consideration the amount of <b><span style="color:#d46644">resources</span></b> required for a specific [[7 - Pods|pod]] and those available on the [[0 - Core Concepts Intro|nodes]]
+- To recap, the [[4 - Kube Scheduler|scheduler]] takes into consideration the amount of <b><span style="color:#d46644">resources</span></b> required for a specific [[7 - Pods|pod]] and those available on the [[0 - Core Concepts Intro ✅|nodes]]
 
-- If a [[0 - Core Concepts Intro|node]] doesn't have the required <b><span style="color:#d46644">resources</span></b> for a [[7 - Pods|pod]], the [[7 - Pods|pod]] is placed on a [[0 - Core Concepts Intro|node]] that does
+- If a [[0 - Core Concepts Intro ✅|node]] doesn't have the required <b><span style="color:#d46644">resources</span></b> for a [[7 - Pods|pod]], the [[7 - Pods|pod]] is placed on a [[0 - Core Concepts Intro ✅|node]] that does
 
-- If there are no sufficient <b><span style="color:#d46644">resources</span></b> available on any of the [[0 - Core Concepts Intro|nodes]], the [[4 - Kube Scheduler|scheduler]] will hold back the [[7 - Pods|pod]] and it will remain in the pending state
+- If there are no sufficient <b><span style="color:#d46644">resources</span></b> available on any of the [[0 - Core Concepts Intro ✅|nodes]], the [[4 - Kube Scheduler|scheduler]] will hold back the [[7 - Pods|pod]] and it will remain in the pending state
 	- The events section (when you describe the [[7 - Pods|pod]]) will explain what <b><span style="color:#d46644">resource</span></b> is insufficient
 
 ![[resource-limits-1.png]]
@@ -14,7 +14,7 @@
 	- 256 mebibytes of <span style="color:#5c7e3e">memory</span>
 
 - This is known as the <b><span style="color:#d46644">resource</span></b> request for a <i><span style="color:#477bbe">container</span></i>
-	- This is the minimum amount of <span style="color:#5c7e3e">CPU</span> or <span style="color:#5c7e3e">memory</span> requested by the <i><span style="color:#477bbe">container</span></i> when the [[4 - Kube Scheduler|scheduler]] tries to place a [[7 - Pods|pod]] on a [[0 - Core Concepts Intro|node]]
+	- This is the minimum amount of <span style="color:#5c7e3e">CPU</span> or <span style="color:#5c7e3e">memory</span> requested by the <i><span style="color:#477bbe">container</span></i> when the [[4 - Kube Scheduler|scheduler]] tries to place a [[7 - Pods|pod]] on a [[0 - Core Concepts Intro ✅|node]]
 
 - If your [[7 - Pods|pod]]s require more than the minimum amount of <b><span style="color:#d46644">resources</span></b>, they can be specified in the [[7 - Pods|pod]] or [[9 - Deployments|deployment]] definition files
 

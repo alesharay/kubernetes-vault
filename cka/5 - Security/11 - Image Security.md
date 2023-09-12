@@ -40,7 +40,7 @@
 
 ![[images-security-6.png]]
 
-- Within <span style="color:#5c7e3e">Kubernetes</span>, <b><i><span style="color:#d46644">images</span></i></b> are pulled by the [[0 - Core Concepts Intro|container runtime]]  (<span style="color:#5c7e3e">Docker</span>) on the [[0 - Core Concepts Intro|worker nodes]]
+- Within <span style="color:#5c7e3e">Kubernetes</span>, <b><i><span style="color:#d46644">images</span></i></b> are pulled by the [[0 - Core Concepts Intro ✅|container runtime]]  (<span style="color:#5c7e3e">Docker</span>) on the [[0 - Core Concepts Intro ✅|worker nodes]]
 
 - In order for <span style="color:#5c7e3e">Kubernetes</span> to get the credentials to access the <b><i><span style="color:#d46644">private registry</span></i></b>, thus [[1 - Authentication|authenticating]] the <i><span style="color:#477bbe">user</span></i> to the <b><i><span style="color:#d46644">private registry</span></i></b> from within <span style="color:#5c7e3e">Kubernetes</span>, a [[5 - Secrets|secret]] object is created with the credentials in it
 	- The [[5 - Secrets|secret]] is of type <span style="color:#5c7e3e">docker-registry</span>
@@ -56,7 +56,7 @@
 
 ![[images-security-8.png]]
 
-- When the [[7 - Pods|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet|kubelet]] (on the [[0 - Core Concepts Intro|worker nodes]]) uses the [[5 - Secrets|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
+- When the [[7 - Pods|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet|kubelet]] (on the [[0 - Core Concepts Intro ✅|worker nodes]]) uses the [[5 - Secrets|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
 
 ### Practice Problems
 

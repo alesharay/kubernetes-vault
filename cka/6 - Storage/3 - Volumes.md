@@ -29,9 +29,9 @@
 
 ![[volumes-3.png]]
 
-- The <span style="color:red">hostPath</span> property is fine if the [[0 - Core Concepts Intro|cluster]] is made up of a [[0 - Core Concepts Intro|single node]] but is not recommended if using a [[0 - Core Concepts Intro|multi-node cluster]]
-	- This is because the [[7 - Pods|pods]] will use that directory on all [[0 - Core Concepts Intro|nodes]] and expect all of them to be the same and have the same data
-	- Since they are on different <i><span style="color:#477bbe">servers</span></i> they are, in fact, not the same; unless you configure some sort of external replicated [[0 - Core Concepts Intro|cluster]] [[0 - Storage in Docker|storage]] solution
+- The <span style="color:red">hostPath</span> property is fine if the [[0 - Core Concepts Intro ✅|cluster]] is made up of a [[0 - Core Concepts Intro ✅|single node]] but is not recommended if using a [[0 - Core Concepts Intro ✅|multi-node cluster]]
+	- This is because the [[7 - Pods|pods]] will use that directory on all [[0 - Core Concepts Intro ✅|nodes]] and expect all of them to be the same and have the same data
+	- Since they are on different <i><span style="color:#477bbe">servers</span></i> they are, in fact, not the same; unless you configure some sort of external replicated [[0 - Core Concepts Intro ✅|cluster]] [[0 - Storage in Docker|storage]] solution
 
 - There are <b><i><span style="color:#d46644">volume storage</span></i></b> solutions for the [[7 - Pods|pod]] spec in addition to the <span style="color:red">hostPath</span> property that can be configured
 	- NFS

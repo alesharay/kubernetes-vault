@@ -70,7 +70,7 @@
 
 ![[role-based-7.png]]
 
-- As a <i><span style="color:#477bbe">user</span></i>, if you want to see if you have access to a particular <b><i><span style="color:#d46644">resource</span></i></b> in the [[0 - Core Concepts Intro|cluster]], you can use the <span style="color:red">kubectl auth can-i</span> command with the action and <b><i><span style="color:#d46644">resource</span></i></b>
+- As a <i><span style="color:#477bbe">user</span></i>, if you want to see if you have access to a particular <b><i><span style="color:#d46644">resource</span></i></b> in the [[0 - Core Concepts Intro ✅|cluster]], you can use the <span style="color:red">kubectl auth can-i</span> command with the action and <b><i><span style="color:#d46644">resource</span></i></b>
 	- You will get a boolean response on whether you can or can't perform that action on the <b><i><span style="color:#d46644">resource</span></i></b>
 
 ![[role-based-8.png]]

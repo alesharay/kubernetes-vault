@@ -8,9 +8,9 @@
 
 ![[pv-1.png]]
 
-- A <b><i><span style="color:#d46644">persistent volume</span></i></b> (<b><i><span style="color:#d46644">PV</span></i></b>) is a [[0 - Core Concepts Intro|cluster]]-wide <b><i><span style="color:#d46644">pool</span></i></b> of [[0 - Storage in Docker|storage]] [[3 - Volumes|volumes]] configured by an <i><span style="color:#477bbe">administrator</span></i> to be used by <i><span style="color:#477bbe">users</span></i> [[9 - Deployments|deploying]] applications on the [[0 - Core Concepts Intro|cluster]]
+- A <b><i><span style="color:#d46644">persistent volume</span></i></b> (<b><i><span style="color:#d46644">PV</span></i></b>) is a [[0 - Core Concepts Intro ✅|cluster]]-wide <b><i><span style="color:#d46644">pool</span></i></b> of [[0 - Storage in Docker|storage]] [[3 - Volumes|volumes]] configured by an <i><span style="color:#477bbe">administrator</span></i> to be used by <i><span style="color:#477bbe">users</span></i> [[9 - Deployments|deploying]] applications on the [[0 - Core Concepts Intro ✅|cluster]]
 	- <b><i><span style="color:#d46644">PVs</span></i></b> are [[3 - Volumes|volume]] plugins like [[3 - Volumes|volumes]], but have a lifecycle independent of any individual [[7 - Pods|Pod]] that uses the <b><i><span style="color:#d46644">PV</span></i></b>.
-	- This [[2 - Kube API server|API]] object captures the details of the implementation of the [[0 - Storage in Docker|storage]], be that <span style="color:#5c7e3e">NFS</span>, <span style="color:#5c7e3e">iSCSI</span>, or a cloud-provider-specific [[0 - Storage in Docker|storage]] system.
+	- This [[2 - Kube API server ✅|API]] object captures the details of the implementation of the [[0 - Storage in Docker|storage]], be that <span style="color:#5c7e3e">NFS</span>, <span style="color:#5c7e3e">iSCSI</span>, or a cloud-provider-specific [[0 - Storage in Docker|storage]] system.
 
 - <i><span style="color:#477bbe">Users</span></i> can select [[0 - Storage in Docker|storage]] from the <b><i><span style="color:#d46644">volume pool</span></i></b> using persist [[3 - Volumes|volume]] claim ([[5 - Persistent Volume Claims|PVC]])
 

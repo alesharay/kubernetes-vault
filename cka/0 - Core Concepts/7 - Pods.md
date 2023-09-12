@@ -5,7 +5,7 @@
 
 - The <b><span style="color:#d46644">pod</span></b> spec contains a <i><span style="color:#5c7e3e">list</span></i> of <i><span style="color:#5c7e3e">dictionaries</span></i> called "<i><span style="color:#477bbe">containers</span></i>"
 
-- The <span style="color:red">kubectl get pod</span> command helps us see a list of <b><span style="color:#d46644">pods</span></b> in the [[0 - Core Concepts Intro|cluster]]
+- The <span style="color:red">kubectl get pod</span> command helps us see a list of <b><span style="color:#d46644">pods</span></b> in the [[0 - Core Concepts Intro ✅|cluster]]
 
 - A single <b><span style="color:#d46644">pod</span></b> can have multiple <i><span style="color:#477bbe">containers</span></i>
 	- Except for the fact that they are normally not <i><span style="color:#477bbe">containers</span></i> of the same kind
@@ -19,7 +19,7 @@
 
 - The READY column of the <span style="color:red">kubectl get pod</span> command shows the number of running <i><span style="color:#477bbe">containers</span></i> in the <b><span style="color:#d46644">pod</span></b> followed by the total number of <i><span style="color:#477bbe">containers</span></i> in the <b><span style="color:#d46644">pod</span></b>
 
-- To scale up an application, new <i><span style="color:#477bbe">containers</span></i> are not added to existing <b><span style="color:#d46644">pods</span></b>; instead, new <b><span style="color:#d46644">pods</span></b> are added to existing or new [[0 - Core Concepts Intro|nodes]]
+- To scale up an application, new <i><span style="color:#477bbe">containers</span></i> are not added to existing <b><span style="color:#d46644">pods</span></b>; instead, new <b><span style="color:#d46644">pods</span></b> are added to existing or new [[0 - Core Concepts Intro ✅|nodes]]
 
 - To create a <b><span style="color:#d46644">pod</span></b> imperatively, use the <span style="color:red">kubectl run [pod_name] --image=[pod_image]</span> command
 

@@ -1,4 +1,4 @@
-- The <b><span style="color:#d46644">kube-controller-manager</span></b> manages various <i><span style="color:#d46644">controllers</span></i> in <span style="color:#5c7e3e">Kubernetes</span>
+ - The <b><span style="color:#d46644">kube-controller-manager</span></b> manages various <i><span style="color:#d46644">controllers</span></i> in <span style="color:#5c7e3e">Kubernetes</span>
 
 - A <i><span style="color:#d46644">controller</span></i> is a process that continuously monitors the state of various components in the system and works towards bringing the system from its current state to the desired functioning state
 
@@ -8,14 +8,14 @@
 ### NODE CONTROLLER
 
 - The <i><span style="color:#d46644">node-controller</span></i> is responsible for monitoring the status of the node and takes the necessary actions to keep the application running
-	- It does this through the [[2 - Kube API server|kube-apiserver]]
+	- It does this through the [[2 - Kube API server ✅|kube-apiserver]]
 
-- The <i><span style="color:#d46644">node-controller</span></i> checks the status of the [[0 - Core Concepts Intro|node]] every <b><span style="color:#5c7e3e">5 seconds</span></b>
-	- If the <i><span style="color:#d46644">controller</span></i> stops receiving updates from a [[0 - Core Concepts Intro|node]], the =[[0 - Core Concepts Intro|nodes]]= is marked as unreachable
-		- The <i><span style="color:#d46644">controller</span></i> waits <b><span style="color:#5c7e3e">40 seconds</span></b> before marking a [[0 - Core Concepts Intro|node]] as unreachable
+- The <i><span style="color:#d46644">node-controller</span></i> checks the status of the [[0 - Core Concepts Intro ✅|node]] every <b><span style="color:#5c7e3e">5 seconds</span></b>
+	- If the <i><span style="color:#d46644">controller</span></i> stops receiving updates from a [[0 - Core Concepts Intro ✅|node]], the =[[0 - Core Concepts Intro ✅|nodes]]= is marked as unreachable
+		- The <i><span style="color:#d46644">controller</span></i> waits <b><span style="color:#5c7e3e">40 seconds</span></b> before marking a [[0 - Core Concepts Intro ✅|node]] as unreachable
 
-- After a [[0 - Core Concepts Intro|node]] is marked unreachable, the <i><span style="color:#d46644">controller</span></i> gives it <b><span style="color:#5c7e3e">5 minutes</span></b> to come back up
-	- If the [[0 - Core Concepts Intro|node]] doesn't come back up, it terminates that [[0 - Core Concepts Intro|node]] and assigns the [[7 - Pods|pods]] on the [[0 - Core Concepts Intro|node]] to healthy running [[0 - Core Concepts Intro|nodes]] (if the [[7 - Pods|pods]] are part of a [[8 - ReplicaSets|replicaSets]])
+- After a [[0 - Core Concepts Intro ✅|node]] is marked unreachable, the <i><span style="color:#d46644">controller</span></i> gives it <b><span style="color:#5c7e3e">5 minutes</span></b> to come back up
+	- If the [[0 - Core Concepts Intro ✅|node]] doesn't come back up, it terminates that [[0 - Core Concepts Intro ✅|node]] and assigns the [[7 - Pods|pods]] on the [[0 - Core Concepts Intro ✅|node]] to healthy running [[0 - Core Concepts Intro ✅|nodes]] (if the [[7 - Pods|pods]] are part of a [[8 - ReplicaSets|replicaSets]])
 
 ### REPLICATION CONTROLLER
 

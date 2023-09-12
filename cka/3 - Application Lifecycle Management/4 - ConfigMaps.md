@@ -1,11 +1,11 @@
 - When you have a lot of [[7 - Pods|pod]] definition files, it will become difficult to manage the environment data stored within the query files
 
-- [[3 - Configure Environment Variables in Applications|Environment variable]] values can be taken out of the [[7 - Pods|pod]] definition file and managed centrally using <b><span style="color:#d46644">configMaps</span></b>
+- [[3 - Environment Variables|Environment variable]] values can be taken out of the [[7 - Pods|pod]] definition file and managed centrally using <b><span style="color:#d46644">configMaps</span></b>
 
 - <b><span style="color:#d46644">configMaps</span></b> are used to pass configuration data in the form of key-value pairs in <span style="color:#5c7e3e">Kubernetes</span>
 
 - When a <b><span style="color:#d46644">configMap</span></b> is created, inject the <b><span style="color:#d46644">configMap</span></b> into the [[7 - Pods|pod]] instead
-	- This way the key-value pairs are available as [[3 - Configure Environment Variables in Applications|Environment variables]] for the application hosted inside of the [[7 - Pods|container]] in the [[7 - Pods|pod]]
+	- This way the key-value pairs are available as [[3 - Environment Variables|Environment variables]] for the application hosted inside of the [[7 - Pods|container]] in the [[7 - Pods|pod]]
 
 ------------------------------------------------------------------------------------------------------
 

@@ -28,7 +28,7 @@
 
 - The <b><span style="color:#d46644">local object definition</span></b> file is found on our <i><span style="color:#477bbe">local system</span></i>
 - The <b><span style="color:#d46644">live object configuration</span></b> is stored in Kubernetes <i><span style="color:#477bbe">memory</span></i>
-- The <b><span style="color:#d46644">last applied configuration</span></b> is stored as a property in the <b><span style="color:#d46644">live object configuration</span></b> on the Kubernetes [[0 - Core Concepts Intro|cluster]] itself as an <i><span style="color:#477bbe">annotation</span></i>
+- The <b><span style="color:#d46644">last applied configuration</span></b> is stored as a property in the <b><span style="color:#d46644">live object configuration</span></b> on the Kubernetes [[0 - Core Concepts Intro ✅|cluster]] itself as an <i><span style="color:#477bbe">annotation</span></i>
 
 - The name of the <i><span style="color:#477bbe">annotation</span></i> for the <b><span style="color:#d46644">last applied configuration</span></b> is `kubectl.kubernetes.io/last-applied-configuration`
 

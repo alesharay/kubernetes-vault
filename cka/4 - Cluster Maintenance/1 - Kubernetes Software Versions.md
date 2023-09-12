@@ -1,4 +1,4 @@
-- We know that when we install the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]], we install a specific version of <span style="color:#5c7e3e">Kubernetes</span>
+- We know that when we install the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], we install a specific version of <span style="color:#5c7e3e">Kubernetes</span>
 
 - We can see the <span style="color:#5c7e3e">Kubernetes</span> version by running the <span style="color:red">kubectl get nodes</span> command
 
@@ -29,12 +29,12 @@
 	[https://kubernetes.io/releases/](https://kubernetes.io/releases/)
 
 - Download the <span style="color:#5c7e3e">Kubernetes.tar.gz</span> file and extract it to find executables for all the <span style="color:#5c7e3e">Kubernetes</span> components
-	- The package has all of the [[0 - Core Concepts Intro|control plane]] components in it
+	- The package has all of the [[0 - Core Concepts Intro ✅|control plane]] components in it
 
 ![[ksoftware-2.png]]
 
 - All of the components in the downloaded package have the same version
-	- [[2 - Kube API server|kube-apiserver]], [[3 - Kube Controller Manager|controller manager]], [[4 - Kube Scheduler|scheduler]], [[5 - Kubelet|kubelet]], [[6 - Kube Proxy|kube-proxy]]
+	- [[2 - Kube API server ✅|kube-apiserver]], [[3 - Kube Controller Manager|controller manager]], [[4 - Kube Scheduler|scheduler]], [[5 - Kubelet|kubelet]], [[6 - Kube Proxy|kube-proxy]]
 
 - There are other components within the control plane that do not have the same version
-	- [[0 - Core Concepts Intro|ETCD cluster]], [[8 - CoreDNS in Kubernetes|core DNS server]]
+	- [[0 - Core Concepts Intro ✅|ETCD cluster]], [[8 - CoreDNS in Kubernetes|core DNS server]]

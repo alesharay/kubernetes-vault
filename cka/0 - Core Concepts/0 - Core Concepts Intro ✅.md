@@ -29,7 +29,7 @@
 		- This engine (ie. Docker, containerd, rkt) should be installed on all of the <b><span style="color:#d46644">nodes</span></b> in the <b><span style="color:#d46644">cluster</span></b>
 
 	- <b><span style="color:#d46644">kubelet</span></b>:
-		- Engine that runs on each <b><span style="color:#d46644">node</span></b>, listening to instructions from the [[2 - Kube API server|apiserver]]
+		- Engine that runs on each <b><span style="color:#d46644">node</span></b>, listening to instructions from the [[2 - Kube API server ✅|apiserver]]
 		- Manages all activities on the node
 		- Communicates with the <b><span style="color:#d46644">master node</span></b> both sending and receiving relevant information about the <b><span style="color:#d46644">node</span></b>
 

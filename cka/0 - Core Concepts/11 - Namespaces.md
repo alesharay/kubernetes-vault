@@ -1,6 +1,6 @@
 - The <i><span style="color:#477bbe">default</span></i> <b><span style="color:#d46644">namespaces</span></b> is created automatically with <span style="color:#5c7e3e">Kubernetes</span>
 
-- When a [[0 - Core Concepts Intro|cluster]] is first setup, <span style="color:#5c7e3e">Kubernetes</span> creates [[0 - Core Concepts Intro|cluster]] and [[10 - Services|services]] for its internal purpose such as those required by the networking solution
+- When a [[0 - Core Concepts Intro ✅|cluster]] is first setup, <span style="color:#5c7e3e">Kubernetes</span> creates [[0 - Core Concepts Intro ✅|cluster]] and [[10 - Services|services]] for its internal purpose such as those required by the networking solution
 	- To isolate these from the user, or preventing them from modifying these [[10 - Services|services]], <span style="color:#5c7e3e">Kubernetes</span> creates them in another <b><span style="color:#d46644">namespace</span></b> at startup name  <b><span style="color:#d46644">kube-system</span></b>
 
 - A third <b><span style="color:#d46644">namespace</span></b> created by <span style="color:#5c7e3e">Kubernetes</span> automatically is the <b><span style="color:#d46644">kube-public namespace</span></b>
@@ -11,7 +11,7 @@
 - To refer to a resource in another <b><span style="color:#d46644">namespace</span></b>, you must append the name of the <b><span style="color:#d46644">namespace</span></b> to the request
 	- Do this by using the <i><span style="color:#477bbe">SERVICE_NAME.NAMESPACE.svc.cluster.local</span></i> format
 	- This is possible because when the [[10 - Services|service]] is created, a <b><span style="color:#5c7e3e">DNS</span></b> entry is added automatically in this format
-	- <i><span style="color:#477bbe">cluster.local</span></i> is the default domain name of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
+	- <i><span style="color:#477bbe">cluster.local</span></i> is the default domain name of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 		- <span style="color:#5c7e3e">svc</span> is the subdomain name
 
 		`RESOURCE_NAME.NAMESPACE.SUBDOMAIN.DOMAIN`
@@ -38,7 +38,7 @@
 
 		kubectl get pods --all-namespaces
 
-- <i><span style="color:#477bbe">Contexts</span></i> are used to manage multiple [[0 - Core Concepts Intro|clusters]] in multiple environments from the same management system
+- <i><span style="color:#477bbe">Contexts</span></i> are used to manage multiple [[0 - Core Concepts Intro ✅|clusters]] in multiple environments from the same management system
 
 - To limit resources in a <b><span style="color:#d46644">namespace</span></b>, create a <i><span style="color:#477bbe">ResourceQuota</span></i> definition yaml.
 	- Add the <b><span style="color:#d46644">namespace</span></b> to the <i><span style="color:#477bbe">metadata</span></i>

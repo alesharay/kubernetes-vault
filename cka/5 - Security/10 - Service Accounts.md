@@ -12,14 +12,14 @@
 	- Service
 
 - <i><span style="color:#477bbe">User</span></i> accounts are used by humans
-	- Ie. Admins accessing the [[0 - Core Concepts Intro|cluster]] to perform administrative tasks
-	- Ie. Developers accessing the [[0 - Core Concepts Intro|cluster]] to deploy applications, etc..
+	- Ie. Admins accessing the [[0 - Core Concepts Intro ✅|cluster]] to perform administrative tasks
+	- Ie. Developers accessing the [[0 - Core Concepts Intro ✅|cluster]] to deploy applications, etc..
 
 - <b><i><span style="color:#d46644">Service accounts</span></i></b> are used by machines
 
-- <b><i><span style="color:#d46644">Service accounts</span></i></b> could be accounts used by an application to interact with the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
+- <b><i><span style="color:#d46644">Service accounts</span></i></b> could be accounts used by an application to interact with the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 	- Ie. A monitoring application like <span style="color:#5c7e3e">Prometheus</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to poll the <span style="color:#5c7e3e">Kubernetes</span> API for performance metrics
-	- Ie. An automated build tool like <span style="color:#5c7e3e">Jenkins</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to deploy applications on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
+	- Ie. An automated build tool like <span style="color:#5c7e3e">Jenkins</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to deploy applications on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
 - In order for an application to query the <span style="color:#5c7e3e">Kubernetes</span> API, it has to be [[1 - Authentication|authenticated]]
 	- For that, you use <b><i><span style="color:#d46644">service accounts</span></i></b>
@@ -59,9 +59,9 @@
 
 ![[servicea-5.png]]
 
-- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]] itself, the <b><i><span style="color:#d46644">service account</span></i></b> process is different
+- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] itself, the <b><i><span style="color:#d46644">service account</span></i></b> process is different
 
-- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods|pod]] hosting the application
+- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods|pod]] hosting the application
 	- This way, the token to access the <span style="color:#5c7e3e">Kubernetes</span> API is already placed inside of the [[7 - Pods|pod]] and can be easily read by the application
 
 - For every [[11 - Namespaces|namespace]] in <span style="color:#5c7e3e">Kubernetes</span>, a <b><i><span style="color:#d46644">service account</span></i></b> named "<span style="color:red">default</span>" is automatically created

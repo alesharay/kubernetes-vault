@@ -59,7 +59,7 @@
 
 - Orchestration tools, such as Ansible, Terraform, puppet, and Chef use a <b><span style="color:#d46644">declarative</span></b> approach
 
-- The <b><span style="color:#d46644">declarative</span></b> approach to <span style="color:#5c7e3e">provisioning</span> is creating a set of files that defines the <i><span style="color:#477bbe">desired state</span></i> of the applications and services on a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]] and letting the system decide how to <span style="color:#5c7e3e">provision</span> them
+- The <b><span style="color:#d46644">declarative</span></b> approach to <span style="color:#5c7e3e">provisioning</span> is creating a set of files that defines the <i><span style="color:#477bbe">desired state</span></i> of the applications and services on a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] and letting the system decide how to <span style="color:#5c7e3e">provision</span> them
 	- A single command, <span style="color:red">kubectl apply -f</span> is needed for this approach
 - This approach looks at the <span style="color:#5c7e3e">existing configuration</span> to bring the <i><span style="color:#477bbe">infrastructure</span></i> to its <i><span style="color:#477bbe">desired state</span></i>
 

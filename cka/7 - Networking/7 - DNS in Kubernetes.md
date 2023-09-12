@@ -1,4 +1,4 @@
-- <span style="color:#5c7e3e">Kubernetes</span> [[9 - Deployments|deploys]] a built-in <b><i><span style="color:#d46644">DNS server</span></i></b> by default when a [[0 - Core Concepts Intro|cluster]] is created
+- <span style="color:#5c7e3e">Kubernetes</span> [[9 - Deployments|deploys]] a built-in <b><i><span style="color:#d46644">DNS server</span></i></b> by default when a [[0 - Core Concepts Intro ✅|cluster]] is created
 	- If <span style="color:#5c7e3e">Kubernetes</span> is setup manually, the <b><i><span style="color:#d46644">DNS server</span></i></b> is also setup manually
 
 ![[dnsk-1.png]]
@@ -9,7 +9,7 @@
 
 ![[dnsk-2.png]]
 
-- Once the [[10 - Services|service]] name is mapped to its <span style="color:#5c7e3e">IP address</span>, any [[7 - Pods|pod]] in the [[0 - Core Concepts Intro|cluster]] can use or reach the [[10 - Services|service]] by name
+- Once the [[10 - Services|service]] name is mapped to its <span style="color:#5c7e3e">IP address</span>, any [[7 - Pods|pod]] in the [[0 - Core Concepts Intro ✅|cluster]] can use or reach the [[10 - Services|service]] by name
 
 ![[dnsk-3.png]]
 
@@ -25,7 +25,7 @@
 
 ![[dnsk-5.png]]
 
-- In addition to the previously mentioned groupings, all [[10 - Services|services]] and [[7 - Pods|pods]] are grouped together into a <b><i><span style="color:#d46644">root domain</span></i></b> for the [[0 - Core Concepts Intro|cluster]], which is set to <span style="color:red">cluster.local</span> by default
+- In addition to the previously mentioned groupings, all [[10 - Services|services]] and [[7 - Pods|pods]] are grouped together into a <b><i><span style="color:#d46644">root domain</span></i></b> for the [[0 - Core Concepts Intro ✅|cluster]], which is set to <span style="color:red">cluster.local</span> by default
 	- So you can access the [[10 - Services|service]] using the URL <span style="color:red">SERVICE_NAME.NAMESPACE_NAME.svc.cluster.local</span>
 	- This is the <b><i><span style="color:#d46644">fully qualified domain name</span></i></b> (<b><i><span style="color:#d46644">FQDN</span></i></b>) for the [[10 - Services|service]]
 

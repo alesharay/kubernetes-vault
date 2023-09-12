@@ -6,8 +6,8 @@
 
 - <span style="color:#5c7e3e">Kubernetes</span> has laid out the requirements for <b><i><span style="color:#d46644">pod networking</span></i></b>
 	- Every [[7 - Pods|pod]] should have an <span style="color:#5c7e3e">IP address</span>
-	- Every [[7 - Pods|pod]] should be able to communicate with every other [[7 - Pods|pod]] in the same [[0 - Core Concepts Intro|node]] using that same <span style="color:#5c7e3e">IP address</span>
-	- Every [[7 - Pods|pod]] should be able to communicate with every other [[7 - Pods|pod]] on other [[0 - Core Concepts Intro|nodes]] without <span style="color:#5c7e3e">IP address</span> using that same <span style="color:#5c7e3e">IP address</span>
+	- Every [[7 - Pods|pod]] should be able to communicate with every other [[7 - Pods|pod]] in the same [[0 - Core Concepts Intro ✅|node]] using that same <span style="color:#5c7e3e">IP address</span>
+	- Every [[7 - Pods|pod]] should be able to communicate with every other [[7 - Pods|pod]] on other [[0 - Core Concepts Intro ✅|nodes]] without <span style="color:#5c7e3e">IP address</span> using that same <span style="color:#5c7e3e">IP address</span>
 
 - There are many <b><i><span style="color:#d46644">networking</span></i></b> solutions out there that can implement these requirements
 

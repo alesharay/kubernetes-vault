@@ -4,28 +4,28 @@
 
 ![[np-1.png]]
 
-- Consider the following scenario: A <i><span style="color:#477bbe">user</span></i> sends a request to the <i><span style="color:#477bbe">web server</span></i> , the <i><span style="color:#477bbe">web server</span></i> then sends a request to the [[2 - Kube API server|API server]]  in the <i><span style="color:#477bbe">backend</span></i>, the [[2 - Kube API server|API server]] then fetches data from the <i><span style="color:#477bbe">database server</span></i> and then sends the data back to the <i><span style="color:#477bbe">user</span></i>
+- Consider the following scenario: A <i><span style="color:#477bbe">user</span></i> sends a request to the <i><span style="color:#477bbe">web server</span></i> , the <i><span style="color:#477bbe">web server</span></i> then sends a request to the [[2 - Kube API server ✅|API server]]  in the <i><span style="color:#477bbe">backend</span></i>, the [[2 - Kube API server ✅|API server]] then fetches data from the <i><span style="color:#477bbe">database server</span></i> and then sends the data back to the <i><span style="color:#477bbe">user</span></i>
 
 ![[np-2.png]]
 
-- There are two types of traffic in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: [[9 - Ingress|ingress]] and [[9 - Ingress|egress]]
+- There are two types of traffic in the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup: [[9 - Ingress|ingress]] and [[9 - Ingress|egress]]
 
-- For a <i><span style="color:#477bbe">web server</span></i>, the traffic coming in from <i><span style="color:#477bbe">users</span></i> is an [[9 - Ingress|ingress traffic]] and the outgoing requests from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server|API server]] is an [[9 - Ingress|egress traffic]]
+- For a <i><span style="color:#477bbe">web server</span></i>, the traffic coming in from <i><span style="color:#477bbe">users</span></i> is an [[9 - Ingress|ingress traffic]] and the outgoing requests from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server ✅|API server]] is an [[9 - Ingress|egress traffic]]
 
 ![[np-3.png]]
 
 - When you define [[9 - Ingress|ingress]] and [[9 - Ingress|egress]], remember you're only looking at the direction in which the traffic originated
 	- The response back to the <i><span style="color:#477bbe">user</span></i> doesn't really matter
 
-- For an [[2 - Kube API server|API server]], it receives [[9 - Ingress|ingress traffic]] from the <i><span style="color:#477bbe">web server</span></i> and sends [[9 - Ingress|egress traffic]] to the <i><span style="color:#477bbe">DB server</span></i>
-	- The <i><span style="color:#477bbe">DB server</span></i> receives [[9 - Ingress|ingress traffic]] from the [[2 - Kube API server|API server]]
+- For an [[2 - Kube API server ✅|API server]], it receives [[9 - Ingress|ingress traffic]] from the <i><span style="color:#477bbe">web server</span></i> and sends [[9 - Ingress|egress traffic]] to the <i><span style="color:#477bbe">DB server</span></i>
+	- The <i><span style="color:#477bbe">DB server</span></i> receives [[9 - Ingress|ingress traffic]] from the [[2 - Kube API server ✅|API server]]
 
 ![[np-4.png]]
 
-- If required <b><i><span style="color:#d46644">rules</span></i></b> to get the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup working were listed, we would have:
+- If required <b><i><span style="color:#d46644">rules</span></i></b> to get the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup working were listed, we would have:
 	- an [[9 - Ingress|ingress rule]] that is required to accept HTTP traffic
-	- an [[9 - Ingress|egress rule]] to allow traffic from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server|API server]]
-	- an [[9 - Ingress|ingress rule]] to accept traffic on the [[2 - Kube API server|API server]]
+	- an [[9 - Ingress|egress rule]] to allow traffic from the <i><span style="color:#477bbe">web server</span></i> to the [[2 - Kube API server ✅|API server]]
+	- an [[9 - Ingress|ingress rule]] to accept traffic on the [[2 - Kube API server ✅|API server]]
 	- an [[9 - Ingress|egress rule]] to allow traffic on the <i><span style="color:#477bbe">DB server</span></i>
 	- an [[9 - Ingress|ingress rule]] to accept traffic on the <i><span style="color:#477bbe">DB server</span></i>
 
@@ -33,7 +33,7 @@
 
 ### Network security in Kubernetes
 
-- On a [[0 - Core Concepts Intro|cluster]] with a set of [[0 - Core Concepts Intro|nodes]] hosting a set of [[7 - Pods|pods]] and [[10 - Services|services]], each [[0 - Core Concepts Intro|node]], [[7 - Pods|pod]], and [[10 - Services|services]] have their own IP address
+- On a [[0 - Core Concepts Intro ✅|cluster]] with a set of [[0 - Core Concepts Intro ✅|nodes]] hosting a set of [[7 - Pods|pods]] and [[10 - Services|services]], each [[0 - Core Concepts Intro ✅|node]], [[7 - Pods|pod]], and [[10 - Services|services]] have their own IP address
 
 ![[np-6.png]]
 
@@ -43,11 +43,11 @@
 
 - *Remember: <span style="color:#5c7e3e">Kubernetes</span> is configured, by default, with an "<b><i><span style="color:#d46644">Allow All</span></i></b>" <b><i><span style="color:#d46644">rule</span></i></b> that allows traffic from any [[7 - Pods|pod]] to any other [[7 - Pods|pod]] or [[10 - Services|service]]
 
-- Using the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup but in <span style="color:#5c7e3e">Kubernetes</span>, for each component in the application, we deploy a [[7 - Pods|pod]]: one for the <i><span style="color:#477bbe">web server</span></i>, one for the [[2 - Kube API server|API server]], and one for the <i><span style="color:#477bbe">DB server</span></i>
+- Using the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup but in <span style="color:#5c7e3e">Kubernetes</span>, for each component in the application, we deploy a [[7 - Pods|pod]]: one for the <i><span style="color:#477bbe">web server</span></i>, one for the [[2 - Kube API server ✅|API server]], and one for the <i><span style="color:#477bbe">DB server</span></i>
 
 - Create [[10 - Services|services]] to enable communication between the [[7 - Pods|pods]] as well as the <i><span style="color:#477bbe">end users</span></i>
 
-- If we don't want the <i><span style="color:#477bbe">frontend web server</span></i> to be able to communicate with the <i><span style="color:#477bbe">DB server</span></i> directly, you would implement a <b><i><span style="color:#d46644">network policy</span></i></b> to allow traffic to the <i><span style="color:#477bbe">DB server</span></i> only from the [[2 - Kube API server|API server]]
+- If we don't want the <i><span style="color:#477bbe">frontend web server</span></i> to be able to communicate with the <i><span style="color:#477bbe">DB server</span></i> directly, you would implement a <b><i><span style="color:#d46644">network policy</span></i></b> to allow traffic to the <i><span style="color:#477bbe">DB server</span></i> only from the [[2 - Kube API server ✅|API server]]
 
 - A <b><i><span style="color:#d46644">network policy</span></i></b> is another object in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces|namespace]]
 
@@ -81,7 +81,7 @@
 
 ![[np-11.png]]
 
-- *Remember: <b><i><span style="color:#d46644">network policies</span></i></b> are enforced by the <b><i><span style="color:#d46644">network</span></i></b> solution implemented on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]]
+- *Remember: <b><i><span style="color:#d46644">network policies</span></i></b> are enforced by the <b><i><span style="color:#d46644">network</span></i></b> solution implemented on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
 - Not all solutions support <b><i><span style="color:#d46644">network policies</span></i></b>; a few of them that are supported are kube-router, Calico, Romana and Weave-net
 	- Flannel does not
@@ -90,5 +90,5 @@
 
 - Always refer to the <b><i><span style="color:#d46644">network</span></i></b> solution's documentation to see support for <b><i><span style="color:#d46644">network policies</span></i></b>
 
-- Even in a [[0 - Core Concepts Intro|cluster]] configured with a solution that does not support <b><i><span style="color:#d46644">network policies</span></i></b>, you can still create the <b><i><span style="color:#d46644">policies</span></i></b> but they will just not be enforced
+- Even in a [[0 - Core Concepts Intro ✅|cluster]] configured with a solution that does not support <b><i><span style="color:#d46644">network policies</span></i></b>, you can still create the <b><i><span style="color:#d46644">policies</span></i></b> but they will just not be enforced
 	- You will not get an error message saying that the <b><i><span style="color:#d46644">network</span></i></b> solution does not support <b><i><span style="color:#d46644">network policies</span></i></b>

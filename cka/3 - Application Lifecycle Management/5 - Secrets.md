@@ -1,6 +1,6 @@
 - <b><span style="color:#d46644">Secrets</span></b> are used to store sensitive information like passwords or keys
 
-- <b><span style="color:#d46644">Secrets</span></b> are similar to [[4 - Configure ConfigMaps in Applications|configMaps]] except that they're stored in an <span style="color:#5c7e3e">encoded</span> or <span style="color:#5c7e3e">hashed</span> format
+- <b><span style="color:#d46644">Secrets</span></b> are similar to [[4 - ConfigMaps|configMaps]] except that they're stored in an <span style="color:#5c7e3e">encoded</span> or <span style="color:#5c7e3e">hashed</span> format
 
 ![[secrets-1.png]]
 
@@ -9,7 +9,7 @@
 ### Two phases involved when working with secrets
 
 1. Create the <b><span style="color:#d46644">secret</span></b>
-	- Similar to [[4 - Configure ConfigMaps in Applications|configMaps]], there are two ways to creating a <b><span style="color:#d46644">secret</span></b>
+	- Similar to [[4 - ConfigMaps|configMaps]], there are two ways to creating a <b><span style="color:#d46644">secret</span></b>
 		- <span style="color:#5c7e3e">Imparatively</span>
 
 	![[secrets-2.png]]
@@ -30,9 +30,9 @@
 
 1. Inject the <b><span style="color:#d46644">secret</span></b> into the [[7 - Pods|pod]] definition file
 
-	- To inject an [[3 - Configure Environment Variables in Applications|environment variable]] into the [[7 - Pods|pod]] definition file, add the <b><span style="color:#d46644">envFrom</span></b> property
+	- To inject an [[3 - Environment Variables|environment variable]] into the [[7 - Pods|pod]] definition file, add the <b><span style="color:#d46644">envFrom</span></b> property
 
-	- The <b><span style="color:#d46644">envFrom</span></b> variable is a list and can hold as many [[3 - Configure Environment Variables in Applications|environment variables]] as required
+	- The <b><span style="color:#d46644">envFrom</span></b> variable is a list and can hold as many [[3 - Environment Variables|environment variables]] as required
 
 ![[secrets-6.png]]
 

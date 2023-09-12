@@ -1,9 +1,9 @@
-- As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics|keys]]
+- As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro ✅|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro ✅|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics|keys]]
 
 - This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>
 
 - When the current <i><span style="color:#477bbe">admin</span></i> receives the new <i><span style="color:#477bbe">admin's</span></i> [[3.1 - Certification Creation|CSR]], the current <i><span style="color:#477bbe">admin</span></i> would [[2 - TLS Basics|sign]] the [[3.1 - Certification Creation|CSR]] using their <i><span style="color:#477bbe">CA server's</span></i> [[2 - TLS Basics|private key]] and [[3.1 - Certification Creation|root certificate]], then send back the [[3.1 - Certification Creation|signed certificate]] to the new <i><span style="color:#477bbe">admin</span></i>
-	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication|authenticated]] to the [[0 - Core Concepts Intro|cluster]]
+	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication|authenticated]] to the [[0 - Core Concepts Intro ✅|cluster]]
 
 - The [[2 - TLS Basics|CA]] is a pair of [[2 - TLS Basics|key]] and [[3.1 - Certification Creation|certificate]] files that have been generated
 
@@ -13,7 +13,7 @@
 
 - Any time you want to [[2 - TLS Basics|sign]] a [[3.1 - Certification Creation|certificate]] with the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] file, the only way to do this is by logging into the <i><span style="color:#477bbe">CA server</span></i>
 
-- If the [[2 - TLS Basics|CA]] files are located on the [[0 - Core Concepts Intro|master node]], then the [[0 - Core Concepts Intro|master node]] is also the <i><span style="color:#477bbe">CA server</span></i>
+- If the [[2 - TLS Basics|CA]] files are located on the [[0 - Core Concepts Intro ✅|master node]], then the [[0 - Core Concepts Intro ✅|master node]] is also the <i><span style="color:#477bbe">CA server</span></i>
 	- This is where the <span style="color:#5c7e3e">kubeadm</span> tool places the [[2 - TLS Basics|CA]] files
 
 - While [[3.1 - Certification Creation|CSR]] can be [[2 - TLS Basics|signed]] manually, with larger teams and continuous growth, you need an easier way of managing [[3.1 - Certification Creation|certificates]], carrying out the [[3.1 - Certification Creation|CSR]] [[2 - TLS Basics|signing]] process, and rotating [[3.1 - Certification Creation|certificates]] when they expire
@@ -24,7 +24,7 @@
 
 - When a [[3.1 - Certification Creation|CSR]] is sent through an <b><i><span style="color:#d46644">API</span></i></b> call, rather than the <i><span style="color:#477bbe">admin</span></i> manually logging into the <i><span style="color:#477bbe">CA server</span></i> to [[2 - TLS Basics|sign]], they create and <span style="color:#5c7e3e">Kubernetes</span> API object called the [[3.1 - Certification Creation|CertificateSigningRequest]] object
 
-- Once the [[3.1 - Certification Creation|CertificateSigningRequest]] object is created, all [[3.1 - Certification Creation|CSRs]] can be seen by the <i><span style="color:#477bbe">administrators</span></i> of the [[0 - Core Concepts Intro|cluster]]
+- Once the [[3.1 - Certification Creation|CertificateSigningRequest]] object is created, all [[3.1 - Certification Creation|CSRs]] can be seen by the <i><span style="color:#477bbe">administrators</span></i> of the [[0 - Core Concepts Intro ✅|cluster]]
 
 - Once the [[3.1 - Certification Creation|CSR]] object is created, the requests can now easily be reviewed and approved using <span style="color:#5c7e3e">kubectl</span> commands
 	- The [[3.1 - Certification Creation|certificate]] can then be extracted and shared with the new <i><span style="color:#477bbe">admin</span></i>

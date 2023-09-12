@@ -1,9 +1,9 @@
-- What if, when the [[4 - Kube Scheduler|scheduler]] is <span style="color:#d46644">scheduling</span> [[7 - Pods|pods]] to [[0 - Core Concepts Intro|nodes]], none of the [[2 - Taints & Tolerations|taints and tolerations]] or [[4 - Node Affinity|nodeAffinity]] & [[3 - Node Selectors|nodeSelector]] rules satisfies the needs
-	- What if you want to use your own <span style="color:#d46644">scheduling</span> algorithm to place [[7 - Pods|pods]] on [[0 - Core Concepts Intro|nodes]]
+- What if, when the [[4 - Kube Scheduler|scheduler]] is <span style="color:#d46644">scheduling</span> [[7 - Pods|pods]] to [[0 - Core Concepts Intro ✅|nodes]], none of the [[2 - Taints & Tolerations|taints and tolerations]] or [[4 - Node Affinity|nodeAffinity]] & [[3 - Node Selectors|nodeSelector]] rules satisfies the needs
+	- What if you want to use your own <span style="color:#d46644">scheduling</span> algorithm to place [[7 - Pods|pods]] on [[0 - Core Concepts Intro ✅|nodes]]
 
-- You can write your own <span style="color:#5c7e3e">Kubernetes</span> [[4 - Kube Scheduler|scheduler]] program, package it and deploy it as the default [[4 - Kube Scheduler|scheduler]] or as an additional [[4 - Kube Scheduler|scheduler]] in the [[0 - Core Concepts Intro|cluster]]
+- You can write your own <span style="color:#5c7e3e">Kubernetes</span> [[4 - Kube Scheduler|scheduler]] program, package it and deploy it as the default [[4 - Kube Scheduler|scheduler]] or as an additional [[4 - Kube Scheduler|scheduler]] in the [[0 - Core Concepts Intro ✅|cluster]]
 
-- Your <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro|cluster]] can have <b><span style="color:#d46644">multiple schedulers</span></b> at the same time
+- Your <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] can have <b><span style="color:#d46644">multiple schedulers</span></b> at the same time
 
 - When creating [[7 - Pods|pods]] or [[9 - Deployments|deployments]], you can instruct <span style="color:#5c7e3e">Kubernetes</span> to have the [[7 - Pods|pods]] <span style="color:#d46644">scheduled</span> by a specific [[4 - Kube Scheduler|scheduler]]
 
@@ -27,14 +27,14 @@ NOTE: be sure to note the name you give the [[4 - Kube Scheduler|scheduler]] as 
 ![[mult-schedulers-3.png]]
 
 - An important option to focus on is the <span style="color:red">--leader-elect</span> option.
-	- This option is used when you have multiple copies of the [[4 - Kube Scheduler|scheduler]] running on different [[0 - Core Concepts Intro|master nodes]] (this is a high availability setup where there are multiple [[0 - Core Concepts Intro|master nodes]])
-	- If multiple copies of the same [[4 - Kube Scheduler|scheduler]] are running on the different [[0 - Core Concepts Intro|nodes]], only one can be active at a time
+	- This option is used when you have multiple copies of the [[4 - Kube Scheduler|scheduler]] running on different [[0 - Core Concepts Intro ✅|master nodes]] (this is a high availability setup where there are multiple [[0 - Core Concepts Intro ✅|master nodes]])
+	- If multiple copies of the same [[4 - Kube Scheduler|scheduler]] are running on the different [[0 - Core Concepts Intro ✅|nodes]], only one can be active at a time
 
 - This is where the <span style="color:red">--leader-elect</span> option helps in choosing a [[4 - Kube Scheduler|scheduler]] who will lead <span style="color:#d46644">scheduling</span> activities
 
-- If you don't have multiple [[0 - Core Concepts Intro|master nodes]], the <span style="color:red">--leader-elect</span> options should be "false".
+- If you don't have multiple [[0 - Core Concepts Intro ✅|master nodes]], the <span style="color:red">--leader-elect</span> options should be "false".
 
-- If you do have multiple [[0 - Core Concepts Intro|master nodes]], you can pass in an additional parameter to set a "lock object" name (DEPRECATED: Will be removed in favor of leader-elect-resource-name)
+- If you do have multiple [[0 - Core Concepts Intro ✅|master nodes]], you can pass in an additional parameter to set a "lock object" name (DEPRECATED: Will be removed in favor of leader-elect-resource-name)
 	- This is to differentiate the new custom [[4 - Kube Scheduler|scheduler]] from the default during the leader election process
 
 ![[mult-schedulers-4.png]]

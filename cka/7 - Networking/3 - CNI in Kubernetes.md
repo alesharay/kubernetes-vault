@@ -3,7 +3,7 @@
 - In order for <span style="color:#5c7e3e">Kubernetes</span> to use <b><i><span style="color:#d46644">CNI plugins</span></i></b>, the <b><i><span style="color:#d46644">CNI plugin</span></i></b> must be invoked by the component within <span style="color:#5c7e3e">Kubernetes</span> that is responsible for creating [[7 - Pods|containers]]
 	- This component must then invoke the appropriate <b><i><span style="color:#d46644">network plugins</span></i></b> after the [[7 - Pods|container]] is created
 
-- The <b><i><span style="color:#d46644">CNI plugin</span></i></b> is configured in the [[5 - Kubelet|kubelet]] service on each [[0 - Core Concepts Intro|node]] in the [[0 - Core Concepts Intro|cluster]]
+- The <b><i><span style="color:#d46644">CNI plugin</span></i></b> is configured in the [[5 - Kubelet|kubelet]] service on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[cnik-1.png]]
 

@@ -22,7 +22,7 @@
 
 ![[pvc-3.png]]
 
-- If there are no [[4 - Persistent Volumes|PVs]] available, the <b><i><span style="color:#d46644">PVC</span></i></b> will remain in a pending state until newer [[4 - Persistent Volumes|PVs]] are made available to the [[0 - Core Concepts Intro|cluster]]
+- If there are no [[4 - Persistent Volumes|PVs]] available, the <b><i><span style="color:#d46644">PVC</span></i></b> will remain in a pending state until newer [[4 - Persistent Volumes|PVs]] are made available to the [[0 - Core Concepts Intro ✅|cluster]]
 	- Once new [[4 - Persistent Volumes|PVs]] are available, the <b><i><span style="color:#d46644">PVC</span></i></b> will automatically be [[3 - Volumes|bound]] to the newly available [[4 - Persistent Volumes|PV]]
 
 - In the <b><i><span style="color:#d46644">PVC</span></i></b> definition file, the <span style="color:#5c7e3e">spec</span> section includes
