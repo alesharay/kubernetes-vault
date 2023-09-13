@@ -13,13 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/7 - Networking/9 - Ingress.md",
+                "file": "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "720f7459e248289d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/7 - Networking/9 - Ingress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/7 - Networking/9 - Ingress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,8 +131,16 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "b54c06693485ea1a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
               "state": {
-                "file": "cka/7 - Networking/9 - Ingress.md"
+                "sortOrder": "frequency"
               }
             }
           }
@@ -146,8 +161,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48e39ba68f5c50b7",
+  "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/9 - Practice Questions/Question 12.md",
+    "cka/9 - Practice Questions/Question 4.md",
+    "cka/5 - Security/1 - Authentication.md",
+    "cka/1 - Scheduling/0 - Scheduling Intro.md",
+    "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
+    "cka/7 - Networking/9 - Ingress.md",
     "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
     "cka/7 - Networking/2 - Pod Networking.md",
     "cka/5 - Security/12 - Pre-requisite - Security in Docker.md",
@@ -172,12 +193,6 @@
     "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
     "cka/5 - Security/10 - Service Accounts.md",
     "cka/5 - Security/9 - Cluster Roles.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/2 - ** Configure High Availability.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/1 - Choosing Kubernetes Infrastructure.md",
-    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
-    "cka/7 - Networking/9 - Ingress.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
