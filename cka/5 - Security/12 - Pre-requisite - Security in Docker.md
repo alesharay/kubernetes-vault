@@ -8,28 +8,28 @@
 
 - [[7 - Pods ✅|Containers]] and their <i><span style="color:#477bbe">host</span></i> share the same <span style="color:#5c7e3e">kernel</span>
 
-- [[7 - Pods ✅|Containers]] are isolated using [[11 - Namespaces|namespaces]] in <span style="color:#5c7e3e">Linux</span>
+- [[7 - Pods ✅|Containers]] are isolated using [[11 - Namespaces ✅|namespaces]] in <span style="color:#5c7e3e">Linux</span>
 
-- The <i><span style="color:#477bbe">host</span></i> has a [[11 - Namespaces|namespace]] and the [[7 - Pods ✅|containers]] have their own [[11 - Namespaces|namespace]]
+- The <i><span style="color:#477bbe">host</span></i> has a [[11 - Namespaces ✅|namespace]] and the [[7 - Pods ✅|containers]] have their own [[11 - Namespaces ✅|namespace]]
 
 ![[psd-3.png]]
 
-- All processes run by a [[7 - Pods ✅|container]] are in fact run on the <i><span style="color:#477bbe">host</span></i> itself but in their own [[11 - Namespaces|namespace]]
-	- As far as the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]] is concerned, it is in its own [[11 - Namespaces|namespace]] and it can see its own processes only
-	- It cannot see anything outside of it or in any other [[11 - Namespaces|namespace]]
+- All processes run by a [[7 - Pods ✅|container]] are in fact run on the <i><span style="color:#477bbe">host</span></i> itself but in their own [[11 - Namespaces ✅|namespace]]
+	- As far as the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]] is concerned, it is in its own [[11 - Namespaces ✅|namespace]] and it can see its own processes only
+	- It cannot see anything outside of it or in any other [[11 - Namespaces ✅|namespace]]
 
 - When you list processes within the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]], you see the processes with their process IDs
 
 ![[psd-4.png]]
 
-- For the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>, all processes of its own, as well as those in the child [[11 - Namespaces|namespaces]] are visible as just another process in the system
+- For the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>, all processes of its own, as well as those in the child [[11 - Namespaces ✅|namespaces]] are visible as just another process in the system
 
 - When you list the processes on the <i><span style="color:#477bbe">host</span></i>, you see a list of processes and there IDs
 	- These will show the same processes as the [[7 - Pods ✅|container]] (including more) but with different process IDs
 
 ![[psd-5.png]]
 
-- Processes can have different process IDs in different [[11 - Namespaces|namespaces]] and this is how <span style="color:#5c7e3e">Docker</span> isolates [[7 - Pods ✅|containers]] within a system
+- Processes can have different process IDs in different [[11 - Namespaces ✅|namespaces]] and this is how <span style="color:#5c7e3e">Docker</span> isolates [[7 - Pods ✅|containers]] within a system
 
 - The <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i> has a set of <i><span style="color:#477bbe">users</span></i>: a <i><span style="color:#477bbe">root user</span></i> and a slew of <i><span style="color:#477bbe">non-root users</span></i>
 

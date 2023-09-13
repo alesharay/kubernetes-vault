@@ -28,7 +28,7 @@
 
 - Depending on how you setup your [[0 - Core Concepts Intro ✅|cluster]], <b><span style="color:#d46644">etcd</span></b> can be deployed differently
 	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup from scratch, you download <b><span style="color:#d46644">etcd</span></b> binaries manually and configure <b><span style="color:#d46644">etcd</span></b> as a service in the [[0 - Core Concepts Intro ✅|master node]]
-	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>, the <b><span style="color:#d46644">etcd server</span></b> is setup for you as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces|namespace]]
+	- If a [[0 - Core Concepts Intro ✅|cluster]] is setup using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>, the <b><span style="color:#d46644">etcd server</span></b> is setup for you as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces ✅|namespace]]
 
 - You can explore the <b><span style="color:#d46644">etcd database</span></b> by running the <span style="color:red">kubectl exec</span> command inside of the [[0 - Core Concepts Intro ✅|master node]]
 

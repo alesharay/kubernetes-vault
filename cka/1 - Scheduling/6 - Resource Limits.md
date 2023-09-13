@@ -26,7 +26,7 @@
 
 ![[resource-limits-4.png]]
 
-- For the [[7 - Pods ✅|pod]] to pick up those defaults, you must have first set those as default values for request and <b><span style="color:#d46644">limit</span></b> by creating a <b><span style="color:#d46644">LimitRange</span></b> in that [[11 - Namespaces|namespace]]
+- For the [[7 - Pods ✅|pod]] to pick up those defaults, you must have first set those as default values for request and <b><span style="color:#d46644">limit</span></b> by creating a <b><span style="color:#d46644">LimitRange</span></b> in that [[11 - Namespaces ✅|namespace]]
 
 ![[resource-limits-5.png]]
 

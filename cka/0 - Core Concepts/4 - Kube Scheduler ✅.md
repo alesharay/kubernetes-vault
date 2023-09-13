@@ -16,6 +16,6 @@
 
 - To install a <b><span style="color:#d46644">scheduler</span></b>, download the binary from the <span style="color:#5c7e3e">Kubernetes</span> release page, extract it, and run it as a **service**
 
-- (if using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>) the <b><span style="color:#d46644">scheduler</span></b> is setup as a [[7 - Pods ✅|pod]] in the <span style="color:#5c7e3e">kube-system</span> [[11 - Namespaces|namespace]] and can be viewed from the **manifests** directory
+- (if using <b><i><span style="color:#5c7e3e">kubeadm</span></i></b>) the <b><span style="color:#d46644">scheduler</span></b> is setup as a [[7 - Pods ✅|pod]] in the <span style="color:#5c7e3e">kube-system</span> [[11 - Namespaces ✅|namespace]] and can be viewed from the **manifests** directory
 
 	`cat /etc/kubernetes/manifests/kube-scheduler.yaml`

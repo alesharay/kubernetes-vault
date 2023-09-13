@@ -7,7 +7,7 @@
 - <b><span style="color:#d46644">Selectors</span></b> help you filter items by their <b><span style="color:#d46644">Labels</span></b>
 
 - In <span style="color:#5c7e3e">Kubernetes</span>, there are several ways to group <i><span style="color:#477bbe">objects</span></i> together
-	- By <i><span style="color:#477bbe">object</span></i> type ([[7 - Pods ✅|pod]], [[9 - Deployments ✅|deployment]], [[10 - Services|service]], <i><span style="color:#477bbe">ingress</span></i>, ….)
+	- By <i><span style="color:#477bbe">object</span></i> type ([[7 - Pods ✅|pod]], [[9 - Deployments ✅|deployment]], [[10 - Services ✅|service]], <i><span style="color:#477bbe">ingress</span></i>, ….)
 	- By application (app1, app2, app3, …)
 	- By functionality (front-end, back-end, web-service, app-server, …)
 	- Etc…

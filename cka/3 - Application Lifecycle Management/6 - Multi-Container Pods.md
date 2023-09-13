@@ -2,9 +2,9 @@
 
 - <span style="color:#5c7e3e">Microservices</span> enable us to develop and deploy a set of independent, small and reusable code
 
-- <span style="color:#5c7e3e">Microservices</span> help us scale up, down and modify each [[10 - Services|service]] as required
+- <span style="color:#5c7e3e">Microservices</span> help us scale up, down and modify each [[10 - Services ✅|service]] as required
 
-- At times, you may need two [[10 - Services|services]] to work together such as a webserver and a logging [[10 - Services|service]]
+- At times, you may need two [[10 - Services ✅|services]] to work together such as a webserver and a logging [[10 - Services ✅|service]]
 	- Even though you want them to deployed separately, you still want them to be paired together
 	- This is the scenario where you would want multiple [[7 - Pods ✅|containers]] in a [[7 - Pods ✅|pod]]
 

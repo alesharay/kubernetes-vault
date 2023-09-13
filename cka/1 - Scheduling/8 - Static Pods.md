@@ -20,7 +20,7 @@
 
 ### The are two ways to configure the manifest directory
 
-- The <i><span style="color:#5c7e3e">manifest</span></i> directory can be any directory on the host, it just needs to be passed into [[5 - Kubelet ✅|kubelet]] as an option while running the [[10 - Services|service]]
+- The <i><span style="color:#5c7e3e">manifest</span></i> directory can be any directory on the host, it just needs to be passed into [[5 - Kubelet ✅|kubelet]] as an option while running the [[10 - Services ✅|service]]
 
 - This option is called <span style="color:red">--pod-manifest-path</span>
 
@@ -88,7 +88,7 @@
 - Then create [[7 - Pods ✅|pod]] definition files that use <i><span style="color:#5c7e3e">docker</span></i> images of the various [[0 - Core Concepts Intro ✅|control plane]] components ([[2 - Kube API server ✅|kube-apiserver]], controller, [[1 - ETCD ✅|etcd]], scheduler)
 - Place these definition files in the specified <i><span style="color:#5c7e3e">manifest</span></i> directory and [[5 - Kubelet ✅|kubelet]] will take care of the rest
 
-- This method allows you to avoid downloading the binaries and configuring the [[10 - Services|services]]
+- This method allows you to avoid downloading the binaries and configuring the [[10 - Services ✅|services]]
 
 - Using this method, if any of the [[7 - Pods ✅|pods]] were to crash, the <b><span style="color:#d46644">static pods</span></b> will automatically be restarted by [[5 - Kubelet ✅|kubelet]]
 
@@ -98,7 +98,7 @@
 
 #### Practice Problems
 
-- How many <b><span style="color:#d46644">static pods</span></b> exist in this [[0 - Core Concepts Intro ✅|cluster]] in all [[11 - Namespaces|namespaces]]?
+- How many <b><span style="color:#d46644">static pods</span></b> exist in this [[0 - Core Concepts Intro ✅|cluster]] in all [[11 - Namespaces ✅|namespaces]]?
 
 		kubectl get pods --all-namespaces
 

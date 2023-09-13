@@ -33,23 +33,23 @@
 
 ### Network security in Kubernetes
 
-- On a [[0 - Core Concepts Intro ✅|cluster]] with a set of [[0 - Core Concepts Intro ✅|nodes]] hosting a set of [[7 - Pods ✅|pods]] and [[10 - Services|services]], each [[0 - Core Concepts Intro ✅|node]], [[7 - Pods ✅|pod]], and [[10 - Services|services]] have their own IP address
+- On a [[0 - Core Concepts Intro ✅|cluster]] with a set of [[0 - Core Concepts Intro ✅|nodes]] hosting a set of [[7 - Pods ✅|pods]] and [[10 - Services ✅|services]], each [[0 - Core Concepts Intro ✅|node]], [[7 - Pods ✅|pod]], and [[10 - Services ✅|services]] have their own IP address
 
 ![[np-6.png]]
 
 - One of the prerequisites for <b><i><span style="color:#d46644">networking</span></i></b> in <span style="color:#5c7e3e">Kubernetes</span> is that with whatever solution you implement, the [[7 - Pods ✅|pods]] should be able to communicate with each other without having to configure any additional settings like routes.
 
-- In <b><i><span style="color:#d46644">networking</span></i></b>, all [[7 - Pods ✅|pods]] should, by default, be able to reach each other by their IP addresses, [[7 - Pods ✅|pod]] names, or [[10 - Services|services]]
+- In <b><i><span style="color:#d46644">networking</span></i></b>, all [[7 - Pods ✅|pods]] should, by default, be able to reach each other by their IP addresses, [[7 - Pods ✅|pod]] names, or [[10 - Services ✅|services]]
 
-- *Remember: <span style="color:#5c7e3e">Kubernetes</span> is configured, by default, with an "<b><i><span style="color:#d46644">Allow All</span></i></b>" <b><i><span style="color:#d46644">rule</span></i></b> that allows traffic from any [[7 - Pods ✅|pod]] to any other [[7 - Pods ✅|pod]] or [[10 - Services|service]]
+- *Remember: <span style="color:#5c7e3e">Kubernetes</span> is configured, by default, with an "<b><i><span style="color:#d46644">Allow All</span></i></b>" <b><i><span style="color:#d46644">rule</span></i></b> that allows traffic from any [[7 - Pods ✅|pod]] to any other [[7 - Pods ✅|pod]] or [[10 - Services ✅|service]]
 
 - Using the <i><span style="color:#477bbe">web server</span></i> - [[2 - Kube API server ✅|API server]] - <i><span style="color:#477bbe">DB server</span></i> setup but in <span style="color:#5c7e3e">Kubernetes</span>, for each component in the application, we deploy a [[7 - Pods ✅|pod]]: one for the <i><span style="color:#477bbe">web server</span></i>, one for the [[2 - Kube API server ✅|API server]], and one for the <i><span style="color:#477bbe">DB server</span></i>
 
-- Create [[10 - Services|services]] to enable communication between the [[7 - Pods ✅|pods]] as well as the <i><span style="color:#477bbe">end users</span></i>
+- Create [[10 - Services ✅|services]] to enable communication between the [[7 - Pods ✅|pods]] as well as the <i><span style="color:#477bbe">end users</span></i>
 
 - If we don't want the <i><span style="color:#477bbe">frontend web server</span></i> to be able to communicate with the <i><span style="color:#477bbe">DB server</span></i> directly, you would implement a <b><i><span style="color:#d46644">network policy</span></i></b> to allow traffic to the <i><span style="color:#477bbe">DB server</span></i> only from the [[2 - Kube API server ✅|API server]]
 
-- A <b><i><span style="color:#d46644">network policy</span></i></b> is another object in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces|namespace]]
+- A <b><i><span style="color:#d46644">network policy</span></i></b> is another object in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces ✅|namespace]]
 
 - You link a <b><i><span style="color:#d46644">network policy</span></i></b> to one ore more [[7 - Pods ✅|pods]]
 

@@ -1,4 +1,4 @@
-- [[4 - Persistent Volumes|Persistent volumes]] and <b><i><span style="color:#d46644">persistent volume claims</span></i></b> are two separate objects in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces|namespace]]
+- [[4 - Persistent Volumes|Persistent volumes]] and <b><i><span style="color:#d46644">persistent volume claims</span></i></b> are two separate objects in the <span style="color:#5c7e3e">Kubernetes</span> [[11 - Namespaces ✅|namespace]]
 
 - <i><span style="color:#477bbe">Administrators</span></i> create [[4 - Persistent Volumes|persistent volumes]] 
 

@@ -52,19 +52,19 @@
 
 ![[developing-5.png]]
 
-- If there are multiple [[7 - Pods ✅|pods]] (ie. In different [[11 - Namespaces|namespaces]]) that need access to the specified [[7 - Pods ✅|pod]], the created <b><i><span style="color:#d46644">network policy</span></i></b> allows any [[7 - Pods ✅|pod]] in any [[11 - Namespaces|namespace]] with [[1 - Labels & Selectors|matchLabels]] to reach that [[7 - Pods ✅|pod]]
+- If there are multiple [[7 - Pods ✅|pods]] (ie. In different [[11 - Namespaces ✅|namespaces]]) that need access to the specified [[7 - Pods ✅|pod]], the created <b><i><span style="color:#d46644">network policy</span></i></b> allows any [[7 - Pods ✅|pod]] in any [[11 - Namespaces ✅|namespace]] with [[1 - Labels & Selectors|matchLabels]] to reach that [[7 - Pods ✅|pod]]
 
-- If we only want to allow a [[7 - Pods ✅|pod]] in a specific [[11 - Namespaces|namespace]] to reach the specified [[7 - Pods ✅|pod]], even though other [[7 - Pods ✅|pods]] have matching [[1 - Labels & Selectors|labels]], we add a new selector called the [[1 - Labels & Selectors|namespaceSelector]] on the same <span style="color:#5c7e3e">rule</span> as the [[1 - Labels & Selectors|podSelector]]
-	- Here we match [[1 - Labels & Selectors|labels]] again using the [[11 - Namespaces|namespace]] [[1 - Labels & Selectors|label]] which should be specified on the [[11 - Namespaces|namespace]] first
+- If we only want to allow a [[7 - Pods ✅|pod]] in a specific [[11 - Namespaces ✅|namespace]] to reach the specified [[7 - Pods ✅|pod]], even though other [[7 - Pods ✅|pods]] have matching [[1 - Labels & Selectors|labels]], we add a new selector called the [[1 - Labels & Selectors|namespaceSelector]] on the same <span style="color:#5c7e3e">rule</span> as the [[1 - Labels & Selectors|podSelector]]
+	- Here we match [[1 - Labels & Selectors|labels]] again using the [[11 - Namespaces ✅|namespace]] [[1 - Labels & Selectors|label]] which should be specified on the [[11 - Namespaces ✅|namespace]] first
 
 ![[developing-6.png]]
 
-- The [[1 - Labels & Selectors|namespaceSelector]] helps in defining from what [[11 - Namespaces|namespace]] traffic is allowed to reach the specified [[7 - Pods ✅|pod]]
+- The [[1 - Labels & Selectors|namespaceSelector]] helps in defining from what [[11 - Namespaces ✅|namespace]] traffic is allowed to reach the specified [[7 - Pods ✅|pod]]
 
-- If you only have the [[1 - Labels & Selectors|namespaceSelector]] and not the [[1 - Labels & Selectors|podSelector]], all [[7 - Pods ✅|pods]] within the specified [[11 - Namespaces|namespace]] will be allowed to reach the specified [[7 - Pods ✅|pod]]
-	- [[7 - Pods ✅|Pods]] from outside of this [[11 - Namespaces|namespace]] will not be allowed to go through
+- If you only have the [[1 - Labels & Selectors|namespaceSelector]] and not the [[1 - Labels & Selectors|podSelector]], all [[7 - Pods ✅|pods]] within the specified [[11 - Namespaces ✅|namespace]] will be allowed to reach the specified [[7 - Pods ✅|pod]]
+	- [[7 - Pods ✅|Pods]] from outside of this [[11 - Namespaces ✅|namespace]] will not be allowed to go through
 
-- If we have a <i><span style="color:#477bbe">server</span></i>, that is not apart of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], that we want to be able to access the specified [[7 - Pods ✅|pod]], the current [[1 - Labels & Selectors|podSelector]] and [[11 - Namespaces|namespace]]Selector won't work
+- If we have a <i><span style="color:#477bbe">server</span></i>, that is not apart of the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], that we want to be able to access the specified [[7 - Pods ✅|pod]], the current [[1 - Labels & Selectors|podSelector]] and [[11 - Namespaces ✅|namespace]]Selector won't work
 
 - It is possible to configure <b><i><span style="color:#d46644">network policies</span></i></b> to allow traffic from a specific IP address by adding an <span style="color:#5c7e3e">ipBlock</span> property.
 	- This will have the CIDR property under it with the IP CIDR
@@ -75,7 +75,7 @@
 
 - [[1 - Labels & Selectors|podSelectors]] select [[7 - Pods ✅|pods]] by [[1 - Labels & Selectors|labels]]
 
-- [[1 - Labels & Selectors|namespaceSelectors]] select [[11 - Namespaces|namespaces]] by [[1 - Labels & Selectors|labels]]
+- [[1 - Labels & Selectors|namespaceSelectors]] select [[11 - Namespaces ✅|namespaces]] by [[1 - Labels & Selectors|labels]]
 
 - <span style="color:#5c7e3e">ipBlock</span> [[1 - Labels & Selectors|selectors]] select IP address ranges
 

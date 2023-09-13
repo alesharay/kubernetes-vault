@@ -39,7 +39,7 @@ NOTE: be sure to note the name you give the [[4 - Kube Scheduler ✅|scheduler]]
 
 ![[mult-schedulers-4.png]]
 
-- Create the [[7 - Pods ✅|pod]] using the `kubectl create` command and run the `kubectl get [[7 - Pods|pod]]s` command in the kube-system [[11 - Namespaces|namespace]] to see the [[4 - Kube Scheduler ✅|schedulers]] running
+- Create the [[7 - Pods ✅|pod]] using the `kubectl create` command and run the `kubectl get [[7 - Pods|pod]]s` command in the kube-system [[11 - Namespaces ✅|namespace]] to see the [[4 - Kube Scheduler ✅|schedulers]] running
 
 ![[mult-schedulers-5.png]]
 
@@ -52,7 +52,7 @@ NOTE: be sure to note the name you give the [[4 - Kube Scheduler ✅|scheduler]]
 - By default, if this property is not defined, it automatically uses the default [[4 - Kube Scheduler ✅|scheduler]]
 
 - To know which [[4 - Kube Scheduler ✅|scheduler]] picked up the [[7 - Pods ✅|pod]] creation responsibilities, view the events using the `kubectl get events` command
-	- This lists all of the events in the current [[11 - Namespaces|namespace]]
+	- This lists all of the events in the current [[11 - Namespaces ✅|namespace]]
 
 ![[mult-schedulers-7.png]]
 

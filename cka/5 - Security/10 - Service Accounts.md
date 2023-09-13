@@ -64,8 +64,8 @@
 - If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods ✅|pod]] hosting the application
 	- This way, the token to access the <span style="color:#5c7e3e">Kubernetes</span> API is already placed inside of the [[7 - Pods ✅|pod]] and can be easily read by the application
 
-- For every [[11 - Namespaces|namespace]] in <span style="color:#5c7e3e">Kubernetes</span>, a <b><i><span style="color:#d46644">service account</span></i></b> named "<span style="color:red">default</span>" is automatically created
-	- Each [[11 - Namespaces|namespace]] has it's own "<span style="color:red">default</span>" <b><i><span style="color:#d46644">service account</span></i></b>
+- For every [[11 - Namespaces ✅|namespace]] in <span style="color:#5c7e3e">Kubernetes</span>, a <b><i><span style="color:#d46644">service account</span></i></b> named "<span style="color:red">default</span>" is automatically created
+	- Each [[11 - Namespaces ✅|namespace]] has it's own "<span style="color:red">default</span>" <b><i><span style="color:#d46644">service account</span></i></b>
 
 - Whenever a [[7 - Pods ✅|pod]] is created, the default <b><i><span style="color:#d46644">service account</span></i></b> and its token are automatically mounted to that [[7 - Pods ✅|pod]] as a [[3 - Volumes|volume mount]]
 

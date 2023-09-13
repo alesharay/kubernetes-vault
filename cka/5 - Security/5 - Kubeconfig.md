@@ -53,7 +53,7 @@
 	- <b><i><span style="color:#d46644">context</span></i></b> (dictionary): details of the <i><span style="color:#477bbe">user</span></i> and [[0 - Core Concepts Intro ✅|cluster]] connection
 		- [[0 - Core Concepts Intro ✅|cluster]] (string/property): [[0 - Core Concepts Intro ✅|cluster]] name for the <b><i><span style="color:#d46644">context</span></i></b>
 		- <i><span style="color:#477bbe">user</span></i> (string/property): username for the specified [[0 - Core Concepts Intro ✅|cluster]]
-		- [[11 - Namespaces|namespace]] (string/property): specifies a particular [[11 - Namespaces|namespace]] for that <b><i><span style="color:#d46644">context</span></i></b> so that when that <b><i><span style="color:#d46644">context</span></i></b> is used, you will automatically be in the correct [[11 - Namespaces|namespace]]
+		- [[11 - Namespaces ✅|namespace]] (string/property): specifies a particular [[11 - Namespaces ✅|namespace]] for that <b><i><span style="color:#d46644">context</span></i></b> so that when that <b><i><span style="color:#d46644">context</span></i></b> is used, you will automatically be in the correct [[11 - Namespaces ✅|namespace]]
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">current-context</span></i></b> section specifies the default <b><i><span style="color:#d46644">context</span></i></b> to use when connecting to <span style="color:#5c7e3e">Kubernetes</span>
 

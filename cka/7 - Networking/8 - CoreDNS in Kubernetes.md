@@ -17,7 +17,7 @@
 
 ### How is CoreDNS setup
 
-- The <b><i><span style="color:#d46644">coreDNS server</span></i></b> is [[9 - Deployments ✅|deployed]] as a [[8 - ReplicaSets ✅|replicaSets]] within a [[9 - Deployments ✅|deployment]] (for redundancy) in the [[11 - Namespaces|kube-system namespace]] in the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
+- The <b><i><span style="color:#d46644">coreDNS server</span></i></b> is [[9 - Deployments ✅|deployed]] as a [[8 - ReplicaSets ✅|replicaSets]] within a [[9 - Deployments ✅|deployment]] (for redundancy) in the [[11 - Namespaces ✅|kube-system namespace]] in the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[coreDNSk-3.png]]
 
@@ -47,15 +47,15 @@
 - The <b><i><span style="color:#d46644">Corefile</span></i></b> is passed into the [[7 - Pods ✅|pod]] as a [[4 - ConfigMaps|configMap]]
 	- This way if you need to modify the configuration, you can edit the [[4 - ConfigMaps|configMap]]
 
-- When the <b><i><span style="color:#d46644">coreDNS</span></i></b> [[7 - Pods ✅|pod]] is up and running and watching the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] for new [[7 - Pods ✅|pods]] or [[10 - Services|services]], every time a [[7 - Pods ✅|pod]] or [[10 - Services|service]] is created, it adds a record for it
+- When the <b><i><span style="color:#d46644">coreDNS</span></i></b> [[7 - Pods ✅|pod]] is up and running and watching the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] for new [[7 - Pods ✅|pods]] or [[10 - Services ✅|services]], every time a [[7 - Pods ✅|pod]] or [[10 - Services ✅|service]] is created, it adds a record for it
 
 ![[coreDNSk-7.png]]
 
-- When the <b><i><span style="color:#d46644">coreDNS</span></i></b> solution is [[9 - Deployments ✅|deployed]], a [[10 - Services|service]] is also created [[10 - Services|services]] made available to other components within a [[0 - Core Concepts Intro ✅|cluster]]
+- When the <b><i><span style="color:#d46644">coreDNS</span></i></b> solution is [[9 - Deployments ✅|deployed]], a [[10 - Services ✅|service]] is also created [[10 - Services ✅|services]] made available to other components within a [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[coreDNSk-8.png]]
 
-- The <b><i><span style="color:#d46644">coreDNS</span></i></b> [[10 - Services|service]] is named [[7 - DNS in Kubernetes|kube-dns]] by default and the <span style="color:#5c7e3e">IP address</span> of the [[10 - Services|service]]  is configured as the <b><i><span style="color:#d46644">nameserver</span></i></b> on [[7 - Pods ✅|pods]]
+- The <b><i><span style="color:#d46644">coreDNS</span></i></b> [[10 - Services ✅|service]] is named [[7 - DNS in Kubernetes|kube-dns]] by default and the <span style="color:#5c7e3e">IP address</span> of the [[10 - Services ✅|service]]  is configured as the <b><i><span style="color:#d46644">nameserver</span></i></b> on [[7 - Pods ✅|pods]]
 
 ![[coreDNSk-9.png]]
 
@@ -69,4 +69,4 @@
 	- svc.cluster.local
 	- cluster.local
 
-- The <span style="color:red">resolv.conf</span> file only has search entries for [[10 - Services|services]]; for [[7 - Pods ✅|pods]] you must specify the <b><i><span style="color:#d46644">FQDN</span></i></b>
+- The <span style="color:red">resolv.conf</span> file only has search entries for [[10 - Services ✅|services]]; for [[7 - Pods ✅|pods]] you must specify the <b><i><span style="color:#d46644">FQDN</span></i></b>

@@ -48,9 +48,9 @@
 
 ![[role-based-3.png]]
 
-- The <b><i><span style="color:#d46644">roles</span></i></b> and <b><i><span style="color:#d46644">role bindings</span></i></b> fall under the scope of [[11 - Namespaces|namespaces]]
+- The <b><i><span style="color:#d46644">roles</span></i></b> and <b><i><span style="color:#d46644">role bindings</span></i></b> fall under the scope of [[11 - Namespaces ✅|namespaces]]
 
-- To limit the access of a <i><span style="color:#477bbe">user</span></i> to a specific [[11 - Namespaces|namespace]]; specify the [[11 - Namespaces|namespace]] in the <span style="color:#5c7e3e">metadata</span> of the <b><i><span style="color:#d46644">role</span></i></b> and <b><i><span style="color:#d46644">role binding</span></i></b> definition files
+- To limit the access of a <i><span style="color:#477bbe">user</span></i> to a specific [[11 - Namespaces ✅|namespace]]; specify the [[11 - Namespaces ✅|namespace]] in the <span style="color:#5c7e3e">metadata</span> of the <b><i><span style="color:#d46644">role</span></i></b> and <b><i><span style="color:#d46644">role binding</span></i></b> definition files
 
 - To view the created <b><i><span style="color:#d46644">roles</span></i></b>, use the <span style="color:red">kubectl get roles</span> command
 
@@ -79,7 +79,7 @@
 
 ![[role-based-9.png]]
 
-- When checking <i><span style="color:#477bbe">user</span></i> access, the [[11 - Namespaces|namespace]] can be specified by using the <span style="color:red">--namespace</span> option
+- When checking <i><span style="color:#477bbe">user</span></i> access, the [[11 - Namespaces ✅|namespace]] can be specified by using the <span style="color:red">--namespace</span> option
 
 !![[role-based-10.png]]
 

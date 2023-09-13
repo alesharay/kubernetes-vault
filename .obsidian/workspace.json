@@ -23,8 +23,12 @@
             "id": "720f7459e248289d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md"
+              }
             }
           },
           {
@@ -163,6 +171,9 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/0 - Core Concepts/10 - Services ✅.md",
+    "cka/1 - Scheduling/3 - Node Selectors.md",
+    "cka/0 - Core Concepts/7 - Pods ✅.md",
     "cka/9 - Practice Questions/Question 12.md",
     "cka/9 - Practice Questions/Question 4.md",
     "cka/5 - Security/1 - Authentication.md",
@@ -180,7 +191,6 @@
     "cka/3 - Application Lifecycle Management/3 - Environment Variables.md",
     "cka/0 - Core Concepts/9 - Deployments ✅.md",
     "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
-    "cka/0 - Core Concepts/7 - Pods ✅.md",
     "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
     "cka/0 - Core Concepts/5 - Kubelet ✅.md",
     "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
@@ -191,8 +201,6 @@
     "cka/5 - Security/11 - Image Security.md",
     "cka/6 - Storage/0 - Storage in Docker.md",
     "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
-    "cka/5 - Security/10 - Service Accounts.md",
-    "cka/5 - Security/9 - Cluster Roles.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",

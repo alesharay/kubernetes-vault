@@ -36,7 +36,7 @@ Using an <span style="color:#5c7e3e">http client</span> (like postman)
 
 ![[scheduling-intro-4.png]]
 
-- The [[4 - Kube Scheduler ✅|scheduler]] runs as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces|namespace]]
+- The [[4 - Kube Scheduler ✅|scheduler]] runs as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces ✅|namespace]]
 
 - When a [[7 - Pods ✅|pod]] is in a <span style="color:#5c7e3e">pending</span> state and after inspecting, there is no other issue in the events, review the [[4 - Kube Scheduler ✅|scheduler]] [[7 - Pods ✅|pod]]
 
