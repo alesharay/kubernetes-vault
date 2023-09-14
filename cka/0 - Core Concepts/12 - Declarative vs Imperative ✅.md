@@ -5,48 +5,50 @@
 
 - In the <span style="color:#5c7e3e">Kubernetes</span> world, the <b><span style="color:#d46644">imperative</span></b> approach to <span style="color:#5c7e3e">provisioning</span> <i><span style="color:#477bbe">infrastructure</span></i> is using commands such as
 	- kubectl run - to create a pod
-	- kubectl create deployment - to create a deployment
+	- kubectl create - to create a resource
+	- kubectl create -f - creates an object from a definition file imperatively
 	- kubectl expose - to create a service and expose it to the deployment
 	- kubectl edit - to edit resources
 	- kubectl scale - to scale the application up or down
 	- kubectl set image - to change the image used for the pods
-	- kubectl create -f - creates an object from a definition file imperatively
 	- kubectl replace -f - to edit an object from a definition file imperatively
 	- kubectl delete  - to delete an object
 - These all say specifically how to bring the <i><span style="color:#477bbe">infrastructure</span></i> to our needs
 
 - NOTE: The <b><span style="color:#d46644">imperative</span></b> approach will be useful during the <span style="color:#5c7e3e">certification exams</span> as we don't have to deal with YAML files
-	- However, they're limited in functionality and will require forming long and complex commands for advanced use-cases such as creating a multi-container [[7 - Pods ✅|pods]] or [[9 - Deployments ✅|deployments]]
+	- However, they're limited in functionality and will require forming long and complex commands for advanced use-cases such as creating a [[6 - Multi-Container Pods|multi-container pods]] or [[9 - Deployments ✅|deployments]]
 
 - <b><span style="color:#d46644">imperative</span></b> commands are run once and then forgotten
 	- They're only available in the session history of the user who ran the commands
-		- This makes it difficult for another user to figure out how the <i><span style="color:#477bbe">objects</span></i> were created
+		- This makes it difficult for another user to figure out how the objects were created
 
-- Creating files makes it easy to keep track of the <i><span style="color:#477bbe">desired state</span></i> of the <i><span style="color:#477bbe">objects</span></i>
+- Creating ***files*** makes it easy to keep track of the <i><span style="color:#d46644">live</span></i> object of the objects
 
-- When using the <span style="color:red">kubectl edit</span> command, we get additional fields, such as the <i><span style="color:#477bbe">status</span></i> field in what is called the "<b><span style="color:#d46644">live object</span></b>"
-	- This stores the <i><span style="color:#477bbe">status</span></i> of the <i><span style="color:#477bbe">object</span></i>
-	- It's important to note that this is not the <span style="color:#5c7e3e">local definition</span> file used to create the <i><span style="color:#477bbe">object</span></i>
+- When using the <span style="color:red">kubectl edit</span> command, we get additional fields, such as the <i><span style="color:#477bbe">status</span></i> field in what is called the <b><span style="color:#d46644">live object</span></b>
+	- This stores the <i><span style="color:#477bbe">status</span></i> of the object
+	- It's important to note that this is not the <span style="color:#5c7e3e">local</span> definition file used to create the object
 
-- There are differences between the "<b><span style="color:#d46644">live object</span></b>" which contains the <i><span style="color:#477bbe">status</span></i>, and the "<span style="color:#5c7e3e">local definition</span>" file used to create the <i><span style="color:#477bbe">object</span></i>
+- There are differences between the <b><span style="color:#d46644">live object</span></b> which contains the <i><span style="color:#477bbe">status</span></i>, and the <span style="color:#5c7e3e">local definition</span> file used to create the object
 
-- When using the <span style="color:red">kubectl edit</span> command and editing the "<b><span style="color:#d46644">live object</span></b>", the changes are not recorded anywhere
+- When using the <span style="color:red">kubectl edit</span> command and editing the <b><span style="color:#d46644">live object</span></b>, the changes are not recorded anywhere
 	- When new changes are made using the <span style="color:red">kubectl edit</span> command, there is no indication that previous changes used by the <span style="color:red">kubectl edit</span> command were made
 
-- A better approach is to edit the <span style="color:#5c7e3e">local definition</span> file and use the <span style="color:red">kubectl replace</span> command to update the <i><span style="color:#477bbe">object</span></i>
+- A better approach is to edit the <span style="color:#5c7e3e">local definition</span> file and use the <span style="color:red">kubectl replace</span> command to update the object
 
-- If the <i><span style="color:#477bbe">object</span></i> already exists when you use the <span style="color:red">kubectl create</span> command, you will encounter an error that the <i><span style="color:#477bbe">object</span></i> "already exists"
+- If the object does not exist when using the <span style="color:red">kubectl replace</span> command, you will encounter a "conflict" error
 
-- If the <i><span style="color:#477bbe">object</span></i> does not already exist when using the <span style="color:red">kubectl replace</span> command, you will encounter a "conflict" error
+- If the object already exists when you use the <span style="color:red">kubectl create</span> command, you will encounter an error that the object "already exists"
 
-- The <b><span style="color:#d46644">imperative</span></b> approach is very taxing as an administrator as you must always be aware of the current configuration
+- The <b><span style="color:#d46644">imperative</span></b> approach is very taxing as an <i><span style="color:#477bbe">administrator</span></i> as you must always be aware of the current configuration
 
 - By default, as soon as a command is run, the <span style="color:#5c7e3e">resource</span> will be created.
 - If you simply want to test your command, use the <span style="color:red">--dry-run=client</span> option
 
 	- This will <u>not</u> create the <span style="color:#5c7e3e">resource</span>; instead, it will tell you whether the <span style="color:#5c7e3e">resource</span> can be created and if your command is correct
 
-- The <span style="color:red">-o [filetype]</span> option will output the <span style="color:#5c7e3e">resource</span> definition in the format for the chosen filetype
+![[declartive-imperative.png]]
+
+- The <span style="color:red">-o FILE_TYPE</span> option will output the <span style="color:#5c7e3e">resource</span> definition in the format for the chosen file type
 	- e.g. yaml, json
 
 ### DECLARATIVE
@@ -63,7 +65,7 @@
 	- A single command, <span style="color:red">kubectl apply -f</span> is needed for this approach
 - This approach looks at the <span style="color:#5c7e3e">existing configuration</span> to bring the <i><span style="color:#477bbe">infrastructure</span></i> to its <i><span style="color:#477bbe">desired state</span></i>
 
-- The <span style="color:red">kubectl apply -f</span> command is intelligent enough to know details such as if the <i><span style="color:#477bbe">object</span></i> already exists and the existing <i><span style="color:#477bbe">status</span></i> of it
+- The <span style="color:red">kubectl apply -f</span> command is intelligent enough to know details such as if the object already exists and the existing <i><span style="color:#477bbe">status</span></i> of it
 
 - The <span style="color:red">kubectl apply -f</span> command is used for all necessary changes such as <i><span style="color:#477bbe">create</span></i> and <i><span style="color:#477bbe">edit</span></i>
 
@@ -71,7 +73,7 @@
 
 - Use the <b><span style="color:#d46644">imperative</span></b> approach to save time as much as possible
 - Practice the <b><span style="color:#d46644">imperative</span></b> commands as much as possible to be prepared
-- Use an <i><span style="color:#477bbe">object</span></i> definition file for complex tasks such as multi-container [[7 - Pods ✅|pods]]
+- Use an object definition file for complex tasks such as [[6 - Multi-Container Pods|multi-container pods]]
 	- Use the <b><span style="color:#d46644">declarative</span></b> approach when dealing with files, just using the <span style="color:red">kubectl apply -f</span> command to make changes
 
 ### IMPERATIVE EXAMPLES

@@ -1,5 +1,5 @@
 - In a real “live” <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] implemented for production, there could be a possibility of often switching between a large number of [[11 - Namespaces ✅|namespaces]] and [[0 - Core Concepts Intro ✅|clusters]]
-	- This can quickly become a confusing and overwhelming task if you had to rely on [[13 - Kubectl Apply|kubectl]] alone
+	- This can quickly become a confusing and overwhelming task if you had to rely on [[13 - Kubectl Apply ✅|kubectl]] alone
 
 - This is where command line tools such as <b><i><span style="color:#d46644">kubectx</span></i></b> and <b><i><span style="color:#d46644">kubens</span></i></b> come in to picture
 	- Reference:  [https://github.com/ahmetb/kubectx](https://github.com/ahmetb/kubectx)

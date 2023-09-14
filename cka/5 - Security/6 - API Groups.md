@@ -53,17 +53,17 @@
 
 ![[api-6.png]]
 
-- An alternative option to accessing the <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> is to start a [[13 - Kubectl Apply|kubectl]] proxy <i><span style="color:#477bbe">client</span></i>
+- An alternative option to accessing the <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> is to start a [[13 - Kubectl Apply ✅|kubectl]] proxy <i><span style="color:#477bbe">client</span></i>
 
-- The [[13 - Kubectl Apply|kubectl]] proxy command launches a proxy service locally on port 8001 and uses credentials and [[3.1 - Certification Creation|certificates]] from your [[5 - Kubeconfig|kubeconfig]] file to [[1 - Authentication|authenticate]] to the [[0 - Core Concepts Intro ✅|cluster]]
+- The [[13 - Kubectl Apply ✅|kubectl]] proxy command launches a proxy service locally on port 8001 and uses credentials and [[3.1 - Certification Creation|certificates]] from your [[5 - Kubeconfig|kubeconfig]] file to [[1 - Authentication|authenticate]] to the [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[api-7.png]]
 
-- [[6 - Kube Proxy ✅|kube-proxy]] and [[13 - Kubectl Apply|kubectl]] proxy are not the same
+- [[6 - Kube Proxy ✅|kube-proxy]] and [[13 - Kubectl Apply ✅|kubectl]] proxy are not the same
 
 - As a reminder, [[6 - Kube Proxy ✅|kube-proxy]] is used to enable connectivity between [[7 - Pods ✅|pods]] and [[10 - Services ✅|services]] across different [[0 - Core Concepts Intro ✅|nodes]] in a [[0 - Core Concepts Intro ✅|cluster]]
 
-- [[13 - Kubectl Apply|kubectl]] proxy is an HTTP proxy service created by the [[13 - Kubectl Apply]] utility to access the [[2 - Kube API server ✅|kube-apiserver]]
+- [[13 - Kubectl Apply ✅|kubectl]] proxy is an HTTP proxy service created by the [[13 - Kubectl Apply ✅]] utility to access the [[2 - Kube API server ✅|kube-apiserver]]
 
 ### Summary
 

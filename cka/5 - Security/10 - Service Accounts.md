@@ -24,7 +24,7 @@
 - In order for an application to query the <span style="color:#5c7e3e">Kubernetes</span> API, it has to be [[1 - Authentication|authenticated]]
 	- For that, you use <b><i><span style="color:#d46644">service accounts</span></i></b>
 
-- To create <b><i><span style="color:#d46644">service accounts</span></i></b> [[12 - Declarative vs Imperative|imperatively]], run the command <span style="color:red">kubectl create serviceaccount</span> followed by the account name
+- To create <b><i><span style="color:#d46644">service accounts</span></i></b> [[12 - Declarative vs Imperative ✅|imperatively]], run the command <span style="color:red">kubectl create serviceaccount</span> followed by the account name
 
 ![[servicea-1.png]]
 

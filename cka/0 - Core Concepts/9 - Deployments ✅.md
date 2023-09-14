@@ -2,7 +2,7 @@
 
 - <b><span style="color:#d46644">Deployments</span></b> automatically create [[8 - ReplicaSets ✅|ReplicaSets]]
 
-- <b><span style="color:#d46644">Deployment</span></b> is a higher-level concept that manages [[8 - ReplicaSets ✅|ReplicaSets]] and provides [[12 - Declarative vs Imperative|declarative]] updates to [[7 - Pods ✅|pods]] along with a lot of other useful features
+- <b><span style="color:#d46644">Deployment</span></b> is a higher-level concept that manages [[8 - ReplicaSets ✅|ReplicaSets]] and provides [[12 - Declarative vs Imperative ✅|declarative]] updates to [[7 - Pods ✅|pods]] along with a lot of other useful features
 
 - To update the [[11 - Image Security|image]] with the <span style="color:red">kubectl set image</span> command, you'll need to give the [[11 - Image Security|image]] name and tag
 

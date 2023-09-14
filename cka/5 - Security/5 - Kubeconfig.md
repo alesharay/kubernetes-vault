@@ -3,12 +3,12 @@
 
 ![[kubeconfig-1.png]]
 
-- For [[13 - Kubectl Apply|kubectl]], the easiest way to query the <span style="color:#5c7e3e">Kubernetes</span> REST API without having to pass in the [[3.1 - Certification Creation|certificate]] and key names each time, is by creating a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file and specify its when using the <span style="color:red">kubectl get</span> command
+- For [[13 - Kubectl Apply ✅|kubectl]], the easiest way to query the <span style="color:#5c7e3e">Kubernetes</span> REST API without having to pass in the [[3.1 - Certification Creation|certificate]] and key names each time, is by creating a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file and specify its when using the <span style="color:red">kubectl get</span> command
 
 ![[kubeconfig-2.png]]
 
-- By default, the [[13 - Kubectl Apply|kubectl]] tool looks for a file named config in the <span style="color:red">$HOME/.kube</span> directory
-	- Therefore if the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is specified here, the <span style="color:red">--kubeconfig</span> option is not necessary for [[13 - Kubectl Apply|kubectl]] API calls
+- By default, the [[13 - Kubectl Apply ✅|kubectl]] tool looks for a file named config in the <span style="color:red">$HOME/.kube</span> directory
+	- Therefore if the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is specified here, the <span style="color:red">--kubeconfig</span> option is not necessary for [[13 - Kubectl Apply ✅|kubectl]] API calls
 
 - The <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is in a specific format of the following sections:
 	- clusters
@@ -57,7 +57,7 @@
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">current-context</span></i></b> section specifies the default <b><i><span style="color:#d46644">context</span></i></b> to use when connecting to <span style="color:#5c7e3e">Kubernetes</span>
 
-- There are command line options available within the [[13 - Kubectl Apply|kubectl]] tool to view and modify the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file
+- There are command line options available within the [[13 - Kubectl Apply ✅|kubectl]] tool to view and modify the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file
 
 - To view the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file being used, run the <span style="color:red">kubectl config view</span> command
 	- This command lists the [[0 - Core Concepts Intro ✅|clusters]], <b><i><span style="color:#d46644">contexts</span></i></b> and <i><span style="color:#477bbe">users</span></i> as well as the <b><i><span style="color:#d46644">current-context</span></i></b>

@@ -7,12 +7,12 @@
 
 - When the <i><span style="color:#477bbe">object</span></i> is created, a <b><span style="color:#d46644">live object configuration</span></b> similar to what we created locally is created but with additional fields to store the status of the <i><span style="color:#477bbe">objects</span></i>
 
-- This is how <span style="color:#5c7e3e">Kubernetes</span> internally stores information about the <i><span style="color:#477bbe">object</span></i> no matter what approach is used to create the <i><span style="color:#477bbe">object</span></i>
+- This is how <span style="color:#5c7e3e">Kubernetes</span> internally stores information about the <i><span style="color:#477bbe">object</span></i> no matter what approach is used to create it
 
 - When using the <span style="color:red">kubectl apply -f</span> approach to create an <i><span style="color:#477bbe">object</span></i>, it does something a bit more…
-	- The values in the <b><span style="color:#d46644">local object definition</span></b> file is converted to JSON and is then stored as the <b><span style="color:#d46644">last applied configuration</span></b>
+	- The values in the <b><span style="color:#d46644">local object definition</span></b> file is converted to <span style="color:#5c7e3e">JSON</span> and is then stored as the <b><span style="color:#d46644">last applied configuration</span></b>
 
-- Going forward, for any changes applied to the <i><span style="color:#477bbe">object</span></i> , all three (<b><span style="color:#d46644">local object definition</span></b>, live object config, last applied config) are compared in order to identify what changes are to be made on the <b><span style="color:#d46644">live object configuration</span></b>
+- Going forward, for any changes applied to the <i><span style="color:#477bbe">object</span></i> , all three (<b><span style="color:#d46644">local object definition</span></b>, <b><span style="color:#d46644">live object configuration</span></b>, <b><span style="color:#d46644">last applied configuration</span></b>) are compared in order to identify what changes are to be made on the <b><span style="color:#d46644">live object configuration</span></b>
 
 - If a field was deleted, and then the <span style="color:red">kubectl apply</span> command is run, we see that the <b><span style="color:#d46644">last applied configuration</span></b> had the deleted field, but it's not present in the <b><span style="color:#d46644">local object definition</span></b> file. 
 	- This would mean that the field would need to be removed from the <b><span style="color:#d46644">live object configuration</span></b>

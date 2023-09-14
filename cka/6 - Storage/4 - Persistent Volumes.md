@@ -31,4 +31,4 @@
 	- ReadWriteOnce
 	- ReadWriteMany
 
-- After creating the <b><i><span style="color:#d46644">PV</span></i></b> using [[13 - Kubectl Apply|kubectl]], use the <span style="color:red">kubectl get persistentvolume</span> command to view the newly created <b><i><span style="color:#d46644">PV</span></i></b>
+- After creating the <b><i><span style="color:#d46644">PV</span></i></b> using [[13 - Kubectl Apply ✅|kubectl]], use the <span style="color:red">kubectl get persistentvolume</span> command to view the newly created <b><i><span style="color:#d46644">PV</span></i></b>

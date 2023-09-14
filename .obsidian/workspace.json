@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "48e39ba68f5c50b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "720f7459e248289d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
+                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
+                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md",
+                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/0 - Core Concepts/11 - Namespaces ✅.md"
+                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md"
               }
             }
           },
@@ -171,6 +158,15 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/0 - Core Concepts/12 - Declarative vs Imperative ✅.md",
+    "ckad/images/declartive-imperative.png",
+    "ckad/images/Screenshot 2023-09-14 at 1.22.36 PM.png",
+    "nginx-deploy.yaml",
+    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
+    "ckad/images/Screen Recording 2023-09-14 at 11.09.27 AM.mov",
+    "nginx-declarative.yaml",
+    "nginx-pod.yaml",
+    "cka/0 - Core Concepts/11 - Namespaces ✅.md",
     "cka/0 - Core Concepts/10 - Services ✅.md",
     "cka/1 - Scheduling/3 - Node Selectors.md",
     "cka/0 - Core Concepts/7 - Pods ✅.md",
@@ -180,7 +176,6 @@
     "cka/1 - Scheduling/0 - Scheduling Intro.md",
     "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
     "cka/7 - Networking/9 - Ingress.md",
-    "cka/7 - Networking/9.1 - Ingress – Annotations and Rewrite-target.md",
     "cka/7 - Networking/2 - Pod Networking.md",
     "cka/5 - Security/12 - Pre-requisite - Security in Docker.md",
     "cka/images/pods3.png",
@@ -198,25 +193,16 @@
     "cka/0 - Core Concepts/2 - Kube API server ✅.md",
     "cka/0 - Core Concepts/1 - ETCD ✅.md",
     "cka/0 - Core Concepts/0 - Core Concepts Intro ✅.md",
-    "cka/5 - Security/11 - Image Security.md",
-    "cka/6 - Storage/0 - Storage in Docker.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
     "ckad/images/readiness-7.png",
-    "ckad/images/readiness-6.png",
-    "ckad/images/readiness-5.png",
     "ckad/images",
     "ckad/2 - Observability",
     "chromedriver",
     "LICENSE.chromedriver",
     "cka/7 - Networking/0 - Prereqs",
     "cka/9 - Practice Questions",
-    "cka/8 - Design and Install a Kubernetes Cluster",
-    "cka/7 - Networking",
-    "cka/6 - Storage",
-    "cka/5 - Security",
     "Untitled.canvas"
   ]
 }
