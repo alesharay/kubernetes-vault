@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
+                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
+                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
+                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md"
+                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md"
               }
             }
           },
@@ -158,6 +158,11 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/6 - Storage/6 - Storage Classes.md",
+    "ckad/images/Screenshot 2023-09-15 at 12.39.52 PM.png",
+    "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+    "cka/1 - Scheduling/0 - Scheduling Intro.md",
+    "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
     "cka/0 - Core Concepts/12 - Declarative vs Imperative ✅.md",
     "ckad/images/declartive-imperative.png",
     "ckad/images/Screenshot 2023-09-14 at 1.22.36 PM.png",
@@ -173,7 +178,6 @@
     "cka/9 - Practice Questions/Question 12.md",
     "cka/9 - Practice Questions/Question 4.md",
     "cka/5 - Security/1 - Authentication.md",
-    "cka/1 - Scheduling/0 - Scheduling Intro.md",
     "cka/3 - Application Lifecycle Management/1 - Commands & Arguments in Docker.md",
     "cka/7 - Networking/9 - Ingress.md",
     "cka/7 - Networking/2 - Pod Networking.md",
@@ -191,12 +195,9 @@
     "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
     "cka/0 - Core Concepts/3 - Kube Controller Manager ✅.md",
     "cka/0 - Core Concepts/2 - Kube API server ✅.md",
-    "cka/0 - Core Concepts/1 - ETCD ✅.md",
-    "cka/0 - Core Concepts/0 - Core Concepts Intro ✅.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
-    "ckad/images/readiness-7.png",
     "ckad/images",
     "ckad/2 - Observability",
     "chromedriver",
