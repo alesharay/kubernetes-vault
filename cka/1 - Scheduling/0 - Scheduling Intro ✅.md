@@ -12,7 +12,7 @@
 - The [[4 - Kube Scheduler ✅|scheduler]] <b><span style="color:#d46644">schedules</span></b> the [[7 - Pods ✅|pod]] on the [[0 - Core Concepts Intro ✅|node]] by setting the <b><span style="color:#d46644">nodeName</span></b> property to the name of the [[0 - Core Concepts Intro ✅|node]]
 	- This is done by creating a <b><span style="color:#d46644">binding object</span></b>
 
-- If there is no [[4 - Kube Scheduler ✅|scheduler]] to monitor and <b><span style="color:#d46644">schedule</span></b> [[7 - Pods ✅|pods]] to be placed on [[0 - Core Concepts Intro ✅|nodes]], then the pods remain in [[7 - Pods ✅|pods]] <u><span style="color:#5c7e3e">pending</span></u> state
+- If there is no [[4 - Kube Scheduler ✅|scheduler]] to monitor and <b><span style="color:#d46644">schedule</span></b> [[7 - Pods ✅|pods]] to be placed on [[0 - Core Concepts Intro ✅|nodes]], then the pods remain in a <u><span style="color:#5c7e3e">pending</span></u> state
 
 - [[7 - Pods ✅|Pods]] can be manually assigned to [[0 - Core Concepts Intro ✅|nodes]] by manually setting the <b><span style="color:#d46644">nodeName</span></b> property
 
@@ -36,7 +36,7 @@ Using an <span style="color:#5c7e3e">http client</span> (like postman)
 
 ![[scheduling-intro-4.png]]
 
-- The [[4 - Kube Scheduler ✅|scheduler]] runs as a [[7 - Pods ✅|pod]] in the kube-system [[11 - Namespaces ✅|namespace]]
+- The [[4 - Kube Scheduler ✅|scheduler]] runs as a [[7 - Pods ✅|pod]] in the ***kube-system*** [[11 - Namespaces ✅|namespace]]
 
 - When a [[7 - Pods ✅|pod]] is in a <span style="color:#5c7e3e">pending</span> state and after inspecting, there is no other issue in the events, review the [[4 - Kube Scheduler ✅|scheduler]] [[7 - Pods ✅|pod]]
 

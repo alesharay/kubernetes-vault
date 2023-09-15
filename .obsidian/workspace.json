@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md",
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/0 - Core Concepts/5 - Kubelet ✅.md"
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md"
               }
             }
           },
@@ -158,10 +158,11 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
+    "cka/0 - Core Concepts/5 - Kubelet ✅.md",
     "cka/6 - Storage/6 - Storage Classes.md",
     "ckad/images/Screenshot 2023-09-15 at 12.39.52 PM.png",
     "cka/1 - Scheduling/2 - Taints & Tolerations.md",
-    "cka/1 - Scheduling/0 - Scheduling Intro.md",
     "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
     "cka/0 - Core Concepts/12 - Declarative vs Imperative ✅.md",
     "ckad/images/declartive-imperative.png",
@@ -191,7 +192,6 @@
     "cka/0 - Core Concepts/9 - Deployments ✅.md",
     "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
     "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
-    "cka/0 - Core Concepts/5 - Kubelet ✅.md",
     "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
     "cka/0 - Core Concepts/3 - Kube Controller Manager ✅.md",
     "cka/0 - Core Concepts/2 - Kube API server ✅.md",
