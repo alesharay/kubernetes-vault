@@ -23,7 +23,7 @@
 - The <b><span style="color:#d46644">DaemonSet</span></b> creation process is similar to the [[8 - ReplicaSets ✅|replicaSet]] creation process
 	- The difference is the <i><span style="color:#477bbe">kind</span></i>
 
-- The <b><span style="color:#d46644">DaemonSet</span></b> definition file has a nested [[7 - Pods ✅|pod]] <i><span style="color:#477bbe">spec</span></i> under the template section and [[1 - Labels & Selectors|selectors]] to link the <b><span style="color:#d46644">DaemonSet</span></b> to the [[7 - Pods ✅|pods]]
+- The <b><span style="color:#d46644">DaemonSet</span></b> definition file has a nested [[7 - Pods ✅|pod]] <i><span style="color:#477bbe">spec</span></i> under the template section and [[1 - Labels & Selectors ✅|selectors]] to link the <b><span style="color:#d46644">DaemonSet</span></b> to the [[7 - Pods ✅|pods]]
 
 ![[daemonsets-3.png]]
 

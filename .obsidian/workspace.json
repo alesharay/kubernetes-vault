@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
+                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
+                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md",
+                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/1 - Scheduling/1 - Labels & Selectors.md"
+                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md"
               }
             }
           },
@@ -158,6 +158,9 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
+    "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
+    "cka/1 - Scheduling/4 - Node Affinity.md",
+    "cka/1 - Scheduling/3 - Node Selectors.md",
     "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
     "cka/0 - Core Concepts/5 - Kubelet ✅.md",
     "cka/6 - Storage/6 - Storage Classes.md",
@@ -174,7 +177,6 @@
     "nginx-pod.yaml",
     "cka/0 - Core Concepts/11 - Namespaces ✅.md",
     "cka/0 - Core Concepts/10 - Services ✅.md",
-    "cka/1 - Scheduling/3 - Node Selectors.md",
     "cka/0 - Core Concepts/7 - Pods ✅.md",
     "cka/9 - Practice Questions/Question 12.md",
     "cka/9 - Practice Questions/Question 4.md",
@@ -193,8 +195,6 @@
     "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
     "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
     "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
-    "cka/0 - Core Concepts/3 - Kube Controller Manager ✅.md",
-    "cka/0 - Core Concepts/2 - Kube API server ✅.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",

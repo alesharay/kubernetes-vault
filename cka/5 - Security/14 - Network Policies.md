@@ -62,22 +62,22 @@
 
 - To apply or link a <b><i><span style="color:#d46644">network policy</span></i></b> to a [[7 - Pods ✅|pod]], use labels and selectors
 
-- To apply a <b><i><span style="color:#d46644">network policy</span></i></b>, label the [[7 - Pods ✅|pod]] and apply the same [[1 - Labels & Selectors|labels]] on the <span style="color:red">podSelector</span> field in the <b><i><span style="color:#d46644">network policy</span></i></b>
+- To apply a <b><i><span style="color:#d46644">network policy</span></i></b>, label the [[7 - Pods ✅|pod]] and apply the same [[1 - Labels & Selectors ✅|labels]] on the <span style="color:red">podSelector</span> field in the <b><i><span style="color:#d46644">network policy</span></i></b>
 
 ![[np-8.png]]
 
-- After the [[7 - Pods ✅|pod]] is [[1 - Labels & Selectors|labeled]] and the <b><i><span style="color:#d46644">rule</span></i></b> is built, under <b><i><span style="color:#d46644">policy types</span></i></b> we specify whether the <b><i><span style="color:#d46644">rule</span></i></b> is to allow [[9 - Ingress|ingress]] or [[9 - Ingress|egress traffic]] or both
+- After the [[7 - Pods ✅|pod]] is [[1 - Labels & Selectors ✅|labeled]] and the <b><i><span style="color:#d46644">rule</span></i></b> is built, under <b><i><span style="color:#d46644">policy types</span></i></b> we specify whether the <b><i><span style="color:#d46644">rule</span></i></b> is to allow [[9 - Ingress|ingress]] or [[9 - Ingress|egress traffic]] or both
 
 ![[np-9.png]]
 
-- Specify the [[9 - Ingress|ingress rule]] that allows traffic from the sending [[7 - Pods ✅|pods]] to the receiving [[7 - Pods ✅|pod]] using [[1 - Labels & Selectors|labels and selectors]].
+- Specify the [[9 - Ingress|ingress rule]] that allows traffic from the sending [[7 - Pods ✅|pods]] to the receiving [[7 - Pods ✅|pod]] using [[1 - Labels & Selectors ✅|labels and selectors]].
 	- Then add the port of the sending [[7 - Pods ✅|pod]]
 
 ![[np-10.png]]
 
 - The <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">network policy</span></i></b> object is networking.k8s.io/v1. The <span style="color:#5c7e3e">kind</span> is <b><i><span style="color:#d46644">NetworkPolicy</span></i></b>
 
-- In a <b><i><span style="color:#d46644">network policy</span></i></b> object file, under the <span style="color:#5c7e3e">spec</span> section,  add the [[1 - Labels & Selectors|podSelector]] to apply the <b><i><span style="color:#d46644">policy</span></i></b>, then the <b><i><span style="color:#d46644">rule</span></i></b>
+- In a <b><i><span style="color:#d46644">network policy</span></i></b> object file, under the <span style="color:#5c7e3e">spec</span> section,  add the [[1 - Labels & Selectors ✅|podSelector]] to apply the <b><i><span style="color:#d46644">policy</span></i></b>, then the <b><i><span style="color:#d46644">rule</span></i></b>
 
 ![[np-11.png]]
 

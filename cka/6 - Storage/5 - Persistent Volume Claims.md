@@ -12,7 +12,7 @@
 
 - During the [[3 - Volumes|binding]] process, <span style="color:#5c7e3e">Kubernetes</span> tries to find a [[4 - Persistent Volumes|PV]] with the sufficient capacity requested by the <b><i><span style="color:#d46644">PVC</span></i></b> along with any other request properties such as accessModes, [[3 - Volumes|volume]] modes, [[6 - Storage Classes|storage classes]], etc…
 
-- If there are multiple possible [[4 - Persistent Volumes|PV]] matches for a single <b><i><span style="color:#d46644">PVC</span></i></b>, and you would like to specifically use a particular [[3 - Volumes|volume]], you can use [[1 - Labels & Selectors|labels and selectors]] to [[3 - Volumes|bind]] to the right [[3 - Volumes|volumes]]
+- If there are multiple possible [[4 - Persistent Volumes|PV]] matches for a single <b><i><span style="color:#d46644">PVC</span></i></b>, and you would like to specifically use a particular [[3 - Volumes|volume]], you can use [[1 - Labels & Selectors ✅|labels and selectors]] to [[3 - Volumes|bind]] to the right [[3 - Volumes|volumes]]
 
 ![[pvc-2.png]]
 

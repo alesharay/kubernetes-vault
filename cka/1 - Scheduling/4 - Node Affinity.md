@@ -9,9 +9,9 @@
 			- As a child of <b><span style="color:#d46644">nodeAffinity</span></b> is a "sentence-like" structure called the <b><span style="color:#d46644">nodeAffinity</span></b> <span style="color:#5c7e3e">type</span>
 				- As a child of the <b><span style="color:#d46644">nodeAffinity</span></b> <span style="color:#5c7e3e">type</span> are the rules used to make the determinations
 					- If <b><span style="color:#d46644">nodeAffinity</span></b> <span style="color:#5c7e3e">type</span> is <b><span style="color:#d46644">requiredDuringSchedulingIgnoredDuringExecution</span></b> then the child of this type is [[3 - Node Selectors|nodeSelectorTerms]]
-						- Under which is [[1 - Labels & Selectors|matchExpressions]]
+						- Under which is [[1 - Labels & Selectors ✅|matchExpressions]]
 					- If <b><span style="color:#d46644">nodeAffinity</span></b> <span style="color:#5c7e3e">type</span> is <b><span style="color:#d46644">preferredDuringSchedulingIgnoredDuringExecution</span></b> then the child is preference
-						- Under which is [[1 - Labels & Selectors|matchExpressions]]
+						- Under which is [[1 - Labels & Selectors ✅|matchExpressions]]
 
 ![[node-affinity-1.png]]
 
@@ -37,11 +37,11 @@
 		- <b><span style="color:#d46644">preferredDuringSchedulingIgnoredDuringExecution</span></b>
 			- The [[4 - Kube Scheduler ✅|scheduler]]  tries to find a [[0 - Core Concepts Intro ✅|node]] that meets the rule. If a matching [[0 - Core Concepts Intro ✅|node]] is not available, the [[4 - Kube Scheduler ✅|scheduler]]  still schedules the [[7 - Pods ✅|pod]]
 
-		Note: In the preceding types, <b><span style="color:#d46644">ignoredDuringExecution</span></b> means that if the [[0 - Core Concepts Intro ✅|node]] [[1 - Labels & Selectors|labels]] change after <span style="color:#5c7e3e">Kubernetes</span> schedules the [[7 - Pods ✅|pod]], the [[7 - Pods ✅|pod]] continues to run.
+		Note: In the preceding types, <b><span style="color:#d46644">ignoredDuringExecution</span></b> means that if the [[0 - Core Concepts Intro ✅|node]] [[1 - Labels & Selectors ✅|labels]] change after <span style="color:#5c7e3e">Kubernetes</span> schedules the [[7 - Pods ✅|pod]], the [[7 - Pods ✅|pod]] continues to run.
 
 - When [[7 - Pods ✅|pods]] are created, these rules are considered when placing the [[7 - Pods ✅|pods]] on the correct [[0 - Core Concepts Intro ✅|nodes]]
 
-- The type of <b><span style="color:#d46644">nodeAffinity</span></b> comes into play in situations where you forget to [[1 - Labels & Selectors|label]] the [[0 - Core Concepts Intro ✅|node]]
+- The type of <b><span style="color:#d46644">nodeAffinity</span></b> comes into play in situations where you forget to [[1 - Labels & Selectors ✅|label]] the [[0 - Core Concepts Intro ✅|node]]
 
 - There are two states in the lifecycle of a [[7 - Pods ✅|pod]] when considering <b><span style="color:#d46644">nodeAffinity</span></b>:
 	- during scheduling
@@ -54,5 +54,5 @@
 			- In cases where a matching [[0 - Core Concepts Intro ✅|node]] is not found, the [[4 - Kube Scheduler ✅|scheduler]]  will simply ignore <b><span style="color:#d46644">nodeAffinity</span></b> rules and place the [[7 - Pods ✅|pod]] on any available [[0 - Core Concepts Intro ✅|node]]
 			- This type is used when the placement of the [[7 - Pods ✅|pod]] is less important
 	- during execution
-		- This is the state where a [[7 - Pods ✅|pod]] has been running and a change is made in the environment that affects <b><span style="color:#d46644">nodeAffinity</span></b> (such as a change in the [[1 - Labels & Selectors|label]] of the [[0 - Core Concepts Intro ✅|node]])
+		- This is the state where a [[7 - Pods ✅|pod]] has been running and a change is made in the environment that affects <b><span style="color:#d46644">nodeAffinity</span></b> (such as a change in the [[1 - Labels & Selectors ✅|label]] of the [[0 - Core Concepts Intro ✅|node]])
 		- [[7 - Pods ✅|pods]] will continue to run and any changes to <b><span style="color:#d46644">nodeAffinity</span></b> will not affect them

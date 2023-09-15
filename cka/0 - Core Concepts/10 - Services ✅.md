@@ -30,7 +30,7 @@
 				- Optional: if this is not provided, an available <span style="color:#5c7e3e">port</span> within the valid range will be automatically assigned
 	- <span style="color:red">selector</span>
 		- This connects the <b><span style="color:#d46644">service</span></b> to the [[7 - Pods ✅|pod]]
-		- Under the [[1 - Labels & Selectors|selector]], a list of [[1 - Labels & Selectors|labels]] are provided that will identify the [[7 - Pods ✅|pods]]
+		- Under the [[1 - Labels & Selectors ✅|selector]], a list of [[1 - Labels & Selectors ✅|labels]] are provided that will identify the [[7 - Pods ✅|pods]]
 
 - Note that <span style="color:red">port</span> is an <i><span style="color:#5c7e3e">array</span></i>/<i><span style="color:#5c7e3e">list</span></i>, as you can have multiple <span style="color:#5c7e3e">port mappings</span> in each <b><span style="color:#d46644">service</span></b>
 
@@ -49,7 +49,7 @@
 			  nodePort:	
 			selector:
 	```
-	- Use [[1 - Labels & Selectors|pod labels]] here to link the <b><span style="color:#d46644">service</span></b> to the [[7 - Pods ✅|pod]]
+	- Use [[1 - Labels & Selectors ✅|pod labels]] here to link the <b><span style="color:#d46644">service</span></b> to the [[7 - Pods ✅|pod]]
 
 ![[services-2.png]]
 
@@ -89,7 +89,7 @@
 
 ### Multiple Pods and/or Multiple Nodes
 
-- When the <b><span style="color:#d46644">service</span></b> is created, it looks for a matching [[7 - Pods ✅|pod]] with the same [[1 - Labels & Selectors|label]] as the [[1 - Labels & Selectors|label selector]]
+- When the <b><span style="color:#d46644">service</span></b> is created, it looks for a matching [[7 - Pods ✅|pod]] with the same [[1 - Labels & Selectors ✅|label]] as the [[1 - Labels & Selectors ✅|label selector]]
 	- For all of the matching [[7 - Pods ✅|pods]] that it finds, the <b><span style="color:#d46644">service</span></b> will automatically select them as <i><span style="color:#477bbe">endpoints</span></i> for forwarding requests coming from the <i><span style="color:#477bbe">user</span></i>
 	- No additional configuration is necessary making this happen
 
@@ -129,7 +129,7 @@
 
 - In this case, we would want to setup a <b><span style="color:#d46644">load balancer</span></b> for all available [[7 - Pods ✅|pods]] / [[0 - Core Concepts Intro ✅|nodes]] and give <i><span style="color:#477bbe">end-users</span></i> the address of the <b><span style="color:#d46644">load balancer</span></b>
 
-- When the <b><span style="color:#d46644">load balancer</span></b> <span style="color:#5c7e3e">IP</span> address is reached, it will automatically send the request to the <b><span style="color:#d46644">nodePort service</span></b> which will then send the request to all [[7 - Pods ✅|pods]] matching the given [[1 - Labels & Selectors|selector]]
+- When the <b><span style="color:#d46644">load balancer</span></b> <span style="color:#5c7e3e">IP</span> address is reached, it will automatically send the request to the <b><span style="color:#d46644">nodePort service</span></b> which will then send the request to all [[7 - Pods ✅|pods]] matching the given [[1 - Labels & Selectors ✅|selector]]
 
 - This will only work in supported cloud platforms.
 	- If set in a non-supported platform, it will be treated like a <b><span style="color:#d46644">nodePort service</span></b>
