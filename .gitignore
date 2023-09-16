@@ -999,3 +999,6 @@ override.tf.json
 terraform.rc
 
 # End of https://www.gitignore.io/api/c,qt,vim,c++,java,pydev,macos,linux,emacs,python,kotlin,pycharm,windows,intellij,notepadpp,qtcreator,visualstudio,openframeworks,visualstudiocode,terraform
+
+# Ignore Obsidian dir
+*.obsidian/*
