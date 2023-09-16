@@ -9,10 +9,10 @@
 
 	![[node-selector-1.png]]
 
-	- [[4 - Node Affinity|NodeAffinity]] (we'll cover this next)
+	- [[4 - Node Affinity ✅|NodeAffinity]] (we'll cover this next)
 
 - To [[1 - Labels & Selectors ✅|label]] a [[0 - Core Concepts Intro ✅|node]], use the following command
 
 	`kubectl label nodes NODE_NAME LABEL_KEY=LABEL_VALUE`
 
-- When the requirements for placing [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]] are more complicated (ie. can go on any [[0 - Core Concepts Intro ✅|node]] that doesn't have specific requirements, or can go on [[0 - Core Concepts Intro ✅|nodes]] with multiple requirements), you would use the [[4 - Node Affinity|nodeAffinity]] section
+- When the requirements for placing [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]] are more complicated (ie. can go on any [[0 - Core Concepts Intro ✅|node]] that doesn't have specific requirements, or can go on [[0 - Core Concepts Intro ✅|nodes]] with multiple requirements), you would use the [[4 - Node Affinity ✅|nodeAffinity]] section

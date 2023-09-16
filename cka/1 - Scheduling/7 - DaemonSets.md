@@ -39,4 +39,4 @@
 - One way is by setting the nodeName property on each [[7 - Pods ✅|pod]] <i><span style="color:#477bbe">spec</span></i> before the [[7 - Pods ✅|pod]] is created
 	- This is the way scheduling a [[7 - Pods ✅|pod]] on each [[0 - Core Concepts Intro ✅|node]] used to work
 
-- From Kubernetes v1.12 onwards, the <b><span style="color:#d46644">DaemonSet</span></b> uses the default [[4 - Kube Scheduler ✅|scheduler]] and [[4 - Node Affinity|nodeAffinity]] rules to schedule [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]]
+- From Kubernetes v1.12 onwards, the <b><span style="color:#d46644">DaemonSet</span></b> uses the default [[4 - Kube Scheduler ✅|scheduler]] and [[4 - Node Affinity ✅|nodeAffinity]] rules to schedule [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]]

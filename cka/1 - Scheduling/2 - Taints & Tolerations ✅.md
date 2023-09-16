@@ -69,7 +69,7 @@
 	- It does not guarantee that a [[7 - Pods ✅|pod]] with a particularly <b><span style="color:#d46644">toleration</span></b> will be placed on the [[0 - Core Concepts Intro ✅|node]] that it <b><span style="color:#d46644">tolerates</span></b>.
 		- This means, if the [[4 - Kube Scheduler ✅|scheduler]] reaches other [[0 - Core Concepts Intro ✅|nodes]] with different or no restrictions (<b><span style="color:#d46644">taints</span></b>) first , the [[7 - Pods ✅|pod]] could be placed on another [[0 - Core Concepts Intro ✅|node]]
 
-- If you want to restrict a [[7 - Pods ✅|pod]] to a certain [[0 - Core Concepts Intro ✅|node]], this is called [[4 - Node Affinity|node affinity]] (will be discussed in another section)
+- If you want to restrict a [[7 - Pods ✅|pod]] to a certain [[0 - Core Concepts Intro ✅|node]], this is called [[4 - Node Affinity ✅|node affinity]] (will be discussed in another section)
 
 - Notice that the [[4 - Kube Scheduler ✅|scheduler]] does not [[4 - Kube Scheduler ✅|schedule]] any [[7 - Pods ✅|pods]] on the [[0 - Core Concepts Intro ✅|master node]] (unless this is a single [[0 - Core Concepts Intro ✅|node cluster]])
 	- This is because when the Kubernetes [[0 - Core Concepts Intro ✅|cluster]] is first setup, a <b><span style="color:#d46644">taint</span></b> is set on the [[0 - Core Concepts Intro ✅|master node]] automatically that prevents any [[7 - Pods ✅|pods]] from being [[4 - Kube Scheduler ✅|scheduled]] on the [[0 - Core Concepts Intro ✅|node]]
