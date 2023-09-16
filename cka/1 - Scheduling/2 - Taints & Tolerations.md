@@ -74,12 +74,12 @@
 - Notice that the [[4 - Kube Scheduler ✅|scheduler]] does not [[4 - Kube Scheduler ✅|schedule]] any [[7 - Pods ✅|pods]] on the [[0 - Core Concepts Intro ✅|master node]] (unless this is a single [[0 - Core Concepts Intro ✅|node cluster]])
 	- This is because when the Kubernetes [[0 - Core Concepts Intro ✅|cluster]] is first setup, a <b><span style="color:#d46644">taint</span></b> is set on the [[0 - Core Concepts Intro ✅|master node]] automatically that prevents any [[7 - Pods ✅|pods]] from being [[4 - Kube Scheduler ✅|scheduled]] on the [[0 - Core Concepts Intro ✅|node]]
 
-- To see the <b><span style="color:#d46644">taint</span></b> on the [[0 - Core Concepts Intro ✅|master node]], run the <span style="color:red">kubectl describe node</span> command with kubemaster [[0 - Core Concepts Intro ✅|node]]
-	- Grep "<b><span style="color:#d46644">taint</span></b>" for easy [[0 - Core Concepts Intro ✅|node]]
+- To see the <b><span style="color:#d46644">taint</span></b> on the [[0 - Core Concepts Intro ✅|master node]], run the <span style="color:red">kubectl describe node</span> command with the ***control-plane* [[0 - Core Concepts Intro ✅|node]]
+	- Grep <b><span style="color:#d46644">taint</span></b> for easy filtering
 
 		`kubectl describe node kube-master | grep -i taint`
 
-- To remove a <b><span style="color:#d46644">taint</span></b> from a [[0 - Core Concepts Intro ✅|node]], use the same syntax (check to see if the <b><span style="color:#d46644">taint</span></b> exists) but with a " - " at the end (no space)
+- To remove a <b><span style="color:#d46644">taint</span></b> from a [[0 - Core Concepts Intro ✅|node]], use the same syntax (check to see if the <b><span style="color:#d46644">taint</span></b> exists) but with a " <b><span style="color:#d46644">-</span></b> " at the end (no space)
 
 	Using the above example
 
