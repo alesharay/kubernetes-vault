@@ -38,3 +38,19 @@
 		kubectl describe pod nginx
 
 From "Kubernetes for Beginners"
+
+
+
+## Practice Questions
+
+1. How many pods are in the current namespace?
+2. Create a new pod with the `nginx` image
+3. What image was used to create the `kube-scheduler` pod in the `kube-system` namespace?
+4. Create 3 more `nginx` pods
+5. Which nodes are the pods placed on?
+6. Create a pod named `broken-pod` with the image `agentx`
+7. What is the status of the `broken-pod` pod?
+8. Why do you think the `broken-pod` pod is in that status?
+9. What does the `READY` column in the output of the `kubectl get pods` command indicate?
+10. Change the image on the `broken-pod` pod to `nginx` using the `set image` command
+11. Delete the `broken-pod` pod

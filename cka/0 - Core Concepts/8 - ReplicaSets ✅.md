@@ -71,4 +71,3 @@
 	- This is because the number of <i><span style="color:#d46644">replicas</span></i> listed in the definition file is the desired number of running [[7 - Pods ✅|pods]] at all times (no more, no less)
 
 From Kubernetes for Beginners - ReplicaSets & Replication Controllers
-

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+                "file": "cka/1 - Scheduling/4 - Node Affinity.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+                "file": "cka/1 - Scheduling/4 - Node Affinity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+                "file": "cka/1 - Scheduling/4 - Node Affinity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cka/1 - Scheduling/2 - Taints & Tolerations.md"
+                "file": "cka/1 - Scheduling/4 - Node Affinity.md"
               }
             }
           },
@@ -158,16 +158,19 @@
   },
   "active": "720f7459e248289d",
   "lastOpenFiles": [
-    "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
-    "cka/1 - Scheduling/2 - Taints & Tolerations.md",
+    "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
+    "cka/0 - Core Concepts/7 - Pods ✅.md",
+    "cka/0 - Core Concepts/12 - Declarative vs Imperative ✅.md",
     "cka/1 - Scheduling/4 - Node Affinity.md",
-    "cka/1 - Scheduling/3 - Node Selectors.md",
+    "cka/1 - Scheduling/3 - Node Selectors ✅.md",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro ✅.md",
+    "cka/1 - Scheduling/2 - Taints & Tolerations ✅.md",
+    "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
     "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
     "cka/0 - Core Concepts/5 - Kubelet ✅.md",
     "cka/6 - Storage/6 - Storage Classes.md",
     "ckad/images/Screenshot 2023-09-15 at 12.39.52 PM.png",
     "cka/0 - Core Concepts/13 - Kubectl Apply ✅.md",
-    "cka/0 - Core Concepts/12 - Declarative vs Imperative ✅.md",
     "ckad/images/declartive-imperative.png",
     "ckad/images/Screenshot 2023-09-14 at 1.22.36 PM.png",
     "nginx-deploy.yaml",
@@ -177,7 +180,6 @@
     "nginx-pod.yaml",
     "cka/0 - Core Concepts/11 - Namespaces ✅.md",
     "cka/0 - Core Concepts/10 - Services ✅.md",
-    "cka/0 - Core Concepts/7 - Pods ✅.md",
     "cka/9 - Practice Questions/Question 12.md",
     "cka/9 - Practice Questions/Question 4.md",
     "cka/5 - Security/1 - Authentication.md",
@@ -192,9 +194,7 @@
     "cka/3 - Application Lifecycle Management/4 - ConfigMaps.md",
     "cka/3 - Application Lifecycle Management/3 - Environment Variables.md",
     "cka/0 - Core Concepts/9 - Deployments ✅.md",
-    "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
     "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
-    "cka/0 - Core Concepts/4 - Kube Scheduler ✅.md",
     "ckad/images/Screenshot 2023-09-05 at 8.11.32 AM.png",
     "ckad/images/readiness-9.png",
     "ckad/images/readiness-8.png",
