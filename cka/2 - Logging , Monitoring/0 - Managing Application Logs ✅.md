@@ -2,9 +2,9 @@
 
 - There are many <span style="color:#5c7e3e">Kubernetes</span> [[1 - Monitor Cluster Components|monitoring]] solutions available,
 	- open-source:
-		-  <b><span style="color:#d46644">Metrics-Server</span></b>, Prometheus, and Elastic Stack
+		-  <b><span style="color:#d46644">Metrics-Server</span></b>, Prometheus, and Elastic Stack, etc...
 	- Proprietary:
-		- Datadog and Dynatrace
+		- Datadog, Dynatrace, etc..
 
 ### Heapster vs Metrics-Server
 
@@ -26,13 +26,13 @@
 
 - [[0 - Core Concepts Intro ✅|Kubelet]] contains a subcomponent known as <span style="color:#5c7e3e">cAdvisor</span> or <span style="color:#5c7e3e">Container Advisor</span>.
 
-- <span style="color:#5c7e3e">cAdvisor</span> is responsible for receiving performance <b><span style="color:#d46644">metrics</span></b> from [[7 - Pods ✅|pods]], and exposing them through the [[0 - Core Concepts Intro ✅|Kubelet]] API to make them available for the <b><span style="color:#d46644">Metrics-Server</span></b>.
+- <span style="color:#5c7e3e">cAdvisor</span> is responsible for receiving performance <b><span style="color:#d46644">metrics</span></b> from [[7 - Pods ✅|pods]], and exposing them through the [[5 - Kubelet ✅|kubelet]] API to make them available for the <b><span style="color:#d46644">Metrics-Server</span></b>.
 
 - If using <span style="color:#5c7e3e">minikube</span>, run the following command
 
 		minikube addons enable metrics-server
 
-- For all other environments, [[9 - Deployments ✅|deploy]] the <b><span style="color:#d46644">metrics-server</span></b> by cloning the <b><span style="color:#d46644">metrics-server</span></b> [[9 - Deployments ✅|deployment]] files from the github repository
+- For all other environments, deploy the <b><span style="color:#d46644">metrics-server</span></b> by cloning the <b><span style="color:#d46644">metrics-server</span></b> [[9 - Deployments ✅|deployment]] files from the github repository
 
 	`git clone` [https://github.com/kubernetes-incubator/metrics-server](https://github.com/kubernetes-incubator/metrics-server)
 
