@@ -35,4 +35,4 @@
 
 - When <b><i><span style="color:#d46644">weave</span></i></b> is applied, it deploys all the necessary components required for <b><i><span style="color:#d46644">weave</span></i></b> in the [[0 - Core Concepts Intro ✅|cluster]]
 
-- The <b><i><span style="color:#d46644">weave</span></i></b> peers are [[9 - Deployments ✅|deployed]] as a [[7 - DaemonSets|daemonsets]] which ensures that one <b><i><span style="color:#d46644">weave</span></i></b> [[7 - Pods ✅|pod]]  is [[9 - Deployments ✅|deployed]] on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]
+- The <b><i><span style="color:#d46644">weave</span></i></b> peers are [[9 - Deployments ✅|deployed]] as a [[7 - DaemonSets ✅|daemonsets]] which ensures that one <b><i><span style="color:#d46644">weave</span></i></b> [[7 - Pods ✅|pod]]  is [[9 - Deployments ✅|deployed]] on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]

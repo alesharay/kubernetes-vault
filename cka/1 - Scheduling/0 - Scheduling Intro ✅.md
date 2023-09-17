@@ -3,7 +3,7 @@
 
 ![[scheduling-intro-1.png]]
 
-- The [[9 - Multiple Schedulers|scheduler]] goes through all of the [[7 - Pods ✅|pods]] and looks for those that do not have this property set
+- The [[9 - Multiple Schedulers ✅|scheduler]] goes through all of the [[7 - Pods ✅|pods]] and looks for those that do not have this property set
 	- These are candidates for <b><span style="color:#d46644">scheduling</span></b>
 	- It then identifies the correct [[0 - Core Concepts Intro ✅|node]] for the [[7 - Pods ✅|pod]] by using the <b><span style="color:#d46644">scheduling</span></b> algorithm
 

@@ -6,4 +6,4 @@
 - To install <b><span style="color:#d46644">kube-proxy</span></b>, download the binary from the <span style="color:#5c7e3e">Kubernetes</span> release page, extract it, and run it as a [[10 - Services ✅|service]]
 
 - The <b><i><span style="color:#5c7e3e">kubeadm</span></i></b> tool deploys <b><span style="color:#d46644">kube-proxy</span></b> as [[7 - Pods ✅|pods]] on each [[0 - Core Concepts Intro ✅|node]]
-	- It is [[9 - Deployments ✅|deployed]] as a [[7 - DaemonSets|daemonSet]], so a single [[7 - Pods ✅|pod]] is always [[9 - Deployments ✅|deployed]] on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]
+	- It is [[9 - Deployments ✅|deployed]] as a [[7 - DaemonSets ✅|daemonSet]], so a single [[7 - Pods ✅|pod]] is always [[9 - Deployments ✅|deployed]] on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]

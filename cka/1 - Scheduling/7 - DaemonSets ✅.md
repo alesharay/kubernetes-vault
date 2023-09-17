@@ -18,25 +18,25 @@
 
 - Since we know that [[0 - Core Concepts Intro ✅|kube-proxy]] is required on every [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]], it is a good use-case for a <b><span style="color:#d46644">DaemonSet</span></b>
 
-- Also, since <i><span style="color:#477bbe">networking</span></i> (ie. Flannel) needs to be on every [[0 - Core Concepts Intro ✅|node]] so that they are able to communicate with each other and every [[7 - Pods ✅|pod]], it is also a good use-case for a <b><span style="color:#d46644">DaemonSet</span></b>
+- Also, since <i><span style="color:#477bbe">networking</span></i> (eg. Flannel) needs to be on every [[0 - Core Concepts Intro ✅|node]] so that they are able to communicate with each other and every [[7 - Pods ✅|pod]], it is also a good use-case for a <b><span style="color:#d46644">DaemonSet</span></b>
 
-- The <b><span style="color:#d46644">DaemonSet</span></b> creation process is similar to the [[8 - ReplicaSets ✅|replicaSet]] creation process
-	- The difference is the <i><span style="color:#477bbe">kind</span></i>
+- The <b><span style="color:#d46644">DaemonSet</span></b> creation process is similar to the [[8 - ReplicaSets ✅|ReplicaSet]] creation process
+	- The difference is the <i><span style="color:#5c7e3e">kind</span></i>
 
-- The <b><span style="color:#d46644">DaemonSet</span></b> definition file has a nested [[7 - Pods ✅|pod]] <i><span style="color:#477bbe">spec</span></i> under the template section and [[1 - Labels & Selectors ✅|selectors]] to link the <b><span style="color:#d46644">DaemonSet</span></b> to the [[7 - Pods ✅|pods]]
+- The <b><span style="color:#d46644">DaemonSet</span></b> definition file has a nested [[7 - Pods ✅|pod]] <i><span style="color:#5c7e3e">spec</span></i> under the <i><span style="color:#5c7e3e">template</span></i> section and [[1 - Labels & Selectors ✅|selectors]] to link the <b><span style="color:#d46644">DaemonSet</span></b> to the [[7 - Pods ✅|pods]]
 
 ![[daemonsets-3.png]]
 
-- To create a <b><span style="color:#d46644">DaemonSet</span></b> <i><span style="color:#477bbe">imperatively</span></i>, use the <span style="color:red">kubectl create deployment</span> command and change the <i><span style="color:#477bbe">kind</span></i> to <b><span style="color:#d46644">DaemonSet</span></b> as there is no ~~kubectl create daemonset~~ command
-	- Remove the replica, strategy and <i><span style="color:#477bbe">status</span></i> fields
+- To create a <b><span style="color:#d46644">DaemonSet</span></b> <i><span style="color:#477bbe">imperatively</span></i>, use the <span style="color:red">kubectl create deployment</span> command and change the <i><span style="color:#5c7e3e">kind</span></i> to <b><span style="color:#d46644">DaemonSet</span></b> as there is no ~~kubectl create daemonset~~ command
+	- Remove the <i><span style="color:#5c7e3e">replicas</span></i>, <i><span style="color:#5c7e3e">strategy</span></i> and <i><span style="color:#5c7e3e">status</span></i> fields
 
-- To view a <b><span style="color:#d46644">DaemonSet</span></b> , use the <span style="color:red">kubectl get daemonsets</span>
+- To view a <b><span style="color:#d46644">DaemonSet</span></b>, use the <span style="color:red">kubectl get daemonsets|ds</span>
 
 - To view more details about the <b><span style="color:#d46644">DaemonSet</span></b>, use the <span style="color:red">kubectl describe daemonset</span> command
 
 ### How DaemonSets Work
 
-- One way is by setting the nodeName property on each [[7 - Pods ✅|pod]] <i><span style="color:#477bbe">spec</span></i> before the [[7 - Pods ✅|pod]] is created
+- One way is by setting the <b><span style="color:#d46644">nodeName</span></b> property on each [[7 - Pods ✅|pod]] <i><span style="color:#5c7e3e">spec</span></i> before the [[7 - Pods ✅|pod]] is created
 	- This is the way scheduling a [[7 - Pods ✅|pod]] on each [[0 - Core Concepts Intro ✅|node]] used to work
 
 - From Kubernetes v1.12 onwards, the <b><span style="color:#d46644">DaemonSet</span></b> uses the default [[4 - Kube Scheduler ✅|scheduler]] and [[4 - Node Affinity ✅|nodeAffinity]] rules to schedule [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]]

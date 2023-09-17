@@ -39,24 +39,24 @@ NOTE: be sure to note the name you give the [[4 - Kube Scheduler ✅|scheduler]]
 
 ![[mult-schedulers-4.png]]
 
-- Create the [[7 - Pods ✅|pod]] using the `kubectl create` command and run the `kubectl get [[7 - Pods|pod]]s` command in the kube-system [[11 - Namespaces ✅|namespace]] to see the [[4 - Kube Scheduler ✅|schedulers]] running
+- Create the [[7 - Pods ✅|pod]] using the <span style="color:red">kubectl create</span> command and run the <span style="color:red">kubectl get pods</span> command in the **kube-system** [[11 - Namespaces ✅|namespace]] to see the [[4 - Kube Scheduler ✅|schedulers]] running
 
 ![[mult-schedulers-5.png]]
 
-- The next step is to configure a new [[7 - Pods ✅|pod]] or deployment to use the new [[4 - Kube Scheduler ✅|scheduler]]
+- The next step is to configure a new [[7 - Pods ✅|pod]] or [[9 - Deployments ✅|deployment]] to use the new [[4 - Kube Scheduler ✅|scheduler]]
 
-- In the definition file, add a field called <span style="color:red">schedulerName</span> and specify the name of the new [[4 - Kube Scheduler ✅|scheduler]]
+- In the definition file, add a field called <span style="color:#5c7e3e">schedulerName</span> and specify the name of the new [[4 - Kube Scheduler ✅|scheduler]]
 
 ![[mult-schedulers-6.png]]
 
 - By default, if this property is not defined, it automatically uses the default [[4 - Kube Scheduler ✅|scheduler]]
 
-- To know which [[4 - Kube Scheduler ✅|scheduler]] picked up the [[7 - Pods ✅|pod]] creation responsibilities, view the events using the `kubectl get events` command
+- To know which [[4 - Kube Scheduler ✅|scheduler]] picked up the [[7 - Pods ✅|pod]] creation responsibilities, view the events using the <span style="color:red">kubectl get events</span> command
 	- This lists all of the events in the current [[11 - Namespaces ✅|namespace]]
 
 ![[mult-schedulers-7.png]]
 
-- You can also view the logs of the [[4 - Kube Scheduler ✅|scheduler]] using the `kubectl logs` command
+- You can also view the logs of the [[4 - Kube Scheduler ✅|scheduler]] using the <span style="color:red">kubectl logs</span> command
 
 ![[mult-schedulers-8.png]]
 
@@ -64,4 +64,4 @@ NOTE: be sure to note the name you give the [[4 - Kube Scheduler ✅|scheduler]]
 
 - What is the name of the [[7 - Pods ✅|pod]] that deploys the default <span style="color:#5c7e3e">Kubernetes</span> [[4 - Kube Scheduler ✅|scheduler]] in this environment?
 
-        kubectl get [[7 - Pods ✅|pod]]s -A
+        kubectl get pods -A
