@@ -89,7 +89,7 @@
 
 - *Remember: you cannot edit the <b><i><span style="color:#d46644">service account</span></i></b> of an existing [[7 - Pods ✅|pod]]. To use a different <b><i><span style="color:#d46644">service account</span></i></b>, you must delete and recreate the [[7 - Pods ✅|pod]]
 
-- You can edit the <b><i><span style="color:#d46644">service account</span></i></b> for a [[9 - Deployments ✅|deployment]] without having to delete and recreate as any changes in the [[7 - Pods ✅|pod]] <span style="color:#5c7e3e">spec</span> section will automatically trigger a new [[0 - Rolling Updates & Rollbacks|rollout]]
+- You can edit the <b><i><span style="color:#d46644">service account</span></i></b> for a [[9 - Deployments ✅|deployment]] without having to delete and recreate as any changes in the [[7 - Pods ✅|pod]] <span style="color:#5c7e3e">spec</span> section will automatically trigger a new [[0 - Rolling Updates & Rollbacks ✅|rollout]]
 	- Thus the [[9 - Deployments ✅|deployment]] will take care of deleting and recreating new [[7 - Pods ✅|pods]] with the right <b><i><span style="color:#d46644">service accounts</span></i></b>
 
 ![[servicea-10.png]]

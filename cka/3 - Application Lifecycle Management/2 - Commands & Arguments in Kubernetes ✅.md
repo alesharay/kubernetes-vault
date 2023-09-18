@@ -1,4 +1,4 @@
-- To append <b><span style="color:#d46644">arguments</span></b> to the <span style="color:red">docker run</span> <b><span style="color:#d46644">command</span></b>, add an <b><span style="color:#d46644">args</span></b> property (in array form) to the [[7 - Pods ✅|containers]] property of the [[7 - Pods ✅|pod]] definition file
+- To append <b><span style="color:#d46644">arguments</span></b> in <span style="color:#5c7e3e">Kubernetes</span>, add an <b><span style="color:#d46644">args</span></b> property (in array form) to the [[7 - Pods ✅|containers]] property of the [[7 - Pods ✅|pod]] definition file
 	- To match the <span style="color:#5c7e3e">json</span> format, put each index on a new line in the [[7 - Pods ✅|pod]] definition
 
 ![[commands-2-1.png]]
