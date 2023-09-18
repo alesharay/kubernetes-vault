@@ -1,6 +1,6 @@
-- <span style="color:#5c7e3e">Kubernetes</span> does not come with a full featured built-in [[1 - Monitor Cluster Components|monitoring]] solution
+- <span style="color:#5c7e3e">Kubernetes</span> does not come with a full featured built-in [[1 - Managing Application Logs ✅|monitoring]] solution
 
-- There are many <span style="color:#5c7e3e">Kubernetes</span> [[1 - Monitor Cluster Components|monitoring]] solutions available,
+- There are many <span style="color:#5c7e3e">Kubernetes</span> [[1 - Managing Application Logs ✅|monitoring]] solutions available,
 	- open-source:
 		-  <b><span style="color:#d46644">Metrics-Server</span></b>, Prometheus, and Elastic Stack, etc...
 	- Proprietary:
@@ -8,7 +8,7 @@
 
 ### Heapster vs Metrics-Server
 
-- <span style="color:#5c7e3e">Heapster</span> was one of the original projects that enabled [[1 - Monitor Cluster Components|monitoring]] and analysis features for <span style="color:#5c7e3e">Kubernetes</span>
+- <span style="color:#5c7e3e">Heapster</span> was one of the original projects that enabled [[1 - Managing Application Logs ✅|monitoring]] and analysis features for <span style="color:#5c7e3e">Kubernetes</span>
 	- This is now deprecated
 
 - <b><span style="color:#d46644">Metrics-Server</span></b> is a slimmed down version of <span style="color:#5c7e3e">Heapster</span>
@@ -17,7 +17,7 @@
 
 - <b><span style="color:#d46644">Metrics-Server</span></b> retrieves information from each [[7 - Pods ✅|pod]] and [[0 - Core Concepts Intro ✅|node]] in the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], aggregates them and stores them in memory
 
-- <b><span style="color:#d46644">Metrics-Server</span></b> is only an in-memory [[1 - Monitor Cluster Components|monitoring]] solution and does not store the <b><span style="color:#d46644">metrics</span></b> externally
+- <b><span style="color:#d46644">Metrics-Server</span></b> is only an in-memory [[1 - Managing Application Logs ✅|monitoring]] solution and does not store the <b><span style="color:#d46644">metrics</span></b> externally
 	- As a result, you cannot see historical performance data
 
 ### How are pod metrics generated

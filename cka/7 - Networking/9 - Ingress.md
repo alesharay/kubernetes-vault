@@ -63,7 +63,7 @@
 
 ![[ingress-9.png]]
 
-- <span style="color:#5c7e3e">NGINX</span> has a set of configuration options such as the path to store the [[0 - Managing Application Logs ✅|logs]], the keep alive threshold, [[3.1 - Certification Creation|SSL]] settings, session timeout, etc…
+- <span style="color:#5c7e3e">NGINX</span> has a set of configuration options such as the path to store the [[0 - Monitor Cluster Components ✅|logs]], the keep alive threshold, [[3.1 - Certification Creation|SSL]] settings, session timeout, etc…
 
 - In order to decouple the configuration data from the <span style="color:#5c7e3e">NGINX</span> <b><i><span style="color:#d46644">ingress controller image</span></i></b>, you must create a [[4 - ConfigMaps|configMap]] object and pass the data into it
 	- The [[4 - ConfigMaps|configMap]] object can be blank at this point; we just want to have one created that way it will be easy to modify configuration settings in the future
