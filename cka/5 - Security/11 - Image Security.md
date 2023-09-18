@@ -42,21 +42,21 @@
 
 - Within <span style="color:#5c7e3e">Kubernetes</span>, <b><i><span style="color:#d46644">images</span></i></b> are pulled by the [[0 - Core Concepts Intro ✅|container runtime]]  (<span style="color:#5c7e3e">Docker</span>) on the [[0 - Core Concepts Intro ✅|worker nodes]]
 
-- In order for <span style="color:#5c7e3e">Kubernetes</span> to get the credentials to access the <b><i><span style="color:#d46644">private registry</span></i></b>, thus [[1 - Authentication|authenticating]] the <i><span style="color:#477bbe">user</span></i> to the <b><i><span style="color:#d46644">private registry</span></i></b> from within <span style="color:#5c7e3e">Kubernetes</span>, a [[5 - Secrets|secret]] object is created with the credentials in it
-	- The [[5 - Secrets|secret]] is of type <span style="color:#5c7e3e">docker-registry</span>
+- In order for <span style="color:#5c7e3e">Kubernetes</span> to get the credentials to access the <b><i><span style="color:#d46644">private registry</span></i></b>, thus [[1 - Authentication|authenticating]] the <i><span style="color:#477bbe">user</span></i> to the <b><i><span style="color:#d46644">private registry</span></i></b> from within <span style="color:#5c7e3e">Kubernetes</span>, a [[5 - Secrets ✅|secret]] object is created with the credentials in it
+	- The [[5 - Secrets ✅|secret]] is of type <span style="color:#5c7e3e">docker-registry</span>
 
-- <span style="color:#5c7e3e">Docker-registry</span> is a built-in [[5 - Secrets|secret]] type that was built for storing <span style="color:#5c7e3e">Docker</span> credentials
+- <span style="color:#5c7e3e">Docker-registry</span> is a built-in [[5 - Secrets ✅|secret]] type that was built for storing <span style="color:#5c7e3e">Docker</span> credentials
 
-- Within the <b><i><span style="color:#d46644">image</span></i></b> [[5 - Secrets|pull secret]], specify the <b><i><span style="color:#d46644">private registry</span></i></b> name, the username, the password, and the email address that has access to <b><i><span style="color:#d46644">pull images</span></i></b>
+- Within the <b><i><span style="color:#d46644">image</span></i></b> [[5 - Secrets ✅|pull secret]], specify the <b><i><span style="color:#d46644">private registry</span></i></b> name, the username, the password, and the email address that has access to <b><i><span style="color:#d46644">pull images</span></i></b>
 
 ![[images-security-7.png]]
 
-- The [[5 - Secrets|secret]] with the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">private registry</span></i></b> credentials is specified in the [[7 - Pods ✅|pod]] definition file using the <span style="color:#5c7e3e">imagePullSecret</span> property
+- The [[5 - Secrets ✅|secret]] with the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">private registry</span></i></b> credentials is specified in the [[7 - Pods ✅|pod]] definition file using the <span style="color:#5c7e3e">imagePullSecret</span> property
 	- This a child to the <span style="color:#5c7e3e">spec</span> property
 
 ![[images-security-8.png]]
 
-- When the [[7 - Pods ✅|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet ✅|kubelet]] (on the [[0 - Core Concepts Intro ✅|worker nodes]]) uses the [[5 - Secrets|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
+- When the [[7 - Pods ✅|pod]] is created with the <b><i><span style="color:#d46644">imagePullSecret</span></i></b> details, [[5 - Kubelet ✅|kubelet]] (on the [[0 - Core Concepts Intro ✅|worker nodes]]) uses the [[5 - Secrets ✅|secret]] object to <b><i><span style="color:#d46644">pull images</span></i></b>
 
 ### Practice Problems
 

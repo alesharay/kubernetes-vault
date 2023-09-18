@@ -44,8 +44,8 @@
 - Any record that the [[0.2 - DNS|DNS server]] can't solve, it is forwarded to the <b><i><span style="color:#d46644">nameserver</span></i></b> specified in the <b><i><span style="color:#d46644">coreDNS</span></i></b> [[7 - Pods ✅|pod's]] <span style="color:red">/etc/resolv.conf</span> file
 	- The <span style="color:red">/etc/resolv.conf</span> file is set the use the <b><i><span style="color:#d46644">nameserver</span></i></b> from the <span style="color:#5c7e3e">Kubernetes</span> node
 
-- The <b><i><span style="color:#d46644">Corefile</span></i></b> is passed into the [[7 - Pods ✅|pod]] as a [[4 - ConfigMaps|configMap]]
-	- This way if you need to modify the configuration, you can edit the [[4 - ConfigMaps|configMap]]
+- The <b><i><span style="color:#d46644">Corefile</span></i></b> is passed into the [[7 - Pods ✅|pod]] as a [[4 - ConfigMaps ✅|configMap]]
+	- This way if you need to modify the configuration, you can edit the [[4 - ConfigMaps ✅|configMap]]
 
 - When the <b><i><span style="color:#d46644">coreDNS</span></i></b> [[7 - Pods ✅|pod]] is up and running and watching the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] for new [[7 - Pods ✅|pods]] or [[10 - Services ✅|services]], every time a [[7 - Pods ✅|pod]] or [[10 - Services ✅|service]] is created, it adds a record for it
 

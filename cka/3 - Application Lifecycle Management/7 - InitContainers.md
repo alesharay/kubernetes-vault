@@ -1,4 +1,4 @@
-- In a [[6 - Multi-Container Pods|multi-container pod]], each [[7 - Pods ✅|container]] is expected to run a process that stays alive as long as the [[7 - Pods ✅|pod's]] lifecycle
+- In a [[6 - Multi-Container Pods ✅|multi-container pod]], each [[7 - Pods ✅|container]] is expected to run a process that stays alive as long as the [[7 - Pods ✅|pod's]] lifecycle
 	- If any of them fail, the [[7 - Pods ✅|pod]] restarts
 
 - In situations where you want to run a process to completion in a [[7 - Pods ✅|container]], this is where <b><span style="color:#d46644">initContainers</span></b> come in

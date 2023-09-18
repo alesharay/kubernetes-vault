@@ -38,7 +38,7 @@
 
 - The <b><i><span style="color:#d46644">service account token</span></i></b> is what must be used by the external application while [[1 - Authentication|authenticating]] to the <span style="color:#5c7e3e">Kubernetes</span> API
 
-- The <b><i><span style="color:#d46644">service account token</span></i></b> is stored as a [[5 - Secrets|secret]] object
+- The <b><i><span style="color:#d46644">service account token</span></i></b> is stored as a [[5 - Secrets ✅|secret]] object
 
 - If the <b><i><span style="color:#d46644">service account token</span></i></b> is not created automatically, one can be created by running the following command:
 
@@ -46,9 +46,9 @@
 
 - When a <b><i><span style="color:#d46644">service account</span></i></b> is created, it first creates a <b><i><span style="color:#d46644">service account</span></i></b> object and then generates a token for the <b><i><span style="color:#d46644">service account</span></i></b>
 
-- After a <b><i><span style="color:#d46644">service account</span></i></b> object is created and a token is generated, a [[5 - Secrets|secret]] is then created to store the token inside, and the [[5 - Secrets|secret]] object is linked to the <b><i><span style="color:#d46644">service account</span></i></b>
+- After a <b><i><span style="color:#d46644">service account</span></i></b> object is created and a token is generated, a [[5 - Secrets ✅|secret]] is then created to store the token inside, and the [[5 - Secrets ✅|secret]] object is linked to the <b><i><span style="color:#d46644">service account</span></i></b>
 
-- To view the <b><i><span style="color:#d46644">service account</span></i></b> token, view the [[5 - Secrets|secret]] object first by running the <span style="color:red">kubectl describe serviceaccount</span> command with the name of the <b><i><span style="color:#d46644">service account</span></i></b> to find out the name of the [[5 - Secrets|secret]] that was created, then <span style="color:red">kubectl describe secret</span> with the name of the [[5 - Secrets|secret]] to see the encoded token
+- To view the <b><i><span style="color:#d46644">service account</span></i></b> token, view the [[5 - Secrets ✅|secret]] object first by running the <span style="color:red">kubectl describe serviceaccount</span> command with the name of the <b><i><span style="color:#d46644">service account</span></i></b> to find out the name of the [[5 - Secrets ✅|secret]] that was created, then <span style="color:red">kubectl describe secret</span> with the name of the [[5 - Secrets ✅|secret]] to see the encoded token
 	- Decode the token using <span style="color:#5c7e3e">base64</span> decoding
 
 - The <b><i><span style="color:#d46644">service account</span></i></b> token can be used as an [[1 - Authentication|authentication]] <span style="color:#5c7e3e">bearer token</span> when making <span style="color:#5c7e3e">REST</span> calls to the <span style="color:#5c7e3e">Kubernetes</span> API
@@ -61,7 +61,7 @@
 
 - If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] itself, the <b><i><span style="color:#d46644">service account</span></i></b> process is different
 
-- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods ✅|pod]] hosting the application
+- If your application is hosted on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], the <b><i><span style="color:#d46644">service account</span></i></b> creation and use process is made simple by automatically mounting the service token [[5 - Secrets ✅|secret]] as a [[3 - Volumes|volume]] inside of the [[7 - Pods ✅|pod]] hosting the application
 	- This way, the token to access the <span style="color:#5c7e3e">Kubernetes</span> API is already placed inside of the [[7 - Pods ✅|pod]] and can be easily read by the application
 
 - For every [[11 - Namespaces ✅|namespace]] in <span style="color:#5c7e3e">Kubernetes</span>, a <b><i><span style="color:#d46644">service account</span></i></b> named "<span style="color:red">default</span>" is automatically created
@@ -69,7 +69,7 @@
 
 - Whenever a [[7 - Pods ✅|pod]] is created, the default <b><i><span style="color:#d46644">service account</span></i></b> and its token are automatically mounted to that [[7 - Pods ✅|pod]] as a [[3 - Volumes|volume mount]]
 
-- When you look at the details of a [[7 - Pods ✅|pod]], you see that a [[3 - Volumes|volume]] is created from the <b><i><span style="color:#d46644">service account</span></i></b> [[5 - Secrets|secret]], which is in fact the [[5 - Secrets|secret]] containing the default token for this <b><i><span style="color:#d46644">service account</span></i></b>
+- When you look at the details of a [[7 - Pods ✅|pod]], you see that a [[3 - Volumes|volume]] is created from the <b><i><span style="color:#d46644">service account</span></i></b> [[5 - Secrets ✅|secret]], which is in fact the [[5 - Secrets ✅|secret]] containing the default token for this <b><i><span style="color:#d46644">service account</span></i></b>
 
 ![[servicea-6.png]]
 

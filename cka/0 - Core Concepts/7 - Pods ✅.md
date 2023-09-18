@@ -7,10 +7,10 @@
 
 - The <span style="color:red">kubectl get pods</span> command helps us see a list of <b><span style="color:#d46644">pods</span></b> in the [[0 - Core Concepts Intro ✅|cluster]]
 
-- A single <b><span style="color:#d46644">pod</span></b> can have [[6 - Multi-Container Pods|multiple containers]]
+- A single <b><span style="color:#d46644">pod</span></b> can have [[6 - Multi-Container Pods ✅|multiple containers]]
 	- Except for the fact that they are normally not <i><span style="color:#d46644">containers</span></i> of the same kind
 
-- If the <span style="color:red">kubectl get pods</span> command shows [[6 - Multi-Container Pods|multiple containers]] for the <b><span style="color:#d46644">pod</span></b>, the <span style="color:red">kubectl describe pod</span> command will have separate information for each <i><span style="color:#d46644">container</span></i>
+- If the <span style="color:red">kubectl get pods</span> command shows [[6 - Multi-Container Pods ✅|multiple containers]] for the <b><span style="color:#d46644">pod</span></b>, the <span style="color:red">kubectl describe pod</span> command will have separate information for each <i><span style="color:#d46644">container</span></i>
 	- This includes separate <i><span style="color:#d46644">container</span></i> images
 
 ![[pods.png]]

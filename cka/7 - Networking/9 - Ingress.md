@@ -65,15 +65,15 @@
 
 - <span style="color:#5c7e3e">NGINX</span> has a set of configuration options such as the path to store the [[0 - Monitor Cluster Components ✅|logs]], the keep alive threshold, [[3.1 - Certification Creation|SSL]] settings, session timeout, etc…
 
-- In order to decouple the configuration data from the <span style="color:#5c7e3e">NGINX</span> <b><i><span style="color:#d46644">ingress controller image</span></i></b>, you must create a [[4 - ConfigMaps|configMap]] object and pass the data into it
-	- The [[4 - ConfigMaps|configMap]] object can be blank at this point; we just want to have one created that way it will be easy to modify configuration settings in the future
+- In order to decouple the configuration data from the <span style="color:#5c7e3e">NGINX</span> <b><i><span style="color:#d46644">ingress controller image</span></i></b>, you must create a [[4 - ConfigMaps ✅|configMap]] object and pass the data into it
+	- The [[4 - ConfigMaps ✅|configMap]] object can be blank at this point; we just want to have one created that way it will be easy to modify configuration settings in the future
 
 ![[ingress-10.png]]
 
 ![[ingress-11.png]]
 
 
-- Two [[3 - Environment Variables|environment variables]] that hold the [[7 - Pods ✅|pod]] name and the [[11 - Namespaces ✅|namespace]] that holds the [[7 - Pods ✅|pod]] is also required
+- Two [[3 - Environment Variables ✅|environment variables]] that hold the [[7 - Pods ✅|pod]] name and the [[11 - Namespaces ✅|namespace]] that holds the [[7 - Pods ✅|pod]] is also required
 	- The <span style="color:#5c7e3e">NGINX</span> [[10 - Services ✅|service]] requires this information to read the configuration data from within the [[7 - Pods ✅|pod]]
 
 ![[ingress-12.png]]
@@ -93,7 +93,7 @@
 
 ![[ingress-15.png]]
 
-- To summarize, with a [[9 - Deployments ✅|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services ✅|service]] to expose it, a [[4 - ConfigMaps|configMap]] to feed configuration data, and a [[10 - Service Accounts|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls|roles]], [[8 - Role Based Access Controls|clusterroles]], and [[8 - Role Based Access Controls|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
+- To summarize, with a [[9 - Deployments ✅|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services ✅|service]] to expose it, a [[4 - ConfigMaps ✅|configMap]] to feed configuration data, and a [[10 - Service Accounts|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls|roles]], [[8 - Role Based Access Controls|clusterroles]], and [[8 - Role Based Access Controls|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
 
 ![[ingress-16.png]]
 

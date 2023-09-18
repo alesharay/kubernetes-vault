@@ -16,7 +16,7 @@
 - These all say specifically how to bring the <i><span style="color:#477bbe">infrastructure</span></i> to our needs
 
 - NOTE: The <b><span style="color:#d46644">imperative</span></b> approach will be useful during the <span style="color:#5c7e3e">certification exams</span> as we don't have to deal with YAML files
-	- However, they're limited in functionality and will require forming long and complex commands for advanced use-cases such as creating a [[6 - Multi-Container Pods|multi-container pods]] or [[9 - Deployments ✅|deployments]]
+	- However, they're limited in functionality and will require forming long and complex commands for advanced use-cases such as creating a [[6 - Multi-Container Pods ✅|multi-container pods]] or [[9 - Deployments ✅|deployments]]
 
 - <b><span style="color:#d46644">imperative</span></b> commands are run once and then forgotten
 	- They're only available in the session history of the user who ran the commands
@@ -73,7 +73,7 @@
 
 - Use the <b><span style="color:#d46644">imperative</span></b> approach to save time as much as possible
 - Practice the <b><span style="color:#d46644">imperative</span></b> commands as much as possible to be prepared
-- Use an object definition file for complex tasks such as [[6 - Multi-Container Pods|multi-container pods]]
+- Use an object definition file for complex tasks such as [[6 - Multi-Container Pods ✅|multi-container pods]]
 	- Use the <b><span style="color:#d46644">declarative</span></b> approach when dealing with files, just using the <span style="color:red">kubectl apply -f</span> command to make changes
 
 ### IMPERATIVE EXAMPLES
