@@ -7,7 +7,7 @@
 
 ![[initc-1.png]]
 
-- When a [[7 - Pods ✅|pod]] is first created, the <b><span style="color:#d46644">initContainer</span></b> is run, and the process in the <b><span style="color:#d46644">initContainer</span></b> must run to a completion before the real [[7 - Pods ✅|container]] hosting the application starts
+- When a [[7 - Pods ✅|pod]] is first created, the <b><span style="color:#d46644">initContainer</span></b> is run, and the process in the <b><span style="color:#d46644">initContainer</span></b> must run to completion before the real [[7 - Pods ✅|container]] hosting the application starts
 
 - Similar to common [[7 - Pods ✅|containers]], you can also configure multiple <b><span style="color:#d46644">initContainers</span></b>
 	- In this case, each <b><span style="color:#d46644">initContainer</span></b> is run one at a time in sequential order
