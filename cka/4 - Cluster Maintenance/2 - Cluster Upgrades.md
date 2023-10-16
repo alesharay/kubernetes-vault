@@ -1,8 +1,9 @@
 - Most <b><span style="color:#d46644">upgrade</span></b> information can be found on the following page
 
-	[https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/](https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
+	https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
 
-- It is not mandatory for all of the [[0 - Core Concepts Intro ✅|core control-plane components]] to have the same <b><span style="color:#d46644">version</span></b>
+- It is not mandatory for all of the [[0 - Core Concepts Intro ✅|core control-plane components]] to have the 
+- same <b><span style="color:#d46644">version</span></b>
 
 ![[clusteru-1.png]]
 
@@ -14,9 +15,9 @@
 
 ![[clusteru-2.png]]
 
-- The <b><span style="color:#d46644">versioning</span></b> rules that apply to the [[0 - Core Concepts Intro ✅| control-plane components]] do not apply to <span style="color:#5c7e3e">kubectl</span>
+- The <b><span style="color:#d46644">versioning</span></b> rules that apply to the [[0 - Core Concepts Intro ✅| control-plane components]] do not apply to <b><span style="color:#5c7e3e">kubectl</span></b>
 
-- The <span style="color:#5c7e3e">kubectl</span> utility can be one <b><span style="color:#d46644">version</span></b> higher, the same, or one <b><span style="color:#d46644">version</span></b> lower than the [[2 - Kube API server ✅|kube-apiserver]]
+- The <b><span style="color:#5c7e3e">kubectl</span></b> utility can be one <b><span style="color:#d46644">version</span></b> higher, the same, or one <b><span style="color:#d46644">version</span></b> lower than the [[2 - Kube API server ✅|kube-apiserver]]
 
 ![[clusteru-3.png]]
 
@@ -35,7 +36,7 @@
 
 - The <b><span style="color:#d46644">upgrade</span></b> process depends on how your [[0 - Core Concepts Intro ✅|cluster]] is setup
 	- If the [[0 - Core Concepts Intro ✅|cluster]] is managed on a cloud platform, there are likely tools that make <b><span style="color:#d46644">upgrading</span></b> easy
-	- If the [[0 - Core Concepts Intro ✅|cluster]] is managed with tools such as <span style="color:#5c7e3e">Kubeadm</span>, the tool will help you plan and <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro ✅|cluster]]
+	- If the [[0 - Core Concepts Intro ✅|cluster]] is managed with tools such as <b><span style="color:#5c7e3e">Kubeadm</span></b>, the tool will help you plan and <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[clusteru-5.png]]
 
