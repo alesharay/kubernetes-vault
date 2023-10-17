@@ -67,7 +67,7 @@
 	- Once the <b><span style="color:#d46644">upgrade</span></b> is complete, the [[0 - Core Concepts Intro ✅|nodes]] are back up, the new [[7 - Pods ✅|pods]] are scheduled, and users are able to access your application
 
 - Strategy 2 to <b><span style="color:#d46644">upgrade</span></b> a [[0 - Core Concepts Intro ✅|worker node]] is to <b><span style="color:#d46644">upgrade</span></b> them one at a time
-	- While <b><span style="color:#d46644">upgrading</span></b> one [[0 - Core Concepts Intro ✅|node]], the [[7 - Pods ✅|pods]] will be placed on other [[0 - Core Concepts Intro ✅|nodes]] while the current one is [[0 - Core Concepts Intro ✅|node]]  <b><span style="color:#d46644">upgraded</span></b>
+	- While <b><span style="color:#d46644">upgrading</span></b> one [[0 - Core Concepts Intro ✅|node]], the [[7 - Pods ✅|pods]] will be placed on other [[0 - Core Concepts Intro ✅|nodes]] while the current one  [[0 - Core Concepts Intro ✅|node]]  <b><span style="color:#d46644">upgraded</span></b>
 	- Once the first [[0 - Core Concepts Intro ✅|node]] is back up, the second [[0 - Core Concepts Intro ✅|node]] goes down and those [[7 - Pods ✅|pods]] are then moved to the other [[0 - Core Concepts Intro ✅|nodes]] while that one is being <b><span style="color:#d46644">upgraded</span></b>
 	- This process is repeated until all [[0 - Core Concepts Intro ✅|worker nodes]] are <b><span style="color:#d46644">upgraded</span></b>
 
@@ -84,7 +84,7 @@
 	- This gives a bunch of information like the [[0 - Core Concepts Intro ✅|cluster]] <b><span style="color:#d46644">version</span></b> and <span style="color:#5c7e3e">Kubeadm</span> tool <b><span style="color:#d46644">version</span></b>
 	- This also lists all of the [[0 - Core Concepts Intro ✅|control-plane components]], their current <b><span style="color:#d46644">versions</span></b>, and what <b><span style="color:#d46644">versions</span></b> they can be <b><span style="color:#d46644">upgraded</span></b> to
 	- It also tells you what components need to be <b><span style="color:#d46644">upgraded</span></b> manually
-	- Keep in mind that <span style="color:#5c7e3e">Kubeadm</span> does not install or <b><span style="color:#d46644">upgrade</span></b> [[5 - Kubelet ✅|kubelet]]
+		- Keep in mind that <span style="color:#5c7e3e">Kubeadm</span> does not install or <b><span style="color:#d46644">upgrade</span></b> [[5 - Kubelet ✅|kubelet]]
 	- Finally, the command gives you the command to <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro ✅|cluster]]
 
 - You must <b><span style="color:#d46644">upgrade</span></b> the <span style="color:#5c7e3e">Kubeadm</span> tool first before you can <b><span style="color:#d46644">upgrade</span></b> the [[0 - Core Concepts Intro ✅|cluster]]

@@ -1,4 +1,4 @@
-link- There are many candidates for <b><span style="color:#d46644">backups</span></b> in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
+- There are many candidates for <b><span style="color:#d46644">backups</span></b> in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 	- <i><span style="color:#477bbe">Resource</span></i> definition files
 	- The [[1 - ETCD ✅|etcd]] store
 	- [[4 - Persistent Volumes|Persistent Volumes]]
@@ -12,7 +12,7 @@ link- There are many candidates for <b><span style="color:#d46644">backups</span
 - The <span style="color:#5c7e3e">source code repositories</span> should be configured with the right <b><span style="color:#d46644">backup</span></b> solutions
 
 - With managed/public <span style="color:#5c7e3e">source code repositories</span>, such as <span style="color:#5c7e3e">GitHub</span> and <span style="color:#5c7e3e">GitLab</span>, <b><span style="color:#d46644">backup</span></b> solutions are automatically available
-	- With this method, even if you lose the entire [[0 - Core Concepts Intro ✅|cluster]], you can bring <b><span style="color:#d46644">backup</span></b> the application by simply applying the configuration files
+	- With this method, even if you lose the entire [[0 - Core Concepts Intro ✅|cluster]], you can bring back up the application by simply applying the configuration files
 
 - If <i><span style="color:#477bbe">resources</span></i> were created imperatively, the better approach to backing up <i><span style="color:#477bbe">resource</span></i> configuration is to query the [[2 - Kube API server ✅|kube-apiserver]]
 
