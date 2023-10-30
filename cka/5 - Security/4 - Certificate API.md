@@ -1,28 +1,28 @@
-- As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro ✅|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro ✅|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics|keys]]
+- As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro ✅|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro ✅|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics ✅|keys]]
 
-- This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>
+- This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics ✅|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>
 
-- When the current <i><span style="color:#477bbe">admin</span></i> receives the new <i><span style="color:#477bbe">admin's</span></i> [[3.1 - Certification Creation|CSR]], the current <i><span style="color:#477bbe">admin</span></i> would [[2 - TLS Basics|sign]] the [[3.1 - Certification Creation|CSR]] using their <i><span style="color:#477bbe">CA server's</span></i> [[2 - TLS Basics|private key]] and [[3.1 - Certification Creation|root certificate]], then send back the [[3.1 - Certification Creation|signed certificate]] to the new <i><span style="color:#477bbe">admin</span></i>
+- When the current <i><span style="color:#477bbe">admin</span></i> receives the new <i><span style="color:#477bbe">admin's</span></i> [[3.1 - Certification Creation|CSR]], the current <i><span style="color:#477bbe">admin</span></i> would [[2 - TLS Basics ✅|sign]] the [[3.1 - Certification Creation|CSR]] using their <i><span style="color:#477bbe">CA server's</span></i> [[2 - TLS Basics ✅|private key]] and [[3.1 - Certification Creation|root certificate]], then send back the [[3.1 - Certification Creation|signed certificate]] to the new <i><span style="color:#477bbe">admin</span></i>
 	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication ✅|authenticated]] to the [[0 - Core Concepts Intro ✅|cluster]]
 
-- The [[2 - TLS Basics|CA]] is a pair of [[2 - TLS Basics|key]] and [[3.1 - Certification Creation|certificate]] files that have been generated
+- The [[2 - TLS Basics ✅|CA]] is a pair of [[2 - TLS Basics ✅|key]] and [[3.1 - Certification Creation|certificate]] files that have been generated
 
-- Whoever gains access to the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] can [[2 - TLS Basics|sign]] any [[3.1 - Certification Creation|certificate]] in the <span style="color:#5c7e3e">Kubernetes</span> environment and can create as many <i><span style="color:#477bbe">users</span></i> as they want with whatever privileges they want
+- Whoever gains access to the [[2 - TLS Basics ✅|CA private key]] and [[3.1 - Certification Creation|certificate]] can [[2 - TLS Basics ✅|sign]] any [[3.1 - Certification Creation|certificate]] in the <span style="color:#5c7e3e">Kubernetes</span> environment and can create as many <i><span style="color:#477bbe">users</span></i> as they want with whatever privileges they want
 
-- Whatever secure <i><span style="color:#477bbe">server</span></i> holds the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] is then the <i><span style="color:#477bbe">CA server</span></i>
+- Whatever secure <i><span style="color:#477bbe">server</span></i> holds the [[2 - TLS Basics ✅|CA private key]] and [[3.1 - Certification Creation|certificate]] is then the <i><span style="color:#477bbe">CA server</span></i>
 
-- Any time you want to [[2 - TLS Basics|sign]] a [[3.1 - Certification Creation|certificate]] with the [[2 - TLS Basics|CA private key]] and [[3.1 - Certification Creation|certificate]] file, the only way to do this is by logging into the <i><span style="color:#477bbe">CA server</span></i>
+- Any time you want to [[2 - TLS Basics ✅|sign]] a [[3.1 - Certification Creation|certificate]] with the [[2 - TLS Basics ✅|CA private key]] and [[3.1 - Certification Creation|certificate]] file, the only way to do this is by logging into the <i><span style="color:#477bbe">CA server</span></i>
 
-- If the [[2 - TLS Basics|CA]] files are located on the [[0 - Core Concepts Intro ✅|master node]], then the [[0 - Core Concepts Intro ✅|master node]] is also the <i><span style="color:#477bbe">CA server</span></i>
-	- This is where the <span style="color:#5c7e3e">kubeadm</span> tool places the [[2 - TLS Basics|CA]] files
+- If the [[2 - TLS Basics ✅|CA]] files are located on the [[0 - Core Concepts Intro ✅|master node]], then the [[0 - Core Concepts Intro ✅|master node]] is also the <i><span style="color:#477bbe">CA server</span></i>
+	- This is where the <span style="color:#5c7e3e">kubeadm</span> tool places the [[2 - TLS Basics ✅|CA]] files
 
-- While [[3.1 - Certification Creation|CSR]] can be [[2 - TLS Basics|signed]] manually, with larger teams and continuous growth, you need an easier way of managing [[3.1 - Certification Creation|certificates]], carrying out the [[3.1 - Certification Creation|CSR]] [[2 - TLS Basics|signing]] process, and rotating [[3.1 - Certification Creation|certificates]] when they expire
+- While [[3.1 - Certification Creation|CSR]] can be [[2 - TLS Basics ✅|signed]] manually, with larger teams and continuous growth, you need an easier way of managing [[3.1 - Certification Creation|certificates]], carrying out the [[3.1 - Certification Creation|CSR]] [[2 - TLS Basics ✅|signing]] process, and rotating [[3.1 - Certification Creation|certificates]] when they expire
 
-- <span style="color:#5c7e3e">Kubernetes</span> has a built-in <b><i><span style="color:#d46644">certificate API</span></i></b> that can manage, [[2 - TLS Basics|sign]], and rotate [[3.1 - Certification Creation|certificates]]
+- <span style="color:#5c7e3e">Kubernetes</span> has a built-in <b><i><span style="color:#d46644">certificate API</span></i></b> that can manage, [[2 - TLS Basics ✅|sign]], and rotate [[3.1 - Certification Creation|certificates]]
 
 - With the <b><i><span style="color:#d46644">certificate API</span></i></b>, you send the [[3.1 - Certification Creation|CSR]] directly to <span style="color:#5c7e3e">Kubernetes</span> through an <b><i><span style="color:#d46644">API</span></i></b> call
 
-- When a [[3.1 - Certification Creation|CSR]] is sent through an <b><i><span style="color:#d46644">API</span></i></b> call, rather than the <i><span style="color:#477bbe">admin</span></i> manually logging into the <i><span style="color:#477bbe">CA server</span></i> to [[2 - TLS Basics|sign]], they create and <span style="color:#5c7e3e">Kubernetes</span> API object called the [[3.1 - Certification Creation|CertificateSigningRequest]] object
+- When a [[3.1 - Certification Creation|CSR]] is sent through an <b><i><span style="color:#d46644">API</span></i></b> call, rather than the <i><span style="color:#477bbe">admin</span></i> manually logging into the <i><span style="color:#477bbe">CA server</span></i> to [[2 - TLS Basics ✅|sign]], they create and <span style="color:#5c7e3e">Kubernetes</span> API object called the [[3.1 - Certification Creation|CertificateSigningRequest]] object
 
 - Once the [[3.1 - Certification Creation|CertificateSigningRequest]] object is created, all [[3.1 - Certification Creation|CSRs]] can be seen by the <i><span style="color:#477bbe">administrators</span></i> of the [[0 - Core Concepts Intro ✅|cluster]]
 
@@ -33,15 +33,15 @@
 
 ### Process
 
-1. A <i><span style="color:#477bbe">user</span></i> creates a [[2 - TLS Basics|key-pair]]
+1. A <i><span style="color:#477bbe">user</span></i> creates a [[2 - TLS Basics ✅|key-pair]]
 
 		![[certa-1.png]]
 
-2. The <i><span style="color:#477bbe">user</span></i> generates a [[3.1 - Certification Creation|CSR]] using the [[2 - TLS Basics|private key]] with their name on it, and sends the request to the <i><span style="color:#477bbe">admin</span></i>
+2. The <i><span style="color:#477bbe">user</span></i> generates a [[3.1 - Certification Creation|CSR]] using the [[2 - TLS Basics ✅|private key]] with their name on it, and sends the request to the <i><span style="color:#477bbe">admin</span></i>
 
 		![[certa-2.png]]
 
-3. The <i><span style="color:#477bbe">admin</span></i> takes the [[3.1 - Certification Creation|CSR]] and creates a [[3.1 - Certification Creation|CertificateSigningRequest]] object with they <span style="color:#5c7e3e">base64</span> [[2 - TLS Basics|private key]] included
+3. The <i><span style="color:#477bbe">admin</span></i> takes the [[3.1 - Certification Creation|CSR]] and creates a [[3.1 - Certification Creation|CertificateSigningRequest]] object with they <span style="color:#5c7e3e">base64</span> [[2 - TLS Basics ✅|private key]] included
 	1. This is created like any other <span style="color:#5c7e3e">Kubernetes</span> object, using a manifest file
 
 		![[certa-3.png]]
@@ -64,7 +64,7 @@
 
 		![[certa-6.png]]
 
-	6. <span style="color:#5c7e3e">Kubernetes</span> [[2 - TLS Basics|signs]] the [[3.1 - Certification Creation|certificate]], then generates a [[3.1 - Certification Creation|certificate]] [[2 - TLS Basics|key-pair]] for the <i><span style="color:#477bbe">user</span></i>
+	6. <span style="color:#5c7e3e">Kubernetes</span> [[2 - TLS Basics ✅|signs]] the [[3.1 - Certification Creation|certificate]], then generates a [[3.1 - Certification Creation|certificate]] [[2 - TLS Basics ✅|key-pair]] for the <i><span style="color:#477bbe">user</span></i>
 
 	7. This [[3.1 - Certification Creation|certificate]] can then be extracted and shared with the <i><span style="color:#477bbe">user</span></i>
 
@@ -78,9 +78,9 @@
 
 - All [[3.1 - Certification Creation|certificate]] operations are carried out by the [[3 - Kube Controller Manager ✅|kube-controller-manager]]
 
-- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has [[3 - Kube Controller Manager ✅|controllers]] called [[3.1 - Certification Creation|CSR]]-Approving, [[3.1 - Certification Creation|CSR]]-[[2 - TLS Basics|signing]], etc… that are responsible for carrying out the [[3.1 - Certification Creation|CSR]] tasks
+- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has [[3 - Kube Controller Manager ✅|controllers]] called [[3.1 - Certification Creation|CSR]]-Approving, [[3.1 - Certification Creation|CSR]]-[[2 - TLS Basics ✅|signing]], etc… that are responsible for carrying out the [[3.1 - Certification Creation|CSR]] tasks
 
-- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has two options where you can specify the [[3.1 - Certification Creation|CA certificate]] and [[2 - TLS Basics|private key]]
+- The [[3 - Kube Controller Manager ✅|kube-controller-manager]] has two options where you can specify the [[3.1 - Certification Creation|CA certificate]] and [[2 - TLS Basics ✅|private key]]
 
 ![[certa-8.png]]
 
