@@ -21,7 +21,7 @@
 	- Ie. A monitoring application like <span style="color:#5c7e3e">Prometheus</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to poll the <span style="color:#5c7e3e">Kubernetes</span> API for performance metrics
 	- Ie. An automated build tool like <span style="color:#5c7e3e">Jenkins</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to deploy applications on the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
-- In order for an application to query the <span style="color:#5c7e3e">Kubernetes</span> API, it has to be [[1 - Authentication|authenticated]]
+- In order for an application to query the <span style="color:#5c7e3e">Kubernetes</span> API, it has to be [[1 - Authentication ✅|authenticated]]
 	- For that, you use <b><i><span style="color:#d46644">service accounts</span></i></b>
 
 - To create <b><i><span style="color:#d46644">service accounts</span></i></b> [[12 - Declarative vs Imperative ✅|imperatively]], run the command <span style="color:red">kubectl create serviceaccount</span> followed by the account name
@@ -36,7 +36,7 @@
 
 ![[servicea-3.png]]
 
-- The <b><i><span style="color:#d46644">service account token</span></i></b> is what must be used by the external application while [[1 - Authentication|authenticating]] to the <span style="color:#5c7e3e">Kubernetes</span> API
+- The <b><i><span style="color:#d46644">service account token</span></i></b> is what must be used by the external application while [[1 - Authentication ✅|authenticating]] to the <span style="color:#5c7e3e">Kubernetes</span> API
 
 - The <b><i><span style="color:#d46644">service account token</span></i></b> is stored as a [[5 - Secrets ✅|secret]] object
 
@@ -51,7 +51,7 @@
 - To view the <b><i><span style="color:#d46644">service account</span></i></b> token, view the [[5 - Secrets ✅|secret]] object first by running the <span style="color:red">kubectl describe serviceaccount</span> command with the name of the <b><i><span style="color:#d46644">service account</span></i></b> to find out the name of the [[5 - Secrets ✅|secret]] that was created, then <span style="color:red">kubectl describe secret</span> with the name of the [[5 - Secrets ✅|secret]] to see the encoded token
 	- Decode the token using <span style="color:#5c7e3e">base64</span> decoding
 
-- The <b><i><span style="color:#d46644">service account</span></i></b> token can be used as an [[1 - Authentication|authentication]] <span style="color:#5c7e3e">bearer token</span> when making <span style="color:#5c7e3e">REST</span> calls to the <span style="color:#5c7e3e">Kubernetes</span> API
+- The <b><i><span style="color:#d46644">service account</span></i></b> token can be used as an [[1 - Authentication ✅|authentication]] <span style="color:#5c7e3e">bearer token</span> when making <span style="color:#5c7e3e">REST</span> calls to the <span style="color:#5c7e3e">Kubernetes</span> API
 
 ![[servicea-4.png]]
 

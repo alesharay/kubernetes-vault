@@ -47,15 +47,15 @@
 
 ![[api-5.png]]
 
-- If accessing the <b><i><span style="color:#d46644">API</span></i></b> through curl, you will not be allowed access except to certain <b><i><span style="color:#d46644">APIs</span></i></b> like version, as you have not specified any [[1 - Authentication|authentication]] mechanisms
+- If accessing the <b><i><span style="color:#d46644">API</span></i></b> through curl, you will not be allowed access except to certain <b><i><span style="color:#d46644">APIs</span></i></b> like version, as you have not specified any [[1 - Authentication ✅|authentication]] mechanisms
 
-- To [[1 - Authentication|authenticate]] to the <b><i><span style="color:#d46644">API</span></i></b> using the command line, pass the [[3.1 - Certification Creation|certificate]] file
+- To [[1 - Authentication ✅|authenticate]] to the <b><i><span style="color:#d46644">API</span></i></b> using the command line, pass the [[3.1 - Certification Creation|certificate]] file
 
 ![[api-6.png]]
 
 - An alternative option to accessing the <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> is to start a [[13 - Kubectl Apply ✅|kubectl]] proxy <i><span style="color:#477bbe">client</span></i>
 
-- The [[13 - Kubectl Apply ✅|kubectl]] proxy command launches a proxy service locally on port 8001 and uses credentials and [[3.1 - Certification Creation|certificates]] from your [[5 - Kubeconfig|kubeconfig]] file to [[1 - Authentication|authenticate]] to the [[0 - Core Concepts Intro ✅|cluster]]
+- The [[13 - Kubectl Apply ✅|kubectl]] proxy command launches a proxy service locally on port 8001 and uses credentials and [[3.1 - Certification Creation|certificates]] from your [[5 - Kubeconfig|kubeconfig]] file to [[1 - Authentication ✅|authenticate]] to the [[0 - Core Concepts Intro ✅|cluster]]
 
 ![[api-7.png]]
 

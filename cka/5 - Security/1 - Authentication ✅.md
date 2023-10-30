@@ -1,20 +1,19 @@
 - Different <i><span style="color:#477bbe">groups</span></i> must access the [[0 - Core Concepts Intro ✅|node]] to perform different tasks
-	- Admins for administrative tasks
-	- Developers for testing and deploying applications
-	- End <i><span style="color:#477bbe">users</span></i> for accessing the deployed applications
-	- Third party applications for integration purposes
+	- <i><span style="color:#477bbe">Admins</span></i> - for administrative tasks
+	- <i><span style="color:#477bbe">Developers</span></i> - for testing and deploying applications
+	- <i><span style="color:#477bbe">Endusers</span></i> - for accessing the deployed applications
+	- <i><span style="color:#477bbe">Third Party Applications</span></i> - for integration purposes
 
 - One way to <b><i><span style="color:#d46644">secure</span></i></b> the [[0 - Core Concepts Intro ✅|cluster]] is to <b><i><span style="color:#d46644">secure</span></i></b> the communication between internal components and securing management access to the [[0 - Core Concepts Intro ✅|cluster]] through <b><i><span style="color:#d46644">authentication</span></i></b> and [[7 - Authorization|authorization]] mechanisms
 
-- The <b><i><span style="color:#d46644">security</span></i></b> of <i><span style="color:#477bbe">end-users</span></i> who access the <u>applications</u> deployed on the [[0 - Core Concepts Intro ✅|cluster]] is managed by the applications themselves internally
+- The <b><i><span style="color:#d46644">security</span></i></b> of <i><span style="color:#477bbe">endusers</span></i> who access the <u>applications</u> deployed on the [[0 - Core Concepts Intro ✅|cluster]] is managed internally by the applications themselves
 
-- <span style="color:#5c7e3e">Kubernetes</span> does not manage <i><span style="color:#477bbe">user</span></i> accounts natively, it relies on external sources like a file with <i><span style="color:#477bbe">user</span></i> details, certificates or a third-party <b><i><span style="color:#d46644">security</span></i></b> [[10 - Services ✅|service]] like <b><i><span style="color:#d46644">LDAP</span></i></b> to manage these <i><span style="color:#477bbe">users</span></i>.
+- <span style="color:#5c7e3e">Kubernetes</span> does not manage <i><span style="color:#477bbe">user</span></i> accounts natively, it relies on external sources like a file with <i><span style="color:#477bbe">user</span></i> details, certificates or a third-party <b><i><span style="color:#d46644">security</span></i></b> [[10 - Services ✅|service]] like <b><i><span style="color:#d46644">LDAP</span></i></b> to manage these <i><span style="color:#477bbe">users</span></i>
 
-- In case of [[10 - Service Accounts|Service Accounts]], <span style="color:#5c7e3e">Kubernetes</span> can manage them
+- In the case of [[10 - Service Accounts|Service Accounts]], <span style="color:#5c7e3e">Kubernetes</span> can manage them
+	- You can create and manage [[10 - Service Accounts|Service Accounts]] using the <span style="color:#5c7e3e">Kubernetes</span> API
 
-- You can create and manage [[10 - Service Accounts|Service Accounts]] using the <span style="color:#5c7e3e">Kubernetes</span> API
-
-        kubernetes create serviceaccount SERVICE_ACCOUNT_NAME
+        <span style="color:red">kubectl create serviceaccount SERVICE_ACCOUNT_NAME</span>
 
 ![[auth-1.png]]
 
@@ -22,7 +21,7 @@
 
 - All <i><span style="color:#477bbe">user</span></i> access is managed by the [[2 - Kube API server ✅|API Server]]
 
-- Whether you are accessing the [[0 - Core Concepts Intro ✅|cluster]] through the kubectl tool or the API directly, all of the request go through the [[2 - Kube API server ✅|kube-apiserver]]
+- Whether you are accessing the [[0 - Core Concepts Intro ✅|cluster]] through the <span style="color:#5c7e3e">Kubectl</span> tool or the API directly, all of the request go through the [[2 - Kube API server ✅|kube-apiserver]]
 
 - The [[2 - Kube API server ✅|kube-apiserver]] <b><i><span style="color:#d46644">authenticates</span></i></b> the requests before processing it
 
@@ -44,7 +43,7 @@
 	- The file has three columns
 		- Username
 		- Password
-		- <i><span style="color:#477bbe">user</span></i> ID
+		- <i><span style="color:#477bbe">User</span></i> ID
 
 - After the <u><i>static</i></u> <b><i><span style="color:#d46644">authentication</span></i></b> file is created, we then pass the file name as an option to the [[2 - Kube API server ✅|kube-apiserver]] service file
 
@@ -61,7 +60,7 @@
 
 ![[auth-7.png]]
 
-- In the <u><i>static</i></u> <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">authentication</span></i></b> csv file, there can be an optional 4th column with the group details to assign <i><span style="color:#477bbe">users</span></i> to specific <i><span style="color:#477bbe">groups</span></i> similarly instead of a <u><i>static password</i></u> file
+- In the <u><i>static</i></u> <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">authentication</span></i></b> csv file, there can be an optional 4th column with the <i><span style="color:#477bbe">group</span></i> details to assign <i><span style="color:#477bbe">users</span></i> to specific <i><span style="color:#477bbe">groups</span></i> similarly instead of a <u><i>static password</i></u> file
 
 ![[auth-8.png]]
 
@@ -73,7 +72,7 @@
 
 ![[auth-10.png]]
 
-- While <b><i><span style="color:#d46644">authenticating</span></i></b>, specify the token as an [[7 - Authorization|authorization]] bearer token to your request
+- While <b><i><span style="color:#d46644">authenticating</span></i></b>, specify the token as an [[7 - Authorization|authorization]] <i><span style="color:#477bbe">bearer token</span></i> to your request
 
 ![[auth-11.png]]
 

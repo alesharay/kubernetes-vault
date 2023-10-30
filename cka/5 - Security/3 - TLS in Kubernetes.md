@@ -44,7 +44,7 @@
 
 - The <i><span style="color:#477bbe">client</span></i> that access the [[2 - Kube API server ✅|kube-apiserver]] is the <i><span style="color:#477bbe">user's</span></i> and <i><span style="color:#477bbe">administrator's</span></i> <span style="color:#5c7e3e">kubectl</span> or a <span style="color:#5c7e3e">ReST API</span>
 
-- The <i><span style="color:#477bbe">admin user</span></i> requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]] to the [[2 - Kube API server ✅|kube-apiserver]]
+- The <i><span style="color:#477bbe">admin user</span></i> requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication ✅|authenticate]] to the [[2 - Kube API server ✅|kube-apiserver]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">admin.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">admin.key</span>
 
 ![[tlsk-6.png]]
@@ -58,12 +58,12 @@
 
 ![[tlsk-7.png]]
 
-- The [[3 - Kube Controller Manager ✅|kube-controller manager]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
+- The [[3 - Kube Controller Manager ✅|kube-controller manager]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication ✅|authenticate]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">controller-manager.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">controller-manager.key</span>
 
 ![[tlsk-8.png]]
 
-- The [[6 - Kube Proxy ✅|kube-proxy]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication|authenticate]]
+- The [[6 - Kube Proxy ✅|kube-proxy]] is a <i><span style="color:#477bbe">client</span></i> that accesses the [[2 - Kube API server ✅|kube-apiserver]] and requires a [[3.1 - Certification Creation|certificate]] to [[1 - Authentication ✅|authenticate]]
 	- We name the generated [[3.1 - Certification Creation|certificate]] <span style="color:red">kube-proxy.crt</span> and <b><i><span style="color:#d46644">private key</span></i></b> <span style="color:red">kube-proxy.key</span>
 
 ![[tlsk-9.png]]
@@ -74,7 +74,7 @@
 
 - The [[2 - Kube API server ✅|kube-apiserver]] is the only <i><span style="color:#477bbe">server</span></i> that talks to the [[1 - ETCD ✅|etcd server]]
 
-- As far as the [[1 - ETCD ✅|etcd server]] is concerned, the [[2 - Kube API server ✅|kube-apiserver]] is just another <i><span style="color:#477bbe">client</span></i> and thus needs to [[1 - Authentication|authenticate]] the [[2 - Kube API server ✅|kube-apiserver]]
+- As far as the [[1 - ETCD ✅|etcd server]] is concerned, the [[2 - Kube API server ✅|kube-apiserver]] is just another <i><span style="color:#477bbe">client</span></i> and thus needs to [[1 - Authentication ✅|authenticate]] the [[2 - Kube API server ✅|kube-apiserver]]
 	- The same <b><i><span style="color:#d46644">keys</span></i></b> from serving its own API service can be used (<span style="color:red">apiservice.crt</span> and <span style="color:red">apiservice.key</span>) or you can generate new ones specifically for this purpose
 
 - The [[2 - Kube API server ✅|kube-apiserver]] talks to the [[5 - Kubelet ✅|kubelet server]] on each of the individual [[0 - Core Concepts Intro ✅|nodes]]

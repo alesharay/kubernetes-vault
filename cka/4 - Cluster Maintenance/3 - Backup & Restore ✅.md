@@ -75,7 +75,7 @@
 
 6. Your [[0 - Core Concepts Intro ✅|cluster]] should now be back in the original state
 
-7. Remember to specify the [[3.1 - Certification Creation|certificate]] files for [[1 - Authentication|authentication]]
+7. Remember to specify the [[3.1 - Certification Creation|certificate]] files for [[1 - Authentication ✅|authentication]]
 	1. Specify the endpoint to the [[1 - ETCD ✅|etcd]] store and the [[3.1 - Certification Creation|ca certificate]], the [[3.1 - Certification Creation|etcd server certificate]], and the key
 
 ![[backup-9.png]]
