@@ -3,7 +3,7 @@
 - This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics ✅|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>
 
 - When the current <i><span style="color:#477bbe">admin</span></i> receives the new <i><span style="color:#477bbe">admin's</span></i> [[3.1 - Certification Creation|CSR]], the current <i><span style="color:#477bbe">admin</span></i> would [[2 - TLS Basics ✅|sign]] the [[3.1 - Certification Creation|CSR]] using their <i><span style="color:#477bbe">CA server's</span></i> [[2 - TLS Basics ✅|private key]] and [[3.1 - Certification Creation|root certificate]], then send back the [[3.1 - Certification Creation|signed certificate]] to the new <i><span style="color:#477bbe">admin</span></i>
-	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication ✅|authenticated]] to the [[0 - Core Concepts Intro ✅|cluster]]
+	- The new <i><span style="color:#477bbe">admin</span></i> is now [[1 - Authentication ✅ ✅|authenticated]] to the [[0 - Core Concepts Intro ✅|cluster]]
 
 - The [[2 - TLS Basics ✅|CA]] is a pair of [[2 - TLS Basics ✅|key]] and [[3.1 - Certification Creation|certificate]] files that have been generated
 
