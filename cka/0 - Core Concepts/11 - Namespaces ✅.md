@@ -45,7 +45,7 @@
 
 #### Contexts
 
-- [[5 - Kubeconfig|Contexts]] are used to manage multiple [[0 - Core Concepts Intro ✅|clusters]] in multiple environments from the same management system
+- [[5 - Kubeconfig ✅|Contexts]] are used to manage multiple [[0 - Core Concepts Intro ✅|clusters]] in multiple environments from the same management system
 
 
 #### Resource Quotas

@@ -1,5 +1,5 @@
 - <i><span style="color:#477bbe">Admins</span></i> and other <i><span style="color:#477bbe">users</span></i> of a [[0 - Core Concepts Intro ✅|cluster]] (developers, testers, etc…) are able to perform all types of operations in the [[0 - Core Concepts Intro ✅|cluster]]; thus <b><i><span style="color:#d46644">authorization</span></i></b> helps limit how much power a particular <i><span style="color:#477bbe">user</span></i> has
-	- Ex. A developer shouldn't have the same access as an <i><span style="color:#477bbe">admin</span></i> (ie. the ability to modify the [[5 - Kubeconfig|kubeconfig]] file)
+	- Ex. A developer shouldn't have the same access as an <i><span style="color:#477bbe">admin</span></i> (ie. the ability to modify the [[5 - Kubeconfig ✅|kubeconfig]] file)
 
 - There are different <b><i><span style="color:#d46644">authorization</span></i></b> mechanisms supported by <span style="color:#5c7e3e">Kubernetes</span>
 	- Node Auth

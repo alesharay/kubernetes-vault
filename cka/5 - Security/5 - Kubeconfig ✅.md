@@ -3,7 +3,7 @@
 
 ![[kubeconfig-1.png]]
 
-- For [[13 - Kubectl Apply ✅|kubectl]], the easiest way to query the <span style="color:#5c7e3e">Kubernetes</span> REST API without having to pass in the [[3.1 - Certification Creation|certificate]] and key names each time, is by creating a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file and specify its when using the <span style="color:red">kubectl get</span> command
+- For [[13 - Kubectl Apply ✅|kubectl]], the easiest way to query the <span style="color:#5c7e3e">Kubernetes</span> REST API without having to pass in the [[3.1 - Certification Creation|certificate]] and [[3.1 - Certification Creation|key]] names each time, is by creating a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file and specify it when using the <span style="color:red">kubectl get</span> command
 
 ![[kubeconfig-2.png]]
 
@@ -24,15 +24,15 @@
 
 - <b><i><span style="color:#d46644">Contexts</span></i></b> (on the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file) marry the <i><span style="color:#477bbe">users</span></i> and [[0 - Core Concepts Intro ✅|clusters]] together by defining which <i><span style="color:#477bbe">user account</span></i> will be used to access which [[0 - Core Concepts Intro ✅|cluster]]
 
-- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <i><span style="color:#477bbe">server</span></i> specification and [[3.1 - Certification Creation|CA cert]]  info would go into the [[0 - Core Concepts Intro ✅|cluster]] section
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <i><span style="color:#477bbe">server</span></i> specification and [[3.1 - Certification Creation|CA cert]] info would go into the [[0 - Core Concepts Intro ✅|cluster]] section
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <i><span style="color:#477bbe">admin</span></i> [[3.1 - Certification Creation|user keys]] and [[3.1 - Certification Creation|certificates]], goes into the <i><span style="color:#477bbe">users</span></i> section
 
-- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, once the [[0 - Core Concepts Intro ✅|cluster]] and user sections are setup, you then setup <b><i><span style="color:#d46644">contexts</span></i></b> to specify which <i><span style="color:#477bbe">user account</span></i> will access which [[0 - Core Concepts Intro ✅|cluster]]
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, once the [[0 - Core Concepts Intro ✅|cluster]] and <i><span style="color:#477bbe">user</span></i> sections are setup, you then setup <b><i><span style="color:#d46644">contexts</span></i></b> to specify which <i><span style="color:#477bbe">user account</span></i> will access which [[0 - Core Concepts Intro ✅|cluster]]
 
-- The current <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is v1 and the <span style="color:#5c7e3e">kind</span> is <b><i><span style="color:#d46644">config</span></i></b>
+- The current <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">kubeconfig</span></i></b> file is v1 and the <span style="color:#5c7e3e">kind</span> is <b><i><span style="color:#d46644">Config</span></i></b>
 
-- Each of the <b><i><span style="color:#d46644">kubeconfig</span></i></b> sections ([[0 - Core Concepts Intro|[[0 - Core Concepts Intro ✅|Cluster]]]], <b><i><span style="color:#d46644">contexts</span></i></b>, <i><span style="color:#477bbe">users</span></i>) are in array format so that you can specify multiple of each in the same file
+- Each of the <b><i><span style="color:#d46644">kubeconfig</span></i></b> sections ([[0 - Core Concepts Intro ✅|Cluster]], <b><i><span style="color:#d46644">contexts</span></i></b>, <i><span style="color:#477bbe">users</span></i>) are in array format so that you can specify multiple of each in the same file
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, each [[0 - Core Concepts Intro ✅|cluster]] has the following properties:
 	- name (string/property): name of the [[0 - Core Concepts Intro ✅|cluster]]
@@ -42,17 +42,17 @@
 			- ( * ) = only one of these fields are needed
 		- <i><span style="color:#477bbe">server</span></i>:  the DNS for the [[2 - Kube API server ✅|kube-apiserver]]
 
-- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the user section has the following properties:
+- In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, each <i><span style="color:#477bbe">user</span></i> has the following properties:
 	- name (string/property): name of the <i><span style="color:#477bbe">user account</span></i>
-	- User (dictionary: details of the user
+	- user (dictionary): details of the user
 		- [[3.1 - Certification Creation|client-certificate]] (string/property): the signed [[3.1 - Certification Creation|TLS certificate]] for the <i><span style="color:#477bbe">user account</span></i> (either filename/location or <span style="color:#5c7e3e">base64</span> encoded string)
 		- [[3.1 - Certification Creation|client-key]] (string/property): the [[3.1 - Certification Creation|private key]] for the <i><span style="color:#477bbe">user account</span></i> (filename/location or <span style="color:#5c7e3e">base64</span> encoded string)
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">contexts</span></i></b> section has the following properties:
-	- name (string/property): whatever name you want to give the <b><i><span style="color:#d46644">context</span></i></b> (may be helpful the indicate the user and [[0 - Core Concepts Intro ✅|cluster]] in the name)
+	- name (string/property): whatever name you want to give the <b><i><span style="color:#d46644">context</span></i></b> (may be helpful to indicate the <i><span style="color:#477bbe">user</span></i> and [[0 - Core Concepts Intro ✅|cluster]] in the name)
 	- <b><i><span style="color:#d46644">context</span></i></b> (dictionary): details of the <i><span style="color:#477bbe">user</span></i> and [[0 - Core Concepts Intro ✅|cluster]] connection
 		- [[0 - Core Concepts Intro ✅|cluster]] (string/property): [[0 - Core Concepts Intro ✅|cluster]] name for the <b><i><span style="color:#d46644">context</span></i></b>
-		- <i><span style="color:#477bbe">user</span></i> (string/property): username for the specified [[0 - Core Concepts Intro ✅|cluster]]
+		- <i><span style="color:#477bbe">user</span></i> (string/property): <i><span style="color:#477bbe">username</span></i> for access to the specified [[0 - Core Concepts Intro ✅|cluster]]
 		- [[11 - Namespaces ✅|namespace]] (string/property): specifies a particular [[11 - Namespaces ✅|namespace]] for that <b><i><span style="color:#d46644">context</span></i></b> so that when that <b><i><span style="color:#d46644">context</span></i></b> is used, you will automatically be in the correct [[11 - Namespaces ✅|namespace]]
 
 - In the <b><i><span style="color:#d46644">kubeconfig</span></i></b> file, the <b><i><span style="color:#d46644">current-context</span></i></b> section specifies the default <b><i><span style="color:#d46644">context</span></i></b> to use when connecting to <span style="color:#5c7e3e">Kubernetes</span>
