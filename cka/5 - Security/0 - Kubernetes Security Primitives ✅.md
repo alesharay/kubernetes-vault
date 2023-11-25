@@ -21,11 +21,11 @@
 	- Integration with external [[1 - Authentication ✅|authentication]] providers - LDAP
 	- Service Accounts - Created for machines
 
-- What can be done, once a <i><span style="color:#477bbe">user</span></i> gains <b><i><span style="color:#d46644">access</span></i></b> to the [[0 - Core Concepts Intro ✅|cluster]], is defined by [[7 - Authorization|authorization]] mechanisms
+- What can be done, once a <i><span style="color:#477bbe">user</span></i> gains <b><i><span style="color:#d46644">access</span></i></b> to the [[0 - Core Concepts Intro ✅|cluster]], is defined by [[7 - Authorization ✅|authorization]] mechanisms
 
 - There are different ways to <b><i><span style="color:#d46644">authorize</span></i></b> as well
-	- Role Based <b><i><span style="color:#d46644">Access</span></i></b> Control (<b><i><span style="color:#d46644">RBAC</span></i></b>) [[7 - Authorization|authorization]]
-	- Attribute Based <b><i><span style="color:#d46644">Access</span></i></b> Control (ABAC) [[7 - Authorization|authorization]]
+	- Role Based <b><i><span style="color:#d46644">Access</span></i></b> Control (<b><i><span style="color:#d46644">RBAC</span></i></b>) [[7 - Authorization ✅|authorization]]
+	- Attribute Based <b><i><span style="color:#d46644">Access</span></i></b> Control (ABAC) [[7 - Authorization ✅|authorization]]
 	- Node Authorizers
 	- Webhooks
 

@@ -2,10 +2,14 @@
 	- Ex. A developer shouldn't have the same access as an <i><span style="color:#477bbe">admin</span></i> (ie. the ability to modify the [[5 - Kubeconfig ✅|kubeconfig]] file)
 
 - There are different <b><i><span style="color:#d46644">authorization</span></i></b> mechanisms supported by <span style="color:#5c7e3e">Kubernetes</span>
-	- Node Auth
-	- Attribute Based Auth (ABAC)
-	- Role Based Auth (RBAC)
-	- Webhook Auth
+	- Node Auth:
+		- a special-purpose _authorization_ mode that specifically authorizes API requests made by kubelets
+	- Attribute Based Auth (ABAC):
+		- uses attributes to determine access
+	- Role Based Auth (RBAC):
+		- provides access _based_ on the _roles_ of individual users
+	- Webhook Auth:
+		- causes Kubernetes to query an outside REST service when determining user privileges
 	- * Always Allow
 	- * Always Deny
 
@@ -26,7 +30,7 @@
 
 - With <b><i><span style="color:#d46644">Attribute Based Authorization</span></i></b>, a policy definition file is created for each <i><span style="color:#477bbe">user</span></i> or <i><span style="color:#477bbe">group</span></i>
 
-- With <b><i><span style="color:#d46644">Attribute Based Authorization</span></i></b>, every time a change needs to be to the security, the policy definition file must be edited manually and the [[2 - Kube API server ✅|API server]] restarted
+- With <b><i><span style="color:#d46644">Attribute Based Authorization</span></i></b>, every time a change needs to be made to the security, the policy definition file must be edited manually and the [[2 - Kube API server ✅|API server]] restarted
 
 ![[authorization-2.png]]
 
@@ -34,10 +38,10 @@
 
 - <b><i><span style="color:#d46644">Role Based Access Controls</span></i></b> (<b><i><span style="color:#d46644">RBAC</span></i></b>) make updating security changes much easier than <b><i><span style="color:#d46644">ABAC</span></i></b>
 
-- With <b><i><span style="color:#d46644">RBAC</span></i></b>, instead of directly associating a <i><span style="color:#477bbe">user</span></i>/<i><span style="color:#477bbe">group</span></i> with a set of permissions, a role is defined and all <i><span style="color:#477bbe">users</span></i>/<i><span style="color:#477bbe">groups</span></i> that fall into that category are associated to the role
-	- Ie. For developers, a role is created with a set of permissions for all developers
+- With <b><i><span style="color:#d46644">RBAC</span></i></b>, instead of directly associating a <i><span style="color:#477bbe">user</span></i> / <i><span style="color:#477bbe">group</span></i> with a set of permissions, a [[8 - Role Based Access Controls|role]] is defined and all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> that fall into that category are associated to the [[8 - Role Based Access Controls|role]]
+	- Ie. For developers, a [[8 - Role Based Access Controls|role]] is created with a set of permissions for all developers
 
-- With <b><i><span style="color:#d46644">RBAC</span></i></b>, whenever a change needs to be made to a <i><span style="color:#477bbe">users</span></i> access, rather than modifying individual policy definition files, simply modify the role and it will reflect on all <i><span style="color:#477bbe">users</span></i>/<i><span style="color:#477bbe">groups</span></i> in that category immediately
+- With <b><i><span style="color:#d46644">RBAC</span></i></b>, whenever a change needs to be made to a <i><span style="color:#477bbe">users</span></i> access, rather than modifying individual policy definition files, simply modify the [[8 - Role Based Access Controls|role]] and it will reflect on all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> in that category immediately
 
 - <b><i><span style="color:#d46644">RBAC</span></i></b> provides a standard approach to managing access within the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
@@ -47,9 +51,9 @@
 	- <span style="color:#5c7e3e">Kubernetes</span> can make an API call to the <span style="color:#5c7e3e">Open Policy Agent</span> with information about the <i><span style="color:#477bbe">user</span></i> and their access requirements
 	- <span style="color:#5c7e3e">Open Policy Agent</span> will then decide if the <i><span style="color:#477bbe">user</span></i> should be permitted
 
-- The **Always Allow** mode allows all requests without performing any <b><i><span style="color:#d46644">authorization</span></i></b> checks
+- The <u><b>Always Allow</b></u> mode allows all requests without performing any <b><i><span style="color:#d46644">authorization</span></i></b> checks
 
-- The **Always Deny** mode denies all requests without performing any <b><i><span style="color:#d46644">authorization</span></i></b> checks
+- The <u><b>Always Deny</b></u> mode denies all requests without performing any <b><i><span style="color:#d46644">authorization</span></i></b> checks
 
 - The <b><i><span style="color:#d46644">authorization</span></i></b> modes are set using the <span style="color:red">--authorization-mode</span> option in the [[2 - Kube API server ✅|kube-apiserver]]
 	- If this option is not set, it defaults to **Always Allow**
@@ -69,5 +73,5 @@
 		- Whenever a mode denies a request, it is forwarded to the next one in the chain
 		- The <b><i><span style="color:#d46644">RBAC</span></i></b> mode performs its checks and grants the <i><span style="color:#477bbe">user</span></i> permission
 			- <b><i><span style="color:#d46644">Authorization</span></i></b> is then complete and the <i><span style="color:#477bbe">user</span></i> is given access
-		- As soon as a mode approves a request, no more checks are done and the [[0 - Core Concepts Intro ✅|node]]/<i><span style="color:#477bbe">user</span></i>/<i><span style="color:#477bbe">group</span></i> is granted permission
-			- Similar to when an if-statement finds its true conditional
+		- As soon as a mode approves a request, no more checks are done and the [[0 - Core Concepts Intro ✅|node]] / <i><span style="color:#477bbe">user</span></i> / <i><span style="color:#477bbe">group</span></i> is granted permission
+			- Similar to when an if-statement finds its true condition

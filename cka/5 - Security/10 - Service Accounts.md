@@ -55,7 +55,7 @@
 
 ![[servicea-4.png]]
 
-- Using <span style="color:#5c7e3e">curl</span>, you can provide the <span style="color:#5c7e3e">bearer token</span> as an [[7 - Authorization|authorization]] header while making the call to the <span style="color:#5c7e3e">Kubernetes</span> API
+- Using <span style="color:#5c7e3e">curl</span>, you can provide the <span style="color:#5c7e3e">bearer token</span> as an [[7 - Authorization ✅|authorization]] header while making the call to the <span style="color:#5c7e3e">Kubernetes</span> API
 
 ![[servicea-5.png]]
 

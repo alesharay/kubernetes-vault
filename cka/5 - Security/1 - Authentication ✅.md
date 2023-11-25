@@ -4,7 +4,7 @@
 	- <i><span style="color:#477bbe">Endusers</span></i> - for accessing the deployed applications
 	- <i><span style="color:#477bbe">Third Party Applications</span></i> - for integration purposes
 
-- One way to <b><i><span style="color:#d46644">secure</span></i></b> the [[0 - Core Concepts Intro ✅|cluster]] is to <b><i><span style="color:#d46644">secure</span></i></b> the communication between internal components and securing management access to the [[0 - Core Concepts Intro ✅|cluster]] through <b><i><span style="color:#d46644">authentication</span></i></b> and [[7 - Authorization|authorization]] mechanisms
+- One way to <b><i><span style="color:#d46644">secure</span></i></b> the [[0 - Core Concepts Intro ✅|cluster]] is to <b><i><span style="color:#d46644">secure</span></i></b> the communication between internal components and securing management access to the [[0 - Core Concepts Intro ✅|cluster]] through <b><i><span style="color:#d46644">authentication</span></i></b> and [[7 - Authorization ✅|authorization]] mechanisms
 
 - The <b><i><span style="color:#d46644">security</span></i></b> of <i><span style="color:#477bbe">endusers</span></i> who access the <u>applications</u> deployed on the [[0 - Core Concepts Intro ✅|cluster]] is managed internally by the applications themselves
 
@@ -72,7 +72,7 @@
 
 ![[auth-10.png]]
 
-- While <b><i><span style="color:#d46644">authenticating</span></i></b>, specify the token as an [[7 - Authorization|authorization]] <i><span style="color:#477bbe">bearer token</span></i> to your request
+- While <b><i><span style="color:#d46644">authenticating</span></i></b>, specify the token as an [[7 - Authorization ✅|authorization]] <i><span style="color:#477bbe">bearer token</span></i> to your request
 
 ![[auth-11.png]]
 
