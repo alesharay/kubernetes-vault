@@ -1,4 +1,4 @@
-- A <b><i><span style="color:#d46644">role</span></i></b> is created by creating a <b><i><span style="color:#d46644">role</span></i></b> object
+- A <b><i><span style="color:#d46644">role</span></i></b> is created by creating a <b><i><span style="color:#d46644">Role</span></i></b> object
 
 - The <span style="color:#5c7e3e">apiVersion</span> for a <b><i><span style="color:#d46644">role</span></i></b> definition file is "rbac.authorization.k8s.io/v1"
 

@@ -38,10 +38,10 @@
 
 - <b><i><span style="color:#d46644">Role Based Access Controls</span></i></b> (<b><i><span style="color:#d46644">RBAC</span></i></b>) make updating security changes much easier than <b><i><span style="color:#d46644">ABAC</span></i></b>
 
-- With <b><i><span style="color:#d46644">RBAC</span></i></b>, instead of directly associating a <i><span style="color:#477bbe">user</span></i> / <i><span style="color:#477bbe">group</span></i> with a set of permissions, a [[8 - Role Based Access Controls|role]] is defined and all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> that fall into that category are associated to the [[8 - Role Based Access Controls|role]]
-	- Ie. For developers, a [[8 - Role Based Access Controls|role]] is created with a set of permissions for all developers
+- With <b><i><span style="color:#d46644">RBAC</span></i></b>, instead of directly associating a <i><span style="color:#477bbe">user</span></i> / <i><span style="color:#477bbe">group</span></i> with a set of permissions, a [[8 - Role Based Access Controls ✅|role]] is defined and all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> that fall into that category are associated to the [[8 - Role Based Access Controls ✅|role]]
+	- Ie. For developers, a [[8 - Role Based Access Controls ✅|role]] is created with a set of permissions for all developers
 
-- With <b><i><span style="color:#d46644">RBAC</span></i></b>, whenever a change needs to be made to a <i><span style="color:#477bbe">users</span></i> access, rather than modifying individual policy definition files, simply modify the [[8 - Role Based Access Controls|role]] and it will reflect on all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> in that category immediately
+- With <b><i><span style="color:#d46644">RBAC</span></i></b>, whenever a change needs to be made to a <i><span style="color:#477bbe">users</span></i> access, rather than modifying individual policy definition files, simply modify the [[8 - Role Based Access Controls ✅|role]] and it will reflect on all <i><span style="color:#477bbe">users</span></i> / <i><span style="color:#477bbe">groups</span></i> in that category immediately
 
 - <b><i><span style="color:#d46644">RBAC</span></i></b> provides a standard approach to managing access within the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 
