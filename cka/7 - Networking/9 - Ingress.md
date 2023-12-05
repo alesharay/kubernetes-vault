@@ -93,7 +93,7 @@
 
 ![[ingress-15.png]]
 
-- To summarize, with a [[9 - Deployments ✅|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services ✅|service]] to expose it, a [[4 - ConfigMaps ✅|configMap]] to feed configuration data, and a [[10 - Service Accounts|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls ✅|roles]], [[8 - Role Based Access Controls ✅|clusterroles]], and [[8 - Role Based Access Controls ✅|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
+- To summarize, with a [[9 - Deployments ✅|deployment]] of the <b><i><span style="color:#d46644">ingress controller</span></i></b> image, a [[10 - Services ✅|service]] to expose it, a [[4 - ConfigMaps ✅|configMap]] to feed configuration data, and a [[10 - Service Accounts ✅|service account]] with the correct permissions to access all of these objects (this includes [[8 - Role Based Access Controls ✅|roles]], [[8 - Role Based Access Controls ✅|clusterroles]], and [[8 - Role Based Access Controls ✅|clusterrolebindings]] as needed), an <b><i><span style="color:#d46644">ingress controller</span></i></b> should be ready in its simplest form
 
 ![[ingress-16.png]]
 

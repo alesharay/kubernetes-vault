@@ -10,8 +10,8 @@
 
 - <span style="color:#5c7e3e">Kubernetes</span> does not manage <i><span style="color:#477bbe">user</span></i> accounts natively, it relies on external sources like a file with <i><span style="color:#477bbe">user</span></i> details, certificates or a third-party <b><i><span style="color:#d46644">security</span></i></b> [[10 - Services ✅|service]] like <b><i><span style="color:#d46644">LDAP</span></i></b> to manage these <i><span style="color:#477bbe">users</span></i>
 
-- In the case of [[10 - Service Accounts|Service Accounts]], <span style="color:#5c7e3e">Kubernetes</span> can manage them
-	- You can create and manage [[10 - Service Accounts|Service Accounts]] using the <span style="color:#5c7e3e">Kubernetes</span> API
+- In the case of [[10 - Service Accounts ✅|Service Accounts]], <span style="color:#5c7e3e">Kubernetes</span> can manage them
+	- You can create and manage [[10 - Service Accounts ✅|Service Accounts]] using the <span style="color:#5c7e3e">Kubernetes</span> API
 
         <span style="color:red">kubectl create serviceaccount SERVICE_ACCOUNT_NAME</span>
 

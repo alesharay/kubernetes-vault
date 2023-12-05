@@ -1,21 +1,21 @@
-- The concept of <b><i><span style="color:#d46644">service accounts</span></i></b> is linked to other security related resources in <span style="color:#5c7e3e">Kubernetes</span>
-	- Ie. authentication
+- The concept of <b><i><span style="color:#d46644">service accounts</span></i></b> is linked to other security related resources in <span style="color:#5c7e3e">Kubernetes</span>:
+	- authentication
 	- authorization
 	- roles
 	- rolebindings
 	- clusterroles
 	- clusterrolebindings
-	- etc
+	- etc...
 
 - There are two types of accounts in <span style="color:#5c7e3e">Kubernetes</span>:
 	- User
 	- Service
 
-- <i><span style="color:#477bbe">User</span></i> accounts are used by humans
+- <i><span style="color:#477bbe">User</span></i> accounts are used by <u><b><i>humans</i></b></u>
 	- Ie. Admins accessing the [[0 - Core Concepts Intro ✅|cluster]] to perform administrative tasks
 	- Ie. Developers accessing the [[0 - Core Concepts Intro ✅|cluster]] to deploy applications, etc..
 
-- <b><i><span style="color:#d46644">Service accounts</span></i></b> are used by machines
+- <b><i><span style="color:#d46644">Service accounts</span></i></b> are used by <u><b><i>machines</i></b></u>
 
 - <b><i><span style="color:#d46644">Service accounts</span></i></b> could be accounts used by an application to interact with the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 	- Ie. A monitoring application like <span style="color:#5c7e3e">Prometheus</span> uses a <b><i><span style="color:#d46644">service account</span></i></b> to poll the <span style="color:#5c7e3e">Kubernetes</span> API for performance metrics
@@ -32,21 +32,16 @@
 
 ![[servicea-2.png]]
 
-- When a <b><i><span style="color:#d46644">service account</span></i></b> is created, it creates a token automatically *
+- A <b><i><span style="color:#d46644">service account token</span></i></b> is what must be used by the external application while [[1 - Authentication ✅|authenticating]] to the <span style="color:#5c7e3e">Kubernetes</span> API
 
-![[servicea-3.png]]
-
-- The <b><i><span style="color:#d46644">service account token</span></i></b> is what must be used by the external application while [[1 - Authentication ✅|authenticating]] to the <span style="color:#5c7e3e">Kubernetes</span> API
-
-- The <b><i><span style="color:#d46644">service account token</span></i></b> is stored as a [[5 - Secrets ✅|secret]] object
+- A <b><i><span style="color:#d46644">service account token</span></i></b> can be stored as a [[5 - Secrets ✅|secret]] object
 
 - If the <b><i><span style="color:#d46644">service account token</span></i></b> is not created automatically, one can be created by running the following command:
 
 		kubectl create token <sa name> -n <sa namespace>
 
-- When a <b><i><span style="color:#d46644">service account</span></i></b> is created, it first creates a <b><i><span style="color:#d46644">service account</span></i></b> object and then generates a token for the <b><i><span style="color:#d46644">service account</span></i></b>
-
-- After a <b><i><span style="color:#d46644">service account</span></i></b> object is created and a token is generated, a [[5 - Secrets ✅|secret]] is then created to store the token inside, and the [[5 - Secrets ✅|secret]] object is linked to the <b><i><span style="color:#d46644">service account</span></i></b>
+- After a <b><i><span style="color:#d46644">service account</span></i></b> object is created, a token can be generated and stored as a [[5 - Secrets ✅|secret]]
+	- The [[5 - Secrets ✅|secret]] object can then be linked to the <b><i><span style="color:#d46644">service account</span></i></b>
 
 - To view the <b><i><span style="color:#d46644">service account</span></i></b> token, view the [[5 - Secrets ✅|secret]] object first by running the <span style="color:red">kubectl describe serviceaccount</span> command with the name of the <b><i><span style="color:#d46644">service account</span></i></b> to find out the name of the [[5 - Secrets ✅|secret]] that was created, then <span style="color:red">kubectl describe secret</span> with the name of the [[5 - Secrets ✅|secret]] to see the encoded token
 	- Decode the token using <span style="color:#5c7e3e">base64</span> decoding
