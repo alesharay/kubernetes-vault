@@ -56,7 +56,7 @@
 
 ![[ingress-8.png]]
 
-- The manifest file type for an <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments ✅|deployment]] and the [[11 - Image Security|image]] to be used is the one that corresponds with your chosen solution
+- The manifest file type for an <b><i><span style="color:#d46644">ingress controller</span></i></b> is [[9 - Deployments ✅|deployment]] and the [[11 - Image Security ✅|image]] to be used is the one that corresponds with your chosen solution
 	- This would be a special build of that [[10 - Services ✅|service]] created specifically to be used as an <b><i><span style="color:#d46644">ingress controller</span></i></b> in <span style="color:#5c7e3e">Kubernetes</span> which means it has its own set of requirements
 
 - For <span style="color:#5c7e3e">NGINX</span>, within the image, the <span style="color:#5c7e3e">NGINX</span> program is stored at location <span style="color:red">/nginx-ingress-controller</span>; therefore that must be passed as the command to start the <span style="color:#5c7e3e">NGINX controller</span> [[10 - Services ✅|service]]

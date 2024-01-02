@@ -2,7 +2,7 @@
 
 - The <b><span style="color:#d46644">kubelet</span></b> acts as a <i><span style="color:#477bbe">client</span></i>, and the <i><span style="color:#477bbe">runtime engine</span></i> acts as the <i><span style="color:#477bbe">server</span></i>.
 
-- When <b><span style="color:#d46644">kubelet</span></b> receives instructions to load a [[7 - Pods ✅|pod]] onto a [[0 - Core Concepts Intro ✅|node]], it requests the <i><span style="color:#477bbe">container runtime engine</span></i> to pull the required [[11 - Image Security|image]] and run an instance
+- When <b><span style="color:#d46644">kubelet</span></b> receives instructions to load a [[7 - Pods ✅|pod]] onto a [[0 - Core Concepts Intro ✅|node]], it requests the <i><span style="color:#477bbe">container runtime engine</span></i> to pull the required [[11 - Image Security ✅|image]] and run an instance
 
 - The <b><span style="color:#d46644">kubelet</span></b> then continues to monitor the state of the [[7 - Pods ✅|pod]] and the <i><span style="color:#477bbe">container(s)</span></i> in it and reports to the [[2 - Kube API server ✅|kube-apiserver]] on a timely basis
 

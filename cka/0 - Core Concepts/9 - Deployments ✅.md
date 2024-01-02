@@ -4,14 +4,14 @@
 
 - <b><span style="color:#d46644">Deployment</span></b> is a higher-level concept that manages [[8 - ReplicaSets ✅|ReplicaSets]] and provides [[12 - Declarative vs Imperative ✅|declarative]] updates to [[7 - Pods ✅|pods]] along with a lot of other useful features
 
-- To update the [[11 - Image Security|image]] with the <span style="color:red">kubectl set image</span> command, you'll need to give the [[11 - Image Security|image]] name and tag
+- To update the [[11 - Image Security ✅|image]] with the <span style="color:red">kubectl set image</span> command, you'll need to give the [[11 - Image Security ✅|image]] name and tag
 
 	`kubectl set image deployment/<deployment_name> <container_name>=<image:tag>`
 
 	- If multiple <i><span style="color:#d46644">containers</span></i>, separate by commas ( , )
 	- If all <i><span style="color:#d46644">containers</span></i>, use star ( * ) for the container_name
 
-- To update an [[11 - Image Security|image]] in the definition files, you can edit the file directly and use the <span style="color:red">kubectl apply -f</span> command when the changes are saved
+- To update an [[11 - Image Security ✅|image]] in the definition files, you can edit the file directly and use the <span style="color:red">kubectl apply -f</span> command when the changes are saved
 	- or you can use the <span style="color:red">kubectl set image</span> command
 
 - Using the <span style="color:red">--record</span> flag when creating a new <b><span style="color:#d46644">deployment</span></b> will take note of any change requests so that in the status check, you can see the reason for the change

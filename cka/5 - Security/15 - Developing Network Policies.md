@@ -28,7 +28,7 @@
 	- Thus a separate <span style="color:#5c7e3e">rule</span> is not needed
 
 - When deciding on what type of <span style="color:#5c7e3e">rule</span> needs to be created, you only need to be concerned about the direction in which the requests originate
-	- This is denoted by the straight line in the [[11 - Image Security|image]]
+	- This is denoted by the straight line in the [[11 - Image Security ✅|image]]
 
 ![[developing-3.png]]
 

@@ -16,7 +16,7 @@
 
 - All processes run by a [[7 - Pods ✅|container]] are in fact run on the <i><span style="color:#477bbe">host</span></i> itself but in their own [[11 - Namespaces ✅|namespace]]
 	- As far as the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]] is concerned, it is in its own [[11 - Namespaces ✅|namespace]] and it can see its own processes only
-	- It cannot see anything outside of it or in any other [[11 - Namespaces ✅|namespace]]
+	- It cannot see anything outside of it's own [[11 - Namespaces ✅|namespace]] or in any other [[11 - Namespaces ✅|namespace]]
 
 - When you list processes within the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]], you see the processes with their process IDs
 
@@ -37,18 +37,18 @@
 
 - Both in the [[7 - Pods ✅|container]] and outside of the [[7 - Pods ✅|container]] as the <i><span style="color:#477bbe">host</span></i>, the process is run as the <i><span style="color:#477bbe">root user</span></i>
 
-- If you don't want processes within the [[7 - Pods ✅|container]] to run as the <i><span style="color:#477bbe">root user</span></i>, you may set the <i><span style="color:#477bbe">user</span></i> using the <span style="color:red">kubectl --user</span> flag within the <span style="color:#5c7e3e">Docker</span> run command
+- If you don't want processes within the [[7 - Pods ✅|container]] to run as the <i><span style="color:#477bbe">root user</span></i>, you may set the <i><span style="color:#477bbe">user</span></i> using the <span style="color:red">--user</span> flag within the <span style="color:#5c7e3e">Docker</span> run command
 	- You will see that the process now runs with the new <i><span style="color:#477bbe">user</span></i> ID
 
 ![[psd-6.png]]
 
-- Another way to enforce <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">security</span></i></b> in [[7 - Pods ✅|containers]] is to define the <i><span style="color:#477bbe">user</span></i> in the [[11 - Image Security|images]] themselves at the time of creation
+- Another way to enforce <i><span style="color:#477bbe">user</span></i> <b><i><span style="color:#d46644">security</span></i></b> in [[7 - Pods ✅|containers]] is to define the <i><span style="color:#477bbe">user</span></i> in the [[11 - Image Security ✅|images]] themselves at the time of creation
 
-- To define the <i><span style="color:#477bbe">user</span></i> in the [[11 - Image Security|image]], use the <i><span style="color:#477bbe">USER</span></i> instruction in the <span style="color:#5c7e3e">Dockerfile</span> then give it the <i><span style="color:#477bbe">user</span></i> ID, then build the custom [[11 - Image Security|image]]
+- To define the <i><span style="color:#477bbe">user</span></i> in the [[11 - Image Security ✅|image]], use the <i><span style="color:#477bbe">USER</span></i> instruction in the <span style="color:#5c7e3e">Dockerfile</span> then give it the <i><span style="color:#477bbe">user</span></i> ID, then build the custom [[11 - Image Security ✅|image]]
 
 ![[psd-7.png]]
 
-- When the <i><span style="color:#477bbe">user</span></i> is specified within the [[11 - Image Security|image]], you can run the [[7 - Pods ✅|container]] without specifying the <i><span style="color:#477bbe">user</span></i> and when you output the processes, you will see the <i><span style="color:#477bbe">user</span></i> is the <i><span style="color:#477bbe">user</span></i> specified at creation time
+- When the <i><span style="color:#477bbe">user</span></i> is specified within the [[11 - Image Security ✅|image]], you can run the [[7 - Pods ✅|container]] without specifying the <i><span style="color:#477bbe">user</span></i> and when you output the processes, you will see the <i><span style="color:#477bbe">user</span></i> is the <i><span style="color:#477bbe">user</span></i> specified at creation time
 
 ![[psd-8.png]]
 
@@ -67,11 +67,11 @@
 
 ![[psd-10.png]]
 
-- If you wish to override the default behavior of the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]] and provide additional privileges than what is available, then use the "<span style="color:red">cap-add</span>" option in the <span style="color:red">docker run</span> command
+- If you wish to override the default behavior of the <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|container]] and provide additional privileges than what is available, then use the "<span style="color:red">--cap-add</span>" option in the <span style="color:red">docker run</span> command
 
 ![[psd-11.png]]
 
-- Similar to adding privileges to a [[7 - Pods ✅|container]] <i><span style="color:#477bbe">user</span></i>, you drop privileges using the "<span style="color:red">cap drop</span>" option with the <span style="color:red">docker run</span> command
+- Similar to adding privileges to a [[7 - Pods ✅|container]] <i><span style="color:#477bbe">user</span></i>, you drop privileges using the "<span style="color:red">--cap-drop</span>" option with the <span style="color:red">docker run</span> command
 
 ![[psd-12.png]]
 

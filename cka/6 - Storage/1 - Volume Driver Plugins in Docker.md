@@ -1,4 +1,4 @@
-- <b><i><span style="color:#d46644">Storage drivers</span></i></b> help manage <b><i><span style="color:#d46644">storage</span></i></b> on [[11 - Image Security|images]] and [[7 - Pods ✅|containers]]
+- <b><i><span style="color:#d46644">Storage drivers</span></i></b> help manage <b><i><span style="color:#d46644">storage</span></i></b> on [[11 - Image Security ✅|images]] and [[7 - Pods ✅|containers]]
 
 - If you want to [[4 - Persistent Volumes|persist]] <b><i><span style="color:#d46644">storage</span></i></b>, you must create a [[3 - Volumes|volume]]
 
