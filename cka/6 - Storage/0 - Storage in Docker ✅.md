@@ -85,9 +85,9 @@
 - When the [[7 - Pods ✅|container]] is destroyed, all of the data that was stored in the [[7 - Pods ✅|container]] layer also gets destroyed
 	- Any files in the [[7 - Pods ✅|container]] layer will also get deleted
 
-- If we would like to persist the data (make available after the container is removed) created when working with [[7 - Pods ✅|containers]], we could add a [[4 - Persistent Volumes|persistent volume]] to the [[7 - Pods ✅|container]]
+- If we would like to persist the data (make available after the container is removed) created when working with [[7 - Pods ✅|containers]], we could add a [[4 - Persistent Volumes ✅|persistent volume]] to the [[7 - Pods ✅|container]]
 
-- To add a [[4 - Persistent Volumes|persistent volume]] to a [[7 - Pods ✅|container]], first create a [[3 - Volumes ✅|volume]] using the <span style="color:red">docker volume create</span> command
+- To add a [[4 - Persistent Volumes ✅|persistent volume]] to a [[7 - Pods ✅|container]], first create a [[3 - Volumes ✅|volume]] using the <span style="color:red">docker volume create</span> command
 
 - When the <span style="color:red">docker volume create</span> command is run, a folder with the same name given for the [[3 - Volumes ✅|volume]] in the command is created under the <span style="color:red">/var/lib/docker/volumes</span> directory
 

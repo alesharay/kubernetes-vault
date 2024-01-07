@@ -1,13 +1,13 @@
 - <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|containers]] are meant to be **transient** in nature
 	- This means they are meant to last only for a short period of time
 
-- To [[4 - Persistent Volumes|persist]] data processed by the [[7 - Pods ✅|container]], we attach a <b><i><span style="color:#d46644">volume</span></i></b> to the [[7 - Pods ✅|container]] when it is created
+- To [[4 - Persistent Volumes ✅|persist]] data processed by the [[7 - Pods ✅|container]], we attach a <b><i><span style="color:#d46644">volume</span></i></b> to the [[7 - Pods ✅|container]] when it is created
 
 - When <b><i><span style="color:#d46644">volumes</span></i></b> are created, the data processed by the [[7 - Pods ✅|container]] is now placed in the <b><i><span style="color:#d46644">volume</span></i></b> thereby retaining it permanently
 
 - Just as with <span style="color:#5c7e3e">Docker</span>, the [[7 - Pods ✅|pods]] created in <span style="color:#5c7e3e">Kubernetes</span> are **transient** in nature
 
-- To [[4 - Persistent Volumes|persist]] data in <span style="color:#5c7e3e">Kubernetes</span>, we attach a <b><i><span style="color:#d46644">volume</span></i></b> to the [[7 - Pods ✅|pod]]
+- To [[4 - Persistent Volumes ✅|persist]] data in <span style="color:#5c7e3e">Kubernetes</span>, we attach a <b><i><span style="color:#d46644">volume</span></i></b> to the [[7 - Pods ✅|pod]]
 	- Therefore, even after the [[7 - Pods ✅|pod]] is deleted, the data remains
 
 - To create a <b><i><span style="color:#d46644">volume</span></i></b> on a [[7 - Pods ✅|pod]], add a <b><i><span style="color:#d46644">volumes</span></i></b> property to the [[7 - Pods ✅|pod]] definition file with the name of the <b><i><span style="color:#d46644">volume</span></i></b> added to the <span style="color:red">name</span> property under it

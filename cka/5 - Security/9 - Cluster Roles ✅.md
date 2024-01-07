@@ -33,7 +33,7 @@
 
 - To see a full list of [[11 - Namespaces ✅|namespaced]] and [[11 - Namespaces ✅|non-namespaced]] resources, run the <span style="color:red">kubectl api-resources</span> command with the [[11 - Namespaces ✅|namespaced]] option set
 
-- To authorize <i><span style="color:#477bbe">users</span></i> to use <b><i><span style="color:#d46644">cluster-wide</span></i></b> resources like [[0 - Core Concepts Intro ✅|nodes]] or [[4 - Persistent Volumes|persistent volumes]], use <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b>
+- To authorize <i><span style="color:#477bbe">users</span></i> to use <b><i><span style="color:#d46644">cluster-wide</span></i></b> resources like [[0 - Core Concepts Intro ✅|nodes]] or [[4 - Persistent Volumes ✅|persistent volumes]], use <b><i><span style="color:#d46644">clusterroles</span></i></b> and <b><i><span style="color:#d46644">clusterrolebindings</span></i></b>
 
 - <b><i><span style="color:#d46644">Clusterroles</span></i></b> are just like <b><i><span style="color:#d46644">roles</span></i></b>, but at a cluster level
 	- Ie. A <b><i><span style="color:#d46644">cluster admin role</span></i></b> can be created for the <b><i><span style="color:#d46644">cluster administrator</span></i></b>
