@@ -17,7 +17,7 @@
 
 ![[storage-classes-2.png]]
 
-- Once a <b><i><span style="color:#d46644">storage class</span></i></b> is created, we no longer need the [[4 - Persistent Volumes ✅|PV]] definition as the [[4 - Persistent Volumes ✅|PV]] will be created automatically when the <b><i><span style="color:#d46644">storage class</span></i></b> is created
+- Once a <b><i><span style="color:#d46644">storage class</span></i></b> is created, we no longer need the [[4 - Persistent Volumes ✅|PV]] definition as the [[4 - Persistent Volumes ✅|PV]] will be created automatically from the <b><i><span style="color:#d46644">storage class</span></i></b>  when the [[5 - Persistent Volume Claims ✅|PVC]] is created
 
 - For the [[5 - Persistent Volume Claims ✅|PVC]] to use the <b><i><span style="color:#d46644">storage class</span></i></b>, specify the "<span style="color:red">storageClassName</span>" property as a child of the <span style="color:#5c7e3e">spec</span> property on the [[5 - Persistent Volume Claims ✅|PVC]], giving the same name as that on the <b><i><span style="color:#d46644">storage class</span></i></b> definition
 
@@ -43,4 +43,4 @@
 
 ![[storage-classes-7.png]]
 
-- The <span style="color:red">volumeBinderMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes ✅|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes ✅|PV]] until a [[7 - Pods ✅|pod]] using the [[5 - Persistent Volume Claims ✅|PVC]] is created
+- The <span style="color:red">volumeBindingMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes ✅|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes ✅|PV]] until a [[7 - Pods ✅|pod]] using the [[5 - Persistent Volume Claims ✅|PVC]] is created
