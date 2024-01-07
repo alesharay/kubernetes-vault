@@ -15,9 +15,9 @@
 
 ![[volumes-1.png]]
 
-- Because a <b><i><span style="color:#d46644">volume</span></i></b> needs a [[0 - Storage in Docker|storage]], when creating a <b><i><span style="color:#d46644">volume</span></i></b>, you can choose to configure its [[0 - Storage in Docker|storage]] in different ways
+- Because a <b><i><span style="color:#d46644">volume</span></i></b> needs a [[0 - Storage in Docker ✅|storage]], when creating a <b><i><span style="color:#d46644">volume</span></i></b>, you can choose to configure its [[0 - Storage in Docker ✅|storage]] in different ways
 
-- If using a directory on the host as the [[0 - Storage in Docker|storage]] location for the <b><i><span style="color:#d46644">volume</span></i></b>, add the <span style="color:red">hostPath</span> property under the <b><i><span style="color:#d46644">volumes</span></i></b> property on the [[7 - Pods ✅|pod]] spec
+- If using a directory on the host as the [[0 - Storage in Docker ✅|storage]] location for the <b><i><span style="color:#d46644">volume</span></i></b>, add the <span style="color:red">hostPath</span> property under the <b><i><span style="color:#d46644">volumes</span></i></b> property on the [[7 - Pods ✅|pod]] spec
 	- Under this, we add the <span style="color:red">path</span> and <span style="color:red">type</span> properties with the location of the path and type of the path respectively
 
 ![[volumes-2.png]]
@@ -31,7 +31,7 @@
 
 - The <span style="color:red">hostPath</span> property is fine if the [[0 - Core Concepts Intro ✅|cluster]] is made up of a [[0 - Core Concepts Intro ✅|single node]] but is not recommended if using a [[0 - Core Concepts Intro ✅|multi-node cluster]]
 	- This is because the [[7 - Pods ✅|pods]] will use that directory on all [[0 - Core Concepts Intro ✅|nodes]] and expect all of them to be the same and have the same data
-	- Since they are on different <i><span style="color:#477bbe">servers</span></i> they are, in fact, not the same; unless you configure some sort of external replicated [[0 - Core Concepts Intro ✅|cluster]] [[0 - Storage in Docker|storage]] solution
+	- Since they are on different <i><span style="color:#477bbe">servers</span></i> they are, in fact, not the same; unless you configure some sort of external replicated [[0 - Core Concepts Intro ✅|cluster]] [[0 - Storage in Docker ✅|storage]] solution
 
 - There are <b><i><span style="color:#d46644">volume storage</span></i></b> solutions for the [[7 - Pods ✅|pod]] spec in addition to the <span style="color:red">hostPath</span> property that can be configured
 	- NFS
@@ -44,7 +44,7 @@
 	- Azure Disk or File (public cloud solution)
 	- Google Persistent Disk (public cloud solution)
 
-- Each [[0 - Storage in Docker|storage]] solution has a different configuration property for the [[7 - Pods ✅|pod]] spec
+- Each [[0 - Storage in Docker ✅|storage]] solution has a different configuration property for the [[7 - Pods ✅|pod]] spec
 	- Ie. <span style="color:#5c7e3e">AWS EBS</span> uses the "<span style="color:red">awsElasticBlockStorage</span>" property with the "<span style="color:red">volumeID</span>" and "<span style="color:red">fsType</span>" properties under it
 
 ![[volumes-4.png]]

@@ -48,7 +48,7 @@
 
 ![[pvc-7.png]]
 
-- A [[4 - Persistent Volumes|PV]] can also be chosen to be deleted automatically by setting the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Delete</span>, this way as soon as the <b><i><span style="color:#d46644">PVC</span></i></b> is deleted, the [[4 - Persistent Volumes|PV]] is deleted as well, thus freeing up [[0 - Storage in Docker|storage]] on the end [[0 - Storage in Docker|storage devices]]
+- A [[4 - Persistent Volumes|PV]] can also be chosen to be deleted automatically by setting the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Delete</span>, this way as soon as the <b><i><span style="color:#d46644">PVC</span></i></b> is deleted, the [[4 - Persistent Volumes|PV]] is deleted as well, thus freeing up [[0 - Storage in Docker ✅|storage]] on the end [[0 - Storage in Docker ✅|storage devices]]
 
 ![[pvc-8.png]]
 

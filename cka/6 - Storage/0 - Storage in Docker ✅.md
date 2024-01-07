@@ -122,7 +122,7 @@
 
 ![[storage-docker-9.png]]
 
-- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the type is either [[3 - Volumes|bind]], <i><span style="color:#477bbe">volume</span></i>, <i><span style="color:#477bbe">tmpfs</span></i>
+- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the type is either <i><span style="color:#477bbe">bind</span></i>, <i><span style="color:#477bbe">volume</span></i>, <i><span style="color:#477bbe">tmpfs</span></i>
 
 - When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the source is the location on the <i><span style="color:#477bbe">host</span></i>
 
