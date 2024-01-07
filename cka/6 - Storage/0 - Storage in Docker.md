@@ -1,6 +1,26 @@
 - When you install <span style="color:#5c7e3e">Docker</span> on a system, it creates its folder structure at <span style="color:red">/var/lib/docker</span>
 	- This is where <span style="color:#5c7e3e">Docker</span> stores all of its files related to [[11 - Image Security ✅|images]] and [[7 - Pods ✅|containers]] by default
 
+* ***Note:*** on <span style="color:#5c7e3e">mac</span>, this folder does not exist. In order to see it, fun the following command:
+
+	```docker run -it --rm --privileged --name var-lib-docker --pid=host debian nsenter -t 1 -m -u -n -i sh```
+
+	* `-it` : make the container interactive and provide a cli terminal
+	* `--rm`: remove the container once you exit from it
+	* `--privilated`: give the container extended privileges
+	* `--pid`: the process ID namespace to use
+
+	* `nsenter`: executes a program in the namespaces that is specified in the cli options
+	* `-t`: specifies a target process to get contexts from
+	* `-m`: the mount namespace for mounting and unmounting filesystems
+	* `-u`: the uts namespace for setting hostnames and domainnames
+	* `-n`: the network namespace so that the process will have independent
+		* IPv4 stacks
+		* IP routing tables
+		* firewall rules
+		* etc....
+	* `-i`: the ipc namespace for POSIX message queues etc...
+
 - There are multiple folders under the <span style="color:red">/var/lib/docker</span> directory:
 	- aufs
 	- containers
@@ -62,10 +82,10 @@
 
 - The [[11 - Image Security ✅|image]] layer being read-only just means that these layers will not be modified in the [[11 - Image Security ✅|image]] itself
 
-- When the [[7 - Pods ✅|container]] is destroyed, all of the data that was stored in the [[7 - Pods ✅|container]] layer also get's delivered
+- When the [[7 - Pods ✅|container]] is destroyed, all of the data that was stored in the [[7 - Pods ✅|container]] layer also gets destroyed
 	- Any files in the [[7 - Pods ✅|container]] layer will also get deleted
 
-- If we would like to persist the data created when working with [[7 - Pods ✅|containers]], we could add a [[4 - Persistent Volumes|persistent volume]] to the [[7 - Pods ✅|container]]
+- If we would like to persist the data (make available after the container is removed) created when working with [[7 - Pods ✅|containers]], we could add a [[4 - Persistent Volumes|persistent volume]] to the [[7 - Pods ✅|container]]
 
 - To add a [[4 - Persistent Volumes|persistent volume]] to a [[7 - Pods ✅|container]], first create a [[3 - Volumes|volume]] using the <span style="color:red">docker volume create</span> command
 
@@ -102,7 +122,7 @@
 
 ![[storage-docker-9.png]]
 
-- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the type is either [[3 - Volumes|bind]] or [[3 - Volumes|mount]]
+- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the type is either [[3 - Volumes|bind]], <i><span style="color:#477bbe">volume</span></i>, <i><span style="color:#477bbe">tmpfs</span></i>
 
 - When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the source is the location on the <i><span style="color:#477bbe">host</span></i>
 
