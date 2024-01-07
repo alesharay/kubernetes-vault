@@ -4,7 +4,7 @@
 
 - When a [[10 - Services ✅|service]] is created, it is accessible from all [[7 - Pods ✅|pods]] on the [[0 - Core Concepts Intro ✅|cluster]] regardless of what [[0 - Core Concepts Intro ✅|nodes]] the [[7 - Pods ✅|pods]] are on
 
-- While a [[7 - Pods ✅|pod]] is <i><span style="color:#477bbe">hosted</span></i> on a [[0 - Core Concepts Intro ✅|node]], a [[10 - Services ✅|service]] is <i><span style="color:#477bbe">hosted</span></i> across a [[0 - Core Concepts Intro ✅|cluster]] and is not [[3 - Volumes|bound]] to a specific [[0 - Core Concepts Intro ✅|node]]
+- While a [[7 - Pods ✅|pod]] is <i><span style="color:#477bbe">hosted</span></i> on a [[0 - Core Concepts Intro ✅|node]], a [[10 - Services ✅|service]] is <i><span style="color:#477bbe">hosted</span></i> across a [[0 - Core Concepts Intro ✅|cluster]] and is not [[3 - Volumes ✅|bound]] to a specific [[0 - Core Concepts Intro ✅|node]]
 
 - ***REMEMBER***: A [[10 - Services ✅|service]] that is only accessible from within the [[0 - Core Concepts Intro ✅|cluster]] is known as [[10 - Services ✅|clusterIP]]
 

@@ -9,7 +9,7 @@
 	- This is the scenario where you would want <b><span style="color:#d46644">multiple containers</span></b> in a [[7 - Pods ✅|pod]]
 
 - <b><span style="color:#d46644">Multiple containers</span></b> in a [[7 - Pods ✅|pod]] means they will be both created and destroyed together
-	- They also share the same network space which means they can refer to each other as localhost, and they have access to the same [[3 - Volumes|storage volumes]]
+	- They also share the same network space which means they can refer to each other as localhost, and they have access to the same [[3 - Volumes ✅|storage volumes]]
 
 - To create a <b><span style="color:#d46644">multi-container pod</span></b>, add the new [[7 - Pods ✅|container]] information to the [[7 - Pods ✅|pod]] definition file
 

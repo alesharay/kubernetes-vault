@@ -37,7 +37,7 @@
 
 ![[secrets-6.png]]
 
-- Another way to inject <b><span style="color:#d46644">secrets</span></b> into a [[7 - Pods ✅|pod]] definition file is as files in a [[3 - Volumes|volume]] if you were to mount the <b><span style="color:#d46644">secret</span></b> as a [[3 - Volumes|volume]] in your [[7 - Pods ✅|pod]]
+- Another way to inject <b><span style="color:#d46644">secrets</span></b> into a [[7 - Pods ✅|pod]] definition file is as files in a [[3 - Volumes ✅|volume]] if you were to mount the <b><span style="color:#d46644">secret</span></b> as a [[3 - Volumes ✅|volume]] in your [[7 - Pods ✅|pod]]
 	- Each attribute in the <b><span style="color:#d46644">secret</span></b> is created as a file with the value of the <b><span style="color:#d46644">secret</span></b> as its content
 
 ![[secrets-7.png]]

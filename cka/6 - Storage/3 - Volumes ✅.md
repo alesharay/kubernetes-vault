@@ -15,7 +15,7 @@
 
 ![[volumes-1.png]]
 
-- Because a <b><i><span style="color:#d46644">volume</span></i></b> needs a [[0 - Storage in Docker ✅|storage]], when creating a <b><i><span style="color:#d46644">volume</span></i></b>, you can choose to configure its [[0 - Storage in Docker ✅|storage]] in different ways
+- Because a <b><i><span style="color:#d46644">volume</span></i></b> needs [[0 - Storage in Docker ✅|storage]], when creating a <b><i><span style="color:#d46644">volume</span></i></b>, you can choose to configure its [[0 - Storage in Docker ✅|storage]] in different ways
 
 - If using a directory on the host as the [[0 - Storage in Docker ✅|storage]] location for the <b><i><span style="color:#d46644">volume</span></i></b>, add the <span style="color:red">hostPath</span> property under the <b><i><span style="color:#d46644">volumes</span></i></b> property on the [[7 - Pods ✅|pod]] spec
 	- Under this, we add the <span style="color:red">path</span> and <span style="color:red">type</span> properties with the location of the path and type of the path respectively

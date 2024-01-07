@@ -4,15 +4,15 @@
 
 - <i><span style="color:#477bbe">Users</span></i> create <b><i><span style="color:#d46644">persistent volume claims</span></i></b>
 
-- Once <b><i><span style="color:#d46644">PVCs</span></i></b> are created, <span style="color:#5c7e3e">Kubernetes</span> [[3 - Volumes|bind]] [[4 - Persistent Volumes|PVs]] to <b><i><span style="color:#d46644">PVCs</span></i></b> based on requests and properties set on the [[3 - Volumes|volume]]
+- Once <b><i><span style="color:#d46644">PVCs</span></i></b> are created, <span style="color:#5c7e3e">Kubernetes</span> [[3 - Volumes ✅|bind]] [[4 - Persistent Volumes|PVs]] to <b><i><span style="color:#d46644">PVCs</span></i></b> based on requests and properties set on the [[3 - Volumes ✅|volume]]
 
 - Every <b><i><span style="color:#d46644">PVC</span></i></b> is bound to a single [[4 - Persistent Volumes|PV]]
 
 ![[pvc-1.png]]
 
-- During the [[3 - Volumes|binding]] process, <span style="color:#5c7e3e">Kubernetes</span> tries to find a [[4 - Persistent Volumes|PV]] with the sufficient capacity requested by the <b><i><span style="color:#d46644">PVC</span></i></b> along with any other request properties such as accessModes, [[3 - Volumes|volume]] modes, [[6 - Storage Classes|storage classes]], etc…
+- During the [[3 - Volumes ✅|binding]] process, <span style="color:#5c7e3e">Kubernetes</span> tries to find a [[4 - Persistent Volumes|PV]] with the sufficient capacity requested by the <b><i><span style="color:#d46644">PVC</span></i></b> along with any other request properties such as accessModes, [[3 - Volumes ✅|volume]] modes, [[6 - Storage Classes|storage classes]], etc…
 
-- If there are multiple possible [[4 - Persistent Volumes|PV]] matches for a single <b><i><span style="color:#d46644">PVC</span></i></b>, and you would like to specifically use a particular [[3 - Volumes|volume]], you can use [[1 - Labels & Selectors ✅|labels and selectors]] to [[3 - Volumes|bind]] to the right [[3 - Volumes|volumes]]
+- If there are multiple possible [[4 - Persistent Volumes|PV]] matches for a single <b><i><span style="color:#d46644">PVC</span></i></b>, and you would like to specifically use a particular [[3 - Volumes ✅|volume]], you can use [[1 - Labels & Selectors ✅|labels and selectors]] to [[3 - Volumes ✅|bind]] to the right [[3 - Volumes ✅|volumes]]
 
 ![[pvc-2.png]]
 
@@ -23,7 +23,7 @@
 ![[pvc-3.png]]
 
 - If there are no [[4 - Persistent Volumes|PVs]] available, the <b><i><span style="color:#d46644">PVC</span></i></b> will remain in a pending state until newer [[4 - Persistent Volumes|PVs]] are made available to the [[0 - Core Concepts Intro ✅|cluster]]
-	- Once new [[4 - Persistent Volumes|PVs]] are available, the <b><i><span style="color:#d46644">PVC</span></i></b> will automatically be [[3 - Volumes|bound]] to the newly available [[4 - Persistent Volumes|PV]]
+	- Once new [[4 - Persistent Volumes|PVs]] are available, the <b><i><span style="color:#d46644">PVC</span></i></b> will automatically be [[3 - Volumes ✅|bound]] to the newly available [[4 - Persistent Volumes|PV]]
 
 - In the <b><i><span style="color:#d46644">PVC</span></i></b> definition file, the <span style="color:#5c7e3e">spec</span> section includes
 	- <span style="color:red">accessModes</span> = should match that on the required [[4 - Persistent Volumes|PV]]
@@ -35,9 +35,9 @@
 
 ![[pvc-5.png]]
 
-- When a <b><i><span style="color:#d46644">PVC</span></i></b> is created, <span style="color:#5c7e3e">Kubernetes</span> looks at previously created [[4 - Persistent Volumes|PVs]] and [[3 - Volumes|binds]] it to one that is available
+- When a <b><i><span style="color:#d46644">PVC</span></i></b> is created, <span style="color:#5c7e3e">Kubernetes</span> looks at previously created [[4 - Persistent Volumes|PVs]] and [[3 - Volumes ✅|binds]] it to one that is available
 
-- After a <b><i><span style="color:#d46644">PVC</span></i></b> has been [[3 - Volumes|bound]] to a [[4 - Persistent Volumes|PV]], run the <span style="color:red">kubectl get persistentvolumeclaim</span> command again to see that it shows the [[4 - Persistent Volumes|PV]] it has been [[3 - Volumes|bound]] to
+- After a <b><i><span style="color:#d46644">PVC</span></i></b> has been [[3 - Volumes ✅|bound]] to a [[4 - Persistent Volumes|PV]], run the <span style="color:red">kubectl get persistentvolumeclaim</span> command again to see that it shows the [[4 - Persistent Volumes|PV]] it has been [[3 - Volumes ✅|bound]] to
 
 ![[pvc-6.png]]
 
@@ -52,11 +52,11 @@
 
 ![[pvc-8.png]]
 
-- A third option for [[4 - Persistent Volumes|PVs]] when a <b><i><span style="color:#d46644">PVC</span></i></b> is deleted is to set the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Recycle</span>, meaning the data in the data [[3 - Volumes|volume]] will be scrubbed before making it available to other <b><i><span style="color:#d46644">PVCs</span></i></b>
+- A third option for [[4 - Persistent Volumes|PVs]] when a <b><i><span style="color:#d46644">PVC</span></i></b> is deleted is to set the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Recycle</span>, meaning the data in the data [[3 - Volumes ✅|volume]] will be scrubbed before making it available to other <b><i><span style="color:#d46644">PVCs</span></i></b>
 
 ![[pvc-9.png]]
 
-- Once you create a <b><i><span style="color:#d46644">PVC</span></i></b>, use it in a [[7 - Pods ✅|pod]] definition file by specifying the <b><i><span style="color:#d46644">PVC</span></i></b> name under the "<span style="color:red">persistentVolumeClaim</span>" section in the [[3 - Volumes|volumes]] section
+- Once you create a <b><i><span style="color:#d46644">PVC</span></i></b>, use it in a [[7 - Pods ✅|pod]] definition file by specifying the <b><i><span style="color:#d46644">PVC</span></i></b> name under the "<span style="color:red">persistentVolumeClaim</span>" section in the [[3 - Volumes ✅|volumes]] section
 	- This same is true for [[8 - ReplicaSets ✅|replicaSets]] and [[9 - Deployments ✅|deployments]]
 
 ![[pvc-10.png]]

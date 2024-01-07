@@ -1,12 +1,12 @@
-- We create [[4 - Persistent Volumes|PVs]] and [[5 - Persistent Volume Claims|PVCs]] to claim the [[4 - Persistent Volumes|PV]] <b><i><span style="color:#d46644">storage</span></i></b>, and inject them into the [[7 - Pods ✅|pod]] definition files as [[3 - Volumes|volumes]]
+- We create [[4 - Persistent Volumes|PVs]] and [[5 - Persistent Volume Claims|PVCs]] to claim the [[4 - Persistent Volumes|PV]] <b><i><span style="color:#d46644">storage</span></i></b>, and inject them into the [[7 - Pods ✅|pod]] definition files as [[3 - Volumes ✅|volumes]]
 
 ![[storage-classes-1.png]]
 
 - In previous cases, when creating a [[5 - Persistent Volume Claims|PVC]] from a <span style="color:#5c7e3e">cloud provider</span>, the problem is that before the [[4 - Persistent Volumes|PV]] is created, the <b><i><span style="color:#d46644">storage</span></i></b> had to be created on the <span style="color:#5c7e3e">cloud platform</span>
 	- This means every time an application requires <b><i><span style="color:#d46644">storage</span></i></b>, you have to first manually <b><i><span style="color:#d46644">provision</span></i></b> the <b><i><span style="color:#d46644">storage</span></i></b> on the <span style="color:#5c7e3e">cloud platform</span>, manually create a [[4 - Persistent Volumes|persistent volume]] definition file using the same name as that of the <b><i><span style="color:#d46644">storage</span></i></b> you created on the <span style="color:#5c7e3e">cloud platform</span>
-	- This is called static <b><i><span style="color:#d46644">provisioning</span></i></b> [[3 - Volumes|volumes]]
+	- This is called static <b><i><span style="color:#d46644">provisioning</span></i></b> [[3 - Volumes ✅|volumes]]
 
-- <b><i><span style="color:#d46644">Storage classes</span></i></b> come in when [[3 - Volumes|volumes]] get <b><i><span style="color:#d46644">provisioned</span></i></b> automatically when the application requires it
+- <b><i><span style="color:#d46644">Storage classes</span></i></b> come in when [[3 - Volumes ✅|volumes]] get <b><i><span style="color:#d46644">provisioned</span></i></b> automatically when the application requires it
 
 - With <b><i><span style="color:#d46644">storage classes</span></i></b>, you can define a <b><i><span style="color:#d46644">provisioner</span></i></b> such as <b><i><span style="color:#d46644">Google Storage</span></i></b> that can automatically <b><i><span style="color:#d46644">provision storage</span></i></b> on the <span style="color:#5c7e3e">cloud platform</span> and attach it to [[7 - Pods ✅|pods]] when a [[5 - Persistent Volume Claims|PVC]] is made
 
@@ -23,7 +23,7 @@
 
 ![[storage-classes-3.png]]
 
-- After a <b><i><span style="color:#d46644">storage class</span></i></b> is added to a [[5 - Persistent Volume Claims|PVC]], the <b><i><span style="color:#d46644">storage class</span></i></b> uses the defined <b><i><span style="color:#d46644">provisioner</span></i></b> to <b><i><span style="color:#d46644">provision</span></i></b> new <b><i><span style="color:#d46644">storage</span></i></b> with the required size on the <span style="color:#5c7e3e">cloud platform</span>, creates a [[4 - Persistent Volumes|PV]], then [[3 - Volumes|binds]] the [[5 - Persistent Volume Claims|PVC]] to that [[4 - Persistent Volumes|PV]]
+- After a <b><i><span style="color:#d46644">storage class</span></i></b> is added to a [[5 - Persistent Volume Claims|PVC]], the <b><i><span style="color:#d46644">storage class</span></i></b> uses the defined <b><i><span style="color:#d46644">provisioner</span></i></b> to <b><i><span style="color:#d46644">provision</span></i></b> new <b><i><span style="color:#d46644">storage</span></i></b> with the required size on the <span style="color:#5c7e3e">cloud platform</span>, creates a [[4 - Persistent Volumes|PV]], then [[3 - Volumes ✅|binds]] the [[5 - Persistent Volume Claims|PVC]] to that [[4 - Persistent Volumes|PV]]
 
 ![[storage-classes-4.png]]
 
@@ -43,4 +43,4 @@
 
 ![[storage-classes-7.png]]
 
-- The <span style="color:red">volumeBinderMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes|PV]] until a [[7 - Pods ✅|pod]] using the [[5 - Persistent Volume Claims|PVC]] is created
+- The <span style="color:red">volumeBinderMode</span> property being set to <span style="color:red">waitForFirstConsumer</span> will delay the [[3 - Volumes ✅|binding]] and <b><i><span style="color:#d46644">provisioning</span></i></b> of a [[4 - Persistent Volumes|PV]] until a [[7 - Pods ✅|pod]] using the [[5 - Persistent Volume Claims|PVC]] is created

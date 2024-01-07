@@ -32,7 +32,7 @@
 
 - Any files related to [[11 - Image Security ✅|images]] are stored under the <span style="color:red">/var/lib/docker/images</span> folder
 
-- Any [[3 - Volumes|volumes]] created by the [[7 - Pods ✅|containers]] are created under the <span style="color:red">/var/lib/docker/volumes</span> folder
+- Any [[3 - Volumes ✅|volumes]] created by the [[7 - Pods ✅|containers]] are created under the <span style="color:red">/var/lib/docker/volumes</span> folder
 
 ### Layered Architecture
 
@@ -87,46 +87,46 @@
 
 - If we would like to persist the data (make available after the container is removed) created when working with [[7 - Pods ✅|containers]], we could add a [[4 - Persistent Volumes|persistent volume]] to the [[7 - Pods ✅|container]]
 
-- To add a [[4 - Persistent Volumes|persistent volume]] to a [[7 - Pods ✅|container]], first create a [[3 - Volumes|volume]] using the <span style="color:red">docker volume create</span> command
+- To add a [[4 - Persistent Volumes|persistent volume]] to a [[7 - Pods ✅|container]], first create a [[3 - Volumes ✅|volume]] using the <span style="color:red">docker volume create</span> command
 
-- When the <span style="color:red">docker volume create</span> command is run, a folder with the same name given for the [[3 - Volumes|volume]] in the command is created under the <span style="color:red">/var/lib/docker/volumes</span> directory
+- When the <span style="color:red">docker volume create</span> command is run, a folder with the same name given for the [[3 - Volumes ✅|volume]] in the command is created under the <span style="color:red">/var/lib/docker/volumes</span> directory
 
 ![[storage-docker-6.png]]
 
-- When running the <span style="color:red">docker run</span> command, the newly created [[3 - Volumes|volume]] will be [[3 - Volumes|mounted]] to the [[7 - Pods ✅|containers's]] read-write layer using the "<span style="color:red">-v HOST_VOLUME_NAME:CONTAINER_VOLUME_LOCATION</span>"
+- When running the <span style="color:red">docker run</span> command, the newly created [[3 - Volumes ✅|volume]] will be [[3 - Volumes ✅|mounted]] to the [[7 - Pods ✅|containers's]] read-write layer using the "<span style="color:red">-v HOST_VOLUME_NAME:CONTAINER_VOLUME_LOCATION</span>"
 
 ![[storage-docker-7.png]]
 
-- When the new [[7 - Pods ✅|container]] with the [[3 - Volumes|mounted]] <span style="color:#5c7e3e">Docker</span> [[3 - Volumes|volume]] is created, all data written is stored on the [[3 - Volumes|volume]] created on the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>
+- When the new [[7 - Pods ✅|container]] with the [[3 - Volumes ✅|mounted]] <span style="color:#5c7e3e">Docker</span> [[3 - Volumes ✅|volume]] is created, all data written is stored on the [[3 - Volumes ✅|volume]] created on the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>
 	- Even if the [[7 - Pods ✅|container]] is destroyed, the data is still active
 
-- If you use the "<span style="color:red">-v</span>" option on the <span style="color:red">docker run</span> command with a [[3 - Volumes|volume]] name that doesn't exist yet, <span style="color:#5c7e3e">Docker</span> will automatically create a [[3 - Volumes|volume]] and [[3 - Volumes|mount]] it to the [[7 - Pods ✅|container]]
+- If you use the "<span style="color:red">-v</span>" option on the <span style="color:red">docker run</span> command with a [[3 - Volumes ✅|volume]] name that doesn't exist yet, <span style="color:#5c7e3e">Docker</span> will automatically create a [[3 - Volumes ✅|volume]] and [[3 - Volumes ✅|mount]] it to the [[7 - Pods ✅|container]]
 
-- You can see the <span style="color:#5c7e3e">Docker</span> [[3 - Volumes|volumes]] by listing the contents of the <span style="color:red">/var/lib/docker/volumes</span> directory
-	- This is called [[3 - Volumes|volume]] [[3 - Volumes|mounting]]
+- You can see the <span style="color:#5c7e3e">Docker</span> [[3 - Volumes ✅|volumes]] by listing the contents of the <span style="color:red">/var/lib/docker/volumes</span> directory
+	- This is called [[3 - Volumes ✅|volume]] [[3 - Volumes ✅|mounting]]
 
-- If we want to store data from a different location than the default [[3 - Volumes|volume]] location on the <i><span style="color:#477bbe">host</span></i>, we would run a [[7 - Pods ✅|container]] using the <span style="color:red">docker run -v</span> command but in this case, we provide the full direction of the location
-	- This is called [[3 - Volumes|bind mounting]]
+- If we want to store data from a different location than the default [[3 - Volumes ✅|volume]] location on the <i><span style="color:#477bbe">host</span></i>, we would run a [[7 - Pods ✅|container]] using the <span style="color:red">docker run -v</span> command but in this case, we provide the full direction of the location
+	- This is called [[3 - Volumes ✅|bind mounting]]
 
 ![[storage-docker-8.png]]
 
-- There are two types of [[3 - Volumes|mounts]], [[3 - Volumes|volume]] [[3 - Volumes|mounting]] and [[3 - Volumes|bind mounting]]
+- There are two types of [[3 - Volumes ✅|mounts]], [[3 - Volumes ✅|volume]] [[3 - Volumes ✅|mounting]] and [[3 - Volumes ✅|bind mounting]]
 
-- [[3 - Volumes|Volume]] [[3 - Volumes|mounting]] [[3 - Volumes|mounts]] [[3 - Volumes|volumes]] from the [[3 - Volumes|volume]] directly
+- [[3 - Volumes ✅|Volume]] [[3 - Volumes ✅|mounting]] [[3 - Volumes ✅|mounts]] [[3 - Volumes ✅|volumes]] from the [[3 - Volumes ✅|volume]] directly
 
-- [[3 - Volumes|Bind mounting]] [[3 - Volumes|mounts]] [[3 - Volumes|volumes]] indirectly from any location on the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>
+- [[3 - Volumes ✅|Bind mounting]] [[3 - Volumes ✅|mounts]] [[3 - Volumes ✅|volumes]] indirectly from any location on the <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i>
 
-- NOTE: using the <span style="color:red">-v</span> option is the old style. The new way to mount is to use the <span style="color:red">--mount</span> which is the preferred method of [[3 - Volumes|mounting]] [[3 - Volumes|volumes]]
+- NOTE: using the <span style="color:red">-v</span> option is the old style. The new way to mount is to use the <span style="color:red">--mount</span> which is the preferred method of [[3 - Volumes ✅|mounting]] [[3 - Volumes ✅|volumes]]
 
 - With the <span style="color:red">--mount</span> option, you have to specify each parameter in a <span style="color:#5c7e3e">key=value</span> format
 
 ![[storage-docker-9.png]]
 
-- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the type is either <i><span style="color:#477bbe">bind</span></i>, <i><span style="color:#477bbe">volume</span></i>, <i><span style="color:#477bbe">tmpfs</span></i>
+- When using the <span style="color:red">--mount</span> option to [[3 - Volumes ✅|mount]] a [[3 - Volumes ✅|volume]], the type is either <i><span style="color:#477bbe">bind</span></i>, <i><span style="color:#477bbe">volume</span></i>, <i><span style="color:#477bbe">tmpfs</span></i>
 
-- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the source is the location on the <i><span style="color:#477bbe">host</span></i>
+- When using the <span style="color:red">--mount</span> option to [[3 - Volumes ✅|mount]] a [[3 - Volumes ✅|volume]], the source is the location on the <i><span style="color:#477bbe">host</span></i>
 
-- When using the <span style="color:red">--mount</span> option to [[3 - Volumes|mount]] a [[3 - Volumes|volume]], the target is the location on the [[7 - Pods ✅|container]]
+- When using the <span style="color:red">--mount</span> option to [[3 - Volumes ✅|mount]] a [[3 - Volumes ✅|volume]], the target is the location on the [[7 - Pods ✅|container]]
 
 - So the entity responsible for performing these operations: maintaining the layered architecture, creating a writeable layer, moving files across layers to enable copy and write, etc… is the <b><i><span style="color:#d46644">storage drivers</span></i></b>
 
