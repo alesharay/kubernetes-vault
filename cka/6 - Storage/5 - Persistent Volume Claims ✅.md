@@ -4,13 +4,13 @@
 
 - <i><span style="color:#477bbe">Users</span></i> create <b><i><span style="color:#d46644">persistent volume claims</span></i></b>
 
-- Once <b><i><span style="color:#d46644">PVCs</span></i></b> are created, <span style="color:#5c7e3e">Kubernetes</span> [[3 - Volumes ✅|bind]] [[4 - Persistent Volumes ✅|PVs]] to <b><i><span style="color:#d46644">PVCs</span></i></b> based on requests and properties set on the [[3 - Volumes ✅|volume]]
+- Once <b><i><span style="color:#d46644">PVCs</span></i></b> are created, <span style="color:#5c7e3e">Kubernetes</span> [[3 - Volumes ✅|binds]] [[4 - Persistent Volumes ✅|PVs]] to <b><i><span style="color:#d46644">PVCs</span></i></b> based on requests and properties set on the [[3 - Volumes ✅|volume]]
 
 - Every <b><i><span style="color:#d46644">PVC</span></i></b> is bound to a single [[4 - Persistent Volumes ✅|PV]]
 
 ![[pvc-1.png]]
 
-- During the [[3 - Volumes ✅|binding]] process, <span style="color:#5c7e3e">Kubernetes</span> tries to find a [[4 - Persistent Volumes ✅|PV]] with the sufficient capacity requested by the <b><i><span style="color:#d46644">PVC</span></i></b> along with any other request properties such as accessModes, [[3 - Volumes ✅|volume]] modes, [[6 - Storage Classes|storage classes]], etc…
+- During the [[3 - Volumes ✅|binding]] process, <span style="color:#5c7e3e">Kubernetes</span> tries to find a [[4 - Persistent Volumes ✅|PV]] with the sufficient <i><span style="color:#477bbe">capacity</span></i> requested by the <b><i><span style="color:#d46644">PVC</span></i></b> along with any other request properties such as <i><span style="color:#477bbe">access modes</span></i>, [[3 - Volumes ✅|volume]] modes, [[6 - Storage Classes|storage classes]], etc…
 
 - If there are multiple possible [[4 - Persistent Volumes ✅|PV]] matches for a single <b><i><span style="color:#d46644">PVC</span></i></b>, and you would like to specifically use a particular [[3 - Volumes ✅|volume]], you can use [[1 - Labels & Selectors ✅|labels and selectors]] to [[3 - Volumes ✅|bind]] to the right [[3 - Volumes ✅|volumes]]
 
@@ -18,7 +18,7 @@
 
 - NOTE: a smaller <b><i><span style="color:#d46644">PVC</span></i></b> may get bound to a larger [[4 - Persistent Volumes ✅|PV]] if all other criteria matches and there are no better options
 
-- There is a one-to-one relationship between <b><i><span style="color:#d46644">PVCs</span></i></b> and [[4 - Persistent Volumes ✅|PVs]], thus no other <b><i><span style="color:#d46644">PVC</span></i></b> can utilize the remaining capacity in the [[4 - Persistent Volumes ✅|PV]]
+- There is a ==one-to-one relationship== between <b><i><span style="color:#d46644">PVCs</span></i></b> and [[4 - Persistent Volumes ✅|PVs]], thus no other <b><i><span style="color:#d46644">PVC</span></i></b> can utilize the remaining capacity in the [[4 - Persistent Volumes ✅|PV]]
 
 ![[pvc-3.png]]
 
@@ -35,7 +35,7 @@
 
 ![[pvc-5.png]]
 
-- When a <b><i><span style="color:#d46644">PVC</span></i></b> is created, <span style="color:#5c7e3e">Kubernetes</span> looks at previously created [[4 - Persistent Volumes ✅|PVs]] and [[3 - Volumes ✅|binds]] it to one that is available
+- When a <b><i><span style="color:#d46644">PVC</span></i></b> is created, <span style="color:#5c7e3e">Kubernetes</span> looks at previously created [[4 - Persistent Volumes ✅|PVs]] and [[3 - Volumes ✅|binds]] it to one that is available and meets the criteria
 
 - After a <b><i><span style="color:#d46644">PVC</span></i></b> has been [[3 - Volumes ✅|bound]] to a [[4 - Persistent Volumes ✅|PV]], run the <span style="color:red">kubectl get persistentvolumeclaim</span> command again to see that it shows the [[4 - Persistent Volumes ✅|PV]] it has been [[3 - Volumes ✅|bound]] to
 
@@ -52,7 +52,7 @@
 
 ![[pvc-8.png]]
 
-- A third option for [[4 - Persistent Volumes ✅|PVs]] when a <b><i><span style="color:#d46644">PVC</span></i></b> is deleted is to set the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Recycle</span>, meaning the data in the data [[3 - Volumes ✅|volume]] will be scrubbed before making it available to other <b><i><span style="color:#d46644">PVCs</span></i></b>
+- A third option for [[4 - Persistent Volumes ✅|PVs]] when a <b><i><span style="color:#d46644">PVC</span></i></b> is deleted is to set the <span style="color:red">persistentVolumeReclaimPolicy</span> to <span style="color:red">Recycle</span>, meaning the data in the [[3 - Volumes ✅|data volume]] will be scrubbed before making the [[4 - Persistent Volumes ✅|PV]] available to other <b><i><span style="color:#d46644">PVCs</span></i></b>
 
 ![[pvc-9.png]]
 

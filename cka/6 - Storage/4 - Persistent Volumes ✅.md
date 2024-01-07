@@ -12,7 +12,7 @@
 	- <b><i><span style="color:#d46644">PVs</span></i></b> are [[3 - Volumes ✅|volume]] plugins like [[3 - Volumes ✅|volumes]], but have a lifecycle independent of any individual [[7 - Pods ✅|pod]] that uses the <b><i><span style="color:#d46644">PV</span></i></b>.
 	- This [[2 - Kube API server ✅|API]] object captures the details of the implementation of the [[0 - Storage in Docker ✅|storage]], be that <span style="color:#5c7e3e">NFS</span>, <span style="color:#5c7e3e">iSCSI</span>, or a cloud-provider-specific [[0 - Storage in Docker ✅|storage]] system.
 
-- <i><span style="color:#477bbe">Users</span></i> can select [[0 - Storage in Docker ✅|storage]] from the <b><i><span style="color:#d46644">volume pool</span></i></b> using persist [[3 - Volumes ✅|volume]] claim ([[5 - Persistent Volume Claims|PVC]])
+- <i><span style="color:#477bbe">Users</span></i> can select [[0 - Storage in Docker ✅|storage]] from the <b><i><span style="color:#d46644">volume pool</span></i></b> using persist [[3 - Volumes ✅|volume]] claim ([[5 - Persistent Volume Claims ✅|PVC]])
 
 - As with all objects in <span style="color:#5c7e3e">Kubernetes</span>, <b><i><span style="color:#d46644">persistent volumes</span></i></b> are created using definition files
 
