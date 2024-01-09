@@ -1,4 +1,4 @@
-- <b><i><span style="color:#d46644">IP Address Management</span></i></b> (<b><i><span style="color:#d46644">IPAM</span></i></b>) describes how the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|virtual bridge networks]] in the [[0 - Core Concepts Intro ✅|nodes]] are assigned an <span style="color:#5c7e3e">IP subnet</span>, how the [[7 - Pods ✅|pods]] are assigned <span style="color:#5c7e3e">IP addresses</span>, and who is responsible for ensuring there are no duplicates assigned
+- <b><i><span style="color:#d46644">IP Address Management</span></i></b> (<b><i><span style="color:#d46644">IPAM</span></i></b>) describes how the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|virtual bridge networks]] in the [[0 - Core Concepts Intro ✅|nodes]] are assigned an <span style="color:#5c7e3e">IP subnet</span>, how the [[7 - Pods ✅|pods]] are assigned <span style="color:#5c7e3e">IP addresses</span>, and who is responsible for ensuring there are no duplicates assigned
 
 - Per <b><i><span style="color:#d46644">CNI</span></i></b>, it is the responsibility of the <b><i><span style="color:#d46644">CNI plugin</span></i></b> (the <b><i><span style="color:#d46644">network</span></i></b> solution provider) to take care of assigning <span style="color:#5c7e3e">IP address</span> to the containers
 
@@ -16,7 +16,7 @@
 	- It is still our responsibility to invoke that <b><i><span style="color:#d46644">plugin</span></i></b>
 	- The **script** can also be dynamic to support different kinds of <b><i><span style="color:#d46644">plugins</span></i></b>
 
-- The <b><i><span style="color:#d46644">CNI</span></i></b> configuration file has a section called <b><i><span style="color:#d46644">IPAM</span></i></b> in which we specify the type of <b><i><span style="color:#d46644">plugin</span></i></b>, [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|subnet]], and [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|route]] to be used
+- The <b><i><span style="color:#d46644">CNI</span></i></b> configuration file has a section called <b><i><span style="color:#d46644">IPAM</span></i></b> in which we specify the type of <b><i><span style="color:#d46644">plugin</span></i></b>, [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|subnet]], and [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] to be used
 	- These details can be read in from the script to invoke the appropriate plugin (instead of hard-coding it)
 
 ![[ipam-weave-3.png]]

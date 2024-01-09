@@ -12,7 +12,7 @@
 ![[cnik-2.png]]
 
 - The <b><i><span style="color:#d46644">CNI</span></i></b> bin directory has all the supported <b><i><span style="color:#d46644">CNI plugins</span></i></b> as executables
-	- Such as [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|bridge]], <span style="color:#5c7e3e">DHCP</span>, <span style="color:#5c7e3e">flannel</span>
+	- Such as [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|bridge]], <span style="color:#5c7e3e">DHCP</span>, <span style="color:#5c7e3e">flannel</span>
 		- This directory is <span style="color:red">/opt/cni/bin</span> by default
 
 ![[cnik-3.png]]
@@ -23,7 +23,7 @@
 
    - If there are multiple config files available, choose the one in alphabetical order
 
-- The [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|bridge]] config file uses a format defined by the <b><i><span style="color:#d46644">CNI</span></i></b> standard for a plugin configuration file
+- The [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|bridge]] config file uses a format defined by the <b><i><span style="color:#d46644">CNI</span></i></b> standard for a plugin configuration file
 
 ![[cnik-5.png]]
 

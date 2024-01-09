@@ -18,7 +18,7 @@
 ![[ingress-4.png]]
 
 - The chosen solution would then be configured to route traffic through other [[10 - Services ✅|services]]
-	- This would involve defining [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|URL routes]], configuring [[3.1 - Certification Creation|SSL certificates]], etc…
+	- This would involve defining [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|URL routes]], configuring [[3.1 - Certification Creation|SSL certificates]], etc…
 
 ![[ingress-5.png]]
 
@@ -100,7 +100,7 @@
 Ingress Resources
 
 - An <b><i><span style="color:#d46644">ingress resource</span></i></b> is a set of rules and configurations applied on the <b><i><span style="color:#d46644">ingress controller</span></i></b>
-	- E.g. a rule can be configured to say "forward all incoming traffic to a single application" or "[[0.1 - Switching, Routing, Gateways CNI in Kubernetes|route]] traffic to different applications based on the URL", etc…
+	- E.g. a rule can be configured to say "forward all incoming traffic to a single application" or "[[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] traffic to different applications based on the URL", etc…
 
 ![[ingress-17.png]]
 
@@ -120,14 +120,14 @@ Ingress Resources
 - The "<span style="color:red">service</span>" property with the child "<span style="color:red">name</span>" and "<span style="color:red">port</span>" properties are used because traffic is routed to the <span style="color:#5c7e3e">Kubernetes</span> service and not the [[7 - Pods ✅|pods]] directly
 	- If it is a single backend, you don't really have any rules and the "<span style="color:red">service</span>" property with the child "<span style="color:red">name</span>" and "<span style="color:red">port</span>" properties will suffice
 
-- Rules are used when you want to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|route]] traffic based on different conditions
+- Rules are used when you want to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] traffic based on different conditions
 
 ![[ingress-19.png]]
 
 - FYI: It is possible to have different [[0.2 - DNS|domain names]] that reach a [[0 - Core Concepts Intro ✅|cluster]] by adding multiple [[0.2 - DNS|DNS]] entries all pointing to the same <b><i><span style="color:#d46644">ingress controller</span></i></b>
 
 - Within each <b><i><span style="color:#d46644">ingress resource</span></i></b> rule, you can handle multiple paths
-	- There are rules at the top level for each <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS|domain name]] and within each rule, there are different paths to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes|route]] traffic based on the URL
+	- There are rules at the top level for each <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS|domain name]] and within each rule, there are different paths to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] traffic based on the URL
 
 ![[ingress-20.png]]
 
