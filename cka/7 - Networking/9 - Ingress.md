@@ -124,10 +124,10 @@ Ingress Resources
 
 ![[ingress-19.png]]
 
-- FYI: It is possible to have different [[0.2 - DNS|domain names]] that reach a [[0 - Core Concepts Intro ✅|cluster]] by adding multiple [[0.2 - DNS|DNS]] entries all pointing to the same <b><i><span style="color:#d46644">ingress controller</span></i></b>
+- FYI: It is possible to have different [[0.2 - DNS ✅|domain names]] that reach a [[0 - Core Concepts Intro ✅|cluster]] by adding multiple [[0.2 - DNS ✅|DNS]] entries all pointing to the same <b><i><span style="color:#d46644">ingress controller</span></i></b>
 
 - Within each <b><i><span style="color:#d46644">ingress resource</span></i></b> rule, you can handle multiple paths
-	- There are rules at the top level for each <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS|domain name]] and within each rule, there are different paths to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] traffic based on the URL
+	- There are rules at the top level for each <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS ✅|domain name]] and within each rule, there are different paths to [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|route]] traffic based on the URL
 
 ![[ingress-20.png]]
 
@@ -152,14 +152,14 @@ Ingress Resources
 
 ![[ingress-25.png]]
 
-- Another type of <b><i><span style="color:#d46644">ingress</span></i></b> definition configuration is using [[0.2 - DNS|domain names]] or hostnames
+- Another type of <b><i><span style="color:#d46644">ingress</span></i></b> definition configuration is using [[0.2 - DNS ✅|domain names]] or hostnames
 
-- To split traffic based on [[0.2 - DNS|domain name]], the "<span style="color:red">host</span>" property is a sibling of the "<span style="color:red">http(s)</span>" property
+- To split traffic based on [[0.2 - DNS ✅|domain name]], the "<span style="color:red">host</span>" property is a sibling of the "<span style="color:red">http(s)</span>" property
 
 ![[ingress-26.png]]
 
-- The "<span style="color:red">host</span>" property for each rule matches the specified value with the [[0.2 - DNS|domain name]] used as the request URL and routes traffic to the appropriate backend
+- The "<span style="color:red">host</span>" property for each rule matches the specified value with the [[0.2 - DNS ✅|domain name]] used as the request URL and routes traffic to the appropriate backend
 
-- Notice the difference between splitting by path or <span style="color:red">endpoint/subdomain</span> and splitting by <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS|domain name]]
+- Notice the difference between splitting by path or <span style="color:red">endpoint/subdomain</span> and splitting by <i><span style="color:#477bbe">host</span></i> or [[0.2 - DNS ✅|domain name]]
 
 ![[ingress-27.png]]

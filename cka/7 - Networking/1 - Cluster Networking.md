@@ -1,5 +1,5 @@
-- Each [[0 - Core Concepts Intro ✅|node]] in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] must have at least 1 [[0.2 - DNS|interface]]
-	- Each [[0.2 - DNS|interface]] must have an <span style="color:#5c7e3e">IP address</span> configured
+- Each [[0 - Core Concepts Intro ✅|node]] in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] must have at least 1 [[0.2 - DNS ✅|interface]]
+	- Each [[0.2 - DNS ✅|interface]] must have an <span style="color:#5c7e3e">IP address</span> configured
 	- The <i><span style="color:#477bbe">host</span></i> must have a unique hostname set and a unique <span style="color:#5c7e3e">MAC address</span>
 
 - There are <span style="color:#5c7e3e">ports</span> on the [[0 - Core Concepts Intro ✅|nodes]] that need to be opened as well, which are used by the various components in the [[0 - Core Concepts Intro ✅|controlplane]]

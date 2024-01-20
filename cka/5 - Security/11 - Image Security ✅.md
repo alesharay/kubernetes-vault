@@ -11,7 +11,7 @@
 
 - If you have your own <span style="color:#5c7e3e">Docker</span> account , the pattern would be similar: your-name/image-name
 
-- For <b><i><span style="color:#d46644">images</span></i></b> in the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">registry</span></i></b>, they are both stored and pulled from the <span style="color:#5c7e3e">docker.io</span> [[0.2 - DNS|DNS]]
+- For <b><i><span style="color:#d46644">images</span></i></b> in the <span style="color:#5c7e3e">Docker</span> <b><i><span style="color:#d46644">registry</span></i></b>, they are both stored and pulled from the <span style="color:#5c7e3e">docker.io</span> [[0.2 - DNS ✅|DNS]]
 
 ![[images-security-2.png]]
 
