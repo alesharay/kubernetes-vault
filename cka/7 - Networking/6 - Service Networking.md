@@ -37,8 +37,8 @@
 
 ![[service-networking-4.png]]
 
-- As we have seen, [[7 - Pods ✅|pods]] have [[7 - Pods ✅|containers]] and [[7 - Pods ✅|containers]] have [[0.4 - Network Namespaces|namespaces]] with [[0.6 - CNI|interfaces]] that have <span style="color:#5c7e3e">IP addresses</span> assigned to them. But with [[10 - Services ✅|services]], nothing like this exists
-	- There are no processes, [[0.4 - Network Namespaces|namespaces]] or [[0.6 - CNI|interfaces]] for [[10 - Services ✅|services]]
+- As we have seen, [[7 - Pods ✅|pods]] have [[7 - Pods ✅|containers]] and [[7 - Pods ✅|containers]] have [[0.4 - Network Namespaces ✅|namespaces]] with [[0.6 - CNI|interfaces]] that have <span style="color:#5c7e3e">IP addresses</span> assigned to them. But with [[10 - Services ✅|services]], nothing like this exists
+	- There are no processes, [[0.4 - Network Namespaces ✅|namespaces]] or [[0.6 - CNI|interfaces]] for [[10 - Services ✅|services]]
 
 - A [[10 - Services ✅|service]] is just a <span style="color:#5c7e3e">virtual</span> object
 

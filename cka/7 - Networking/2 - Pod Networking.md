@@ -19,5 +19,5 @@
 
 - Whenever a [[7 - Pods ✅|container]] is created, the [[5 - Kubelet ✅|kubelet]] looks at the [[0.6 - CNI|CNI]] configuration passed as a command-line argument when it is run, and identifies the **script's** name
 	- It then looks at the [[0.6 - CNI|CNI]] bin directory to find the **script**
-	- It executes the script with the <span style="color:red">add</span> command and the name of the [[0.4 - Network Namespaces|namespace]] of the [[7 - Pods ✅|container]]
+	- It executes the script with the <span style="color:red">add</span> command and the name of the [[0.4 - Network Namespaces ✅|namespace]] of the [[7 - Pods ✅|container]]
 	- The **script** takes care of the rest
