@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "c032a2e9a20d14d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a5590ab0eb757c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1fb5a2066f71332a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "05fe8a066a0f2886",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb66f6bb91cbf135",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3d5210de19af715",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "73df7677342f5d92",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "affinity",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a46fa3d192630ddb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0744a6741531c885",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f9c64e23176f8b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2dce8100c32c6f3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "edf2d23f783e79fe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2c1d78f9641caa40",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "db204e3129b82bb2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "cka/1 - Scheduling/1 - Labels & Selectors ✅.md"
+              }
+            }
+          },
+          {
+            "id": "3bb66de87d29cbc8",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "a5dcd2a5fd93b1bc",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
+    }
+  },
+  "active": "1fb5a2066f71332a",
+  "lastOpenFiles": [
+    "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
+    "cka/9 - Practice Questions/Question 22.md",
+    "cka/9 - Practice Questions/Question 21.md",
+    "cka/9 - Practice Questions/Question 20.md",
+    "cka/9 - Practice Questions/Question 19.md",
+    "cka/9 - Practice Questions/Question 18.md",
+    "cka/9 - Practice Questions/Question 17.md",
+    "cka/9 - Practice Questions/Question 16.md",
+    "cka/9 - Practice Questions/Question 15.md",
+    "cka/9 - Practice Questions/Question 14.md",
+    "cka/9 - Practice Questions/Question 13.md",
+    "cka/9 - Practice Questions/Question 12.md",
+    "cka/9 - Practice Questions/Question 11.md",
+    "cka/9 - Practice Questions/Question 10.md",
+    "cka/9 - Practice Questions/Question 9.md",
+    "cka/9 - Practice Questions/Question 8.md",
+    "cka/9 - Practice Questions/Question 7.md",
+    "cka/9 - Practice Questions/Question 6.md",
+    "cka/9 - Practice Questions/Question 5.md",
+    "cka/9 - Practice Questions/Question 4.md",
+    "cka/9 - Practice Questions/Question 3.md",
+    "cka/9 - Practice Questions/Question 2.md",
+    "cka/9 - Practice Questions/Question 1.md",
+    "cka/1 - Scheduling/4 - Node Affinity ✅.md",
+    "cka/1 - Scheduling/3 - Node Selectors ✅.md",
+    "cka/1 - Scheduling/2 - Taints & Tolerations ✅.md",
+    "kind-config.yaml",
+    "root-cert.pem",
+    "cka/images/Screenshot 2023-10-15 at 11.19.33 AM.png"
+  ]
+}
