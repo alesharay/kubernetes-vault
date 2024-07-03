@@ -41,7 +41,7 @@
 
 	Mac:
 
-		ps -el | grep -i /usr/bin/kubeletƒ
+		ps -el | grep -i /usr/bin/kubelet
 
 	- Jot down the <span style="color:red">--config</span> path
 

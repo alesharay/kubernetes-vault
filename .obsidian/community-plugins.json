@@ -1,16 +1,16 @@
 [
-  "obsidian-kanban",
   "obsidian-excalidraw-plugin",
   "dataview",
   "table-editor-obsidian",
+  "obsidian-tasks-plugin",
   "calendar",
+  "obsidian-kanban",
   "obsidian-git",
-  "obsidian-advanced-slides",
   "obsidian-icon-folder",
+  "tag-wrangler",
   "obsidian-mind-map",
   "cm-editor-syntax-highlight-obsidian",
-  "highlightr-plugin",
-  "colored-text",
-  "omnisearch",
-  "obsidian-doubleshift"
+  "actions-uri",
+  "obsidian-textgenerator-plugin",
+  "obsidian-style-settings"
 ]
