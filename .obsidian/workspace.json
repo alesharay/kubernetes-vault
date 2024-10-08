@@ -23,9 +23,11 @@
             "id": "ae8b1f0894344724",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.5"
+                "file": "cka/9 - Practice Questions/Question 10.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ckad/3 - Observability/0 - Readiness probes.md",
+                "file": "cka/9 - Practice Questions/Question 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ckad/3 - Observability/0 - Readiness probes.md",
+                "file": "cka/9 - Practice Questions/Question 10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ckad/3 - Observability/0 - Readiness probes.md"
+                "file": "cka/9 - Practice Questions/Question 10.md"
               }
             }
           },
@@ -192,6 +194,30 @@
   },
   "active": "ae8b1f0894344724",
   "lastOpenFiles": [
+    "cka/9 - Practice Questions/Question 8.md",
+    "cka/9 - Practice Questions/Question 15.md",
+    "cka/9 - Practice Questions/Question 1.md",
+    "cka/4 - Cluster Maintenance/1 - Kubernetes Software Versions ✅.md",
+    "cka/0 - Core Concepts/8 - ReplicaSets ✅.md",
+    "cka/0 - Core Concepts/6 - Kube Proxy ✅.md",
+    "cka/0 - Core Concepts/9 - Deployments ✅.md",
+    "cka/0 - Core Concepts/2 - Kube API server ✅.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/4 - Installing Kubernetes with Kubeadm.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/3 - ** ETCD in HA.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/2 - ** Configure High Availability.md",
+    "cka/8 - Design and Install a Kubernetes Cluster/0 - Design a Kubernetes Cluster.md",
+    "cka/9 - Practice Questions/Question 4.md",
+    "cka/9 - Practice Questions/Question 7.md",
+    "cka/9 - Practice Questions/Question 9.md",
+    "cka/9 - Practice Questions/Question 12.md",
+    "cka/9 - Practice Questions/Question 17.md",
+    "cka/9 - Practice Questions/Question 19.md",
+    "cka/9 - Practice Questions/Question 21.md",
+    "cka/9 - Practice Questions/Question 22.md",
+    "cka/9 - Practice Questions/Question 2.md",
+    "cka/9 - Practice Questions/Question 3.md",
+    "cka/1 - Scheduling/2 - Taints & Tolerations ✅.md",
+    "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
     "ckad/9 - Additional Practice",
     "ckad/8 - Helm Fundamentals",
     "ckad/7 - Security",
@@ -203,31 +229,7 @@
     "ckad/0 - Core Concepts",
     "cka/1 - Scheduling/1 - Labels & Selectors ✅.md",
     "cka/7 - Networking/0 - Prereqs/0.5 - Docker Networking.md",
-    "cka/1 - Scheduling/0 - Scheduling Intro ✅.md",
-    "cka/9 - Practice Questions/Question 22.md",
-    "cka/9 - Practice Questions/Question 21.md",
-    "cka/9 - Practice Questions/Question 20.md",
-    "cka/9 - Practice Questions/Question 19.md",
-    "cka/9 - Practice Questions/Question 18.md",
-    "cka/9 - Practice Questions/Question 17.md",
-    "cka/9 - Practice Questions/Question 16.md",
-    "cka/9 - Practice Questions/Question 15.md",
-    "cka/9 - Practice Questions/Question 14.md",
-    "cka/9 - Practice Questions/Question 13.md",
-    "cka/9 - Practice Questions/Question 12.md",
-    "cka/9 - Practice Questions/Question 11.md",
-    "cka/9 - Practice Questions/Question 10.md",
-    "cka/9 - Practice Questions/Question 9.md",
-    "cka/9 - Practice Questions/Question 8.md",
-    "cka/9 - Practice Questions/Question 7.md",
-    "cka/9 - Practice Questions/Question 6.md",
-    "cka/9 - Practice Questions/Question 5.md",
-    "cka/9 - Practice Questions/Question 4.md",
-    "cka/9 - Practice Questions/Question 3.md",
-    "cka/9 - Practice Questions/Question 2.md",
-    "cka/9 - Practice Questions/Question 1.md",
     "kind-config.yaml",
-    "root-cert.pem",
     "cka/images/Screenshot 2023-10-15 at 11.19.33 AM.png"
   ]
 }
