@@ -6,11 +6,13 @@ Question 2
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-ek8s
+```bash
+[student$node-1] $ kubectl config use-context ek8s
+```
 
 Task -
 
-Set the node named k3d-ek8s-agent-0 as unavailable and reschedule all the pods running on it.
+Set the node named `ek8s-agent-0` as unavailable and reschedule all the pods running on it.
 
 
 

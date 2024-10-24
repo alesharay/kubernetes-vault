@@ -6,11 +6,13 @@ Question 9
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-k8s
+```bash
+[student$node-1] $ kubectl config use-context k8s
+```
 
 Task -
 
-Check to see how many nodes are ready (not including nodes tainted NoSchedule) and write the number to $HOME/kubernetes/KUSC00402/kusc00402.txt.
+Check to see how many nodes are ready (not including nodes tainted `NoSchedule`) and write the number to `$HOME/kubernetes/KUSC00402/kusc00402.txt`.
 
 
 

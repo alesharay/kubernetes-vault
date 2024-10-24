@@ -6,11 +6,14 @@ Question 11
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-hk8s
+```bash
+[student$node-1] $ kubectl config use-context hk8s
+```
 
 Task -
 
-Create a persistent volume with name app-data, of capacity 2Gi and access mode ReadWriteMany. The type of volume is hostPath and its location is /srv/app-data.
+Create a persistent volume with name `app-data`, of capacity `2Gi` and access mode `ReadWriteMany`. 
+The type of volume is `hostPath` and its location is `/srv/app-data`.
 
 
 

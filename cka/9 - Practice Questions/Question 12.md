@@ -6,15 +6,17 @@ Question 12
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-k8s
+```bash
+[student$node-1] $ kubectl config use-context k8s
+```
 
 Task -
 
-Monitor the logs of pod foo and:
+Monitor the logs of pod `foo` and:
 
-✑ Extract log lines corresponding to error file-not-found
+✑ Extract log lines corresponding to `error file-not-found`
 
-✑ Write them to $HOME/kubernetes/KUTR00101/foo
+✑ Write them to `$HOME/kubernetes/KUTR00101/foo`
 
 
 

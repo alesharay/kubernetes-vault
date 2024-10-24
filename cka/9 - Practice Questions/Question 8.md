@@ -6,17 +6,19 @@ Question 8
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-k8s
+```bash
+[student$node-1] $ kubectl config use-context k8s
+```
 
 Task -
 
 Schedule a pod as follows:
 
-✑ Name: nginx-kusc00401
+✑ Name: `nginx-kusc00401`
 
-✑ Image: nginx
+✑ Image: `nginx`
 
-✑ Node selector: disk=ssd
+✑ Node selector: `disk=ssd`
 
 
 

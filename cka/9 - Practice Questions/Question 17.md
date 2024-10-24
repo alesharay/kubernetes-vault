@@ -6,21 +6,25 @@ Question 17 ( Topic 1 )
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-k8s
+```bash
+[student$node-1] $ kubectl config use-context k8s
+```
 
 Task -
 
-Create a new nginx Ingress resource as follows:
+Create a new `nginx` Ingress resource as follows:
 
-✑ Name: pong
+	✑ Name: pong
+	
+	✑ Namespace: ing-internal
+	
+	✑ Exposing service hello on path /hello using service port 5678
 
-✑ Namespace: ing-internal
+The availability of service `hello` can be checked using the following command, which should return `hello` :
 
-✑ Exposing service hello on path /hello using service port 5678
-
-The availability of service hello can be checked using the following command, which should return hello :
-
+```bash
 [student@node-1] $ curl -kL <INTERNAL_IP>/hello
+```
 
 
 

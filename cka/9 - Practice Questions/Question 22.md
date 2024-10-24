@@ -2,9 +2,11 @@
 
 [see answer](#answer)
 
-Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. Record the version.
+Create a new deployment called `nginx-deploy`, with image `nginx:1.16` and `1` replica. 
+Record the version.
 
-Next upgrade the deployment to version 1.17 using rolling update. Make sure that the version upgrade is recorded in the resource annotation.
+Next upgrade the deployment to version `1.17` using `rolling update`.
+Make sure that the version upgrade is recorded in the resource annotation.
 
 
 

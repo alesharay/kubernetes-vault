@@ -6,21 +6,23 @@ Question 10
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context k3d-k8s
+```bash
+[student$node-1] $ kubectl config use-context k8s
+```
 
 Task -
 
 Schedule a Pod as follows:
 
-✑ Name: kucc8
+✑ Name: `kucc8`
 
-✑ App Containers: 2
+✑ App Containers: `2`
 
 ✑ Container Name/Images:
 
-- nginx
+- `nginx`
 
-- consul
+- `consul`
 
 
 

@@ -6,7 +6,9 @@ Question 15
 
 SIMULATION -
 
-[student$node-1] $ kubectl config use-context kind-wk8s
+```bash
+[student$node-1] $ kubectl config use-context wk8s
+```
 
 Task -
 
@@ -16,11 +18,15 @@ Investigate why this is the case, and perform any appropriate steps to bring the
 
 You can ssh to the failed node using:
 
+```bash
 [student@node-1] $ docker exec -it wk8s-agent-0 shnt-0
+```
 
 You can assume elevated privileges on the node with the following command:
 
+```bash
 [student@k3ds-wk8s-agent-0] $ sudo -i
+```
 
 
 

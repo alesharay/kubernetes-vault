@@ -2,11 +2,11 @@
 
 [see answer](#answer)
 
-Create a Pod called non-root-pod  with image redis:alpine and the following requirements:
+Create a Pod called `non-root-pod`  with image `redis:alpine` and the following requirements:
 
-runAsUser: 1000
+`✑ runAsUser: 1000
 
-fsGroup: 2000
+`✑ fsGroup: 2000`
 
 
 

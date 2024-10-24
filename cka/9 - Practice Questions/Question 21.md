@@ -2,11 +2,11 @@
 
 [see answer](#answer)
 
-Create a new ServiceAccount with the name pvviewer.
+Create a new ServiceAccount with the name `pvviewer`.
 
-Grant this ServiceAccount access to list all PersistentVolumes in the cluster by creating an appropriate ClusterRole called pvviewer-role and ClusterRoleBinding called pvviewer-role-binding.
+Grant this ServiceAccount access to list all PersistentVolumes in the cluster by creating an appropriate ClusterRole called `pvviewer-role` and ClusterRoleBinding called `pvviewer-role-binding`.
 
-Next, create a pod called pvviewer with the image: redis and serviceaccount: pvviewer in the default namespace.
+Next, create a pod called `pvviewer` with the image: `redis` and serviceaccount: `pvviewer` in the `default` namespace.
 
 
 

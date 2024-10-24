@@ -1,0 +1,33 @@
+### Create the following:
+- k8s
+	- deployment named `front-end`
+	- container named `nginx`
+		- port `80`
+	- namespace named `app-team1`
+	- deployment named `presentation`
+	- pod named `foo`
+		- outputs following logs:
+			- `error file-not-found`
+	- image named `busybox`
+	- pod named `big-corp-app`
+	- volume mounted at `/var/log`
+	- pod with label `run=overload-cpu`
+	- file named `$HOME/kubernetes/KUTR00401/KUTR00401.txt`
+- ek8s
+	- agent-0 (worker node)
+- hk8s
+	- namespace `fubar`
+	- port 9000
+	- namespace `internal`
+- mk8s
+	- master-0 (master node)
+	- run kubernetes version 1.26.3
+	- keys located at 
+	- /etc/kubenetes/pki/etcd/
+		- ca.crt
+		- server.crt
+		- server.key
+- ok8s
+- wk8s
+	- agent-0 (worker node) - not ready state
+	
