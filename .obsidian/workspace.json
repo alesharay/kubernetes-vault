@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cka/9 - Practice Questions/Question 1.md",
+                "file": "cka/0 - Core Concepts/1 - ETCD ✅.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Question 1"
+              "title": "1 - ETCD ✅"
             }
           }
         ]
@@ -221,19 +221,22 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "a3d5210de19af715",
+  "active": "1fb5a2066f71332a",
   "lastOpenFiles": [
-    "cka/images/np-9.png",
-    "cka/images/auth-9.png",
-    "cka/images/dns-1.png",
-    "cka/images/mult-schedulers-7.png",
-    "cka/images/rolling-3.png",
-    "cka/images/docker-network-9.png",
-    "cka/images/daemonsets-3.png",
-    "cka/images/clusteru-5.png",
-    "cka/images/ingress-16.png",
-    "cka/images/static-pods-2.png",
-    "cka/images/commands-1.png",
+    "cka/0 - Core Concepts/0 - Core Concepts Intro ✅.md",
+    "cka/9 - Practice Questions/Question 1.md",
+    "cka/5 - Security/2 - TLS Basics.md",
+    "cka/5 - Security/3 - TLS in Kubernetes.md",
+    "cka/images/tlsk-10.png",
+    "cka/images/tlsb-4.png",
+    "cka/images/certc-8.png",
+    "cka/images/nn-24.png",
+    "cka/images/srgck-12.png",
+    "cka/images/api-2.png",
+    "cka/images/api-3.png",
+    "cka/images/backup-3.png",
+    "cka/images/srgck-8.png",
+    "cka/images/static-pods-1.png",
     "ckad/2 - Observability/0 - Readiness probes.md",
     "ckad/2 - Observability/1 - Liveness Probes.md",
     "ckad/2 - Observability",
@@ -258,9 +261,6 @@
     "cka/9 - Practice Questions/Question 5.md",
     "cka/9 - Practice Questions/Question 4.md",
     "cka/9 - Practice Questions/Question 3.md",
-    "cka/9 - Practice Questions/Question 2.md",
-    "cka/9 - Practice Questions/Question 1.md",
-    "cka/9 - Practice Questions/Practice Exam Setup.md",
     "cka/Untitled.canvas",
     "ckad/9 - Additional Practice",
     "ckad/8 - Helm Fundamentals",
