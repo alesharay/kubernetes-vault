@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - We create [[4 - Persistent Volumes ✅|PVs]] and [[5 - Persistent Volume Claims ✅|PVCs]] to claim the [[4 - Persistent Volumes ✅|PV]] <b><i><span style="color:#d46644">storage</span></i></b>, and inject them into the [[7 - Pods ✅|pod]] definition files as [[3 - Volumes ✅|volumes]]
 
 ![[storage-classes-1.png]]

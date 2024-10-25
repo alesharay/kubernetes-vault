@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - <span style="color:#5c7e3e">Docker</span> [[7 - Pods ✅|containers]] are meant to be **transient** in nature
 	- This means they are meant to last only for a short period of time
 

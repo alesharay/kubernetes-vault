@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/core-concepts
+
 - An <b><span style="color:#d46644">imperative</span></b> approach is specifying what to do and exactly how to do it
 	- A set of step-by-step instructions for <span style="color:#5c7e3e">provisioning</span> an <i><span style="color:#477bbe">infrastructure</span></i> is <b><span style="color:#d46644">imperative</span></b>
 

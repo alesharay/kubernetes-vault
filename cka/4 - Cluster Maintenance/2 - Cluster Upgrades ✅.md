@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/cluster-maintenance
+
 - Most <b><span style="color:#d46644">upgrade</span></b> information can be found on the following page
 
 	https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/

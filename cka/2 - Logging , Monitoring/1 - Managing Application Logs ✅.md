@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/logging-monitoring
+
 ### Logging in Docker
 
 - To see <span style="color:#5c7e3e">docker</span> logs, use the <span style="color:red">docker logs -f</span> command followed by the container ID

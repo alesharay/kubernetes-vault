@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - In the past, <span style="color:#5c7e3e">Kubernetes</span> used <span style="color:#5c7e3e">Docker</span> alone as the <b><i><span style="color:#d46644">container runtime engine</span></i></b>
 
 - This means that all of the code to work with <span style="color:#5c7e3e">Docker</span> was embedded into the <span style="color:#5c7e3e">Kubernetes</span> source code

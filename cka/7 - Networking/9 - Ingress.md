@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - <b><i><span style="color:#d46644">Ingress</span></i></b> helps <i><span style="color:#477bbe">users</span></i> access an application using a single externally accessible URL that can be configured to route traffic between different [[10 - Services ✅|services]] within the [[0 - Core Concepts Intro ✅|cluster]] based on the URL path and, at the same time, implement [[3.1 - Certification Creation|SSL]] security as well
 
 - Think of <b><i><span style="color:#d46644">ingress</span></i></b> as a layer 7 [[10 - Services ✅|load balancer]] that is built into the [[0 - Core Concepts Intro ✅|cluster]] and can be configured using native <span style="color:#5c7e3e">Kubernetes</span> primitives (just like any other <span style="color:#5c7e3e">Kubernetes</span> object)

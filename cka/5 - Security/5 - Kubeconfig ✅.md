@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - A <i><span style="color:#477bbe">client</span></i> can use the [[3.1 - Certification Creation|certificate]] file and [[3.1 - Certification Creation|key]] to query the <span style="color:#5c7e3e">Kubernetes</span> REST API for a list of [[7 - Pods ✅|pods]] using <span style="color:#5c7e3e">curl</span>
 	- This is then validated by the [[2 - Kube API server ✅|kube-apiserver]] to [[1 - Authentication ✅|authenticate]] the <i><span style="color:#477bbe">user</span></i>
 

@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/cluster-maintenance
+
 - We know that when we install the <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]], we install a specific version of <span style="color:#5c7e3e">Kubernetes</span>
 
 - We can see the <span style="color:#5c7e3e">Kubernetes</span> version by running the <span style="color:red">kubectl get nodes</span> command

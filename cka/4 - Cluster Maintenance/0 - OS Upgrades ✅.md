@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/cluster-maintenance
+
 - When a [[0 - Core Concepts Intro ✅|cluster]] or [[0 - Core Concepts Intro ✅|node]] goes down, the [[7 - Pods ✅|pods]] on the [[0 - Core Concepts Intro ✅|node]] are not available
 	- Depending on how you deployed the [[7 - Pods ✅|pods]], that could impact your <i><span style="color:#477bbe">users</span></i>
 

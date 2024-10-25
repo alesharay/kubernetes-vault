@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - Adding and removing additional <b><i><span style="color:#d46644">privileges</span></i></b>, or setting a different user can be configured in <span style="color:#5c7e3e">Kubernetes</span> as well
 
 - Since [[7 - Pods ✅|containers]] are encapsulated in [[7 - Pods ✅|pods]] in <span style="color:#5c7e3e">Kubernetes</span>, you can configure <b><i><span style="color:#d46644">security</span></i></b> at a [[7 - Pods ✅|container]] level or at a [[7 - Pods ✅|pod]] level

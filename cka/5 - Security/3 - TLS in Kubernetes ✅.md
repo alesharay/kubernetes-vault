@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - <b><i><span style="color:#d46644">Root Certificates</span></i></b> are the <b><i><span style="color:#d46644">CA's pubilc</span></i></b> and <b><i><span style="color:#d46644">private keys</span></i></b> that are configured on <i><span style="color:#477bbe">CA servers</span></i> used to sign <b><i><span style="color:#d46644">server certificates</span></i></b>
 
 - <b><i><span style="color:#d46644">Server Certificates</span></i></b> are <b><i><span style="color:#d46644">public</span></i></b> and <b><i><span style="color:#d46644">private key</span></i></b> pairs used to <i><span style="color:#477bbe">secure</span></i> connectivity

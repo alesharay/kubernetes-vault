@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - When you install <span style="color:#5c7e3e">Docker</span> on a system, it creates its folder structure at <span style="color:red">/var/lib/docker</span>
 	- This is where <span style="color:#5c7e3e">Docker</span> stores all of its files related to [[11 - Image Security ✅|images]] and [[7 - Pods ✅|containers]] by default
 

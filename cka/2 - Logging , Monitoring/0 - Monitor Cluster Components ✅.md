@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/logging-monitoring
+
 - <span style="color:#5c7e3e">Kubernetes</span> does not come with a full featured built-in [[1 - Managing Application Logs ✅|monitoring]] solution
 
 - There are many <span style="color:#5c7e3e">Kubernetes</span> [[1 - Managing Application Logs ✅|monitoring]] solutions available,

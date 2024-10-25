@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 <i><span style="color:red">Not listed in as a required topic in cert but important to know</span></i>
 
 - [[7 - Pods ✅|Containers]] are not meant to host an OS

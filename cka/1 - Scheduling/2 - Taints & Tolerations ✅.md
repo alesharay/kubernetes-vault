@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - <b><span style="color:#d46644">Taints & Tolerations</span></b> set restrictions on what [[7 - Pods ✅|pod]] can be [[4 - Kube Scheduler ✅|scheduled]] on a [[0 - Core Concepts Intro ✅|node]]
 	(see the bug and repellent example)
 

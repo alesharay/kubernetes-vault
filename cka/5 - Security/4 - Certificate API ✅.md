@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - As the <i><span style="color:#477bbe">admin</span></i> of the [[0 - Core Concepts Intro ✅|cluster]], when you need to add new <i><span style="color:#477bbe">admins</span></i> to have access to the [[0 - Core Concepts Intro ✅|cluster]], they need their own [[3.1 - Certification Creation|certificate]] and [[2 - TLS Basics ✅|keys]]
 
 - This new <i><span style="color:#477bbe">admin</span></i> would create their own [[2 - TLS Basics ✅|key-pair]], generate a [[3.1 - Certification Creation|CSR]], and send it to the current <i><span style="color:#477bbe">admin</span></i> who has access to the <i><span style="color:#477bbe">CA server</span></i>

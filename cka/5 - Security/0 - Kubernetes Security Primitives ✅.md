@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - All <b><i><span style="color:#d46644">access</span></i></b> to the hosts ([[0 - Core Concepts Intro ✅|nodes]]) that form the [[0 - Core Concepts Intro ✅|cluster]] need to meet the following requirements:
 	- must be <b><i><span style="color:#d46644">secured</span></i></b>
 	- root <b><i><span style="color:#d46644">access</span></i></b> disabled

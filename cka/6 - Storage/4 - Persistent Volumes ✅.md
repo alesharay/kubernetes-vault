@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - Previously when we created [[3 - Volumes ✅|volumes]], we configured them within the [[7 - Pods ✅|pod]] definition file so that all configuration information required to configure [[0 - Storage in Docker ✅|storage]] for the [[3 - Volumes ✅|volume]] goes inside of the [[7 - Pods ✅|pod]] definition file as well
 
 - With using just [[3 - Volumes ✅|volumes]], when you have a large environment with a lot of <i><span style="color:#477bbe">users</span></i> [[9 - Deployments ✅|deploying]] a lot of [[7 - Pods ✅|pods]], the <i><span style="color:#477bbe">users</span></i> would have to configure [[0 - Storage in Docker ✅|storage]] every time for each [[7 - Pods ✅|pod]]

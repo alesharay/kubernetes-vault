@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - The concept of <b><i><span style="color:#d46644">service accounts</span></i></b> is linked to other security related resources in <span style="color:#5c7e3e">Kubernetes</span>:
 	- authentication
 	- authorization

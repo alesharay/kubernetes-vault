@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - In a [[6 - Multi-Container Pods ✅|multi-container pod]], each [[7 - Pods ✅|container]] is expected to run a process that stays alive as long as the [[7 - Pods ✅|pod's]] lifecycle
 	- If any of them fail, the [[7 - Pods ✅|pod]] restarts
 

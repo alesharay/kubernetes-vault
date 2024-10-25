@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - <span style="color:#5c7e3e">Limitations</span> can be set on [[7 - Pods ✅|pods]] so that they only run on the [[0 - Core Concepts Intro ✅|nodes]] that can handle their resource requirements
 
 - There are two ways to add <span style="color:#5c7e3e">limitations</span> on [[7 - Pods ✅|pods]]:

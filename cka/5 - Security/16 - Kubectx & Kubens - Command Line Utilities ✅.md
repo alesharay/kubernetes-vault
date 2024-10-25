@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - In a real “live” <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] implemented for production, there could be a possibility of often switching between a large number of [[11 - Namespaces ✅|namespaces]] and [[0 - Core Concepts Intro ✅|clusters]]
 	- This can quickly become a confusing and overwhelming task if you had to rely on [[13 - Kubectl Apply ✅|kubectl]] alone
 

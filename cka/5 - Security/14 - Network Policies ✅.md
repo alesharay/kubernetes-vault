@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 ### Basics of traffic flow and rules
 
 - There are many configurations for an application. Assume you have a <i><span style="color:#477bbe">web server</span></i> serving <i><span style="color:#477bbe">frontend</span></i> to <i><span style="color:#477bbe">users</span></i> and an <i><span style="color:#477bbe">app server</span></i> serving <i><span style="color:#477bbe">backend API server</span></i> and <i><span style="color:#477bbe">database server</span></i>

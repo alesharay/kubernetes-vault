@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - <b><i><span style="color:#d46644">Roles</span></i></b> and <b><i><span style="color:#d46644">role bindings</span></i></b> are [[11 - Namespaces ✅|namespaced]], meaning they are created within [[11 - Namespaces ✅|namespaces]]
 
 - If the [[11 - Namespaces ✅|namespace]] for <b><i><span style="color:#d46644">roles</span></i></b> and <b><i><span style="color:#d46644">role bindings</span></i></b> are not indicated, they will be created within the default [[11 - Namespaces ✅|namespace]] and can control resources in that [[11 - Namespaces ✅|namespace]] alone

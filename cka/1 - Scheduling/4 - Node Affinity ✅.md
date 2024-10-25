@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - <b><span style="color:#d46644">nodeAffinity</span></b> ensures that [[7 - Pods ✅|pods]] are placed on particular [[0 - Core Concepts Intro ✅|nodes]]
 	- We are provided with advanced capabilities to limit [[7 - Pods ✅|pods]] being placed on specific [[0 - Core Concepts Intro ✅|nodes]]
 

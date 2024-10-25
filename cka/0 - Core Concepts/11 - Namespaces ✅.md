@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/core-concepts
+
 - The <b><span style="color:#d46644">default namespaces</span></b> is created automatically with <span style="color:#5c7e3e">Kubernetes</span>
 
 - When a [[0 - Core Concepts Intro ✅|cluster]] is first setup, <span style="color:#5c7e3e">Kubernetes</span> creates a [[0 - Core Concepts Intro ✅|cluster]] and [[10 - Services ✅|services]] for its internal purpose such as those required by the networking solution

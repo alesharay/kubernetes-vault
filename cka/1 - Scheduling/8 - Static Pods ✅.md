@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - [[5 - Kubelet ✅|Kubelet]] can manage [[0 - Core Concepts Intro ✅|nodes]] independently
 
 - If [[5 - Kubelet ✅|kubelet]] has no [[2 - Kube API server ✅|kube-apiserver]] or [[1 - ETCD ✅|etcd]] store to communicate with, there are still things that can be done in order to deploy [[7 - Pods ✅|pods]] onto [[0 - Core Concepts Intro ✅|nodes]]

@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - Each [[0 - Core Concepts Intro ✅|node]] in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]] must have at least 1 [[0.2 - DNS ✅|interface]]
 	- Each [[0.2 - DNS ✅|interface]] must have an <span style="color:#5c7e3e">IP address</span> configured
 	- The <i><span style="color:#477bbe">host</span></i> must have a unique hostname set and a unique <span style="color:#5c7e3e">MAC address</span>

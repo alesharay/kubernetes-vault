@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - When you first create a [[9 - Deployments ✅|deployment]], it triggers a <b><span style="color:#d46644">rollout</span></b>
 
 - A new <b><span style="color:#d46644">rollout</span></b> creates a new [[9 - Deployments ✅|deployment]] <b><span style="color:#d46644">revision</span></b>

@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - <b><span style="color:#d46644">DaemonSets</span></b>, like [[8 - ReplicaSets ✅|ReplicaSets]], help you deploy multiple instances of a [[7 - Pods ✅|pod]]
 	- It runs only <u>one</u> copy of the [[7 - Pods ✅|pod]] on each [[0 - Core Concepts Intro ✅|node]] in the [[0 - Core Concepts Intro ✅|cluster]]
 

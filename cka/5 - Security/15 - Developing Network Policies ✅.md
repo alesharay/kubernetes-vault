@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - Assume the goal is to protect the <i><span style="color:#477bbe">DB</span></i> [[7 - Pods ✅|pod]] in the <i><span style="color:#477bbe">web server</span></i> - <i><span style="color:#477bbe">API server</span></i>- <i><span style="color:#477bbe">DB server</span></i> setup so that it doesn't allow access from any other [[7 - Pods ✅|pods]] except the <i><span style="color:#477bbe">API server</span></i> [[7 - Pods ✅|pod]]
 
 - By default, <span style="color:#5c7e3e">Kubernetes</span> allows all communications from all [[7 - Pods ✅|pods]] to all destinations

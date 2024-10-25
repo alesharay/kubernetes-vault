@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - Given a [[7 - Pods ✅|pod]] definition file, to set an <b><span style="color:#d46644">environment variable</span></b> to use with the <span style="color:#5c7e3e">Dockerfile</span>, add an <b><span style="color:#d46644">env</span></b> property that consists of an <span style="color:#5c7e3e">array</span> of <span style="color:#5c7e3e">dictionaries</span> with properties <span style="color:#5c7e3e">name</span> and <span style="color:#5c7e3e">value</span>
 	- The <span style="color:#5c7e3e">name</span> is the name of the <b><span style="color:#d46644">environment variable</span></b> made available to the [[7 - Pods ✅|container]]
 	- The <span style="color:#5c7e3e">value</span> is the value of the <b><span style="color:#d46644">environment variable</span></b> made available to the [[7 - Pods ✅|container]]

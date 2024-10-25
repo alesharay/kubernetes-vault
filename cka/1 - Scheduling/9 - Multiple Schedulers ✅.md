@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - What if, when the [[4 - Kube Scheduler ✅|scheduler]] is <span style="color:#d46644">scheduling</span> [[7 - Pods ✅|pods]] to [[0 - Core Concepts Intro ✅|nodes]], none of the [[2 - Taints & Tolerations ✅|taints and tolerations]] or [[4 - Node Affinity ✅|nodeAffinity]] & [[3 - Node Selectors ✅|nodeSelector]] rules satisfies the needs
 	- What if you want to use your own <span style="color:#d46644">scheduling</span> algorithm to place [[7 - Pods ✅|pods]] on [[0 - Core Concepts Intro ✅|nodes]]
 

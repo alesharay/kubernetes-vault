@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/core-concepts
+
 - The <span style="color:red">kubectl apply</span> command takes the following into consideration before making a decision on what changes are to be made
 	- The local object definition file
 	- The live object configuration

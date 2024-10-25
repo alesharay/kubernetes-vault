@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - Whenever a [[7 - Pods ✅|pod]] is placed on a [[0 - Core Concepts Intro ✅|node]] it consumes <b><span style="color:#d46644">resources</span></b> available to the [[0 - Core Concepts Intro ✅|node]] (<span style="color:#5c7e3e">CPU</span>, <span style="color:#5c7e3e">memory</span>, <span style="color:#5c7e3e">disk space</span>, etc…)
 
 - To recap, the [[4 - Kube Scheduler ✅|scheduler]] takes into consideration the amount of <b><span style="color:#d46644">resources</span></b> required for a specific [[7 - Pods ✅|pod]] and those available on the [[0 - Core Concepts Intro ✅|nodes]]

@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - Different <i><span style="color:#477bbe">groups</span></i> must access the [[0 - Core Concepts Intro ✅|node]] to perform different tasks
 	- <i><span style="color:#477bbe">Admins</span></i> - for administrative tasks
 	- <i><span style="color:#477bbe">Developers</span></i> - for testing and deploying applications

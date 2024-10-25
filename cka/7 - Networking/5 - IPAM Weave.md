@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - <b><i><span style="color:#d46644">IP Address Management</span></i></b> (<b><i><span style="color:#d46644">IPAM</span></i></b>) describes how the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|virtual bridge networks]] in the [[0 - Core Concepts Intro ✅|nodes]] are assigned an <span style="color:#5c7e3e">IP subnet</span>, how the [[7 - Pods ✅|pods]] are assigned <span style="color:#5c7e3e">IP addresses</span>, and who is responsible for ensuring there are no duplicates assigned
 
 - Per <b><i><span style="color:#d46644">CNI</span></i></b>, it is the responsibility of the <b><i><span style="color:#d46644">CNI plugin</span></i></b> (the <b><i><span style="color:#d46644">network</span></i></b> solution provider) to take care of assigning <span style="color:#5c7e3e">IP address</span> to the containers

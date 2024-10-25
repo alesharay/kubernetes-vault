@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - The idea of decoupling large <span style="color:#5c7e3e">monolith</span> applications into smaller subcomponents is known as <span style="color:#5c7e3e">microservices</span>
 
 - <span style="color:#5c7e3e">Microservices</span> enable us to develop and deploy a set of independent, small and reusable code

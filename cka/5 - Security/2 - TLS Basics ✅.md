@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 ** This section is an over simplification of the TLS process and PKI. Enough info is given solely to pass the exam. Read [https://smallstep.com/blog/everything-pki/](https://smallstep.com/blog/everything-pki/) for more information
 
 - A [[3.1 - Certification Creation|certificate]] is used to guarantee trust between two parties during a transaction

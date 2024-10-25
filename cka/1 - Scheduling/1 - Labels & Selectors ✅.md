@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - <b><span style="color:#d46644">Labels</span></b> and <b><span style="color:#d46644">selectors</span></b> are a standard method of grouping things together
 
 - The best way to group things together based on specific needs is by using <b><span style="color:#d46644">labels</span></b>

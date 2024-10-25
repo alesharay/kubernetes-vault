@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/cluster-maintenance
+
 - There are many candidates for <b><span style="color:#d46644">backups</span></b> in a <span style="color:#5c7e3e">Kubernetes</span> [[0 - Core Concepts Intro ✅|cluster]]
 	- <i><span style="color:#477bbe">Resource</span></i> definition files
 	- The [[1 - ETCD ✅|etcd]] store

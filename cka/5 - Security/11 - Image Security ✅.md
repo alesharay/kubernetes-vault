@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - This lesson will cover <b><i><span style="color:#d46644">image</span></i></b> names and configuring [[7 - Pods ✅|pods]] to use <b><i><span style="color:#d46644">images</span></i></b> from secure repositories
 
 - When you use the <span style="color:#5c7e3e">nginx</span> <b><i><span style="color:#d46644">image</span></i></b>, it's actually **library**/<span style="color:#5c7e3e">nginx</span>

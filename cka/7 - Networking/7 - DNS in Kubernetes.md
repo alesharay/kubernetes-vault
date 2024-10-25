@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - <span style="color:#5c7e3e">Kubernetes</span> [[9 - Deployments ✅|deploys]] a built-in <b><i><span style="color:#d46644">DNS server</span></i></b> by default when a [[0 - Core Concepts Intro ✅|cluster]] is created
 	- If <span style="color:#5c7e3e">Kubernetes</span> is setup manually, the <b><i><span style="color:#d46644">DNS server</span></i></b> is also setup manually
 

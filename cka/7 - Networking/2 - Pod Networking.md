@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - The <b><i><span style="color:#d46644">networking</span></i></b> at the [[7 - Pods ✅|pod]] layer is another crucial function of a <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">network</span></i></b>
 
 - <span style="color:#5c7e3e">Kubernetes</span> does not come with a built-in solution for <b><i><span style="color:#d46644">pod networking</span></i></b>

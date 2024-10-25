@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 [https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#-strong-api-groups-strong](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#-strong-api-groups-strong)-
 
 - The <span style="color:#5c7e3e">Kubernetes</span> <b><i><span style="color:#d46644">API</span></i></b> is <b><i><span style="color:#d46644">grouped</span></i></b> into multiple <b><i><span style="color:#d46644">groups</span></i></b> based on their purpose

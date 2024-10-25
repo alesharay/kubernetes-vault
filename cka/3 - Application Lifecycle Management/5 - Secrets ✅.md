@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - <b><span style="color:#d46644">Secrets</span></b> are used to store sensitive information like passwords or keys
 
 - <b><span style="color:#d46644">Secrets</span></b> are similar to [[4 - ConfigMaps ✅|configMaps]] except that they're stored in an <span style="color:#5c7e3e">encoded</span> or <span style="color:#5c7e3e">hashed</span> format

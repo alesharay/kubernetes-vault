@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/application-lifecycle-management
+
 - When you have a lot of [[7 - Pods ✅|pod]] definition files, it will become difficult to manage the environment data stored within the query files
 
 - [[3 - Environment Variables ✅|Environment variable]] values can be taken out of the [[7 - Pods ✅|pod]] definition file and managed centrally using <b><span style="color:#d46644">configMaps</span></b>

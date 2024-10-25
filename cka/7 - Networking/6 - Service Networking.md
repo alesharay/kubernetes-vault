@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - [[7 - Pods ✅|Pods]] are rarely configured to communicate with each other directly
 
 - If a [[7 - Pods ✅|pod]] should be able to access [[10 - Services ✅|services]] on another [[7 - Pods ✅|pod]], it would use a [[10 - Services ✅|service]]

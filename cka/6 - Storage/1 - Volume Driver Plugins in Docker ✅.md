@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/storage
+
 - <i><span style="color:#477bbe">Storage Drivers</span></i> help manage [[0 - Storage in Docker ✅|storage]] on [[11 - Image Security ✅|images]] and [[7 - Pods ✅|containers]]
 
 - If you want to [[4 - Persistent Volumes ✅|persist]] [[0 - Storage in Docker ✅|storage]], you must create a [[3 - Volumes ✅|volume]]

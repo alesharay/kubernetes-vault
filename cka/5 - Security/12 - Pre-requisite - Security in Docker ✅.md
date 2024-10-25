@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/security
+
 - A <span style="color:#5c7e3e">Docker</span> <i><span style="color:#477bbe">host</span></i> has a set of its own processes running on it (i.e. a number of operating system processes, the <span style="color:#5c7e3e">Docker daemon</span> itself, the <span style="color:#5c7e3e">SSH</span> server, etc…)
 
 ![[psd-1.png]]

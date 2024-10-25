@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/scheduling
+
 - Every [[7 - Pods ✅|pod]] has a field called <b><span style="color:#d46644">nodeName</span></b> that, by default, is not set
 	- This field is added automatically by <span style="color:#5c7e3e">Kubernetes</span>
 

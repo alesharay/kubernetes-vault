@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - REMEMBER: as the [[0 - Core Concepts Intro ✅|cluster]] grows, it is not feasible to add every new [[7 - Pods ✅|pod]] to the <span style="color:red">/etc/hosts</span> file.
 	- The better way to do this (if being done manually) is to create a [[0.2 - DNS ✅|DNS server]], and whenever a new [[7 - Pods ✅|pod]] is created, a record in the [[0.2 - DNS ✅|DNS server]] is added for that [[7 - Pods ✅|pod]] so that other [[7 - Pods ✅|pods]] can access the new [[7 - Pods ✅|pod]]
 	- You would also configure the <span style="color:red">/etc/resolv.conf</span> file in the [[7 - Pods ✅|pod]] to point to the [[0.2 - DNS ✅|DNS server]] so that the new [[7 - Pods ✅|pod]] can resolve other [[7 - Pods ✅|pods]] in the [[0 - Core Concepts Intro ✅|cluster]]

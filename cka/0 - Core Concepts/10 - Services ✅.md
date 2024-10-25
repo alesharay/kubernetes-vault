@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/core-concepts
+
 - <b><span style="color:#d46644">Services</span></b> enable communication between various components within and outside of the <i><span style="color:#477bbe">application</span></i>
 	- This helps us connect <i><span style="color:#477bbe">applications</span></i> together with other <i><span style="color:#477bbe">applications</span></i> or <i><span style="color:#477bbe">users</span></i>
 

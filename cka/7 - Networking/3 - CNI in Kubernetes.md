@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - As per <b><i><span style="color:#d46644">CNI</span></i></b>, [[7 - Pods ✅|container runtimes]], in the case <span style="color:#5c7e3e">Kubernetes</span>, is responsible for creating [[7 - Pods ✅|container]] [[0.4 - Network Namespaces ✅|network namespaces]] identifying and attaching those [[0.4 - Network Namespaces ✅|namespaces]] to the right <b><i><span style="color:#d46644">network</span></i></b> by calling the right <b><i><span style="color:#d46644">network plugins</span></i></b>
 
 - In order for <span style="color:#5c7e3e">Kubernetes</span> to use <b><i><span style="color:#d46644">CNI plugins</span></i></b>, the <b><i><span style="color:#d46644">CNI plugin</span></i></b> must be invoked by the component within <span style="color:#5c7e3e">Kubernetes</span> that is responsible for creating [[7 - Pods ✅|containers]]

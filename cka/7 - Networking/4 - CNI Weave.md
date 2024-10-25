@@ -1,3 +1,5 @@
+#flashcards/kubernetes/cka/networking
+
 - The <b><i><span style="color:#d46644">WeaveWorks weave</span></i></b> <b><i><span style="color:#d46644">CNI plugin</span></i></b> is one of many solutions based on <b><i><span style="color:#d46644">CNI</span></i></b>
 
 - With a <b><i><span style="color:#d46644">network</span></i></b> solution that is manually configured with a [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|routing table]] which maps what <b><i><span style="color:#d46644">networks</span></i></b> are on what <i><span style="color:#477bbe">hosts</span></i>, when a <span style="color:#5c7e3e">packet</span> is sent from one [[7 - Pods ✅|pod]] to another, it goes out to the <b><i><span style="color:#d46644">network</span></i></b>, to the [[0.1 - Switching, Routing, Gateways CNI in Kubernetes ✅|router]] and finds it's way to the [[0 - Core Concepts Intro ✅|node]] that <i><span style="color:#477bbe">hosts</span></i> that [[7 - Pods ✅|pod]]
